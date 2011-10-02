@@ -125,7 +125,7 @@ enum {
   }
 }
 
-- (int) playlistIndexForPoint:(CGPoint)point{
+- (int) playlistIndexForPoint:(CGPoint) point{
   MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
   float eachSectionWidth = 1024 / [appDelegate.playlists count];
   float x = point.x;

@@ -22,10 +22,8 @@
 }
 
 - (void) prepare {
-  NSLog(@"prepared");
   [[SPSession sharedSession] setPlaybackDelegate:self];
   audio_init(&audiofifo);
-
 }
 
 -(audio_fifo_t*)audiofifo; {
@@ -33,8 +31,6 @@
 }
 
 -(NSInteger)session:(SPSession *)aSession shouldDeliverAudioFrames:(const void *)audioFrames ofCount:(NSInteger)frameCount format:(const sp_audioformat *)audioFormat {
-  NSLog(@"audio");
-  
   audio_fifo_t *af = [self audiofifo];
 	audio_fifo_data_t *afd = NULL;
 	size_t s;
@@ -47,7 +43,6 @@
 	/* Buffer one second of audio */
 	if (af->qlen > audioFormat->sample_rate) {
 		pthread_mutex_unlock(&af->mutex);
-    
 		return 0;
 	}
   
