@@ -128,7 +128,7 @@
 		60B1FC641434BF360039206C /* SPURLExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPURLExtensions.m; sourceTree = "<group>"; };
 		60B1FC651434BF360039206C /* SPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUser.h; sourceTree = "<group>"; };
 		60B1FC661434BF360039206C /* SPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUser.m; sourceTree = "<group>"; };
-		60B1FC771434BF530039206C /* api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = api.h; sourceTree = "<group>"; };
+		60B1FC771434BF530039206C /* api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = api.h; path = vendor/api.h; sourceTree = "<group>"; };
 		60B1FC7E1434C0330039206C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		60B1FC801434C0B50039206C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		60DD0ABD143892B7006C1934 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
@@ -167,6 +167,7 @@
 				601088661438A85E008D3D9F /* queue.h */,
 			);
 			name = "spotify audio";
+			path = vendor;
 			sourceTree = "<group>";
 		};
 		608086AA14350EF70029BBC9 /* Extra Spotify */ = {
