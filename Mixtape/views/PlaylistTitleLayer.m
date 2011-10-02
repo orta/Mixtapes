@@ -27,9 +27,7 @@
 }
 
 - (void)turnToLabel {
-  CGSize cs = [self.name sizeWithFont:[UIFont fontWithName:@"Helvetica" size:FONT_SIZE] constrainedToSize:CGSizeMake(240, 120) lineBreakMode:UILineBreakModeWordWrap];
-  
-  [self setFrame: CGRectMake( 0, 0, cs.width + 40, 50)];
+  [self setBounds: CGRectMake( 0, 0, 240, 40)];
   self.backgroundColor = [[UIColor colorWithRed:0 green:0 blue:0 alpha:0.7] CGColor];
   self.fontSize = FONT_SIZE;
   float degrees = (random() % 40) - 20;

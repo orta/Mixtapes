@@ -13,7 +13,6 @@
 @interface MixtapeAppDelegate : UIResponder <UIApplicationDelegate, SPSessionDelegate>
 
 @property (retain, nonatomic) UIWindow *window;
-
 @property (retain, nonatomic) MainViewController *mainViewController;
 @property (retain, nonatomic) NSMutableArray * playlists;
 

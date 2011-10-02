@@ -11,6 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <ImageIO/ImageIO.h>
 #import "LayoutController.h"
+#import "AudioController.h"
 
 #define DegreesToRadians(x) (M_PI * x / 180.0)
 
@@ -21,7 +22,7 @@
 
 @synthesize canvas = _CACanvasView;
 @synthesize flipsidePopoverController = _flipsidePopoverController;
-@synthesize layout = _layout;
+@synthesize layout = _layout, audio = _audio;
 
 - (void)viewDidLoad
 {
@@ -33,6 +34,7 @@
 
 - (void)playlistsReady:(id)notification {
   [self removeLoadingNotice];
+  [self.audio prepare];
   [self.layout setupAlbumArtwork];
   [self.layout transitionIntoFloorView];
   [self.layout setupGestureReconition];

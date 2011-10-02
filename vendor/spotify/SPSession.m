@@ -267,10 +267,13 @@ static void message_to_user(sp_session *session, const char *msg) {
  *       that the library should retry delivery in a short while.
  */
 static int music_delivery(sp_session *session, const sp_audioformat *format, const void *frames, int num_frames) {
-	
 	SPSession *sess = (SPSession *)sp_session_userdata(session);
 	
+  NSLog(@"music in to %@", [sess playbackDelegate]);
+
 	if ([[sess playbackDelegate] respondsToSelector:@selector(session:shouldDeliverAudioFrames:ofCount:format:)]) {
+      NSLog(@"responds");
+
         NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
         int framesConsumed = (int)[(id <SPSessionPlaybackDelegate>)[sess playbackDelegate] session:sess
 																		  shouldDeliverAudioFrames:frames

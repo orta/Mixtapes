@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		601088591438A33B008D3D9F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601088581438A33B008D3D9F /* AVFoundation.framework */; };
+		601088611438A722008D3D9F /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601088601438A722008D3D9F /* AudioController.m */; };
+		601088671438A85E008D3D9F /* audio.c in Sources */ = {isa = PBXBuildFile; fileRef = 601088631438A85E008D3D9F /* audio.c */; };
+		601088681438A85E008D3D9F /* osx-audio.c in Sources */ = {isa = PBXBuildFile; fileRef = 601088641438A85E008D3D9F /* osx-audio.c */; };
+		6010886A1438B6D8008D3D9F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601088691438B6D7008D3D9F /* AudioToolbox.framework */; };
 		6080869A1434FCDA0029BBC9 /* template.png in Resources */ = {isa = PBXBuildFile; fileRef = 608086991434FCDA0029BBC9 /* template.png */; };
 		6080869C143504B30029BBC9 /* loadingbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6080869B143504B30029BBC9 /* loadingbg.png */; };
 		608086CE14352A1C0029BBC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608086CD14352A1C0029BBC9 /* QuartzCore.framework */; };
@@ -44,13 +49,20 @@
 		60B1FC741434BF360039206C /* SPTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1FC621434BF360039206C /* SPTrack.m */; };
 		60B1FC751434BF360039206C /* SPURLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1FC641434BF360039206C /* SPURLExtensions.m */; };
 		60B1FC761434BF360039206C /* SPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1FC661434BF360039206C /* SPUser.m */; };
-		60B1FC791434BF5D0039206C /* appkey.h in Sources */ = {isa = PBXBuildFile; fileRef = 60B1FC781434BF5C0039206C /* appkey.h */; };
 		60B1FC7F1434C0340039206C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B1FC7E1434C0330039206C /* SystemConfiguration.framework */; };
 		60B1FC811434C0B50039206C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B1FC801434C0B50039206C /* CFNetwork.framework */; };
 		60E600C3143790F00096BBB4 /* LayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E600C2143790F00096BBB4 /* LayoutController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		601088581438A33B008D3D9F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6010885F1438A722008D3D9F /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		601088601438A722008D3D9F /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		601088631438A85E008D3D9F /* audio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = audio.c; sourceTree = "<group>"; };
+		601088641438A85E008D3D9F /* osx-audio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "osx-audio.c"; sourceTree = "<group>"; };
+		601088651438A85E008D3D9F /* audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audio.h; sourceTree = "<group>"; };
+		601088661438A85E008D3D9F /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
+		601088691438B6D7008D3D9F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		608086991434FCDA0029BBC9 /* template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = template.png; sourceTree = "<group>"; };
 		6080869B143504B30029BBC9 /* loadingbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbg.png; sourceTree = "<group>"; };
 		608086CD14352A1C0029BBC9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -117,7 +129,6 @@
 		60B1FC651434BF360039206C /* SPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUser.h; sourceTree = "<group>"; };
 		60B1FC661434BF360039206C /* SPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUser.m; sourceTree = "<group>"; };
 		60B1FC771434BF530039206C /* api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = api.h; sourceTree = "<group>"; };
-		60B1FC781434BF5C0039206C /* appkey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appkey.h; sourceTree = "<group>"; };
 		60B1FC7E1434C0330039206C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		60B1FC801434C0B50039206C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		60DD0ABD143892B7006C1934 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
@@ -130,6 +141,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6010886A1438B6D8008D3D9F /* AudioToolbox.framework in Frameworks */,
+				601088591438A33B008D3D9F /* AVFoundation.framework in Frameworks */,
 				608086D714352C5A0029BBC9 /* ImageIO.framework in Frameworks */,
 				608086D514352C200029BBC9 /* CoreImage.framework in Frameworks */,
 				608086CE14352A1C0029BBC9 /* QuartzCore.framework in Frameworks */,
@@ -145,6 +158,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		601088621438A84F008D3D9F /* spotify audio */ = {
+			isa = PBXGroup;
+			children = (
+				601088631438A85E008D3D9F /* audio.c */,
+				601088641438A85E008D3D9F /* osx-audio.c */,
+				601088651438A85E008D3D9F /* audio.h */,
+				601088661438A85E008D3D9F /* queue.h */,
+			);
+			name = "spotify audio";
+			sourceTree = "<group>";
+		};
 		608086AA14350EF70029BBC9 /* Extra Spotify */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +199,8 @@
 				60B1FC301434BE530039206C /* FlipsideViewController.m */,
 				60E600C1143790F00096BBB4 /* LayoutController.h */,
 				60E600C2143790F00096BBB4 /* LayoutController.m */,
+				6010885F1438A722008D3D9F /* AudioController.h */,
+				601088601438A722008D3D9F /* AudioController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -192,6 +218,7 @@
 		60B1FC0B1434BE520039206C = {
 			isa = PBXGroup;
 			children = (
+				601088691438B6D7008D3D9F /* AudioToolbox.framework */,
 				60B1FC201434BE530039206C /* Mixtape */,
 				60B1FC191434BE530039206C /* Frameworks */,
 				60B1FC171434BE530039206C /* Products */,
@@ -209,12 +236,13 @@
 		60B1FC191434BE530039206C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				601088621438A84F008D3D9F /* spotify audio */,
 				608086AA14350EF70029BBC9 /* Extra Spotify */,
-				60B1FC781434BF5C0039206C /* appkey.h */,
 				60B1FC771434BF530039206C /* api.h */,
-				608086CD14352A1C0029BBC9 /* QuartzCore.framework */,
 				60B1FC401434BEF90039206C /* Spotify */,
 				60B1FC801434C0B50039206C /* CFNetwork.framework */,
+				608086CD14352A1C0029BBC9 /* QuartzCore.framework */,
+				601088581438A33B008D3D9F /* AVFoundation.framework */,
 				60B1FC7E1434C0330039206C /* SystemConfiguration.framework */,
 				60B1FC1A1434BE530039206C /* UIKit.framework */,
 				60B1FC1C1434BE530039206C /* Foundation.framework */,
@@ -386,10 +414,12 @@
 				60B1FC741434BF360039206C /* SPTrack.m in Sources */,
 				60B1FC751434BF360039206C /* SPURLExtensions.m in Sources */,
 				60B1FC761434BF360039206C /* SPUser.m in Sources */,
-				60B1FC791434BF5D0039206C /* appkey.h in Sources */,
 				608086DA14359E350029BBC9 /* PlaylistTitleLayer.m in Sources */,
 				608086E01435AF1C0029BBC9 /* TrackLayer.m in Sources */,
 				60E600C3143790F00096BBB4 /* LayoutController.m in Sources */,
+				601088611438A722008D3D9F /* AudioController.m in Sources */,
+				601088671438A85E008D3D9F /* audio.c in Sources */,
+				601088681438A85E008D3D9F /* osx-audio.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

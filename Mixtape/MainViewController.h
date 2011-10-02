@@ -8,14 +8,14 @@
 
 #import "FlipsideViewController.h"
 
-@class LayoutController;
+@class LayoutController, AudioController;
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
   UIImageView *_loadingImage;
   UIImageView *_loadingBackground;
   UIView *_CACanvasView;
   LayoutController *_layout;
-
+  ;
 }
 
 
@@ -26,5 +26,7 @@
 @property (retain, nonatomic) IBOutlet UIImageView *loadingImage;
 @property (retain, nonatomic) IBOutlet UIImageView *loadingBackground;
 @property (retain, nonatomic) IBOutlet  LayoutController *layout;
+@property (retain, nonatomic) IBOutlet  AudioController *audio;
+
 -(void) removeLoadingNotice;
 @end

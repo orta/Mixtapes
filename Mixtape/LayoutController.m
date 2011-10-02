@@ -86,17 +86,21 @@ enum {
 }
 
 - (IBAction)handlePinchGesture:(UIGestureRecognizer *)sender {
-  CGFloat factor = [(UIPinchGestureRecognizer *)sender scale];
-  NSLog(@" %f ", factor);
-  canvas.transform = CGAffineTransformMakeScale(factor, factor);
+  if (self.state == LayoutsSinglePlaylist) {
+    CGFloat factor = [(UIPinchGestureRecognizer *)sender scale];
+    //canvas.transform = CGAffineTransformMakeScale(factor, factor);
+    if (factor > 0.3) {
+      [self transitionIntoFloorView];
+    }
+    
+  }
 }
 
 - (IBAction)handlePanGesture:(UIPanGestureRecognizer *)sender {
   if (self.state == LayoutsSinglePlaylist) {
-    CGPoint translate = [sender translationInView:canvas];
-    NSLog(@" %f - %f ", translate.x, translate.y );
+    CGPoint translate = [sender velocityInView:canvas];
     CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
-    wrapper.position = CGPointMake(translate.x, wrapper.position.y);
+    wrapper.position = CGPointMake(wrapper.position.x + translate.x, wrapper.position.y);
   }
 }
 
@@ -116,6 +120,7 @@ enum {
       self.currentPlaylist = [self.layers objectAtIndex:_currentplaylistIndex];
       [self hideAllPlaylistsButCurrent];
       [self transitionIntoPlaylistView];
+      [[SPSession sharedSession] playTrack:[[self.currentPlaylist objectAtIndex:0] track] error:nil];
       break;
   }
 }
@@ -175,7 +180,7 @@ enum {
     CALayer * wrapperLayer = [self.playlistWrapperLayers objectAtIndex:i];
     [wrapperLayer setPosition: CGPointMake( (random() % 20) + x_center, (random() % 20) + 531)];
     
-    for (int j = [playlist count] - 1; j > 0 ; j--) {
+    for (int j = [playlist count] - 1; j > -1 ; j--) {
       TrackLayer *layer = [playlist objectAtIndex:j];
       [layer turnToThumbnail];
       layer.position = CGPointMake(0, 0);
