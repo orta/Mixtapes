@@ -57,15 +57,11 @@ extern NSString *g_SpotifyFolder;
 -(void)waitAndFillTrackPool {
 	
 	// It can take a while for playlists to load, especially on a large account.
-
-  NSLog(@"wait");
   BOOL found = FALSE;
   for (id playlistOrFolder in [[SPSession sharedSession] userPlaylists].playlists) {
     if ([playlistOrFolder isKindOfClass:[SPPlaylistFolder class]]) {
-
       if ([[playlistOrFolder name] isEqualToString:g_SpotifyFolder]) {
         SPPlaylistFolder * folder = playlistOrFolder;
-        NSLog(@"found %@", [folder name]);
         self.playlists = folder.playlists;
         [[NSNotificationCenter defaultCenter] postNotificationName:@"PlaylistsSet" object:self];
         found = YES;

@@ -219,7 +219,6 @@
 		60B1FC0B1434BE520039206C = {
 			isa = PBXGroup;
 			children = (
-				601088691438B6D7008D3D9F /* AudioToolbox.framework */,
 				60B1FC201434BE530039206C /* Mixtape */,
 				60B1FC191434BE530039206C /* Frameworks */,
 				60B1FC171434BE530039206C /* Products */,
@@ -242,6 +241,7 @@
 				60B1FC771434BF530039206C /* api.h */,
 				60B1FC401434BEF90039206C /* Spotify */,
 				60B1FC801434C0B50039206C /* CFNetwork.framework */,
+				601088691438B6D7008D3D9F /* AudioToolbox.framework */,
 				608086CD14352A1C0029BBC9 /* QuartzCore.framework */,
 				601088581438A33B008D3D9F /* AVFoundation.framework */,
 				60B1FC7E1434C0330039206C /* SystemConfiguration.framework */,
