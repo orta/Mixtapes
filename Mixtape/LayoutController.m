@@ -146,22 +146,12 @@ enum {
   
   for (int i = 0; i < [self.titleLayers count]; i++) {
     CALayer *layer = [self.titleLayers objectAtIndex:i];
-    if (i == _currentplaylistIndex) layer.opacity = 1;
-    else layer.opacity = 0;
+    layer.opacity = 0;
   }
   
-  CATextLayer *title = [self.titleLayers objectAtIndex:_currentplaylistIndex];
-  title.fontSize = 30;
-  title.frame = CGRectMake(0, 80, 1024, 80);
-  title.backgroundColor = [[UIColor colorWithWhite:0 alpha:0] CGColor];
-  title.transform = CATransform3DIdentity;
-
   CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
-  NSLog(@"wrapper %@  ++++", NSStringFromCGRect(wrapper.frame) );
   wrapper.masksToBounds = NO;
-  wrapper.position = CGPointMake(0, 300);
-  
-  NSLog(@"wrapper %@  -----", NSStringFromCGRect(wrapper.frame) );
+  wrapper.position = CGPointMake(0, 550);
   
   for (int i = 0; i < [self.currentPlaylist count]; i++) {
     CALayer * layer = [self.currentPlaylist objectAtIndex:i];
