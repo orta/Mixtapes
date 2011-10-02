@@ -63,6 +63,7 @@
 		601088651438A85E008D3D9F /* audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audio.h; sourceTree = "<group>"; };
 		601088661438A85E008D3D9F /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
 		601088691438B6D7008D3D9F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6010886B1438E529008D3D9F /* SettingsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsExample.h; sourceTree = "<group>"; };
 		608086991434FCDA0029BBC9 /* template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = template.png; sourceTree = "<group>"; };
 		6080869B143504B30029BBC9 /* loadingbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbg.png; sourceTree = "<group>"; };
 		608086CD14352A1C0029BBC9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -258,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				60DD0ABD143892B7006C1934 /* Settings.h */,
+				6010886B1438E529008D3D9F /* SettingsExample.h */,
 				608086DD14359E860029BBC9 /* Nibs */,
 				608086DC14359E7B0029BBC9 /* Controllers */,
 				608086DB14359E750029BBC9 /* Views */,

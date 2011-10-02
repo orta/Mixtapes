@@ -30,6 +30,14 @@
 	return &audiofifo;
 }
 
+// someone else is using the app
+-(void)sessionDidLosePlayToken:(SPSession *)aSession;
+
+-(void)sessionDidEndPlayback:(SPSession *)aSession{
+  
+}
+
+
 -(NSInteger)session:(SPSession *)aSession shouldDeliverAudioFrames:(const void *)audioFrames ofCount:(NSInteger)frameCount format:(const sp_audioformat *)audioFormat {
   audio_fifo_t *af = [self audiofifo];
 	audio_fifo_data_t *afd = NULL;

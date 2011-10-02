@@ -15,7 +15,6 @@
 
 #define DegreesToRadians(x) (M_PI * x / 180.0)
 
-
 @implementation MainViewController
 @synthesize loadingImage = _loadingImage;
 @synthesize loadingBackground = _loadingBackground;
@@ -24,12 +23,9 @@
 @synthesize flipsidePopoverController = _flipsidePopoverController;
 @synthesize layout = _layout, audio = _audio;
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-  
-//    self.canvas.isUserInteractionEnabled = YES;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playlistsReady:)  name:@"PlaylistsSet" object:[[UIApplication sharedApplication] delegate]];
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playlistsReady:)  name:@"PlaylistsSet" object:[[UIApplication sharedApplication] delegate]];
 }
 
 - (void)playlistsReady:(id)notification {
@@ -40,7 +36,9 @@
   [self.layout setupGestureReconition];
 }
 
-
+- (NSMutableArray *)currentPlaylist {
+  return [self.layout currentPlaylist];
+}
 
 - (void)viewDidUnload
 {
@@ -50,18 +48,15 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
+- (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 }
 

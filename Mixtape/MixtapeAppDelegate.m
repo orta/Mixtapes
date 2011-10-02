@@ -38,7 +38,6 @@ extern NSString *g_SpotifyFolder;
 
 -(void) startSpotify {
     srandom((unsigned int)time(NULL));
-    NSLog(@"starting");
     [SPSession initializeSharedSessionWithApplicationKey:[NSData dataWithBytes:&g_appkey length:g_appkey_size]
                                                userAgent:@"com.ortatherox.mixmcshane"
                                                    error:nil];
@@ -49,10 +48,10 @@ extern NSString *g_SpotifyFolder;
 -(void)sessionDidLoginSuccessfully:(SPSession *)aSession; {
   [self waitAndFillTrackPool];
 }
+
 -(void)session:(SPSession *)aSession didLogMessage:(NSString *)aMessage; {
   NSLog(@"msg: %@", aMessage);
 }
-
 
 -(void)waitAndFillTrackPool {
 	
