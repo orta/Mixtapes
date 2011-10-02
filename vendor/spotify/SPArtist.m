@@ -1,0 +1,123 @@
+//
+//  SPArtist.m
+//  CocoaLibSpotify
+//
+//  Created by Daniel Kennett on 2/20/11.
+/*
+Copyright (c) 2011, Spotify AB
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of Spotify AB nor the names of its contributors may 
+      be used to endorse or promote products derived from this software 
+      without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL SPOTIFY AB BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT 
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
+OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#import "SPArtist.h"
+#import "SPURLExtensions.h"
+
+@implementation SPArtist
+
+static NSMutableDictionary *artistCache;
+
++(SPArtist *)artistWithArtistStruct:(sp_artist *)anArtist {
+    
+    if (artistCache == nil) {
+        artistCache = [[NSMutableDictionary alloc] init];
+    }
+    
+    NSValue *ptrValue = [NSValue valueWithPointer:anArtist];
+    SPArtist *cachedArtist = [artistCache objectForKey:ptrValue];
+    
+    if (cachedArtist != nil) {
+        return cachedArtist;
+    }
+    
+    cachedArtist = [[SPArtist alloc] initWithArtistStruct:anArtist];
+    
+    [artistCache setObject:cachedArtist forKey:ptrValue];
+    return [cachedArtist autorelease];
+}
+
++(SPArtist *)artistWithArtistURL:(NSURL *)aURL {
+	
+	if ([aURL spotifyLinkType] == SP_LINKTYPE_ARTIST) {
+		sp_artist *artist = sp_link_as_artist([aURL createSpotifyLink]);
+		if (artist != NULL) {
+			SPArtist *spArtist = [self artistWithArtistStruct:artist];
+			sp_artist_release(artist);
+			return spArtist;
+		}
+	}
+	return nil;
+}
+
+#pragma mark -
+
+-(id)initWithArtistStruct:(sp_artist *)anArtist {
+    if ((self = [super init])) {
+        artist = anArtist;
+        sp_artist_add_ref(artist);
+        
+        if (!sp_artist_is_loaded(artist)) {
+            [self performSelector:@selector(checkLoaded)
+                       withObject:nil
+                       afterDelay:.25];
+        }
+    }
+    return self;
+}
+
+-(void)checkLoaded {
+    BOOL loaded = sp_artist_is_loaded(artist);
+    if (!loaded) {
+        [self performSelector:_cmd
+                   withObject:nil
+                   afterDelay:.25];
+    } else {
+        
+        // Fire KVO notifications
+        [self willChangeValueForKey:@"name"];
+        [self didChangeValueForKey:@"name"];
+    }
+}
+
+-(NSString *)description {
+	return [NSString stringWithFormat:@"%@: %@", [super description], self.name];
+}
+
+@synthesize artist;
+
+-(NSString *)name {
+    const char *name = sp_artist_name(artist);
+    if (name != NULL) {
+        NSString *nameString = [NSString stringWithUTF8String:name];
+        return [nameString length] > 0 ? nameString : nil;
+    } else {
+        return nil;
+    }
+}
+
+-(void)dealloc {
+    sp_artist_release(artist);
+    [super dealloc];
+}
+
+@end
