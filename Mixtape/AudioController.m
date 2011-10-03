@@ -28,9 +28,28 @@
   audio_init(&audiofifo);
 }
 
-- (void)nextTrack{}
-- (void)previousTrack{}
-- (void)playPause{}
+- (void)playTrackWithIndex:(int)index {
+  _trackIndex = index;
+  _trackIndex = MIN(_trackIndex, [self.currentPlaylist.tracks count]);
+  _trackIndex = MAX(_trackIndex, 0);
+  NSMutableArray *tracks = self.currentPlaylist.tracks;
+  [[SPSession sharedSession] playTrack:[tracks objectAtIndex:_trackIndex] error:nil];
+  if (_trackIndex < [tracks count]) {
+    [[SPSession sharedSession] preloadTrackForPlayback:[tracks objectAtIndex:_trackIndex + 1] error:nil];
+  }
+}
+
+- (void) nextTrack {
+  [self playTrackWithIndex:_trackIndex + 1];
+}
+
+- (void) previousTrack {
+  [self playTrackWithIndex:_trackIndex - 1];
+}
+
+- (void) playPause{
+
+}
 
 
 -(audio_fifo_t*)audiofifo; {

@@ -23,6 +23,7 @@
 - (void)nextTrack;
 - (void)previousTrack;
 - (void)playPause;
+- (void)playTrackWithIndex:(int)index;
 
 -(void)prepare;
 -(audio_fifo_t*)audiofifo;

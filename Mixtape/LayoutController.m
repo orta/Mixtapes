@@ -142,6 +142,19 @@ enum {
   switch (self.state) {
     
     case LayoutsSinglePlaylist:
+      NSLog(@"loc %f, %f", tapPoint.x, tapPoint.y );
+      CGRect centerCover = CGRectMake(200, 200, 400, 400);
+      if ( CGRectContainsPoint(centerCover, tapPoint)) {
+        NSLog(@"tapped");
+        MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
+
+        [audio setCurrentPlaylist:[[appDelegate playlists] objectAtIndex:_currentplaylistIndex]];
+        [audio playTrackWithIndex:[self currentPlaylistSelectionIndex]];
+        return;
+      }
+      
+      
+      //fallback to hiding
       [self transitionIntoFloorView];
       break;
     
