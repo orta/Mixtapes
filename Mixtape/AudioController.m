@@ -29,12 +29,14 @@
 }
 
 - (void)playTrackWithIndex:(int)index {
+  NSLog(@"track with index %i", index);
+  if (_trackIndex == index) return;
   _trackIndex = index;
   _trackIndex = MIN(_trackIndex, [self.currentPlaylist.tracks count]);
   _trackIndex = MAX(_trackIndex, 0);
   NSMutableArray *tracks = self.currentPlaylist.tracks;
   [[SPSession sharedSession] playTrack:[tracks objectAtIndex:_trackIndex] error:nil];
-  if (_trackIndex < [tracks count]) {
+  if (_trackIndex < [tracks count] - 1) {
     [[SPSession sharedSession] preloadTrackForPlayback:[tracks objectAtIndex:_trackIndex + 1] error:nil];
   }
 }
@@ -51,7 +53,6 @@
 
 }
 
-
 -(audio_fifo_t*)audiofifo; {
 	return &audiofifo;
 }
@@ -60,7 +61,7 @@
 -(void)sessionDidLosePlayToken:(SPSession *)aSession{}
 
 -(void)sessionDidEndPlayback:(SPSession *)aSession{
-  
+  [self nextTrack];
 }
 
 -(NSInteger)session:(SPSession *)aSession shouldDeliverAudioFrames:(const void *)audioFrames ofCount:(NSInteger)frameCount format:(const sp_audioformat *)audioFormat {
