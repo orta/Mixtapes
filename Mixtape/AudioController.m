@@ -32,7 +32,7 @@
   NSLog(@"track with index %i", index);
   if (_trackIndex == index) return;
   _trackIndex = index;
-  _trackIndex = MIN(_trackIndex, [self.currentPlaylist.tracks count]);
+  _trackIndex = MIN(_trackIndex, [self.currentPlaylist.tracks count] - 1);
   _trackIndex = MAX(_trackIndex, 0);
   NSMutableArray *tracks = self.currentPlaylist.tracks;
   [[SPSession sharedSession] playTrack:[tracks objectAtIndex:_trackIndex] error:nil];
