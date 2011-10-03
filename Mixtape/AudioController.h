@@ -12,8 +12,13 @@
 @interface AudioController : NSObject <SPSessionPlaybackDelegate> {
   audio_fifo_t audiofifo;
 	sp_session *session;
-
+  
+  SPPlaylist *_currentSPPlaylist;
+  int _trackIndex;
 }
+
+@property (retain) SPPlaylist *currentPlaylist;
+@property () int trackIndex;
 
 -(void)prepare;
 -(audio_fifo_t*)audiofifo;

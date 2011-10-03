@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class AudioController;
+
 @interface LayoutController : NSObject {
   IBOutlet UIView * canvas;
   int _state;
@@ -19,6 +21,8 @@
   int _currentplaylistIndex;
   NSMutableArray * _currentPlaylist; 
   CALayer *_playlistLayer;
+  
+  IBOutlet AudioController * audio;
 }
 
 -(void)setupAlbumArtwork;

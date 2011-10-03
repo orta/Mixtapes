@@ -38,6 +38,7 @@ extern NSString *g_SpotifyFolder;
 
 -(void) startSpotify {
     srandom((unsigned int)time(NULL));
+
     [SPSession initializeSharedSessionWithApplicationKey:[NSData dataWithBytes:&g_appkey length:g_appkey_size]
                                                userAgent:@"com.ortatherox.mixmcshane"
                                                    error:nil];

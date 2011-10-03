@@ -11,6 +11,8 @@
 
 @implementation AudioController
 
+@synthesize trackIndex = _trackIndex, currentPlaylist = _currentSPPlaylist;
+
 - (void)awakeFromNib {
   [[AVAudioSession sharedInstance] setDelegate:self];
 	NSError *err = nil;
@@ -31,12 +33,11 @@
 }
 
 // someone else is using the app
--(void)sessionDidLosePlayToken:(SPSession *)aSession;
+-(void)sessionDidLosePlayToken:(SPSession *)aSession{}
 
 -(void)sessionDidEndPlayback:(SPSession *)aSession{
   
 }
-
 
 -(NSInteger)session:(SPSession *)aSession shouldDeliverAudioFrames:(const void *)audioFrames ofCount:(NSInteger)frameCount format:(const sp_audioformat *)audioFormat {
   audio_fifo_t *af = [self audiofifo];

@@ -11,6 +11,7 @@
 #import "PlaylistTitleLayer.h"
 #import "TrackLayer.h"
 #import <QuartzCore/QuartzCore.h>
+#import "AudioController.h"
 
 enum {
   LayoutsFloorView = 1,
@@ -57,12 +58,16 @@ enum {
     [canvas.layer addSublayer:wrapperLayer];
     [self.playlistWrapperLayers addObject:wrapperLayer];
         
-    // backwards so the Z-ordering is done for free
-    for (int j = [playlist.tracks count] - 1; j != 0 ; j--) {
+    for (int j = 0; j < [playlist.tracks count] ; j++) {
       SPTrack *track = [playlist.tracks objectAtIndex:j];
       TrackLayer * layer = [[TrackLayer alloc] initWithTrack:track];
       [playlistLayerArray addObject:layer];
-      [wrapperLayer addSublayer:layer];
+      
+      // get Z ordering correct 
+      if ([[wrapperLayer sublayers] count])
+        [wrapperLayer insertSublayer:layer below:[[wrapperLayer sublayers] lastObject]];  
+      else
+        [wrapperLayer addSublayer:layer];
     }
   }
 }
@@ -74,11 +79,15 @@ enum {
   [canvas addGestureRecognizer:singleFingerTap];
   [singleFingerTap release];
 
-  UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc]
-                                        initWithTarget:self action:@selector(handlePanGesture:)];
-  [canvas addGestureRecognizer:panGesture];
-  [panGesture release];
-
+  UISwipeGestureRecognizer* swipe;
+  swipe = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeLeft:)] autorelease];
+  swipe.direction = UISwipeGestureRecognizerDirectionLeft;
+  [canvas addGestureRecognizer:swipe];
+  
+  swipe = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeRight:)] autorelease];
+  swipe.direction = UISwipeGestureRecognizerDirectionRight; // default
+  [canvas addGestureRecognizer:swipe];
+  
   UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc]
                                             initWithTarget:self action:@selector(handlePinchGesture:)];
   [canvas addGestureRecognizer:pinchGesture];
@@ -96,11 +105,20 @@ enum {
   }
 }
 
-- (IBAction)handlePanGesture:(UIPanGestureRecognizer *)sender {
+
+- (IBAction)handleSwipeLeft:(UISwipeGestureRecognizer *)sender {
   if (self.state == LayoutsSinglePlaylist) {
-    CGPoint translate = [sender velocityInView:canvas];
     CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
-    wrapper.position = CGPointMake(wrapper.position.x + translate.x, wrapper.position.y);
+        NSLog(@"left");
+//    wrapper.position = CGPointMake(wrapper.position.x + translate.x, wrapper.position.y);
+  }
+}
+
+- (IBAction)handleSwipeRight:(UISwipeGestureRecognizer *)sender {
+  if (self.state == LayoutsSinglePlaylist) {
+    CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
+    NSLog(@"right");
+    //    wrapper.position = CGPointMake(wrapper.position.x + translate.x, wrapper.position.y);
   }
 }
 
@@ -120,7 +138,6 @@ enum {
       self.currentPlaylist = [self.layers objectAtIndex:_currentplaylistIndex];
       [self hideAllPlaylistsButCurrent];
       [self transitionIntoPlaylistView];
-      [[SPSession sharedSession] playTrack:[[self.currentPlaylist objectAtIndex:0] track] error:nil];
       break;
   }
 }
@@ -184,8 +201,8 @@ enum {
       TrackLayer *layer = [playlist objectAtIndex:j];
       [layer turnToThumbnail];
       layer.position = CGPointMake(0, 0);
-      if (j > [playlist count] - 5) layer.opacity = 0;
-      else layer.opacity = 1;
+      if (j < 5) layer.opacity = 1;
+      else layer.opacity = 0;
     }
   }
   
