@@ -41,6 +41,40 @@
   self.transform = transform;
 }
 
+- (void)turnToSelected {
+  self.shadowOpacity = 0.8;
+  self.shadowRadius = 8.0;
+  self.shadowOffset = CGSizeMake(0, 5);
+  
+  CATransform3D transform = CATransform3DMakeScale(1.2, 1.2, 1.2);
+  self.transform = transform;
+}
+
+- (void)turnToUnSelected {
+  self.shadowOpacity = 0.6;
+  self.shadowRadius = 5.0;
+  self.shadowOffset = CGSizeMake(0, 3);
+
+  self.transform = CATransform3DIdentity;
+}
+
+- (void)reposition:(BOOL)shouldMove {
+  if(shouldMove && _shifted) return;
+  if(!shouldMove && !_shifted) return;
+  
+  int toMove = 60;
+  if(shouldMove && !_shifted) {
+    // should move right
+    self.position = CGPointMake(self.position.x + toMove, self.position.y);
+    _shifted = YES;
+  }
+  if(!shouldMove && _shifted) {
+    // should move back
+    self.position = CGPointMake(self.position.x - toMove, self.position.y);
+    _shifted = NO;
+  }
+}
+
 
 -(void)albumArtReady:(id)notification {
   self.contents = (id)[[[[self.track album] cover] image] CGImage];

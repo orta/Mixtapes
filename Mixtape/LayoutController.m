@@ -189,16 +189,7 @@ enum {
     layer.opacity = 0;
   }
   
-  CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
-  wrapper.masksToBounds = NO;
   [self moveToCurrentTrack];
-  
-  for (int i = 0; i < [self.currentPlaylist count]; i++) {
-    CALayer * layer = [self.currentPlaylist objectAtIndex:i];
-    layer.transform = CATransform3DIdentity;
-    layer.position = CGPointMake(i * 340, 0);
-  }
-  
   self.state = LayoutsSinglePlaylist;
 }
 
@@ -207,6 +198,17 @@ enum {
   int index = [self currentPlaylistSelectionIndex];
   CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
   wrapper.position = CGPointMake((index * -340) + 280, wrapper.position.y); 
+    
+  for (int i = 0; i < [self.currentPlaylist count]; i++) {
+    TrackLayer * layer = [self.currentPlaylist objectAtIndex:i];
+    layer.position = CGPointMake(i * 340, 0);
+
+    if(i == index) [layer turnToSelected];
+    else [layer turnToUnSelected];
+    
+    // true if after selected track
+    [layer reposition:( i > index )];
+  } 
 }
 
 

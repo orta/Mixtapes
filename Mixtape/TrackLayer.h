@@ -10,6 +10,7 @@
 
 @interface TrackLayer : CATextLayer {
   int _monitorCount;
+  BOOL _shifted;
 }
 
 @property (retain, nonatomic) SPTrack * track;
@@ -17,4 +18,8 @@
 - (id)initWithTrack:(SPTrack*)track;
 - (void)monitorForLoaded;
 - (void)turnToThumbnail;
+- (void)turnToSelected;
+- (void)turnToUnSelected;
+- (void)reposition:(BOOL)shouldMove;
+
 @end
