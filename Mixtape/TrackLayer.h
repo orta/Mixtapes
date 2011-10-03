@@ -11,9 +11,12 @@
 @interface TrackLayer : CATextLayer {
   int _monitorCount;
   BOOL _shifted;
+  SPTrack * _track;
+  CALayer * _playButton;
 }
 
 @property (retain, nonatomic) SPTrack * track;
+@property (retain, nonatomic) CALayer * playButton;
 
 - (id)initWithTrack:(SPTrack*)track;
 - (void)monitorForLoaded;

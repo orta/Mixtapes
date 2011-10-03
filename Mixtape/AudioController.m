@@ -28,6 +28,11 @@
   audio_init(&audiofifo);
 }
 
+- (void)nextTrack{}
+- (void)previousTrack{}
+- (void)playPause{}
+
+
 -(audio_fifo_t*)audiofifo; {
 	return &audiofifo;
 }

@@ -105,7 +105,6 @@ enum {
 - (IBAction)handlePinchGesture:(UIGestureRecognizer *)sender {
   if (self.state == LayoutsSinglePlaylist) {
     CGFloat factor = [(UIPinchGestureRecognizer *)sender scale];
-    //canvas.transform = CGAffineTransformMakeScale(factor, factor);
     if (factor > 0.3) {
       [self transitionIntoFloorView];
     }
@@ -113,11 +112,9 @@ enum {
   }
 }
 
-
 - (IBAction)handleSwipeLeft:(UISwipeGestureRecognizer *)sender {
   if (self.state == LayoutsSinglePlaylist) {
     int index = [self currentPlaylistSelectionIndex];
-    NSLog(@"left %i", index);
 
     if ( index == ([self.currentPlaylist count] - 1) ) return;    
     index = index + 1;
@@ -130,7 +127,6 @@ enum {
 - (IBAction)handleSwipeRight:(UISwipeGestureRecognizer *)sender {
   if (self.state == LayoutsSinglePlaylist) {
     int index = [self currentPlaylistSelectionIndex];
-    NSLog(@"right %i", index);
     
     if(index == 0) return;
     index = index - 1;
@@ -183,12 +179,16 @@ enum {
 }
 
 - (void)transitionIntoPlaylistView {
-  
   for (int i = 0; i < [self.titleLayers count]; i++) {
     CALayer *layer = [self.titleLayers objectAtIndex:i];
     layer.opacity = 0;
   }
   
+  for (int i = 0; i < [self.currentPlaylist count]; i++) {
+    CALayer *layer = [self.currentPlaylist objectAtIndex:i];
+    layer.position = CGPointMake(i * 340, 0);
+  }
+
   [self moveToCurrentTrack];
   self.state = LayoutsSinglePlaylist;
 }
@@ -201,7 +201,6 @@ enum {
     
   for (int i = 0; i < [self.currentPlaylist count]; i++) {
     TrackLayer * layer = [self.currentPlaylist objectAtIndex:i];
-    layer.position = CGPointMake(i * 340, 0);
 
     if(i == index) [layer turnToSelected];
     else [layer turnToUnSelected];

@@ -11,7 +11,7 @@
 #define DegreesToRadians(x) (M_PI * x / 180.0)
 
 @implementation TrackLayer
-@synthesize track = _track;
+@synthesize track = _track, playButton = _playButton;
 
 - (id)initWithTrack:(SPTrack*)track {
     self = [super init];
@@ -30,6 +30,13 @@
       [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(albumArtReady:)  name:@"loaded" object: self.track.album.cover];
       _monitorCount = 0;
       [self monitorForLoaded];
+      
+      self.playButton = [CALayer layer];
+      self.playButton.contents =  (id)[[UIImage imageNamed:@"play"] CGImage];
+      [self addSublayer:self.playButton];
+      self.playButton.position = CGPointMake(200, -100);
+      self.playButton.bounds = CGRectMake(0, 0, 120, 120);
+      self.playButton.opacity = 0;      
     }
     return self;
 }
@@ -45,6 +52,7 @@
   self.shadowOpacity = 0.8;
   self.shadowRadius = 8.0;
   self.shadowOffset = CGSizeMake(0, 5);
+  self.playButton.opacity = 1;
   
   CATransform3D transform = CATransform3DMakeScale(1.2, 1.2, 1.2);
   self.transform = transform;
@@ -54,7 +62,7 @@
   self.shadowOpacity = 0.6;
   self.shadowRadius = 5.0;
   self.shadowOffset = CGSizeMake(0, 3);
-
+  self.playButton.opacity = 0;
   self.transform = CATransform3DIdentity;
 }
 

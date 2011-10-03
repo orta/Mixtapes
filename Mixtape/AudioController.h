@@ -20,6 +20,10 @@
 @property (retain) SPPlaylist *currentPlaylist;
 @property () int trackIndex;
 
+- (void)nextTrack;
+- (void)previousTrack;
+- (void)playPause;
+
 -(void)prepare;
 -(audio_fifo_t*)audiofifo;
 -(NSInteger)session:(SPSession *)aSession shouldDeliverAudioFrames:(const void *)audioFrames ofCount:(NSInteger)frameCount format:(const sp_audioformat *)audioFormat;

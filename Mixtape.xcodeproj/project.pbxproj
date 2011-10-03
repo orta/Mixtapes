@@ -12,6 +12,7 @@
 		601088671438A85E008D3D9F /* audio.c in Sources */ = {isa = PBXBuildFile; fileRef = 601088631438A85E008D3D9F /* audio.c */; };
 		601088681438A85E008D3D9F /* osx-audio.c in Sources */ = {isa = PBXBuildFile; fileRef = 601088641438A85E008D3D9F /* osx-audio.c */; };
 		6010886A1438B6D8008D3D9F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601088691438B6D7008D3D9F /* AudioToolbox.framework */; };
+		6051C0C41439EF8200BD8CBA /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 6051C0C31439EF8200BD8CBA /* play.png */; };
 		6080869A1434FCDA0029BBC9 /* template.png in Resources */ = {isa = PBXBuildFile; fileRef = 608086991434FCDA0029BBC9 /* template.png */; };
 		6080869C143504B30029BBC9 /* loadingbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6080869B143504B30029BBC9 /* loadingbg.png */; };
 		608086CE14352A1C0029BBC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608086CD14352A1C0029BBC9 /* QuartzCore.framework */; };
@@ -64,6 +65,7 @@
 		601088661438A85E008D3D9F /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
 		601088691438B6D7008D3D9F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6010886B1438E529008D3D9F /* SettingsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsExample.h; sourceTree = "<group>"; };
+		6051C0C31439EF8200BD8CBA /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		608086991434FCDA0029BBC9 /* template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = template.png; sourceTree = "<group>"; };
 		6080869B143504B30029BBC9 /* loadingbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbg.png; sourceTree = "<group>"; };
 		608086CD14352A1C0029BBC9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -271,6 +273,7 @@
 		60B1FC211434BE530039206C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6051C0C31439EF8200BD8CBA /* play.png */,
 				6080869B143504B30029BBC9 /* loadingbg.png */,
 				608086991434FCDA0029BBC9 /* template.png */,
 				60947ED91434EE2B007024CD /* loading.png */,
@@ -387,6 +390,7 @@
 				60947EDA1434EE2B007024CD /* loading.png in Resources */,
 				6080869A1434FCDA0029BBC9 /* template.png in Resources */,
 				6080869C143504B30029BBC9 /* loadingbg.png in Resources */,
+				6051C0C41439EF8200BD8CBA /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
