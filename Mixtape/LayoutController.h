@@ -17,6 +17,7 @@
   NSMutableArray * _layers;
   NSMutableArray * _titleLayers;
   NSMutableArray * _playlistWrapperLayers;
+  NSMutableArray * _playlistSelectionIndex;
   
   int _currentplaylistIndex;
   NSMutableArray * _currentPlaylist; 
@@ -35,4 +36,5 @@
 @property (retain) NSMutableArray * titleLayers;
 @property (retain) NSMutableArray * currentPlaylist;
 @property (retain) NSMutableArray * playlistWrapperLayers;
+@property (retain) NSMutableArray * playlistSelectionIndex;
 @end

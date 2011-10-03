@@ -22,6 +22,11 @@ enum {
 - (void)hideAllPlaylistsButCurrent;
 - (int)playlistIndexForPoint:(CGPoint)point;
 - (void)transitionIntoPlaylistView;
+
+- (void)moveToCurrentTrack;
+- (int)currentPlaylistSelectionIndex;
+- (void)setCurrentPlaylistSeletionIndex:(int)index;
+
 @end
 
 
@@ -29,12 +34,14 @@ enum {
 
 @synthesize state = _state, layers = _layers, titleLayers = _titleLayers;
 @synthesize currentPlaylist = _currentPlaylist, playlistWrapperLayers = _playlistWrapperLayers;
+@synthesize playlistSelectionIndex = _playlistSelectionIndex;
 
 - (id)init {
   self = [super init];
   self.layers = [NSMutableArray array];
   self.titleLayers = [NSMutableArray array];
   self.playlistWrapperLayers = [NSMutableArray array];
+  self.playlistSelectionIndex = [NSMutableArray array];
   _playlistLayer = [[CALayer layer] retain];
   [canvas.layer addSublayer:_playlistLayer];
   self.state = LayoutsFloorView;
@@ -50,6 +57,7 @@ enum {
     PlaylistTitleLayer *label = [[PlaylistTitleLayer alloc] initWithPlaylist:playlist];
     [self.titleLayers addObject:label];
     [canvas.layer addSublayer:label];
+    [self.playlistSelectionIndex addObject:[NSNumber numberWithInt:0]];
     
     NSMutableArray * playlistLayerArray = [NSMutableArray array];
     [self.layers addObject:playlistLayerArray];
@@ -108,17 +116,27 @@ enum {
 
 - (IBAction)handleSwipeLeft:(UISwipeGestureRecognizer *)sender {
   if (self.state == LayoutsSinglePlaylist) {
-    CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
-        NSLog(@"left");
-//    wrapper.position = CGPointMake(wrapper.position.x + translate.x, wrapper.position.y);
+    int index = [self currentPlaylistSelectionIndex];
+    NSLog(@"left %i", index);
+
+    if ( index == ([self.currentPlaylist count] - 1) ) return;    
+    index = index + 1;
+    
+    [self setCurrentPlaylistSeletionIndex:index];
+    [self moveToCurrentTrack];
   }
 }
 
 - (IBAction)handleSwipeRight:(UISwipeGestureRecognizer *)sender {
   if (self.state == LayoutsSinglePlaylist) {
-    CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
-    NSLog(@"right");
-    //    wrapper.position = CGPointMake(wrapper.position.x + translate.x, wrapper.position.y);
+    int index = [self currentPlaylistSelectionIndex];
+    NSLog(@"right %i", index);
+    
+    if(index == 0) return;
+    index = index - 1;
+
+    [self setCurrentPlaylistSeletionIndex:index];
+    [self moveToCurrentTrack];
   }
 }
 
@@ -173,7 +191,7 @@ enum {
   
   CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
   wrapper.masksToBounds = NO;
-  wrapper.position = CGPointMake(0, 550);
+  [self moveToCurrentTrack];
   
   for (int i = 0; i < [self.currentPlaylist count]; i++) {
     CALayer * layer = [self.currentPlaylist objectAtIndex:i];
@@ -183,6 +201,14 @@ enum {
   
   self.state = LayoutsSinglePlaylist;
 }
+
+
+- (void) moveToCurrentTrack {
+  int index = [self currentPlaylistSelectionIndex];
+  CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
+  wrapper.position = CGPointMake((index * -340) + 280, wrapper.position.y); 
+}
+
 
 - (void)transitionIntoFloorView {
   for (int i = 0; i < [self.layers count]; i++) {
@@ -209,5 +235,12 @@ enum {
   self.state = LayoutsFloorView;
 }
 
+- (void)setCurrentPlaylistSeletionIndex:(int)index {
+  [self.playlistSelectionIndex  replaceObjectAtIndex:_currentplaylistIndex withObject:[NSNumber numberWithInt:index]];  
+}
+
+- (int) currentPlaylistSelectionIndex {
+  return [[self.playlistSelectionIndex objectAtIndex:_currentplaylistIndex] intValue];
+}
 
 @end
