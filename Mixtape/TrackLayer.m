@@ -46,6 +46,7 @@
   float angle = ( random() % 20 ) - 10;
   transform = CATransform3DRotate(transform, DegreesToRadians( angle ), 0, 0, 1);
   self.transform = transform;
+  self.playButton.opacity = 0;
 }
 
 - (void)turnToSelected {

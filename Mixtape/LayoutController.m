@@ -45,27 +45,29 @@ enum {
   _playlistLayer = [[CALayer layer] retain];
   [canvas.layer addSublayer:_playlistLayer];
   
-  songNameLayer = [[CATextLayer layer] retain];
-  songNameLayer.position = CGPointMake(200, 200);
-  songNameLayer.bounds = CGRectMake(0, 0, 400, 200);
-  songNameLayer.opacity = 1;
-  songNameLayer.string = @"ASDAFS";
-  songNameLayer.backgroundColor = [[UIColor colorWithRed:0 green:0 blue:0 alpha:0.7] CGColor];
-
-  [canvas.layer addSublayer:songNameLayer];
-  
-  
-  songArtistLayer = [[CATextLayer layer] retain];
-  songArtistLayer.position = CGPointMake(200, 700);
-  songArtistLayer.bounds = CGRectMake(0, 0, 400, 200);
-  songArtistLayer.opacity = 1;
-  [canvas.layer addSublayer:songArtistLayer];
   
   self.state = LayoutsFloorView;
   return self;
 }
 
 - (void) setupAlbumArtwork {
+  songNameLayer = [[CATextLayer layer] retain];
+  songNameLayer.position = CGPointMake(500, 700);
+  songNameLayer.bounds = CGRectMake(0, 0, 800, 200);
+  songNameLayer.opacity = 1;
+  songNameLayer.alignmentMode = kCAAlignmentLeft;
+  songNameLayer.string = @"";
+  [canvas.layer addSublayer:songNameLayer];
+  
+  
+  songArtistLayer = [[CATextLayer layer] retain];
+  songArtistLayer.position = CGPointMake(500, 750);
+  songArtistLayer.bounds = CGRectMake(0, 0, 800, 200);
+  songArtistLayer.opacity = 1;
+  songArtistLayer.alignmentMode = kCAAlignmentLeft;
+  [canvas.layer addSublayer:songArtistLayer];
+
+  
   MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
   
   for (int i = 0; i < [appDelegate.playlists count]; i++) {
@@ -162,7 +164,6 @@ enum {
       NSLog(@"loc %f, %f", tapPoint.x, tapPoint.y );
       CGRect centerCover = CGRectMake(200, 200, 400, 400);
       if ( CGRectContainsPoint(centerCover, tapPoint)) {
-        NSLog(@"tapped");
         MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
 
         [audio setCurrentPlaylist:[[appDelegate playlists] objectAtIndex:_currentplaylistIndex]];
@@ -233,7 +234,7 @@ enum {
 
     if(i == index) {
       [layer turnToSelected]; 
-      songArtistLayer.string = [[[layer track] artists] componentsJoinedByString:@" "];
+      songArtistLayer.string = [[[[layer track] artists] objectAtIndex:0] name];
       songNameLayer.string = [[layer track] name];
     }
     else {
@@ -247,6 +248,9 @@ enum {
 
 
 - (void)transitionIntoFloorView {
+  songNameLayer.opacity = 0;
+  songArtistLayer.opacity = 0;
+  
   for (int i = 0; i < [self.layers count]; i++) {
     NSMutableArray * playlist = [self.layers objectAtIndex:i];
     float x_center = ( 834 / [self.layers count] ) * (i + 1) - 155; 
