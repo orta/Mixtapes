@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
 
 @class AudioController;
 
@@ -24,6 +25,9 @@
   CALayer *_playlistLayer;
   
   IBOutlet AudioController * audio;
+  
+  CATextLayer *songNameLayer;
+  CATextLayer *songArtistLayer;
 }
 
 -(void)setupAlbumArtwork;

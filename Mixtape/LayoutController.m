@@ -44,6 +44,23 @@ enum {
   self.playlistSelectionIndex = [NSMutableArray array];
   _playlistLayer = [[CALayer layer] retain];
   [canvas.layer addSublayer:_playlistLayer];
+  
+  songNameLayer = [[CATextLayer layer] retain];
+  songNameLayer.position = CGPointMake(200, 200);
+  songNameLayer.bounds = CGRectMake(0, 0, 400, 200);
+  songNameLayer.opacity = 1;
+  songNameLayer.string = @"ASDAFS";
+  songNameLayer.backgroundColor = [[UIColor colorWithRed:0 green:0 blue:0 alpha:0.7] CGColor];
+
+  [canvas.layer addSublayer:songNameLayer];
+  
+  
+  songArtistLayer = [[CATextLayer layer] retain];
+  songArtistLayer.position = CGPointMake(200, 700);
+  songArtistLayer.bounds = CGRectMake(0, 0, 400, 200);
+  songArtistLayer.opacity = 1;
+  [canvas.layer addSublayer:songArtistLayer];
+  
   self.state = LayoutsFloorView;
   return self;
 }
@@ -153,7 +170,6 @@ enum {
         return;
       }
       
-      
       //fallback to hiding
       [self transitionIntoFloorView];
       break;
@@ -215,8 +231,14 @@ enum {
   for (int i = 0; i < [self.currentPlaylist count]; i++) {
     TrackLayer * layer = [self.currentPlaylist objectAtIndex:i];
 
-    if(i == index) [layer turnToSelected];
-    else [layer turnToUnSelected];
+    if(i == index) {
+      [layer turnToSelected]; 
+      songArtistLayer.string = [[[layer track] artists] componentsJoinedByString:@" "];
+      songNameLayer.string = [[layer track] name];
+    }
+    else {
+      [layer turnToUnSelected]; 
+    }
     
     // true if after selected track
     [layer reposition:( i > index )];

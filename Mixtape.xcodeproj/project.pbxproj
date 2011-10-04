@@ -16,7 +16,6 @@
 		6080869A1434FCDA0029BBC9 /* template.png in Resources */ = {isa = PBXBuildFile; fileRef = 608086991434FCDA0029BBC9 /* template.png */; };
 		6080869C143504B30029BBC9 /* loadingbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6080869B143504B30029BBC9 /* loadingbg.png */; };
 		608086CE14352A1C0029BBC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608086CD14352A1C0029BBC9 /* QuartzCore.framework */; };
-		608086D514352C200029BBC9 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608086D414352C1F0029BBC9 /* CoreImage.framework */; };
 		608086D714352C5A0029BBC9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608086D614352C5A0029BBC9 /* ImageIO.framework */; };
 		608086DA14359E350029BBC9 /* PlaylistTitleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 608086D914359E350029BBC9 /* PlaylistTitleLayer.m */; };
 		608086E01435AF1C0029BBC9 /* TrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 608086DF1435AF1C0029BBC9 /* TrackLayer.m */; };
@@ -147,7 +146,6 @@
 				6010886A1438B6D8008D3D9F /* AudioToolbox.framework in Frameworks */,
 				601088591438A33B008D3D9F /* AVFoundation.framework in Frameworks */,
 				608086D714352C5A0029BBC9 /* ImageIO.framework in Frameworks */,
-				608086D514352C200029BBC9 /* CoreImage.framework in Frameworks */,
 				608086CE14352A1C0029BBC9 /* QuartzCore.framework in Frameworks */,
 				60B1FC811434C0B50039206C /* CFNetwork.framework in Frameworks */,
 				60B1FC7F1434C0340039206C /* SystemConfiguration.framework in Frameworks */,
@@ -525,6 +523,7 @@
 				GCC_PREFIX_HEADER = "Mixtape/Mixtape-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Mixtape/Mixtape-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/vendor/spotify\"/**",
@@ -543,6 +542,7 @@
 				GCC_PREFIX_HEADER = "Mixtape/Mixtape-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Mixtape/Mixtape-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/vendor/spotify\"/**",

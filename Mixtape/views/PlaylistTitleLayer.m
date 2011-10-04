@@ -17,7 +17,6 @@
 - (id)initWithPlaylist:(SPPlaylist*)playlist {
     self = [super init];
     if (self) {
-      self.name = [NSString stringWithFormat:@"%i", [playlist hash]];
       self.string = playlist.name;
       self.cornerRadius = 8; 
       self.alignmentMode = kCAAlignmentCenter;
