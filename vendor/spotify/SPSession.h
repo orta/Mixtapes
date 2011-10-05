@@ -183,6 +183,10 @@ Playback
  */
 -(void)logout;
 
+
+-(void)pause;
+-(void)resume;
+
 /** Returns the current connection state.
  
  Possible values: 

@@ -14,7 +14,15 @@
 	sp_session *session;
   
   SPPlaylist *_currentSPPlaylist;
+  
   int _trackIndex;
+  BOOL _playing;
+  
+  IBOutlet UIImageView * _currentPlayingTrackImage;
+  IBOutlet UILabel * _currentPlayingTrackName;
+  IBOutlet UILabel * _currentPlayingTrackArtist;
+  IBOutlet UIButton * _playPauseButton;
+
 }
 
 @property (retain) SPPlaylist *currentPlaylist;
@@ -22,7 +30,7 @@
 
 - (void)nextTrack;
 - (void)previousTrack;
-- (void)playPause;
+- (IBAction)playPause:(id)sender;
 - (void)playTrackWithIndex:(int)index;
 
 -(void)prepare;

@@ -14,6 +14,10 @@
 @synthesize trackIndex = _trackIndex, currentPlaylist = _currentSPPlaylist;
 
 - (void)awakeFromNib {
+  _currentPlayingTrackArtist.text = @"";
+  _currentPlayingTrackName.text = @"";
+  _playing = NO;
+  
   [[AVAudioSession sharedInstance] setDelegate:self];
 	NSError *err = nil;
   BOOL success = YES;
@@ -34,8 +38,17 @@
   _trackIndex = index;
   _trackIndex = MIN(_trackIndex, [self.currentPlaylist.tracks count] - 1);
   _trackIndex = MAX(_trackIndex, 0);
+  
   NSMutableArray *tracks = self.currentPlaylist.tracks;
-  [[SPSession sharedSession] playTrack:[tracks objectAtIndex:_trackIndex] error:nil];
+  SPTrack *track = [tracks objectAtIndex:_trackIndex];
+  [[SPSession sharedSession] playTrack:track error:nil];
+  
+  _currentPlayingTrackImage.image = track.album.cover.image;
+  _currentPlayingTrackArtist.text = [track.album.artist name];
+  _currentPlayingTrackName.text = [track name];
+  _playPauseButton.imageView.image = [UIImage imageNamed:@"pause"];
+  _playing = YES;
+  
   if (_trackIndex < [tracks count] - 1) {
     [[SPSession sharedSession] preloadTrackForPlayback:[tracks objectAtIndex:_trackIndex + 1] error:nil];
   }
@@ -49,8 +62,14 @@
   [self playTrackWithIndex:_trackIndex - 1];
 }
 
-- (void) playPause{
-
+- (void) playPause:(id)sender {
+  if (_playing) {
+    [[SPSession sharedSession] pause];
+  }else{
+    [[SPSession sharedSession] resume];
+    _playPauseButton.imageView.image = [UIImage imageNamed:@"pause"];
+  }
+  _playing = !_playing;
 }
 
 -(audio_fifo_t*)audiofifo; {
@@ -65,6 +84,7 @@
 }
 
 -(NSInteger)session:(SPSession *)aSession shouldDeliverAudioFrames:(const void *)audioFrames ofCount:(NSInteger)frameCount format:(const sp_audioformat *)audioFormat {
+  NSLog(@"playing");
   audio_fifo_t *af = [self audiofifo];
 	audio_fifo_data_t *afd = NULL;
 	size_t s;

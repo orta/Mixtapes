@@ -21,6 +21,7 @@
 		608086E01435AF1C0029BBC9 /* TrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 608086DF1435AF1C0029BBC9 /* TrackLayer.m */; };
 		60947ED01434CE36007024CD /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60947ECF1434CE36007024CD /* bg.jpg */; };
 		60947EDA1434EE2B007024CD /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 60947ED91434EE2B007024CD /* loading.png */; };
+		60A19589143C750700EB89C9 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 60A19588143C750700EB89C9 /* pause.png */; };
 		60B1FC1B1434BE530039206C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B1FC1A1434BE530039206C /* UIKit.framework */; };
 		60B1FC1D1434BE530039206C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B1FC1C1434BE530039206C /* Foundation.framework */; };
 		60B1FC1F1434BE530039206C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B1FC1E1434BE530039206C /* CoreGraphics.framework */; };
@@ -76,6 +77,7 @@
 		608086DF1435AF1C0029BBC9 /* TrackLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackLayer.m; sourceTree = "<group>"; };
 		60947ECF1434CE36007024CD /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		60947ED91434EE2B007024CD /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
+		60A19588143C750700EB89C9 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		60B1FC161434BE530039206C /* Mixtape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixtape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B1FC1A1434BE530039206C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60B1FC1C1434BE530039206C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -271,6 +273,7 @@
 		60B1FC211434BE530039206C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				60A19588143C750700EB89C9 /* pause.png */,
 				6051C0C31439EF8200BD8CBA /* play.png */,
 				6080869B143504B30029BBC9 /* loadingbg.png */,
 				608086991434FCDA0029BBC9 /* template.png */,
@@ -389,6 +392,7 @@
 				6080869A1434FCDA0029BBC9 /* template.png in Resources */,
 				6080869C143504B30029BBC9 /* loadingbg.png in Resources */,
 				6051C0C41439EF8200BD8CBA /* play.png in Resources */,
+				60A19589143C750700EB89C9 /* pause.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,7 +527,7 @@
 				GCC_PREFIX_HEADER = "Mixtape/Mixtape-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Mixtape/Mixtape-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/vendor/spotify\"/**",
@@ -542,7 +546,7 @@
 				GCC_PREFIX_HEADER = "Mixtape/Mixtape-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Mixtape/Mixtape-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/vendor/spotify\"/**",

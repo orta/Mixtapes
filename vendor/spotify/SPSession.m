@@ -942,6 +942,15 @@ static SPSession *sharedSession;
 	return NO;
 }
 
+-(void)pause {
+	sp_session_player_play(session, false);
+}
+-(void)resume {
+	sp_session_player_play(session, true);
+}
+
+
+
 -(void)seekPlaybackToOffset:(NSTimeInterval)offset {
 	sp_session_player_seek(session, (int)offset * 1000);
 }
