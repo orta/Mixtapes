@@ -115,9 +115,13 @@
 }
 
 -(void) removeLoadingNotice {
-    
-	[self.loadingImage performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:0.0];
-	[self.loadingBackground performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:0.0];
+  [UIView beginAnimations:@"hideLoading" context:NULL];
+  [UIView setAnimationDuration:1.0];
+  [self.loadingImage setAlpha: 0];
+  [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
+  [UIView commitAnimations];
+  
+	[self.loadingImage performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:1.0];
 }
 
 - (void)dealloc {
