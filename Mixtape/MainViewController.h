@@ -13,6 +13,8 @@
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
   UIImageView *_loadingImage;
   UIImageView *_loadingBackground;
+  IBOutlet UIImageView *_background;
+  
   UIView *_CACanvasView;
   LayoutController *_layout;
 }

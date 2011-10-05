@@ -17,17 +17,20 @@
   
   int _trackIndex;
   BOOL _playing;
+  BOOL _showingController;
   
   IBOutlet UIImageView * _currentPlayingTrackImage;
   IBOutlet UILabel * _currentPlayingTrackName;
   IBOutlet UILabel * _currentPlayingTrackArtist;
   IBOutlet UIButton * _playPauseButton;
+  IBOutlet UIView * _controllerView;
 
 }
 
 @property (retain) SPPlaylist *currentPlaylist;
 @property () int trackIndex;
 
+- (void)animateControllerIn;
 - (void)nextTrack;
 - (void)previousTrack;
 - (IBAction)playPause:(id)sender;

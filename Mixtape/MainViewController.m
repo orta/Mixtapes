@@ -60,8 +60,7 @@
 	[super viewWillDisappear:animated];
 }
 
-- (void)viewDidDisappear:(BOOL)animated
-{
+- (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
 }
 
@@ -71,7 +70,14 @@
   if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
       return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
   } else {
-      return YES;
+    
+    if ( UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
+      _background.image = [UIImage imageNamed:@"bg2.jpg"];
+    }else{
+      _background.image = [UIImage imageNamed:@"bg.jpg"];      
+    }
+    
+  return YES;
   }
 }
 

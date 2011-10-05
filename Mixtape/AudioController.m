@@ -17,6 +17,11 @@
   _currentPlayingTrackArtist.text = @"";
   _currentPlayingTrackName.text = @"";
   _playing = NO;
+
+  _showingController = NO;
+  CGRect newLocation = _controllerView.frame;
+  newLocation.origin.y += 200;
+  _controllerView.frame = newLocation;
   
   [[AVAudioSession sharedInstance] setDelegate:self];
 	NSError *err = nil;
@@ -33,7 +38,10 @@
 }
 
 - (void)playTrackWithIndex:(int)index {
-  NSLog(@"track with index %i", index);
+  if(!_showingController){
+    [self animateControllerIn];
+  }
+  
   if (_trackIndex == index) return;
   _trackIndex = index;
   _trackIndex = MIN(_trackIndex, [self.currentPlaylist.tracks count] - 1);
@@ -84,7 +92,7 @@
 }
 
 -(NSInteger)session:(SPSession *)aSession shouldDeliverAudioFrames:(const void *)audioFrames ofCount:(NSInteger)frameCount format:(const sp_audioformat *)audioFormat {
-  NSLog(@"playing");
+
   audio_fifo_t *af = [self audiofifo];
 	audio_fifo_data_t *afd = NULL;
 	size_t s;
@@ -117,7 +125,19 @@
 	pthread_mutex_unlock(&af->mutex);
   
 	return frameCount;
+}
 
+- (void)animateControllerIn {
+  _showingController = YES;
+  [UIView beginAnimations:@"animationID" context:NULL];
+  [UIView setAnimationDuration:0.6];
+  
+  CGRect newLocation = _controllerView.frame;
+  newLocation.origin.y -= 200;
+  _controllerView.frame = newLocation;
+  
+  [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
+  [UIView commitAnimations];
 }
 
 
