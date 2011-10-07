@@ -127,7 +127,6 @@ enum {
     if (factor > 0.3) {
       [self transitionIntoFloorView];
     }
-    
   }
 }
 
@@ -161,7 +160,7 @@ enum {
   switch (self.state) {
     
     case LayoutsSinglePlaylist:
-      NSLog(@"loc %f, %f", tapPoint.x, tapPoint.y );
+      self; // I get weird errors if I have C code right after case's
       CGRect centerCover = CGRectMake(200, 200, 400, 400);
       if ( CGRectContainsPoint(centerCover, tapPoint)) {
         MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -176,7 +175,7 @@ enum {
       break;
     
     case LayoutsFloorView:
-      NSLog(@"touched");
+      self;
       int i  = [self playlistIndexForPoint:tapPoint];
       _currentplaylistIndex = i;
       self.currentPlaylist = [self.layers objectAtIndex:_currentplaylistIndex];
@@ -227,7 +226,7 @@ enum {
 - (void) moveToCurrentTrack {
   int index = [self currentPlaylistSelectionIndex];
   CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
-  wrapper.position = CGPointMake((index * -340) + 280, wrapper.position.y); 
+  wrapper.position = CGPointMake((index * -340) + 300, wrapper.position.y); 
     
   for (int i = 0; i < [self.currentPlaylist count]; i++) {
     TrackLayer * layer = [self.currentPlaylist objectAtIndex:i];
