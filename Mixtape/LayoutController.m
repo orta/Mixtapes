@@ -27,6 +27,8 @@ enum {
 - (int)currentPlaylistSelectionIndex;
 - (void)setCurrentPlaylistSeletionIndex:(int)index;
 
+- (BOOL)isIPhone;
+
 @end
 
 
@@ -258,7 +260,6 @@ enum {
     [label turnToLabel];
     label.position = CGPointMake( x_center + 80 + random() % 40, 260);
     
-    
     CALayer * wrapperLayer = [self.playlistWrapperLayers objectAtIndex:i];
     [wrapperLayer setPosition: CGPointMake( (random() % 20) + x_center, (random() % 20) + 531)];
     
@@ -280,6 +281,10 @@ enum {
 
 - (int) currentPlaylistSelectionIndex {
   return [[self.playlistSelectionIndex objectAtIndex:_currentplaylistIndex] intValue];
+}
+
+- (BOOL)isIPhone {
+  return ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone );
 }
 
 @end
