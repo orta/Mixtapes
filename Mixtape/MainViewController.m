@@ -30,7 +30,6 @@
 
 - (void)playlistsReady:(id)notification {
   [self removeLoadingNotice];
-  [self.audio prepare];
   [self.layout setupAlbumArtwork];
   [self.layout transitionIntoFloorView];
   [self.layout setupGestureReconition];

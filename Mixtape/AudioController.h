@@ -7,12 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "audio.h"
+#import "SPPlaybackManager.h"
 
 @interface AudioController : NSObject <SPSessionPlaybackDelegate> {
-  audio_fifo_t audiofifo;
-	sp_session *session;
-  
   SPPlaylist *_currentSPPlaylist;
   
   int _trackIndex;
@@ -25,9 +22,11 @@
   IBOutlet UIButton * _playPauseButton;
   IBOutlet UIView * _controllerView;
 
+  SPPlaybackManager *_playbackManager;
 }
 
 @property (retain) SPPlaylist *currentPlaylist;
+@property (retain) SPPlaybackManager *playbackManager;
 @property () int trackIndex;
 
 - (void)animateControllerIn;
@@ -35,8 +34,4 @@
 - (void)previousTrack;
 - (IBAction)playPause:(id)sender;
 - (void)playTrackWithIndex:(int)index;
-
--(void)prepare;
--(audio_fifo_t*)audiofifo;
--(NSInteger)session:(SPSession *)aSession shouldDeliverAudioFrames:(const void *)audioFrames ofCount:(NSInteger)frameCount format:(const sp_audioformat *)audioFormat;
 @end
