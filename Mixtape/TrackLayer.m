@@ -86,6 +86,7 @@
 
 
 -(void)albumArtReady:(id)notification {
+  NSLog(@"album art ready for %@", self.track.name);
   self.contents = (id)[[[[self.track album] cover] image] CGImage];
 }
 
