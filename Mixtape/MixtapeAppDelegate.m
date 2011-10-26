@@ -37,13 +37,24 @@ extern NSString *g_SpotifyFolder;
 }
 
 -(void) startSpotify {
-    srandom((unsigned int)time(NULL));
+  srandom((unsigned int)time(NULL));
 
-    [SPSession initializeSharedSessionWithApplicationKey:[NSData dataWithBytes:&g_appkey length:g_appkey_size]
+  [SPSession initializeSharedSessionWithApplicationKey:[NSData dataWithBytes:&g_appkey length:g_appkey_size]
                                                userAgent:@"com.ortatherox.mixmcshane"
                                                    error:nil];
-    [[SPSession sharedSession] setDelegate:self];
-    [[SPSession sharedSession] attemptLoginWithUserName:g_SpotifyUsername password:g_SpotifyPassword rememberCredentials:YES];
+
+  SPSession * session = [SPSession sharedSession];
+  session.delegate = self;
+  
+  if ([session storedCredentialsUserName] == nil) {
+    [session attemptLoginWithUserName:g_SpotifyUsername password:g_SpotifyPassword rememberCredentials:YES];    
+  }else{ 
+    NSError *error;
+    [session attemptLoginWithStoredCredentials:&error];
+//    if (error) {
+//      NSLog(@"error logging in %@", [error localizedDescription]);
+//    }
+  }
 }
 
 -(void)sessionDidLoginSuccessfully:(SPSession *)aSession; {
