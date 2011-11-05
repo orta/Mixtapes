@@ -92,10 +92,12 @@
 
 
 - (void)monitorForLoaded {
-  if( ( self.track.album.cover == nil ) && (_monitorCount++ < 10) ) {
+  if( ( [self.track.album.cover image] == nil ) && (_monitorCount++ < 10) ) {
     [self performSelector:_cmd withObject:nil afterDelay:1.0];
     return;
   }
+    NSLog(@"album art ready 2 for %@", self.track.name);
+  
   self.contents = (id)[[[[self.track album] cover] image] CGImage];
 }
 

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SPPlaybackManager.h"
 
-@interface AudioController : NSObject <SPSessionPlaybackDelegate> {
+@interface AudioController : NSObject <SPSessionPlaybackDelegate, SPPlaybackManagerDelegate> {
   SPPlaylist *_currentSPPlaylist;
   
   int _trackIndex;

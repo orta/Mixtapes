@@ -87,8 +87,9 @@ enum {
     [canvas.layer addSublayer:wrapperLayer];
     [self.playlistWrapperLayers addObject:wrapperLayer];
         
-    for (int j = 0; j < [playlist.tracks count] ; j++) {
-      SPTrack *track = [playlist.tracks objectAtIndex:j];
+    for (int j = 0; j < [playlist.items count] ; j++) {
+      SPTrack *track = [[playlist.items objectAtIndex:j] item];
+        
       TrackLayer * layer = [[TrackLayer alloc] initWithTrack:track];
       [playlistLayerArray addObject:layer];
       

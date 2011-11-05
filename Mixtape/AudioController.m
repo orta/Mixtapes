@@ -23,24 +23,42 @@
   CGRect newLocation = _controllerView.frame;
   newLocation.origin.y += 200;
   _controllerView.frame = newLocation;
-
-  self.playbackManager = [[[SPPlaybackManager alloc] initWithPlaybackSession:[SPSession sharedSession]] autorelease];
+    
 }
 
+-(void)playbackManagerWillStartPlayingAudio:(SPPlaybackManager *)aPlaybackManager{ 
+    NSLog(@"started playing");
+}
+
+
 - (void)playTrackWithIndex:(int)index {
+    if(self.playbackManager == nil){
+        self.playbackManager = [[[SPPlaybackManager alloc] initWithPlaybackSession:[SPSession sharedSession]] autorelease];
+        self.playbackManager.delegate = self;       
+    }
+
   if(!_showingController){
     [self animateControllerIn];
   }
   
-  if (_trackIndex == index) return;
+  if ( _playing &&  (_trackIndex == index) ) return;
   _trackIndex = index;
-  _trackIndex = MIN(_trackIndex, [self.currentPlaylist.tracks count] - 1);
+  _trackIndex = MIN(_trackIndex, [self.currentPlaylist.items count] - 1);
   _trackIndex = MAX(_trackIndex, 0);
   
-  NSMutableArray *tracks = self.currentPlaylist.tracks;
-  SPTrack *track = [tracks objectAtIndex:_trackIndex];
-  [[SPSession sharedSession] playTrack:track error:nil];
-  
+  NSMutableArray *tracks = self.currentPlaylist.items;
+  SPTrack *track = [[tracks objectAtIndex:_trackIndex] item];
+    
+    NSError *error = nil;
+    BOOL playing = [self.playbackManager playTrack:track error:&error];
+    if (playing) {
+        NSLog(@"playing?");
+    }
+    
+    if( error && [error isKindOfClass:[NSError class]]) {
+        NSLog(@"playback error %@", [error localizedDescription]);
+    }
+    
   _currentPlayingTrackImage.image = track.album.cover.image;
   _currentPlayingTrackArtist.text = [track.album.artist name];
   _currentPlayingTrackName.text = [track name];
@@ -48,7 +66,7 @@
   _playing = YES;
   
   if (_trackIndex < [tracks count] - 1) {
-    [[SPSession sharedSession] preloadTrackForPlayback:[tracks objectAtIndex:_trackIndex + 1] error:nil];
+    [[SPSession sharedSession] preloadTrackForPlayback:[[tracks objectAtIndex:_trackIndex + 1] item] error:nil];
   }
 }
 
@@ -62,10 +80,10 @@
 
 - (void) playPause:(id)sender {
   if (_playing) {
-#warning fix this
-    [[SPSession sharedSession] pause];
+      [SPSession sharedSession].playing = NO;
+       _playPauseButton.imageView.image = [UIImage imageNamed:@"play"];
   }else{
-    [[SPSession sharedSession] resume];
+      [SPSession sharedSession].playing = YES;
     _playPauseButton.imageView.image = [UIImage imageNamed:@"pause"];
   }
   _playing = !_playing;
