@@ -15,6 +15,8 @@
   IBOutlet UIView * canvas;
   int _state;
 
+  IBOutlet UIActivityIndicatorView *loadingActivityView;
+    
   NSMutableArray * _layers;
   NSMutableArray * _titleLayers;
   NSMutableArray * _playlistWrapperLayers;
