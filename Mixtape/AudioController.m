@@ -90,10 +90,8 @@
 }
 
 // someone else is using the app
--(void)sessionDidLosePlayToken:(SPSession *)aSession{}
-
--(void)sessionDidEndPlayback:(SPSession *)aSession{
-  [self nextTrack];
+- (void)playbackManagerDidFinishPlayingAudio:(SPPlaybackManager *)aPlaybackManager {
+  [self nextTrack];    
 }
 
 - (void)animateControllerIn {

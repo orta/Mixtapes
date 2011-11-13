@@ -51,6 +51,7 @@ enum {
   self.state = LayoutsFloorView;
   return self;
 }
+
 - (void) setupAlbumArtwork {
     [loadingActivityView stopAnimating];
   songNameLayer = [[CATextLayer layer] retain];
