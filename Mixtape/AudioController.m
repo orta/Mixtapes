@@ -90,7 +90,7 @@
 }
 
 // someone else is using the app
-- (void)playbackManagerDidFinishPlayingAudio:(SPPlaybackManager *)aPlaybackManager {
+- (void)playbackManagerWillStopPlayingAudio:(SPPlaybackManager *)aPlaybackManager {
   [self nextTrack];    
 }
 

@@ -1,3 +1,3 @@
 [submodule "vendor/cocoalibspotify"]
 	path = vendor/cocoalibspotify
-	url = https://github.com/spotify/cocoalibspotify.git
+	url = git@github.com:orta/cocoalibspotify.git
