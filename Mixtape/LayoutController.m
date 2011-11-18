@@ -14,8 +14,8 @@
 #import "AudioController.h"
 
 enum {
-  LayoutsFloorView = 1,
-  LayoutsSinglePlaylist = 2
+    LayoutsFloorView = 1,
+    LayoutsSinglePlaylist = 2
 };
 
 @interface LayoutController(private)
@@ -28,7 +28,7 @@ enum {
 - (void)setCurrentPlaylistSeletionIndex:(int)index;
 
 - (BOOL)isIPhone;
-
+- (BOOL)isPortrait;
 @end
 
 
@@ -39,254 +39,277 @@ enum {
 @synthesize playlistSelectionIndex = _playlistSelectionIndex;
 
 - (id)init {
-  self = [super init];
-  self.layers = [NSMutableArray array];
-  self.titleLayers = [NSMutableArray array];
-  self.playlistWrapperLayers = [NSMutableArray array];
-  self.playlistSelectionIndex = [NSMutableArray array];
-  _playlistLayer = [[CALayer layer] retain];
-  [canvas.layer addSublayer:_playlistLayer];
-  
-  
-  self.state = LayoutsFloorView;
-  return self;
+    self = [super init];
+    self.layers = [NSMutableArray array];
+    self.titleLayers = [NSMutableArray array];
+    self.playlistWrapperLayers = [NSMutableArray array];
+    self.playlistSelectionIndex = [NSMutableArray array];
+    _playlistLayer = [[CALayer layer] retain];
+    [canvas.layer addSublayer:_playlistLayer];
+    
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(orientationChanged:)
+                                                 name:UIDeviceOrientationDidChangeNotification
+                                               object:nil];
+    
+    self.state = LayoutsFloorView;
+    return self;
+}
+
+- (void)orientationChanged:(NSNotification *)notification {
+    switch (self.state) {
+        case LayoutsFloorView:
+            [self transitionIntoFloorView];
+            break;
+        case LayoutsSinglePlaylist:
+            [self transitionIntoPlaylistView];
+            break;
+    }
 }
 
 - (void) setupAlbumArtwork {
     [loadingActivityView stopAnimating];
-  songNameLayer = [[CATextLayer layer] retain];
-  songNameLayer.position = CGPointMake(500, 700);
-  songNameLayer.bounds = CGRectMake(0, 0, 800, 200);
-  songNameLayer.opacity = 1;
-  songNameLayer.alignmentMode = kCAAlignmentLeft;
-  songNameLayer.string = @"";
-  [canvas.layer addSublayer:songNameLayer];
-  
-  
-  songArtistLayer = [[CATextLayer layer] retain];
-  songArtistLayer.position = CGPointMake(500, 750);
-  songArtistLayer.bounds = CGRectMake(0, 0, 800, 200);
-  songArtistLayer.opacity = 1;
-  songArtistLayer.alignmentMode = kCAAlignmentLeft;
-  [canvas.layer addSublayer:songArtistLayer];
-
-  
-  MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
-  
-  for (int i = 0; i < [appDelegate.playlists count]; i++) {
-    SPPlaylist * playlist = [appDelegate.playlists objectAtIndex:i];
+    songNameLayer = [[CATextLayer layer] retain];
+    songNameLayer.position = CGPointMake(500, 700);
+    songNameLayer.bounds = CGRectMake(0, 0, 800, 200);
+    songNameLayer.opacity = 1;
+    songNameLayer.alignmentMode = kCAAlignmentLeft;
+    songNameLayer.string = @"";
+    [canvas.layer addSublayer:songNameLayer];
     
-    PlaylistTitleLayer *label = [[PlaylistTitleLayer alloc] initWithPlaylist:playlist];
-    [self.titleLayers addObject:label];
-    [canvas.layer addSublayer:label];
-    [self.playlistSelectionIndex addObject:[NSNumber numberWithInt:0]];
     
-    NSMutableArray * playlistLayerArray = [NSMutableArray array];
-    [self.layers addObject:playlistLayerArray];
+    songArtistLayer = [[CATextLayer layer] retain];
+    songArtistLayer.position = CGPointMake(500, 750);
+    songArtistLayer.bounds = CGRectMake(0, 0, 800, 200);
+    songArtistLayer.opacity = 1;
+    songArtistLayer.alignmentMode = kCAAlignmentLeft;
+    [canvas.layer addSublayer:songArtistLayer];
     
-    CALayer *wrapperLayer = [CALayer layer];
-    [canvas.layer addSublayer:wrapperLayer];
-    [self.playlistWrapperLayers addObject:wrapperLayer];
+    
+    MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    for (int i = 0; i < [appDelegate.playlists count]; i++) {
+        SPPlaylist * playlist = [appDelegate.playlists objectAtIndex:i];
         
-    for (int j = 0; j < [playlist.items count] ; j++) {
-      SPTrack *track = [[playlist.items objectAtIndex:j] item];
+        PlaylistTitleLayer *label = [[PlaylistTitleLayer alloc] initWithPlaylist:playlist];
+        [self.titleLayers addObject:label];
+        [canvas.layer addSublayer:label];
+        [self.playlistSelectionIndex addObject:[NSNumber numberWithInt:0]];
         
-      TrackLayer * layer = [[TrackLayer alloc] initWithTrack:track];
-      [playlistLayerArray addObject:layer];
-      
-      // get Z ordering correct 
-      if ([[wrapperLayer sublayers] count])
-        [wrapperLayer insertSublayer:layer below:[[wrapperLayer sublayers] lastObject]];  
-      else
-        [wrapperLayer addSublayer:layer];
+        NSMutableArray * playlistLayerArray = [NSMutableArray array];
+        [self.layers addObject:playlistLayerArray];
+        
+        CALayer *wrapperLayer = [CALayer layer];
+        [canvas.layer addSublayer:wrapperLayer];
+        [self.playlistWrapperLayers addObject:wrapperLayer];
+        
+        for (int j = 0; j < [playlist.items count] ; j++) {
+            SPTrack *track = [[playlist.items objectAtIndex:j] item];
+            
+            TrackLayer * layer = [[TrackLayer alloc] initWithTrack:track];
+            [playlistLayerArray addObject:layer];
+            
+            // get Z ordering correct 
+            if ([[wrapperLayer sublayers] count])
+                [wrapperLayer insertSublayer:layer below:[[wrapperLayer sublayers] lastObject]];  
+            else
+                [wrapperLayer addSublayer:layer];
+        }
     }
-  }
 }
 
 -(void)setupGestureReconition { 
-  UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc]
-                                              initWithTarget:self action:@selector(handleTap:)];
-  singleFingerTap.numberOfTapsRequired = 1;
-  [canvas addGestureRecognizer:singleFingerTap];
-  [singleFingerTap release];
-
-  UISwipeGestureRecognizer* swipe;
-  swipe = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeLeft:)] autorelease];
-  swipe.direction = UISwipeGestureRecognizerDirectionLeft;
-  [canvas addGestureRecognizer:swipe];
-  
-  swipe = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeRight:)] autorelease];
-  swipe.direction = UISwipeGestureRecognizerDirectionRight; // default
-  [canvas addGestureRecognizer:swipe];
-  
-  UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc]
-                                            initWithTarget:self action:@selector(handlePinchGesture:)];
-  [canvas addGestureRecognizer:pinchGesture];
-  [pinchGesture release];
+    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc]
+                                               initWithTarget:self action:@selector(handleTap:)];
+    singleFingerTap.numberOfTapsRequired = 1;
+    [canvas addGestureRecognizer:singleFingerTap];
+    [singleFingerTap release];
+    
+    UISwipeGestureRecognizer* swipe;
+    swipe = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeLeft:)] autorelease];
+    swipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [canvas addGestureRecognizer:swipe];
+    
+    swipe = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeRight:)] autorelease];
+    swipe.direction = UISwipeGestureRecognizerDirectionRight; // default
+    [canvas addGestureRecognizer:swipe];
+    
+    UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc]
+                                              initWithTarget:self action:@selector(handlePinchGesture:)];
+    [canvas addGestureRecognizer:pinchGesture];
+    [pinchGesture release];
 }
 
 - (IBAction)handlePinchGesture:(UIGestureRecognizer *)sender {
-  if (self.state == LayoutsSinglePlaylist) {
-    CGFloat factor = [(UIPinchGestureRecognizer *)sender scale];
-    if (factor > 0.3) {
-      [self transitionIntoFloorView];
+    if (self.state == LayoutsSinglePlaylist) {
+        CGFloat factor = [(UIPinchGestureRecognizer *)sender scale];
+        if (factor > 0.3) {
+            [self transitionIntoFloorView];
+        }
     }
-  }
 }
 
 - (IBAction)handleSwipeLeft:(UISwipeGestureRecognizer *)sender {
-  if (self.state == LayoutsSinglePlaylist) {
-    int index = [self currentPlaylistSelectionIndex];
-
-    if ( index == ([self.currentPlaylist count] - 1) ) return;    
-    index = index + 1;
-    
-    [self setCurrentPlaylistSeletionIndex:index];
-    [self moveToCurrentTrack];
-  }
+    if (self.state == LayoutsSinglePlaylist) {
+        int index = [self currentPlaylistSelectionIndex];
+        
+        if ( index == ([self.currentPlaylist count] - 1) ) return;    
+        index = index + 1;
+        
+        [self setCurrentPlaylistSeletionIndex:index];
+        [self moveToCurrentTrack];
+    }
 }
 
 - (IBAction)handleSwipeRight:(UISwipeGestureRecognizer *)sender {
-  if (self.state == LayoutsSinglePlaylist) {
-    int index = [self currentPlaylistSelectionIndex];
-    
-    if(index == 0) return;
-    index = index - 1;
-
-    [self setCurrentPlaylistSeletionIndex:index];
-    [self moveToCurrentTrack];
-  }
+    if (self.state == LayoutsSinglePlaylist) {
+        int index = [self currentPlaylistSelectionIndex];
+        
+        if(index == 0) return;
+        index = index - 1;
+        
+        [self setCurrentPlaylistSeletionIndex:index];
+        [self moveToCurrentTrack];
+    }
 }
 
 - (IBAction)handleTap:(UIGestureRecognizer *)sender {
-  CGPoint tapPoint = [sender locationInView:sender.view.superview];
-  
-  switch (self.state) {
+    CGPoint tapPoint = [sender locationInView:sender.view.superview];
     
-    case LayoutsSinglePlaylist:
-      self; // I get weird errors if I have C code right after case's
-      CGRect centerCover = CGRectMake(200, 200, 400, 400);
-      if ( CGRectContainsPoint(centerCover, tapPoint)) {
-        MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
-
-        [audio setCurrentPlaylist:[[appDelegate playlists] objectAtIndex:_currentplaylistIndex]];
-        [audio playTrackWithIndex:[self currentPlaylistSelectionIndex]];
-        return;
-      }
-      
-      //fallback to hiding
-      [self transitionIntoFloorView];
-      break;
-    
-    case LayoutsFloorView:
-      self;
-      int i  = [self playlistIndexForPoint:tapPoint];
-      _currentplaylistIndex = i;
-      self.currentPlaylist = [self.layers objectAtIndex:_currentplaylistIndex];
-      [self hideAllPlaylistsButCurrent];
-      [self transitionIntoPlaylistView];
-      break;
-  }
+    switch (self.state) {
+            
+        case LayoutsSinglePlaylist:
+            self; // I get weird errors if I have C code right after case's
+            CGRect centerCover = CGRectMake(200, 200, 400, 400);
+            if ( CGRectContainsPoint(centerCover, tapPoint)) {
+                MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
+                
+                [audio setCurrentPlaylist:[[appDelegate playlists] objectAtIndex:_currentplaylistIndex]];
+                [audio playTrackWithIndex:[self currentPlaylistSelectionIndex]];
+                return;
+            }
+            
+            //fallback to hiding
+            [self transitionIntoFloorView];
+            break;
+            
+        case LayoutsFloorView:
+            self;
+            int i  = [self playlistIndexForPoint:tapPoint];
+            _currentplaylistIndex = i;
+            self.currentPlaylist = [self.layers objectAtIndex:_currentplaylistIndex];
+            [self hideAllPlaylistsButCurrent];
+            [self transitionIntoPlaylistView];
+            break;
+    }
 }
 
 - (int) playlistIndexForPoint:(CGPoint) point{
-  MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
-  float eachSectionWidth = 1024 / [appDelegate.playlists count];
-  float x = point.x;
-  int i = -1;
-  while (x > 0) {
-    x -= eachSectionWidth;
-    i++;
-  }
-  return i;
+    MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
+    float eachSectionWidth = 1024 / [appDelegate.playlists count];
+    float x = point.x;
+    int i = -1;
+    while (x > 0) {
+        x -= eachSectionWidth;
+        i++;
+    }
+    return i;
 }
 
 - (void)hideAllPlaylistsButCurrent {
-  for (int i = 0; i < [self.layers count]; i++) {
-    NSMutableArray * otherPlaylist = [self.layers objectAtIndex:i];
-    for (CALayer * layer in otherPlaylist) {
-      if (otherPlaylist == self.currentPlaylist) layer.opacity = 1;
-      else layer.opacity = 0;
+    for (int i = 0; i < [self.layers count]; i++) {
+        NSMutableArray * otherPlaylist = [self.layers objectAtIndex:i];
+        for (CALayer * layer in otherPlaylist) {
+            if (otherPlaylist == self.currentPlaylist) layer.opacity = 1;
+            else layer.opacity = 0;
+        }
     }
-  }
 }
 
 - (void)transitionIntoPlaylistView {
-  for (int i = 0; i < [self.titleLayers count]; i++) {
-    CALayer *layer = [self.titleLayers objectAtIndex:i];
-    layer.opacity = 0;
-  }
-  
-  for (int i = 0; i < [self.currentPlaylist count]; i++) {
-    CALayer *layer = [self.currentPlaylist objectAtIndex:i];
-    layer.position = CGPointMake(i * 340, 0);
-  }
-
-  [self moveToCurrentTrack];
-  self.state = LayoutsSinglePlaylist;
+    for (int i = 0; i < [self.titleLayers count]; i++) {
+        CALayer *layer = [self.titleLayers objectAtIndex:i];
+        layer.opacity = 0;
+    }
+    
+    for (int i = 0; i < [self.currentPlaylist count]; i++) {
+        CALayer *layer = [self.currentPlaylist objectAtIndex:i];
+        layer.position = CGPointMake(i * 340, 0);
+    }
+    
+    [self moveToCurrentTrack];
+    self.state = LayoutsSinglePlaylist;
 }
 
 
 - (void) moveToCurrentTrack {
-  int index = [self currentPlaylistSelectionIndex];
-  CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
-  wrapper.position = CGPointMake((index * -340) + 300, wrapper.position.y); 
+    int index = [self currentPlaylistSelectionIndex];
+    CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
+    wrapper.position = CGPointMake((index * -340) + 300, wrapper.position.y); 
     
-  for (int i = 0; i < [self.currentPlaylist count]; i++) {
-    TrackLayer * layer = [self.currentPlaylist objectAtIndex:i];
-
-    if(i == index) {
-      [layer turnToSelected]; 
-      songArtistLayer.string = [[[[layer track] artists] objectAtIndex:0] name];
-      songNameLayer.string = [[layer track] name];
-    }
-    else {
-      [layer turnToUnSelected]; 
-    }
-    
-    // true if after selected track
-    [layer reposition:( i > index )];
-  } 
+    for (int i = 0; i < [self.currentPlaylist count]; i++) {
+        TrackLayer * layer = [self.currentPlaylist objectAtIndex:i];
+        
+        if(i == index) {
+            [layer turnToSelected]; 
+            songArtistLayer.string = [[[[layer track] artists] objectAtIndex:0] name];
+            songNameLayer.string = [[layer track] name];
+        }
+        else {
+            [layer turnToUnSelected]; 
+        }
+        
+        // true if after selected track
+        [layer reposition:( i > index )];
+    } 
 }
 
 
 - (void)transitionIntoFloorView {
-  songNameLayer.opacity = 0;
-  songArtistLayer.opacity = 0;
-  
-  for (int i = 0; i < [self.layers count]; i++) {
-    NSMutableArray * playlist = [self.layers objectAtIndex:i];
-    float x_center = ( 834 / [self.layers count] ) * (i + 1) - 155; 
+    songNameLayer.opacity = 0;
+    songArtistLayer.opacity = 0;
     
-    PlaylistTitleLayer * label = [self.titleLayers objectAtIndex:i];
-    [label turnToLabel];
-    label.position = CGPointMake( x_center + 80 + random() % 40, 260);
-    
-    CALayer * wrapperLayer = [self.playlistWrapperLayers objectAtIndex:i];
-    [wrapperLayer setPosition: CGPointMake( (random() % 20) + x_center, (random() % 20) + 531)];
-    
-    for (int j = [playlist count] - 1; j > -1 ; j--) {
-      TrackLayer *layer = [playlist objectAtIndex:j];
-      [layer turnToThumbnail];
-      layer.position = CGPointMake(0, 0);
-      if (j < 5) layer.opacity = 1;
-      else layer.opacity = 0;
+    for (int i = 0; i < [self.layers count]; i++) {
+        NSMutableArray * playlist = [self.layers objectAtIndex:i];
+        
+        float x_center = ( canvas.frame.size.width / [self.layers count] ) * (i + 1); 
+        
+        
+        PlaylistTitleLayer * label = [self.titleLayers objectAtIndex:i];
+        [label turnToLabel];
+        label.position = CGPointMake( x_center + 80 + random() % 40, 260);
+        
+        CALayer * wrapperLayer = [self.playlistWrapperLayers objectAtIndex:i];
+        [wrapperLayer setPosition: CGPointMake( (random() % 20) + x_center, (random() % 20) + 531)];
+        
+        for (int j = [playlist count] - 1; j > -1 ; j--) {
+            TrackLayer *layer = [playlist objectAtIndex:j];
+            [layer turnToThumbnail];
+            layer.position = CGPointMake(0, 0);
+            if (j < 5) layer.opacity = 1;
+            else layer.opacity = 0;
+        }
     }
-  }
-  
-  self.state = LayoutsFloorView;
+    
+    self.state = LayoutsFloorView;
 }
 
 - (void)setCurrentPlaylistSeletionIndex:(int)index {
-  [self.playlistSelectionIndex  replaceObjectAtIndex:_currentplaylistIndex withObject:[NSNumber numberWithInt:index]];  
+    [self.playlistSelectionIndex  replaceObjectAtIndex:_currentplaylistIndex withObject:[NSNumber numberWithInt:index]];  
 }
 
 - (int) currentPlaylistSelectionIndex {
-  return [[self.playlistSelectionIndex objectAtIndex:_currentplaylistIndex] intValue];
+    return [[self.playlistSelectionIndex objectAtIndex:_currentplaylistIndex] intValue];
 }
 
+- (BOOL)isPortrait {
+    return UIDeviceOrientationIsPortrait([[UIDevice currentDevice] orientation]);
+}
+
+
 - (BOOL)isIPhone {
-  return ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone );
+    return ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone );
 }
 
 @end
