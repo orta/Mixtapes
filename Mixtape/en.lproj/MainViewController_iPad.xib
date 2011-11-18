@@ -125,7 +125,7 @@
 					</object>
 					<object class="IBUIActivityIndicatorView" id="46434212">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">301</int>
 						<string key="NSFrame">{{493, 446}, {37, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
@@ -218,7 +218,6 @@
 								<string key="NSFrame">{{301, -10}, {121, 121}}</string>
 								<reference key="NSSuperview" ref="878246342"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:241</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
