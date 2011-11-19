@@ -139,8 +139,6 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application{}
 
-- (void)applicationWillTerminate:(UIApplication *)application{
-	[[UIApplication sharedApplication] endReceivingRemoteControlEvents];
-}
+- (void)applicationWillTerminate:(UIApplication *)application{}
 
 @end
