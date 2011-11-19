@@ -13,6 +13,7 @@
 		602D4C151458834300CB8CF7 /* mixtapes114.png in Resources */ = {isa = PBXBuildFile; fileRef = 602D4C141458834300CB8CF7 /* mixtapes114.png */; };
 		602D4C171458836200CB8CF7 /* mixtapes57.png in Resources */ = {isa = PBXBuildFile; fileRef = 602D4C161458836200CB8CF7 /* mixtapes57.png */; };
 		6051C0C41439EF8200BD8CBA /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 6051C0C31439EF8200BD8CBA /* play.png */; };
+		606E99D71476936900DB1646 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E99D61476936900DB1646 /* Constants.m */; };
 		6080869A1434FCDA0029BBC9 /* template.png in Resources */ = {isa = PBXBuildFile; fileRef = 608086991434FCDA0029BBC9 /* template.png */; };
 		6080869C143504B30029BBC9 /* loadingbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6080869B143504B30029BBC9 /* loadingbg.png */; };
 		608086CE14352A1C0029BBC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608086CD14352A1C0029BBC9 /* QuartzCore.framework */; };
@@ -68,6 +69,8 @@
 		602D4C141458834300CB8CF7 /* mixtapes114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mixtapes114.png; path = ../mixtapes114.png; sourceTree = "<group>"; };
 		602D4C161458836200CB8CF7 /* mixtapes57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mixtapes57.png; path = ../mixtapes57.png; sourceTree = "<group>"; };
 		6051C0C31439EF8200BD8CBA /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		606E99D51476936900DB1646 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Constants/Constants.h; sourceTree = "<group>"; };
+		606E99D61476936900DB1646 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Constants/Constants.m; sourceTree = "<group>"; };
 		608086991434FCDA0029BBC9 /* template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = template.png; sourceTree = "<group>"; };
 		6080869B143504B30029BBC9 /* loadingbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbg.png; sourceTree = "<group>"; };
 		608086CD14352A1C0029BBC9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -141,6 +144,15 @@
 			);
 			name = "spotify audio";
 			path = ../vendor;
+			sourceTree = "<group>";
+		};
+		606E99D81476937200DB1646 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				606E99D51476936900DB1646 /* Constants.h */,
+				606E99D61476936900DB1646 /* Constants.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		608086DB14359E750029BBC9 /* Views */ = {
@@ -227,6 +239,7 @@
 		60B1FC201434BE530039206C /* Mixtape */ = {
 			isa = PBXGroup;
 			children = (
+				606E99D81476937200DB1646 /* Util */,
 				60DD0ABD143892B7006C1934 /* Settings.h */,
 				6010886B1438E529008D3D9F /* SettingsExample.h */,
 				608086DD14359E860029BBC9 /* Nibs */,
@@ -359,6 +372,7 @@
 				601088611438A722008D3D9F /* AudioController.m in Sources */,
 				60A99FDB143F3A2100ED5D11 /* SPCircularBuffer.m in Sources */,
 				60A99FDC143F3A2100ED5D11 /* SPPlaybackManager.m in Sources */,
+				606E99D71476936900DB1646 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

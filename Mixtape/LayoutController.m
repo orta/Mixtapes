@@ -12,6 +12,7 @@
 #import "TrackLayer.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AudioController.h"
+#import "Constants.h"
 
 enum {
     LayoutsFloorView = 1,
@@ -29,6 +30,7 @@ enum {
 
 - (BOOL)isIPhone;
 - (BOOL)isPortrait;
+
 @end
 
 
@@ -52,7 +54,7 @@ enum {
                                              selector:@selector(orientationChanged:)
                                                  name:UIDeviceOrientationDidChangeNotification
                                                object:nil];
-    
+
     self.state = LayoutsFloorView;
     return self;
 }
@@ -86,6 +88,10 @@ enum {
     songArtistLayer.alignmentMode = kCAAlignmentLeft;
     [canvas.layer addSublayer:songArtistLayer];
     
+    if ([self isIPhone]) {
+        CATransform3D transform = CATransform3DMakeScale(0.6, 0.6, 0.6);
+        canvas.layer.transform = transform;
+    }
     
     MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
     
@@ -273,12 +279,11 @@ enum {
     for (int i = 0; i < [self.layers count]; i++) {
         NSMutableArray * playlist = [self.layers objectAtIndex:i];
         
-        float x_center = ( canvas.frame.size.width / [self.layers count] ) * (i + 1); 
-        
+        float x_center = ( canvas.frame.size.width / [self.layers count] ) * (i + 1) - ( ORArtworkIpadWidth / 2 ); 
         
         PlaylistTitleLayer * label = [self.titleLayers objectAtIndex:i];
         [label turnToLabel];
-        label.position = CGPointMake( x_center + 80 + random() % 40, 260);
+        label.position = CGPointMake( x_center + 80 + random() % 40, 280);
         
         CALayer * wrapperLayer = [self.playlistWrapperLayers objectAtIndex:i];
         [wrapperLayer setPosition: CGPointMake( (random() % 20) + x_center, (random() % 20) + 531)];
