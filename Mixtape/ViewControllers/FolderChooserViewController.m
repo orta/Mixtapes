@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     folders = [[NSMutableArray array] mutableCopy];
+    NSURL *url = [[NSURL alloc] initWithString: @"spotify://track" ];
+    spotifyButton.hidden = ![[UIApplication sharedApplication] canOpenURL:url];
     [self searchForFolders];
 }
 
@@ -26,7 +28,8 @@
         [self performSelector:_cmd withObject:nil afterDelay:0.5];
         return;
     }
-
+    
+    NSLog(@"found playlist");
     for (id playlistOrFolder in [[SPSession sharedSession] userPlaylists].playlists) {
         if ([playlistOrFolder isKindOfClass:[SPPlaylistFolder class]]) {
             [folders addObject:playlistOrFolder];
@@ -35,7 +38,16 @@
     [tableView reloadData];
 }
 
+- (IBAction)loadSpotify:(id)sender {
+    NSURL *url = [[NSURL alloc] initWithString: @"spotify://playlists" ];
+    [[UIApplication sharedApplication] openURL: url];   
+}
+
 #pragma mark table view data source
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 23.0f;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [folders count];

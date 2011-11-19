@@ -10,9 +10,10 @@
 
 @interface FolderChooserViewController : UIViewController <UITableViewDataSource, UITableViewDelegate > {
     NSMutableArray * folders;
+    IBOutlet UIButton * spotifyButton;
 }
 @property (retain, nonatomic) IBOutlet UITableView *tableView;
-
+- (IBAction)loadSpotify:(id)sender;
 
 
 @end
