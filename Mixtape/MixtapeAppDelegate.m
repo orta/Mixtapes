@@ -47,9 +47,8 @@
     
     SPSession * session = [SPSession sharedSession];
     session.delegate = self; 
-    NSLog(@"%@ UESR",[session storedCredentialsUserName]);
 
-    if ([session storedCredentialsUserName] == nil) {
+    if (![session storedCredentialsUserName]) {
         [self showLoginController];
     }else{ 
 #warning add error messages
@@ -63,21 +62,13 @@
 }
 
 - (void)sessionDidLoginSuccessfully:(SPSession *)aSession; {
-    
-    SPSession * session = [SPSession sharedSession];
-
-    NSLog(@"%@ UESR",[session storedCredentialsUserName]);
-
     [self.window.rootViewController dismissModalViewControllerAnimated:NO];
-    if ([[NSUserDefaults standardUserDefaults] integerForKey:ORFolderID] != 0) {
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:ORFolderID]) {
         [self waitAndFillTrackPool];        
     }else{
         [self showFolderController];
     }
-}
-
--(void)session:(SPSession *)aSession didLogMessage:(NSString *)aMessage; {
-    //    NSLog(@"msg: %@", aMessage);
 }
 
 -(void)waitAndFillTrackPool {
