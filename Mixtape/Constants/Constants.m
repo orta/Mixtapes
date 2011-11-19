@@ -10,6 +10,8 @@
 
 NSString * const ORUserAgent = @"com.ortatherox.mixmcshane";
 NSString * const ORLoginFailed = @"ORLoginFailed";
+NSString * const ORFolderChosen = @"ORFolderChosen";
+
 
 NSString * const ORFolderID = @"ORFolderID";
 NSString * const ORCellReuseID = @"ORCellReuseID";

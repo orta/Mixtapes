@@ -8,17 +8,21 @@
 
 #import "FolderChooserViewController.h"
 
+@interface FolderChooserViewController (private)
+- (void)searchForFolders;
+@end
+
 @implementation FolderChooserViewController
 @synthesize tableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    folders = [NSMutableArray array];
+    folders = [[NSMutableArray array] mutableCopy];
     [self searchForFolders];
 }
 
-- (void)searchForFolders{
-    if ([[SPSession sharedSession] userPlaylists].playlists == nil) {
+- (void)searchForFolders {
+    if ([[[SPSession sharedSession] userPlaylists].playlists count] == 0) {
         [self performSelector:_cmd withObject:nil afterDelay:0.5];
         return;
     }
@@ -28,6 +32,7 @@
             [folders addObject:playlistOrFolder];
         } 
     }
+    [tableView reloadData];
 }
 
 #pragma mark table view data source
@@ -36,19 +41,28 @@
     return [folders count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:ORCellReuseID];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ORCellReuseID];
     }
-    
+    SPPlaylistFolder * folder = [folders objectAtIndex:indexPath.row];
+    cell.textLabel.text = folder.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%i playlists", [[folder playlists] count]];
     return cell;
 
 }
 
 
 #pragma mark table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    SPPlaylistFolder * folder = [folders objectAtIndex:indexPath.row];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithUnsignedLongLong:folder.folderId] forKey:ORFolderID];
+    [[NSNotificationCenter defaultCenter] postNotificationName: ORFolderChosen
+                                                        object: nil];
+
+}
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
