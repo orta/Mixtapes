@@ -12,10 +12,6 @@
 #import "LoginViewController.h"
 #import "FolderChooserViewController.h"
 
-extern NSString *g_SpotifyUsername;
-extern NSString *g_SpotifyPassword;
-extern NSString *g_SpotifyFolder;
-
 @interface MixtapeAppDelegate (private)
 - (void)showLoginController;
 - (void)showFolderController;
