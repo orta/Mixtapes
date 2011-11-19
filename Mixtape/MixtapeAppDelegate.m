@@ -48,11 +48,10 @@
     
     SPSession * session = [SPSession sharedSession];
     session.delegate = self; 
-
+    
     if (![session storedCredentialsUserName]) {
         [self showLoginController];
     }else{ 
-#warning add error messages
         NSLog(@"logged in as %@", [session storedCredentialsUserName]);
         [session attemptLoginWithStoredCredentials:nil];
     }
@@ -83,7 +82,9 @@
     BOOL found = FALSE;
     NSNumber * folderIDNumber = [[NSUserDefaults standardUserDefaults] objectForKey:ORFolderID];
     uint64_t folderID = [folderIDNumber unsignedLongLongValue];
-    for (id playlistOrFolder in [[SPSession sharedSession] userPlaylists].playlists) {
+    NSArray * playlists =  [[SPSession sharedSession] userPlaylists].playlists;
+    
+    for (id playlistOrFolder in playlists) {
         if ([playlistOrFolder isKindOfClass:[SPPlaylistFolder class]]) {
             SPPlaylistFolder * folder = playlistOrFolder;
             if (folder.folderId == folderID) {
@@ -100,16 +101,16 @@
 }
 
 - (void)waitForPlaylistsToLoad {
-    for (SPPlaylistItem * playlist in self.playlists) {
-        if ([playlist isKindOfClass:[SPPlaylistFolder class]]) {
-            if ([[playlist items] loaded] == NO) {
+    for (id item in self.playlists) {
+        if ([item isKindOfClass:[SPPlaylist class]]) {
+            SPPlaylist *playlist = item;
+            if ([playlist isLoaded] == NO) {
                 [self performSelector:_cmd withObject:nil afterDelay:0.5];
                 return;
             }
         }
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PlaylistsSet" object:self];
-
 }
 
 - (void)showLoginController {
@@ -137,7 +138,14 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application{}
 
-- (void)applicationDidBecomeActive:(UIApplication *)application{}
+- (void)applicationDidBecomeActive:(UIApplication *)application{    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:ORAppResetKey]) {
+        SPSession * session = [SPSession sharedSession];
+        [session logout];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:ORAppResetKey];
+        [self startSpotify];
+    }
+}
 
 - (void)applicationWillTerminate:(UIApplication *)application{}
 

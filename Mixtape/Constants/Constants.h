@@ -14,6 +14,7 @@ extern NSString * const ORFolderChosen;
 
 // Constants
 extern NSString * const ORUserAgent;
+extern NSString * const ORAppResetKey;
 
 extern NSString * const ORFolderID;
 extern NSString * const ORCellReuseID;
