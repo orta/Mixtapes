@@ -52,6 +52,7 @@
         [self showLoginController];
     }else{ 
 #warning add error messages
+        NSLog(@"logged in as %@", [session storedCredentialsUserName]);
         [session attemptLoginWithStoredCredentials:nil];
     }
 }
@@ -120,6 +121,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application{}
 
-- (void)applicationWillTerminate:(UIApplication *)application{}
+- (void)applicationWillTerminate:(UIApplication *)application{
+	[[UIApplication sharedApplication] endReceivingRemoteControlEvents];
+}
 
 @end
