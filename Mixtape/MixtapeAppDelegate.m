@@ -15,6 +15,7 @@
 @interface MixtapeAppDelegate (private)
 - (void)showLoginController;
 - (void)showFolderController;
+- (void)waitForPlaylistsToLoad;
 @end
 
 @implementation MixtapeAppDelegate
@@ -73,7 +74,11 @@
 }
 
 -(void)waitAndFillTrackPool {
-	
+	if ([[[SPSession sharedSession] userPlaylists] isLoaded] == NO) {
+        [self performSelector:_cmd withObject:nil afterDelay:0.5];
+        return;
+    }
+    
 	// It can take a while for playlists to load, especially on a large account
     BOOL found = FALSE;
     NSNumber * folderIDNumber = [[NSUserDefaults standardUserDefaults] objectForKey:ORFolderID];
@@ -83,7 +88,7 @@
             SPPlaylistFolder * folder = playlistOrFolder;
             if (folder.folderId == folderID) {
                 self.playlists = folder.playlists;
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"PlaylistsSet" object:self];
+                [self waitForPlaylistsToLoad];
                 found = YES;
             }
         } 
@@ -92,6 +97,19 @@
         [self performSelector:_cmd withObject:nil afterDelay:1.0];
         return;
     }
+}
+
+- (void)waitForPlaylistsToLoad {
+    for (SPPlaylistItem * playlist in self.playlists) {
+        if ([playlist isKindOfClass:[SPPlaylistFolder class]]) {
+            if ([[playlist items] loaded] == NO) {
+                [self performSelector:_cmd withObject:nil afterDelay:0.5];
+                return;
+            }
+        }
+    }
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"PlaylistsSet" object:self];
+
 }
 
 - (void)showLoginController {

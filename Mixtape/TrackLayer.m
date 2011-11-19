@@ -16,87 +16,98 @@
 - (id)initWithTrack:(SPTrack*)track {
     self = [super init];
     if (self) {
-      self.name = [NSString stringWithFormat:@"%i", [track hash]];
-      self.contents = (id)[[UIImage imageNamed:@"template"] CGImage];
-      self.track = track;
-      
-      self.anchorPoint = CGPointMake(0.5, 0.5);
-      [self turnToThumbnail];
-      
-      self.shadowColor = [[UIColor blackColor] CGColor];
-      self.shadowOpacity = 0.6;
-      self.shadowRadius = 5.0;
-      self.shadowOffset = CGSizeMake(0, 3);
-      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(albumArtReady:)  name:@"loaded" object: self.track.album.cover];
-      _monitorCount = 0;
-      [self monitorForLoaded];
-      
-      self.playButton = [CALayer layer];
-      self.playButton.contents =  (id)[[UIImage imageNamed:@"play"] CGImage];
-      [self addSublayer:self.playButton];
-      self.playButton.position = CGPointMake(200, -100);
-      self.playButton.bounds = CGRectMake(0, 0, 120, 120);
-      self.playButton.opacity = 0;      
+        self.name = [NSString stringWithFormat:@"%i", [track hash]];
+        self.contents = (id)[[UIImage imageNamed:@"template"] CGImage];
+        self.track = track;
+        
+        self.anchorPoint = CGPointMake(0.5, 0.5);
+        [self turnToThumbnail];
+        
+        self.shadowColor = [[UIColor blackColor] CGColor];
+        self.shadowOpacity = 0.6;
+        self.shadowRadius = 5.0;
+        self.shadowOffset = CGSizeMake(0, 3);
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(albumArtReady:)  name:@"loaded" object: self.track.album.cover];
+        _monitorCount = 0;
+        [self monitorForLoaded];
+        
+        self.playButton = [CALayer layer];
+        self.playButton.contents =  (id)[[UIImage imageNamed:@"play"] CGImage];
+        [self addSublayer:self.playButton];
+        self.playButton.position = CGPointMake(200, -100);
+        self.playButton.bounds = CGRectMake(0, 0, 120, 120);
+        self.playButton.opacity = 0;
+        
+        [self addObserver:self forKeyPath:@"self.album.cover.image" options:NSKeyValueObservingOptionInitial context:nil];
+
     }
     return self;
 }
 
 - (void)turnToThumbnail {
-  CATransform3D transform = CATransform3DMakeScale(0.7, 0.7, 0.7);
-  float angle = ( random() % 20 ) - 10;
-  transform = CATransform3DRotate(transform, DegreesToRadians( angle ), 0, 0, 1);
-  self.transform = transform;
-  self.playButton.opacity = 0;
+    CATransform3D transform = CATransform3DMakeScale(0.7, 0.7, 0.7);
+    float angle = ( random() % 20 ) - 10;
+    transform = CATransform3DRotate(transform, DegreesToRadians( angle ), 0, 0, 1);
+    self.transform = transform;
+    self.playButton.opacity = 0;
 }
 
 - (void)turnToSelected {
-  self.shadowOpacity = 0.8;
-  self.shadowRadius = 8.0;
-  self.shadowOffset = CGSizeMake(0, 5);
-  self.playButton.opacity = 1;
-  
-  CATransform3D transform = CATransform3DMakeScale(1.2, 1.2, 1.2);
-  self.transform = transform;
+    self.shadowOpacity = 0.8;
+    self.shadowRadius = 8.0;
+    self.shadowOffset = CGSizeMake(0, 5);
+    self.playButton.opacity = 1;
+    
+    CATransform3D transform = CATransform3DMakeScale(1.2, 1.2, 1.2);
+    self.transform = transform;
 }
 
 - (void)turnToUnSelected {
-  self.shadowOpacity = 0.6;
-  self.shadowRadius = 5.0;
-  self.shadowOffset = CGSizeMake(0, 3);
-  self.playButton.opacity = 0;
-  self.transform = CATransform3DIdentity;
+    self.shadowOpacity = 0.6;
+    self.shadowRadius = 5.0;
+    self.shadowOffset = CGSizeMake(0, 3);
+    self.playButton.opacity = 0;
+    self.transform = CATransform3DIdentity;
 }
 
 - (void)reposition:(BOOL)shouldMove {
-  if(shouldMove && _shifted) return;
-  if(!shouldMove && !_shifted) return;
-  
-  int toMove = 60;
-  if(shouldMove && !_shifted) {
-    // should move right
-    self.position = CGPointMake(self.position.x + toMove, self.position.y);
-    _shifted = YES;
-  }
-  if(!shouldMove && _shifted) {
-    // should move back
-    self.position = CGPointMake(self.position.x - toMove, self.position.y);
-    _shifted = NO;
-  }
+    if(shouldMove && _shifted) return;
+    if(!shouldMove && !_shifted) return;
+    
+    int toMove = 60;
+    if(shouldMove && !_shifted) {
+        // should move right
+        self.position = CGPointMake(self.position.x + toMove, self.position.y);
+        _shifted = YES;
+    }
+    if(!shouldMove && _shifted) {
+        // should move back
+        self.position = CGPointMake(self.position.x - toMove, self.position.y);
+        _shifted = NO;
+    }
 }
 
 
 -(void)albumArtReady:(id)notification {
-  self.contents = (id)[[[[self.track album] cover] image] CGImage];
+    self.contents = (id)[[[[self.track album] cover] image] CGImage];
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    NSLog(@"loaded an image!");
+            NSLog(@"passed for %@", self.track.name);
+    self.contents = (id)[[[[self.track album] cover] image] CGImage];
+}
 
 - (void)monitorForLoaded {
-  if( ( [self.track.album.cover image] == nil ) && (_monitorCount++ < 10) ) {
-    [self performSelector:_cmd withObject:nil afterDelay:1.0];
-    return;
-  }
-  self.contents = (id)[[[[self.track album] cover] image] CGImage];
-}
+    
+    if( [self.track.album.cover isLoaded] ){
+        NSLog(@"passed for %@", self.track.name);
+        self.contents = (id)[[[[self.track album] cover] image] CGImage];
+        [self removeObserver:self forKeyPath:@"self.album.cover.image"];
 
+        return;
+    }
+    [self performSelector:_cmd withObject:nil afterDelay:1.0];
+}
 
 @end

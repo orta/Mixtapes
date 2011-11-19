@@ -13,7 +13,6 @@
   SPPlaylist *_currentSPPlaylist;
   
   int _trackIndex;
-  BOOL _playing;
   BOOL _showingController;
   
   IBOutlet UIImageView * _currentPlayingTrackImage;
