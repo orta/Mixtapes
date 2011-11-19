@@ -148,7 +148,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		601088621438A84F008D3D9F /* spotify audio */ = {
+		601088621438A84F008D3D9F /* Spotify Audio */ = {
 			isa = PBXGroup;
 			children = (
 				60A99FD7143F3A2100ED5D11 /* SPCircularBuffer.h */,
@@ -156,7 +156,7 @@
 				60A99FD9143F3A2100ED5D11 /* SPPlaybackManager.h */,
 				60A99FDA143F3A2100ED5D11 /* SPPlaybackManager.m */,
 			);
-			name = "spotify audio";
+			name = "Spotify Audio";
 			path = ../vendor;
 			sourceTree = "<group>";
 		};
@@ -269,14 +269,14 @@
 		60B1FC201434BE530039206C /* Mixtape */ = {
 			isa = PBXGroup;
 			children = (
-				606E9A1114774E8C00DB1646 /* Assets */,
-				606E99D81476937200DB1646 /* Util */,
 				60DD0ABD143892B7006C1934 /* Settings.h */,
 				6010886B1438E529008D3D9F /* SettingsExample.h */,
-				608086DD14359E860029BBC9 /* Nibs */,
+				606E9A1114774E8C00DB1646 /* Assets */,
 				608086DC14359E7B0029BBC9 /* Controllers */,
 				608086DB14359E750029BBC9 /* Views */,
-				601088621438A84F008D3D9F /* spotify audio */,
+				608086DD14359E860029BBC9 /* Nibs */,
+				601088621438A84F008D3D9F /* Spotify Audio */,
+				606E99D81476937200DB1646 /* Util */,
 				60B1FC211434BE530039206C /* Supporting Files */,
 			);
 			path = Mixtape;
