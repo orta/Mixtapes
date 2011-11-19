@@ -14,6 +14,10 @@
 		602D4C171458836200CB8CF7 /* mixtapes57.png in Resources */ = {isa = PBXBuildFile; fileRef = 602D4C161458836200CB8CF7 /* mixtapes57.png */; };
 		6051C0C41439EF8200BD8CBA /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 6051C0C31439EF8200BD8CBA /* play.png */; };
 		606E99D71476936900DB1646 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E99D61476936900DB1646 /* Constants.m */; };
+		606E9A0F14774D7E00DB1646 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E9A0D14774D7E00DB1646 /* LoginViewController.m */; };
+		606E9A1014774D7E00DB1646 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 606E9A0E14774D7E00DB1646 /* LoginViewController.xib */; };
+		606E9A1314774EA500DB1646 /* loginview.png in Resources */ = {isa = PBXBuildFile; fileRef = 606E9A1214774EA500DB1646 /* loginview.png */; };
+		606E9A231477593D00DB1646 /* loginbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 606E9A221477593D00DB1646 /* loginbg.jpg */; };
 		6080869A1434FCDA0029BBC9 /* template.png in Resources */ = {isa = PBXBuildFile; fileRef = 608086991434FCDA0029BBC9 /* template.png */; };
 		6080869C143504B30029BBC9 /* loadingbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6080869B143504B30029BBC9 /* loadingbg.png */; };
 		608086CE14352A1C0029BBC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608086CD14352A1C0029BBC9 /* QuartzCore.framework */; };
@@ -71,6 +75,11 @@
 		6051C0C31439EF8200BD8CBA /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		606E99D51476936900DB1646 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Constants/Constants.h; sourceTree = "<group>"; };
 		606E99D61476936900DB1646 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Constants/Constants.m; sourceTree = "<group>"; };
+		606E9A0C14774D7E00DB1646 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/LoginViewController.h; sourceTree = "<group>"; };
+		606E9A0D14774D7E00DB1646 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/LoginViewController.m; sourceTree = "<group>"; };
+		606E9A0E14774D7E00DB1646 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ViewControllers/LoginViewController.xib; sourceTree = "<group>"; };
+		606E9A1214774EA500DB1646 /* loginview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginview.png; sourceTree = "<group>"; };
+		606E9A221477593D00DB1646 /* loginbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginbg.jpg; sourceTree = "<group>"; };
 		608086991434FCDA0029BBC9 /* template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = template.png; sourceTree = "<group>"; };
 		6080869B143504B30029BBC9 /* loadingbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbg.png; sourceTree = "<group>"; };
 		608086CD14352A1C0029BBC9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -155,6 +164,16 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		606E9A1114774E8C00DB1646 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				606E9A221477593D00DB1646 /* loginbg.jpg */,
+				606E9A1214774EA500DB1646 /* loginview.png */,
+			);
+			name = Assets;
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		608086DB14359E750029BBC9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +198,9 @@
 				60E600C2143790F00096BBB4 /* LayoutController.m */,
 				6010885F1438A722008D3D9F /* AudioController.h */,
 				601088601438A722008D3D9F /* AudioController.m */,
+				606E9A0C14774D7E00DB1646 /* LoginViewController.h */,
+				606E9A0D14774D7E00DB1646 /* LoginViewController.m */,
+				606E9A0E14774D7E00DB1646 /* LoginViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -239,6 +261,7 @@
 		60B1FC201434BE530039206C /* Mixtape */ = {
 			isa = PBXGroup;
 			children = (
+				606E9A1114774E8C00DB1646 /* Assets */,
 				606E99D81476937200DB1646 /* Util */,
 				60DD0ABD143892B7006C1934 /* Settings.h */,
 				6010886B1438E529008D3D9F /* SettingsExample.h */,
@@ -352,6 +375,9 @@
 				60A1958E143C977700EB89C9 /* bg2.jpg in Resources */,
 				602D4C151458834300CB8CF7 /* mixtapes114.png in Resources */,
 				602D4C171458836200CB8CF7 /* mixtapes57.png in Resources */,
+				606E9A1014774D7E00DB1646 /* LoginViewController.xib in Resources */,
+				606E9A1314774EA500DB1646 /* loginview.png in Resources */,
+				606E9A231477593D00DB1646 /* loginbg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +399,7 @@
 				60A99FDB143F3A2100ED5D11 /* SPCircularBuffer.m in Sources */,
 				60A99FDC143F3A2100ED5D11 /* SPPlaybackManager.m in Sources */,
 				606E99D71476936900DB1646 /* Constants.m in Sources */,
+				606E9A0F14774D7E00DB1646 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

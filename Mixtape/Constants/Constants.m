@@ -7,3 +7,6 @@
 //
 
 #import "Constants.h"
+
+
+NSString * const ORLoginFailed = @"ORLoginFailed";
