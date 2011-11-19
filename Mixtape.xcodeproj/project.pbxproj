@@ -10,6 +10,8 @@
 		601088591438A33B008D3D9F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601088581438A33B008D3D9F /* AVFoundation.framework */; };
 		601088611438A722008D3D9F /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601088601438A722008D3D9F /* AudioController.m */; };
 		6010886A1438B6D8008D3D9F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601088691438B6D7008D3D9F /* AudioToolbox.framework */; };
+		60257AF514775F7800E3A53F /* FolderChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60257AF314775F7800E3A53F /* FolderChooserViewController.m */; };
+		60257AF614775F7800E3A53F /* FolderChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60257AF414775F7800E3A53F /* FolderChooserViewController.xib */; };
 		602D4C151458834300CB8CF7 /* mixtapes114.png in Resources */ = {isa = PBXBuildFile; fileRef = 602D4C141458834300CB8CF7 /* mixtapes114.png */; };
 		602D4C171458836200CB8CF7 /* mixtapes57.png in Resources */ = {isa = PBXBuildFile; fileRef = 602D4C161458836200CB8CF7 /* mixtapes57.png */; };
 		6051C0C41439EF8200BD8CBA /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 6051C0C31439EF8200BD8CBA /* play.png */; };
@@ -70,6 +72,9 @@
 		601088601438A722008D3D9F /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
 		601088691438B6D7008D3D9F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6010886B1438E529008D3D9F /* SettingsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsExample.h; sourceTree = "<group>"; };
+		60257AF214775F7800E3A53F /* FolderChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FolderChooserViewController.h; path = ViewControllers/FolderChooserViewController.h; sourceTree = "<group>"; };
+		60257AF314775F7800E3A53F /* FolderChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FolderChooserViewController.m; path = ViewControllers/FolderChooserViewController.m; sourceTree = "<group>"; };
+		60257AF414775F7800E3A53F /* FolderChooserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FolderChooserViewController.xib; path = ViewControllers/FolderChooserViewController.xib; sourceTree = "<group>"; };
 		602D4C141458834300CB8CF7 /* mixtapes114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mixtapes114.png; path = ../mixtapes114.png; sourceTree = "<group>"; };
 		602D4C161458836200CB8CF7 /* mixtapes57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mixtapes57.png; path = ../mixtapes57.png; sourceTree = "<group>"; };
 		6051C0C31439EF8200BD8CBA /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
@@ -201,6 +206,9 @@
 				606E9A0C14774D7E00DB1646 /* LoginViewController.h */,
 				606E9A0D14774D7E00DB1646 /* LoginViewController.m */,
 				606E9A0E14774D7E00DB1646 /* LoginViewController.xib */,
+				60257AF214775F7800E3A53F /* FolderChooserViewController.h */,
+				60257AF314775F7800E3A53F /* FolderChooserViewController.m */,
+				60257AF414775F7800E3A53F /* FolderChooserViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -378,6 +386,7 @@
 				606E9A1014774D7E00DB1646 /* LoginViewController.xib in Resources */,
 				606E9A1314774EA500DB1646 /* loginview.png in Resources */,
 				606E9A231477593D00DB1646 /* loginbg.jpg in Resources */,
+				60257AF614775F7800E3A53F /* FolderChooserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +409,7 @@
 				60A99FDC143F3A2100ED5D11 /* SPPlaybackManager.m in Sources */,
 				606E99D71476936900DB1646 /* Constants.m in Sources */,
 				606E9A0F14774D7E00DB1646 /* LoginViewController.m in Sources */,
+				60257AF514775F7800E3A53F /* FolderChooserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

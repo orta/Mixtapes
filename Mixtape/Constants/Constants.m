@@ -8,5 +8,8 @@
 
 #import "Constants.h"
 
-
+NSString * const ORUserAgent = @"com.ortatherox.mixmcshane";
 NSString * const ORLoginFailed = @"ORLoginFailed";
+
+NSString * const ORFolderID = @"ORFolderID";
+NSString * const ORCellReuseID = @"ORCellReuseID";

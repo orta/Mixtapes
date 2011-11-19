@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-static const float ORArtworkIpadWidth = 460;
-
 // Notifications
 extern NSString * const ORLoginFailed;
+
+// Constants
+extern NSString * const ORUserAgent;
+
+extern NSString * const ORFolderID;
+extern NSString * const ORCellReuseID;
+
+static const float ORArtworkIpadWidth = 460;

@@ -10,11 +10,16 @@
 #import "MainViewController.h"
 #import "Settings.h"
 #import "LoginViewController.h"
+#import "FolderChooserViewController.h"
 
 extern NSString *g_SpotifyUsername;
 extern NSString *g_SpotifyPassword;
 extern NSString *g_SpotifyFolder;
 
+@interface MixtapeAppDelegate (private)
+- (void)showLoginController;
+- (void)showFolderController;
+@end
 
 @implementation MixtapeAppDelegate
 
@@ -41,22 +46,16 @@ extern NSString *g_SpotifyFolder;
     srandom((unsigned int)time(NULL));
     
     [SPSession initializeSharedSessionWithApplicationKey:[NSData dataWithBytes:&g_appkey length:g_appkey_size]
-                                               userAgent:@"com.ortatherox.mixmcshane"
+                                               userAgent:ORUserAgent
                                                    error:nil];
     
     SPSession * session = [SPSession sharedSession];
     session.delegate = self;    
     if ([session storedCredentialsUserName] == nil) {
-        LoginViewController *controller = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-        controller.modalPresentationStyle = UIModalPresentationFormSheet;
-        [self.window.rootViewController presentModalViewController:controller animated:YES];
-        
+        [self showLoginController];
     }else{ 
-        NSError *error;
-        [session attemptLoginWithStoredCredentials:&error];
-        //    if (error) {
-        //      NSLog(@"error logging in %@", [error localizedDescription]);
-        //    }
+#warning add error messages
+        [session attemptLoginWithStoredCredentials:nil];
     }
 }
 
@@ -67,7 +66,11 @@ extern NSString *g_SpotifyFolder;
 
 - (void)sessionDidLoginSuccessfully:(SPSession *)aSession; {
     [self.window.rootViewController dismissModalViewControllerAnimated:YES];
-    [self waitAndFillTrackPool];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:ORFolderID]) {
+        [self waitAndFillTrackPool];        
+    }else{
+        [self showFolderController];
+    }
 }
 
 -(void)session:(SPSession *)aSession didLogMessage:(NSString *)aMessage; {
@@ -92,6 +95,18 @@ extern NSString *g_SpotifyFolder;
         [self performSelector:_cmd withObject:nil afterDelay:1.0];
         return;
     }
+}
+
+- (void)showLoginController {
+    LoginViewController *controller = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    controller.modalPresentationStyle = UIModalPresentationFormSheet;
+    [self.window.rootViewController presentModalViewController:controller animated:YES];
+}
+
+- (void)showFolderController {
+    FolderChooserViewController *controller = [[FolderChooserViewController alloc] initWithNibName:@"FolderChooserViewController" bundle:nil];
+    controller.modalPresentationStyle = UIModalPresentationFormSheet;
+    [self.window.rootViewController presentModalViewController:controller animated:YES];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application{}
