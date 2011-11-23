@@ -8,6 +8,7 @@
 
 #import "AudioController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "SPTrack+Debug.h"
 
 @implementation AudioController
 
@@ -25,10 +26,18 @@
     
 }
 
+#pragma mark playing / pausing delegate callbacks
+
 -(void)playbackManagerWillStartPlayingAudio:(SPPlaybackManager *)aPlaybackManager{ 
     NSLog(@"started playing");
 }
 
+// someone else is using the app
+- (void)playbackManagerWillStopPlayingAudio:(SPPlaybackManager *)aPlaybackManager {
+    [self nextTrack];    
+}
+
+# pragma mark playing /pausing audio
 
 - (void)playTrackWithIndex:(int)index {
     if(self.playbackManager == nil){
@@ -47,6 +56,7 @@
     
     NSMutableArray *tracks = self.currentPlaylist.items;
     SPTrack *track = [[tracks objectAtIndex:_trackIndex] item];
+    [track printDebugInfo];
     
     NSError *error = nil;
     [self.playbackManager playTrack:track error:&error];
@@ -76,16 +86,12 @@
     NSLog(@"play pause");
     [SPSession sharedSession].playing = ![SPSession sharedSession].playing;
     if ([SPSession sharedSession].playing) {
-        _playPauseButton.imageView.image = [UIImage imageNamed:@"play"];
-    }else{
         _playPauseButton.imageView.image = [UIImage imageNamed:@"pause"];
+    }else{
+        _playPauseButton.imageView.image = [UIImage imageNamed:@"play"];
     }
 }
 
-// someone else is using the app
-- (void)playbackManagerWillStopPlayingAudio:(SPPlaybackManager *)aPlaybackManager {
-    [self nextTrack];    
-}
 
 - (void)animateControllerIn {
     _showingController = YES;

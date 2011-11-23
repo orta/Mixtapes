@@ -10,6 +10,11 @@
 
 #define DegreesToRadians(x) (M_PI * x / 180.0)
 
+@interface TrackLayer (private)
+- (void) requestArtwork;
+- (void)albumArtReady:(id)notification;
+@end
+
 @implementation TrackLayer
 @synthesize track = _track, playButton = _playButton;
 
@@ -27,9 +32,6 @@
         self.shadowOpacity = 0.6;
         self.shadowRadius = 5.0;
         self.shadowOffset = CGSizeMake(0, 3);
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(albumArtReady:)  name:@"loaded" object: self.track.album.cover];
-        _monitorCount = 0;
-        [self monitorForLoaded];
         
         self.playButton = [CALayer layer];
         self.playButton.contents =  (id)[[UIImage imageNamed:@"play"] CGImage];
@@ -38,10 +40,16 @@
         self.playButton.bounds = CGRectMake(0, 0, 120, 120);
         self.playButton.opacity = 0;
         
-        [self addObserver:self forKeyPath:@"self.album.cover.image" options:NSKeyValueObservingOptionInitial context:nil];
-
+        [self addObserver:self
+               forKeyPath:@"track.album.cover.image.loaded"
+                  options:0
+                  context:nil];
     }
     return self;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    self.contents = (id)[[[[self.track album] cover] image] CGImage];        
 }
 
 - (void)turnToThumbnail {
@@ -86,28 +94,4 @@
         _shifted = NO;
     }
 }
-
-
--(void)albumArtReady:(id)notification {
-    self.contents = (id)[[[[self.track album] cover] image] CGImage];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    NSLog(@"loaded an image!");
-            NSLog(@"passed for %@", self.track.name);
-    self.contents = (id)[[[[self.track album] cover] image] CGImage];
-}
-
-- (void)monitorForLoaded {
-    
-    if( [self.track.album.cover isLoaded] ){
-        NSLog(@"passed for %@", self.track.name);
-        self.contents = (id)[[[[self.track album] cover] image] CGImage];
-        [self removeObserver:self forKeyPath:@"self.album.cover.image"];
-
-        return;
-    }
-    [self performSelector:_cmd withObject:nil afterDelay:1.0];
-}
-
 @end

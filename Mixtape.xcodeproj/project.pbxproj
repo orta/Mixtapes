@@ -46,6 +46,7 @@
 		60B1FC3A1434BE530039206C /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B1FC381434BE530039206C /* FlipsideViewController.xib */; };
 		60B1FC7F1434C0340039206C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B1FC7E1434C0330039206C /* SystemConfiguration.framework */; };
 		60B1FC811434C0B50039206C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B1FC801434C0B50039206C /* CFNetwork.framework */; };
+		60E39AD3147890C900F848B7 /* SPTrack+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E39AD2147890C900F848B7 /* SPTrack+Debug.m */; };
 		60E600C3143790F00096BBB4 /* LayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E600C2143790F00096BBB4 /* LayoutController.m */; };
 		60F8C43F147864DE00DD8D8C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60F8C43E147864DD00DD8D8C /* Settings.bundle */; };
 /* End PBXBuildFile section */
@@ -124,6 +125,8 @@
 		60B1FC7E1434C0330039206C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		60B1FC801434C0B50039206C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		60DD0ABD143892B7006C1934 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		60E39AD1147890C900F848B7 /* SPTrack+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPTrack+Debug.h"; sourceTree = "<group>"; };
+		60E39AD2147890C900F848B7 /* SPTrack+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPTrack+Debug.m"; sourceTree = "<group>"; };
 		60E600C1143790F00096BBB4 /* LayoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutController.h; sourceTree = "<group>"; };
 		60E600C2143790F00096BBB4 /* LayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutController.m; sourceTree = "<group>"; };
 		60F8C43E147864DD00DD8D8C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Resources/Settings.bundle; sourceTree = "<group>"; };
@@ -271,6 +274,7 @@
 		60B1FC201434BE530039206C /* Mixtape */ = {
 			isa = PBXGroup;
 			children = (
+				60E39AD0147890A700F848B7 /* Categories */,
 				60DD0ABD143892B7006C1934 /* Settings.h */,
 				6010886B1438E529008D3D9F /* SettingsExample.h */,
 				606E9A1114774E8C00DB1646 /* Assets */,
@@ -303,6 +307,15 @@
 				60B1FC281434BE530039206C /* Mixtape-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60E39AD0147890A700F848B7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				60E39AD1147890C900F848B7 /* SPTrack+Debug.h */,
+				60E39AD2147890C900F848B7 /* SPTrack+Debug.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +427,7 @@
 				606E99D71476936900DB1646 /* Constants.m in Sources */,
 				606E9A0F14774D7E00DB1646 /* LoginViewController.m in Sources */,
 				60257AF514775F7800E3A53F /* FolderChooserViewController.m in Sources */,
+				60E39AD3147890C900F848B7 /* SPTrack+Debug.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

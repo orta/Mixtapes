@@ -19,7 +19,6 @@
 @property (retain, nonatomic) CALayer * playButton;
 
 - (id)initWithTrack:(SPTrack*)track;
-- (void)monitorForLoaded;
 - (void)turnToThumbnail;
 - (void)turnToSelected;
 - (void)turnToUnSelected;

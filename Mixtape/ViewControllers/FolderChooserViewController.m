@@ -18,8 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     folders = [[NSMutableArray array] mutableCopy];
-    NSURL *url = [[NSURL alloc] initWithString: @"spotify://track" ];
+    
+    // only show spotify button if they have spotify
+    NSURL *url = [[NSURL alloc] initWithString: @"spotify://" ];
     spotifyButton.hidden = ![[UIApplication sharedApplication] canOpenURL:url];
+    
     [self searchForFolders];
 }
 
@@ -39,7 +42,7 @@
 }
 
 - (IBAction)loadSpotify:(id)sender {
-    NSURL *url = [[NSURL alloc] initWithString: @"spotify://playlists" ];
+    NSURL *url = [[NSURL alloc] initWithString: @"spotify:" ];
     [[UIApplication sharedApplication] openURL: url];   
 }
 
