@@ -13,6 +13,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "AudioController.h"
 #import "Constants.h"
+#import "AlbumRef.h"
+#import "PlaylistPostionGenerator.h"
 
 enum {
     LayoutsFloorView = 1,
@@ -27,6 +29,8 @@ enum {
 - (void)moveToCurrentTrack;
 - (int)currentPlaylistSelectionIndex;
 - (void)setCurrentPlaylistSeletionIndex:(int)index;
+
+- (NSArray*)currentCenterPoints;
 
 - (BOOL)isIPhone;
 - (BOOL)isPortrait;
@@ -48,6 +52,7 @@ enum {
     self.playlistSelectionIndex = [NSMutableArray array];
     _playlistLayer = [[CALayer layer] retain];
     [canvas.layer addSublayer:_playlistLayer];
+    centerPoints = [PlaylistPostionGenerator currentCenterPoints];
     
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -278,15 +283,13 @@ enum {
     
     for (int i = 0; i < [self.layers count]; i++) {
         NSMutableArray * playlist = [self.layers objectAtIndex:i];
-        
-        float x_center = ( canvas.frame.size.width / [self.layers count] ) * (i + 1) - ( ORArtworkIpadWidth / 2 ); 
-        
+                
         PlaylistTitleLayer * label = [self.titleLayers objectAtIndex:i];
         [label turnToLabel];
-        label.position = CGPointMake( x_center + 80 + random() % 40, 280);
+        label.position = [[centerPoints objectAtIndex:i] point];
         
         CALayer * wrapperLayer = [self.playlistWrapperLayers objectAtIndex:i];
-        [wrapperLayer setPosition: CGPointMake( (random() % 20) + x_center, (random() % 20) + 531)];
+        [wrapperLayer setPosition: [[centerPoints objectAtIndex:i] point]];
         
         for (int j = [playlist count] - 1; j > -1 ; j--) {
             TrackLayer *layer = [playlist objectAtIndex:j];
@@ -315,5 +318,7 @@ enum {
 - (BOOL)isIPhone {
     return ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone );
 }
+
+
 
 @end

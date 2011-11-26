@@ -31,7 +31,7 @@
     CATextLayer *songNameLayer;
     CATextLayer *songArtistLayer;
     
-    
+    NSArray * centerPoints;
 }
 
 -(void)setupAlbumArtwork;
