@@ -12,24 +12,26 @@
 @class AudioController;
 
 @interface LayoutController : NSObject {
-  IBOutlet UIView * canvas;
-  int _state;
-
-  IBOutlet UIActivityIndicatorView *loadingActivityView;
+    IBOutlet UIView * canvas;
+    int _state;
     
-  NSMutableArray * _layers;
-  NSMutableArray * _titleLayers;
-  NSMutableArray * _playlistWrapperLayers;
-  NSMutableArray * _playlistSelectionIndex;
-  
-  int _currentplaylistIndex;
-  NSMutableArray * _currentPlaylist; 
-  CALayer *_playlistLayer;
-  
-  IBOutlet AudioController * audio;
-  
-  CATextLayer *songNameLayer;
-  CATextLayer *songArtistLayer;
+    IBOutlet UIActivityIndicatorView *loadingActivityView;
+    
+    NSMutableArray * _layers;
+    NSMutableArray * _titleLayers;
+    NSMutableArray * _playlistWrapperLayers;
+    NSMutableArray * _playlistSelectionIndex;
+    
+    int _currentplaylistIndex;
+    NSMutableArray * _currentPlaylist; 
+    CALayer *_playlistLayer;
+    
+    IBOutlet AudioController * audio;
+    
+    CATextLayer *songNameLayer;
+    CATextLayer *songArtistLayer;
+    
+    
 }
 
 -(void)setupAlbumArtwork;

@@ -54,7 +54,7 @@ enum {
                                              selector:@selector(orientationChanged:)
                                                  name:UIDeviceOrientationDidChangeNotification
                                                object:nil];
-
+    
     self.state = LayoutsFloorView;
     return self;
 }
@@ -295,8 +295,7 @@ enum {
             if (j < 5) layer.opacity = 1;
             else layer.opacity = 0;
         }
-    }
-    
+    }   
     self.state = LayoutsFloorView;
 }
 
