@@ -146,6 +146,7 @@
     if ([[NSUserDefaults standardUserDefaults] boolForKey:ORAppResetKey]) {
         SPSession * session = [SPSession sharedSession];
         [session logout];
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:ORFolderID];
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:ORAppResetKey];
         [self startSpotify];
     }
