@@ -23,7 +23,7 @@ enum {
 
 @interface LayoutController(private)
 - (void)hideAllPlaylistsButCurrent;
-- (int)playlistIndexForPoint:(CGPoint)point;
+- (NSNumber *) playlistIndexForPoint:(CGPoint) point;
 - (void)transitionIntoPlaylistView;
 
 - (void)moveToCurrentTrack;
@@ -192,7 +192,7 @@ enum {
             
         case LayoutsFloorView:
             self;
-            int i  = [self playlistIndexForPoint:tapPoint];
+            int i  = [[self playlistIndexForPoint:tapPoint] intValue];
             _currentplaylistIndex = i;
             self.currentPlaylist = [self.layers objectAtIndex:_currentplaylistIndex];
             [self hideAllPlaylistsButCurrent];
@@ -201,16 +201,20 @@ enum {
     }
 }
 
-- (int) playlistIndexForPoint:(CGPoint) point{
-    MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
-    float eachSectionWidth = 1024 / [appDelegate.playlists count];
-    float x = point.x;
-    int i = -1;
-    while (x > 0) {
-        x -= eachSectionWidth;
-        i++;
+- (NSNumber *) playlistIndexForPoint:(CGPoint) point{
+    for (int i = 0; i > [self.centerPoints count]; i++) {
+        AlbumRef * album = [self.centerPoints objectAtIndex:i];
+        
+        CGRect hitRect = CGRectMake(album.point.x, album.point.y, ORCoverWidth * album.scale, ORCoverWidth * album.scale);
+        // move it into the position it would be 
+        float offset = (ORCoverWidth * album.scale) / -2;
+        hitRect = CGRectOffset(hitRect, offset, offset);
+        if (CGRectContainsPoint(hitRect, point)) {
+            return [NSNumber numberWithInt:i];
+        }
     }
-    return i;
+    return nil;
+    
 }
 
 - (void)hideAllPlaylistsButCurrent {
