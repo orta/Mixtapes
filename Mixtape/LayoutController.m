@@ -287,14 +287,15 @@ enum {
                 
         PlaylistTitleLayer * label = [self.titleLayers objectAtIndex:i];
         [label turnToLabel];
-        label.position = [[self.centerPoints objectAtIndex:i] point];
+        AlbumRef * ref = [self.centerPoints objectAtIndex:i];
+        label.position = [ref point];
 
         CALayer * wrapperLayer = [self.playlistWrapperLayers objectAtIndex:i];
-        [wrapperLayer setPosition: [[self.centerPoints objectAtIndex:i] point]];
+        [wrapperLayer setPosition: [ref point]];
         
         for (int j = [playlist count] - 1; j > -1 ; j--) {
             TrackLayer *layer = [playlist objectAtIndex:j];
-            [layer turnToThumbnail];
+            [layer turnToThumbnailWithScale:[ref scale]];
             layer.position = CGPointMake(0, 0);
             if (j < 5) layer.opacity = 1;
             else layer.opacity = 0;

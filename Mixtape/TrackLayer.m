@@ -26,7 +26,6 @@
         self.track = track;
         
         self.anchorPoint = CGPointMake(0.5, 0.5);
-        [self turnToThumbnail];
         
         self.shadowColor = [[UIColor blackColor] CGColor];
         self.shadowOpacity = 0.6;
@@ -52,8 +51,8 @@
     self.contents = (id)[[[[self.track album] cover] image] CGImage];        
 }
 
-- (void)turnToThumbnail {
-    CATransform3D transform = CATransform3DMakeScale(0.7, 0.7, 0.7);
+- (void)turnToThumbnailWithScale:(float)scale {
+    CATransform3D transform = CATransform3DMakeScale(scale, scale, scale);
     float angle = ( random() % 20 ) - 10;
     transform = CATransform3DRotate(transform, DegreesToRadians( angle ), 0, 0, 1);
     self.transform = transform;
