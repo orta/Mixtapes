@@ -12,6 +12,14 @@
 
 @synthesize tableView;
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    playlistItems = [[NSMutableArray array] mutableCopy];
+    
+    [self getStarredSongs];
+}
+
+
 - (void) getStarredSongs {
     if ([[[SPSession sharedSession] starredPlaylist] isLoaded] == NO) {
         [self performSelector:_cmd withObject:nil afterDelay:0.5];
@@ -51,11 +59,17 @@
 #pragma mark table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    SPPlaylistFolder * folder = [folders objectAtIndex:indexPath.row];
-//    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithUnsignedLongLong:folder.folderId] forKey:ORFolderID];
-//    [[NSNotificationCenter defaultCenter] postNotificationName: ORFolderChosen
-//                                                        object: nil];
-    
+    SPTrack * track = [playlistItems objectAtIndex:indexPath.row];
+    [[SPSession sharedSession] postTracks: [NSArray arrayWithObject:track] toInboxOfUser:@"ortatherox" withMessage:@"a new song form Mixtape!" delegate:self];
+}
+
+-(void)postTracksToInboxOperationDidSucceed:(SPPostTracksToInboxOperation *)operation {
+    sentLabel.text = @"Sent";
+}
+
+-(void)postTracksToInboxOperation:(SPPostTracksToInboxOperation *)operation didFailWithError:(NSError *)error {
+    #warning sending failed needs work
+    sentLabel.text = @"Sending failed?!";    
 }
 
 

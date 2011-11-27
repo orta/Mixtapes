@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SendSongViewController : UIViewController <UITableViewDataSource, UITableViewDelegate > {
+@interface SendSongViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPPostTracksToInboxOperationDelegate > {
     NSMutableArray * playlistItems;
     IBOutlet UIButton * spotifyButton;
+    IBOutlet UILabel * sentLabel;
 }
 
 @property (retain, nonatomic) IBOutlet UITableView *tableView;
-- (IBAction)loadSpotify:(id)sender;
-
-
+- (void) getStarredSongs; 
 @end
