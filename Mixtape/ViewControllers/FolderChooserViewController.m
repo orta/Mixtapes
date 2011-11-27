@@ -32,11 +32,14 @@
         return;
     }
     
-    NSLog(@"found playlist");
     for (id playlistOrFolder in [[SPSession sharedSession] userPlaylists].playlists) {
         if ([playlistOrFolder isKindOfClass:[SPPlaylistFolder class]]) {
             [folders addObject:playlistOrFolder];
         } 
+    }
+    if ([folders count] == 0) {
+        #warning  deal with them having no folders to choose from
+        NSLog(@"UH OH");
     }
     [tableView reloadData];
 }

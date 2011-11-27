@@ -64,7 +64,7 @@
 
 - (void)sessionDidLoginSuccessfully:(SPSession *)aSession; {
     [self.window.rootViewController dismissModalViewControllerAnimated:NO];
-    
+    NSLog(@"logged in");
     if ([[NSUserDefaults standardUserDefaults] objectForKey:ORFolderID]) {
         [self waitAndFillTrackPool];        
     }else{
@@ -118,7 +118,6 @@
     controller.modalPresentationStyle = UIModalPresentationFormSheet;
     [self.window.rootViewController presentModalViewController:controller animated:YES];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:ORFolderID];
-
 }
 
 - (void)showFolderController {

@@ -122,10 +122,4 @@
   
 	[self.loadingImage performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:1.0];
 }
-
-- (void)dealloc {
-  [_loadingImage release];
-  [_CACanvasView release];
-  [super dealloc];
-}
 @end

@@ -17,6 +17,8 @@
 		602D4C151458834300CB8CF7 /* mixtapes114.png in Resources */ = {isa = PBXBuildFile; fileRef = 602D4C141458834300CB8CF7 /* mixtapes114.png */; };
 		602D4C171458836200CB8CF7 /* mixtapes57.png in Resources */ = {isa = PBXBuildFile; fileRef = 602D4C161458836200CB8CF7 /* mixtapes57.png */; };
 		6051C0C41439EF8200BD8CBA /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 6051C0C31439EF8200BD8CBA /* play.png */; };
+		6056C17114828F8D002D7358 /* SendSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6056C16F14828F8C002D7358 /* SendSongViewController.m */; };
+		6056C17214828F8D002D7358 /* SendSongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6056C17014828F8D002D7358 /* SendSongViewController.xib */; };
 		606761BF147D655B00623485 /* IDEAS in Resources */ = {isa = PBXBuildFile; fileRef = 606761BE147D655B00623485 /* IDEAS */; };
 		606E99D71476936900DB1646 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E99D61476936900DB1646 /* Constants.m */; };
 		606E9A0F14774D7E00DB1646 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E9A0D14774D7E00DB1646 /* LoginViewController.m */; };
@@ -87,6 +89,9 @@
 		602D4C141458834300CB8CF7 /* mixtapes114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mixtapes114.png; path = ../../mixtapes114.png; sourceTree = "<group>"; };
 		602D4C161458836200CB8CF7 /* mixtapes57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mixtapes57.png; path = ../../mixtapes57.png; sourceTree = "<group>"; };
 		6051C0C31439EF8200BD8CBA /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play.png; path = ../play.png; sourceTree = "<group>"; };
+		6056C16E14828F8C002D7358 /* SendSongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendSongViewController.h; path = ViewControllers/SendSongViewController.h; sourceTree = "<group>"; };
+		6056C16F14828F8C002D7358 /* SendSongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SendSongViewController.m; path = ViewControllers/SendSongViewController.m; sourceTree = "<group>"; };
+		6056C17014828F8D002D7358 /* SendSongViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SendSongViewController.xib; path = ViewControllers/SendSongViewController.xib; sourceTree = "<group>"; };
 		606761BE147D655B00623485 /* IDEAS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IDEAS; sourceTree = "<group>"; };
 		606E99D51476936900DB1646 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Constants/Constants.h; sourceTree = "<group>"; };
 		606E99D61476936900DB1646 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Constants/Constants.m; sourceTree = "<group>"; };
@@ -186,8 +191,8 @@
 		606E99D81476937200DB1646 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				606E99D51476936900DB1646 /* Constants.h */,
-				606E99D61476936900DB1646 /* Constants.m */,
+				6028CF6B14810B1A0033B680 /* PlaylistPostionGenerator.h */,
+				6028CF6C14810B1A0033B680 /* PlaylistPostionGenerator.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -241,8 +246,9 @@
 				60257AF214775F7800E3A53F /* FolderChooserViewController.h */,
 				60257AF314775F7800E3A53F /* FolderChooserViewController.m */,
 				60257AF414775F7800E3A53F /* FolderChooserViewController.xib */,
-				6028CF6B14810B1A0033B680 /* PlaylistPostionGenerator.h */,
-				6028CF6C14810B1A0033B680 /* PlaylistPostionGenerator.m */,
+				6056C16E14828F8C002D7358 /* SendSongViewController.h */,
+				6056C16F14828F8C002D7358 /* SendSongViewController.m */,
+				6056C17014828F8D002D7358 /* SendSongViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -303,11 +309,13 @@
 		60B1FC201434BE530039206C /* Mixtape */ = {
 			isa = PBXGroup;
 			children = (
-				60E39AD0147890A700F848B7 /* Categories */,
 				60DD0ABD143892B7006C1934 /* Settings.h */,
 				6010886B1438E529008D3D9F /* SettingsExample.h */,
-				6056C16414827DF9002D7358 /* Models */,
+				606E99D51476936900DB1646 /* Constants.h */,
+				606E99D61476936900DB1646 /* Constants.m */,
 				606E9A1114774E8C00DB1646 /* Assets */,
+				60E39AD0147890A700F848B7 /* Categories */,
+				6056C16414827DF9002D7358 /* Models */,
 				608086DC14359E7B0029BBC9 /* Controllers */,
 				608086DB14359E750029BBC9 /* Views */,
 				608086DD14359E860029BBC9 /* Nibs */,
@@ -427,6 +435,7 @@
 				60257AF614775F7800E3A53F /* FolderChooserViewController.xib in Resources */,
 				60F8C43F147864DE00DD8D8C /* Settings.bundle in Resources */,
 				606761BF147D655B00623485 /* IDEAS in Resources */,
+				6056C17214828F8D002D7358 /* SendSongViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +462,7 @@
 				60E39AD3147890C900F848B7 /* SPTrack+Debug.m in Sources */,
 				6028CF6A148107670033B680 /* AlbumRef.m in Sources */,
 				6028CF6D14810B1A0033B680 /* PlaylistPostionGenerator.m in Sources */,
+				6056C17114828F8D002D7358 /* SendSongViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
