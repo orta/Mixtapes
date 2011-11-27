@@ -31,7 +31,7 @@
     CATextLayer *songNameLayer;
     CATextLayer *songArtistLayer;
     
-    NSArray * centerPoints;
+    NSArray * _centerPoints;
 }
 
 -(void)setupAlbumArtwork;
@@ -45,4 +45,6 @@
 @property (retain) NSMutableArray * currentPlaylist;
 @property (retain) NSMutableArray * playlistWrapperLayers;
 @property (retain) NSMutableArray * playlistSelectionIndex;
+@property (retain) NSArray * centerPoints;
+
 @end

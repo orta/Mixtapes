@@ -21,7 +21,7 @@
     // 5 - 250/259 - 765/259 - 508/431  - 250/618 - 759/618
     
     MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSArray *points;
+    NSArray *points = [NSArray array];
     
     if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ){
         
@@ -64,6 +64,7 @@
                           , nil];
                 break;    
         }
+        NSLog(@"%@ -< points", points);
         return points;
     }
     return nil;

@@ -42,7 +42,7 @@ enum {
 
 @synthesize state = _state, layers = _layers, titleLayers = _titleLayers;
 @synthesize currentPlaylist = _currentPlaylist, playlistWrapperLayers = _playlistWrapperLayers;
-@synthesize playlistSelectionIndex = _playlistSelectionIndex;
+@synthesize playlistSelectionIndex = _playlistSelectionIndex, centerPoints = _centerPoints;
 
 - (id)init {
     self = [super init];
@@ -52,7 +52,6 @@ enum {
     self.playlistSelectionIndex = [NSMutableArray array];
     _playlistLayer = [[CALayer layer] retain];
     [canvas.layer addSublayer:_playlistLayer];
-    centerPoints = [PlaylistPostionGenerator currentCenterPoints];
     
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -77,6 +76,8 @@ enum {
 
 - (void) setupAlbumArtwork {
     [loadingActivityView stopAnimating];
+    self.centerPoints = [PlaylistPostionGenerator currentCenterPoints];
+
     songNameLayer = [[CATextLayer layer] retain];
     songNameLayer.position = CGPointMake(500, 700);
     songNameLayer.bounds = CGRectMake(0, 0, 800, 200);
@@ -99,7 +100,7 @@ enum {
     }
     
     MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
-    
+
     for (int i = 0; i < [appDelegate.playlists count]; i++) {
         SPPlaylist * playlist = [appDelegate.playlists objectAtIndex:i];
         
@@ -286,10 +287,13 @@ enum {
                 
         PlaylistTitleLayer * label = [self.titleLayers objectAtIndex:i];
         [label turnToLabel];
-        label.position = [[centerPoints objectAtIndex:i] point];
+        NSLog(@"pre crash") ;
+        label.position = [[self.centerPoints objectAtIndex:i] point];
         
+        NSLog(@"pre crash") ;
+
         CALayer * wrapperLayer = [self.playlistWrapperLayers objectAtIndex:i];
-        [wrapperLayer setPosition: [[centerPoints objectAtIndex:i] point]];
+        [wrapperLayer setPosition: [[self.centerPoints objectAtIndex:i] point]];
         
         for (int j = [playlist count] - 1; j > -1 ; j--) {
             TrackLayer *layer = [playlist objectAtIndex:j];
@@ -313,7 +317,6 @@ enum {
 - (BOOL)isPortrait {
     return UIDeviceOrientationIsPortrait([[UIDevice currentDevice] orientation]);
 }
-
 
 - (BOOL)isIPhone {
     return ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone );

@@ -80,8 +80,8 @@
 		60257AF214775F7800E3A53F /* FolderChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FolderChooserViewController.h; path = ViewControllers/FolderChooserViewController.h; sourceTree = "<group>"; };
 		60257AF314775F7800E3A53F /* FolderChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FolderChooserViewController.m; path = ViewControllers/FolderChooserViewController.m; sourceTree = "<group>"; };
 		60257AF414775F7800E3A53F /* FolderChooserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FolderChooserViewController.xib; path = ViewControllers/FolderChooserViewController.xib; sourceTree = "<group>"; };
-		6028CF68148107670033B680 /* AlbumRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlbumRef.h; path = models/AlbumRef.h; sourceTree = "<group>"; };
-		6028CF69148107670033B680 /* AlbumRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlbumRef.m; path = models/AlbumRef.m; sourceTree = "<group>"; };
+		6028CF68148107670033B680 /* AlbumRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlbumRef.h; path = ../models/AlbumRef.h; sourceTree = "<group>"; };
+		6028CF69148107670033B680 /* AlbumRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlbumRef.m; path = ../models/AlbumRef.m; sourceTree = "<group>"; };
 		6028CF6B14810B1A0033B680 /* PlaylistPostionGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistPostionGenerator.h; sourceTree = "<group>"; };
 		6028CF6C14810B1A0033B680 /* PlaylistPostionGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistPostionGenerator.m; sourceTree = "<group>"; };
 		602D4C141458834300CB8CF7 /* mixtapes114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mixtapes114.png; path = ../../mixtapes114.png; sourceTree = "<group>"; };
@@ -173,6 +173,16 @@
 			path = ../vendor;
 			sourceTree = "<group>";
 		};
+		6056C16414827DF9002D7358 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6028CF68148107670033B680 /* AlbumRef.h */,
+				6028CF69148107670033B680 /* AlbumRef.m */,
+			);
+			name = Models;
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		606E99D81476937200DB1646 /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,8 +241,6 @@
 				60257AF214775F7800E3A53F /* FolderChooserViewController.h */,
 				60257AF314775F7800E3A53F /* FolderChooserViewController.m */,
 				60257AF414775F7800E3A53F /* FolderChooserViewController.xib */,
-				6028CF68148107670033B680 /* AlbumRef.h */,
-				6028CF69148107670033B680 /* AlbumRef.m */,
 				6028CF6B14810B1A0033B680 /* PlaylistPostionGenerator.h */,
 				6028CF6C14810B1A0033B680 /* PlaylistPostionGenerator.m */,
 			);
@@ -298,6 +306,7 @@
 				60E39AD0147890A700F848B7 /* Categories */,
 				60DD0ABD143892B7006C1934 /* Settings.h */,
 				6010886B1438E529008D3D9F /* SettingsExample.h */,
+				6056C16414827DF9002D7358 /* Models */,
 				606E9A1114774E8C00DB1646 /* Assets */,
 				608086DC14359E7B0029BBC9 /* Controllers */,
 				608086DB14359E750029BBC9 /* Views */,
