@@ -192,17 +192,20 @@ enum {
             
         case LayoutsFloorView:
             self;
-            int i  = [[self playlistIndexForPoint:tapPoint] intValue];
-            _currentplaylistIndex = i;
-            self.currentPlaylist = [self.layers objectAtIndex:_currentplaylistIndex];
-            [self hideAllPlaylistsButCurrent];
-            [self transitionIntoPlaylistView];
+            NSNumber *index = [self playlistIndexForPoint:tapPoint];
+            if (index) {
+                int i = [index intValue];
+                _currentplaylistIndex = i;
+                self.currentPlaylist = [self.layers objectAtIndex:_currentplaylistIndex];
+                [self hideAllPlaylistsButCurrent];
+                [self transitionIntoPlaylistView];
+            }
             break;
     }
 }
 
 - (NSNumber *) playlistIndexForPoint:(CGPoint) point{
-    for (int i = 0; i > [self.centerPoints count]; i++) {
+    for (int i = 0; i < [self.centerPoints count]; i++) {
         AlbumRef * album = [self.centerPoints objectAtIndex:i];
         
         CGRect hitRect = CGRectMake(album.point.x, album.point.y, ORCoverWidth * album.scale, ORCoverWidth * album.scale);
@@ -246,7 +249,7 @@ enum {
 - (void) moveToCurrentTrack {
     int index = [self currentPlaylistSelectionIndex];
     CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
-    wrapper.position = CGPointMake((index * -340) + 300, wrapper.position.y); 
+    wrapper.position = CGPointMake((index * -340) + 300, (canvas.frame.size.height / 2) + ( ORCoverWidth /2) ); 
     
     for (int i = 0; i < [self.currentPlaylist count]; i++) {
         TrackLayer * layer = [self.currentPlaylist objectAtIndex:i];
@@ -272,9 +275,10 @@ enum {
         [label turnToLabel];
         
         AlbumRef * ref = [self.centerPoints objectAtIndex:i];
+        float halfCoverWidth = ORCoverWidth / 2;
         CGPoint location = ref.point;
-        location.x -= ORCoverWidth / 2;
-        location.y -= ORCoverWidth / 2;
+//        location.x += halfCoverWidth;
+//        location.y += halfCoverWidth;
         label.position = location;
 
         CALayer * wrapperLayer = [self.playlistWrapperLayers objectAtIndex:i];
@@ -283,7 +287,7 @@ enum {
         for (int j = [playlist count] - 1; j > -1 ; j--) {
             TrackLayer *layer = [playlist objectAtIndex:j];
             [layer turnToThumbnailWithScale:[ref scale]];
-            layer.position = CGPointMake(0, 0);
+            layer.position = CGPointMake(halfCoverWidth *- 1, halfCoverWidth);
             if (j < 5) layer.opacity = 1;
             else layer.opacity = 0;
         }
