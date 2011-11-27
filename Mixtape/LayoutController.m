@@ -287,10 +287,7 @@ enum {
                 
         PlaylistTitleLayer * label = [self.titleLayers objectAtIndex:i];
         [label turnToLabel];
-        NSLog(@"pre crash") ;
         label.position = [[self.centerPoints objectAtIndex:i] point];
-        
-        NSLog(@"pre crash") ;
 
         CALayer * wrapperLayer = [self.playlistWrapperLayers objectAtIndex:i];
         [wrapperLayer setPosition: [[self.centerPoints objectAtIndex:i] point]];
