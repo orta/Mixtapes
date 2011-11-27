@@ -19,4 +19,4 @@ extern NSString * const ORAppResetKey;
 extern NSString * const ORFolderID;
 extern NSString * const ORCellReuseID;
 
-static const float ORArtworkIpadWidth = 460;
+extern const float ORCoverWidth;

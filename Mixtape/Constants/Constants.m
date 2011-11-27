@@ -15,3 +15,5 @@ NSString * const ORAppResetKey = @"ORAppReset";
 
 NSString * const ORFolderID = @"ORFolderID";
 NSString * const ORCellReuseID = @"ORCellReuseID";
+
+const float ORCoverWidth = 460;

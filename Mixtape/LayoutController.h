@@ -28,9 +28,6 @@
     
     IBOutlet AudioController * audio;
     
-    CATextLayer *songNameLayer;
-    CATextLayer *songArtistLayer;
-    
     NSArray * _centerPoints;
 }
 
