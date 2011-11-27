@@ -57,9 +57,22 @@
     }
 }
 
+#pragma mark Spotify Session delegate methods
+
 - (void)session:(SPSession *)aSession didFailToLoginWithError:(NSError *)error {
+    NSLog(@"bad spotify creds");
     [[NSNotificationCenter defaultCenter] postNotificationName: ORLoginFailed
                                                         object: nil];
+}
+
+- (void)session:(SPSession *)aSession didEncounterNetworkError:(NSError *)error {
+    NSLog(@"spotify is down");
+    [[NSNotificationCenter defaultCenter] postNotificationName: ORLoginFailed
+                                                        object: nil];
+}
+
+- (void)session:(SPSession *)aSession didLogMessage:(NSString *)aMessage {
+    NSLog(@"--- %@ ", aMessage);
 }
 
 - (void)sessionDidLoginSuccessfully:(SPSession *)aSession; {

@@ -13,13 +13,14 @@
 @end
 
 @implementation LoginViewController
-@synthesize usernameTextField, passwordTextField, loginButton, failureLabel;
+@synthesize usernameTextField, passwordTextField, loginButton, failureLabel, activityIndicator;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [usernameTextField becomeFirstResponder];
     failureLabel.text = @"";
     loginButton.enabled = NO;
+    [activityIndicator stopAnimating];
     
     //register for text changes
     [usernameTextField addTarget:(id)self action:@selector(textFieldDidChange) forControlEvents:UIControlEventEditingChanged];
@@ -35,12 +36,14 @@
     if (![self validate]) {
         return;
     }
+    [activityIndicator startAnimating];
     failureLabel.text = @"";
     [[SPSession sharedSession] attemptLoginWithUserName:usernameTextField.text password:passwordTextField.text rememberCredentials:YES];    
 }
 
 - (void)loginFailed {
     failureLabel.text = @"Are you sure?";
+    [activityIndicator stopAnimating];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

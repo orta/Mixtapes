@@ -14,6 +14,7 @@
 @property (retain, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (retain, nonatomic) IBOutlet UILabel *failureLabel;
 @property (retain, nonatomic) IBOutlet UIButton *loginButton;
+@property (retain, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (IBAction)login:(id)sender;
 
