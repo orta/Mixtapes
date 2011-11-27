@@ -25,8 +25,6 @@
         self.contents = (id)[[UIImage imageNamed:@"template"] CGImage];
         self.track = track;
         
-        self.anchorPoint = CGPointMake(0.5, 0.5);
-        
         self.shadowColor = [[UIColor blackColor] CGColor];
         self.shadowOpacity = 0.6;
         self.shadowRadius = 5.0;

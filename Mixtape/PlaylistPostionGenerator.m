@@ -28,21 +28,21 @@
         switch ([appDelegate.playlists count]) {
             case 1:
                 points = [NSArray arrayWithObject: 
-                          [[AlbumRef alloc] refWithX:516 y:422 andScale:1]];
+                          [[AlbumRef alloc] refWithX:526 y:422 andScale:1]];
                 break;
                 
             case 2:
                 points = [NSArray arrayWithObjects: 
-                          [[AlbumRef alloc] refWithX:300 y:422 andScale:1],
-                          [[AlbumRef alloc] refWithX:710 y:422 andScale:1]
+                          [[AlbumRef alloc] refWithX:340 y:422 andScale:1],
+                          [[AlbumRef alloc] refWithX:750 y:422 andScale:1]
                           , nil];
                 break;
                 
             case 3:
                 points = [NSArray arrayWithObjects: 
-                          [[AlbumRef alloc] refWithX:295 y:337 andScale:1],
-                          [[AlbumRef alloc] refWithX:512 y:506 andScale:1],
-                          [[AlbumRef alloc] refWithX:770 y:337 andScale:1]
+                          [[AlbumRef alloc] refWithX:542 y:506 andScale:0.9],
+                          [[AlbumRef alloc] refWithX:295 y:337 andScale:0.9],
+                          [[AlbumRef alloc] refWithX:830 y:337 andScale:0.9]
                           , nil];
                 break;
                 
