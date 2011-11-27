@@ -27,7 +27,8 @@
         
         switch ([appDelegate.playlists count]) {
             case 1:
-                points = [NSArray arrayWithObject: [[AlbumRef alloc] refWithX:516 y:422 andScale:1]];
+                points = [NSArray arrayWithObject: 
+                          [[AlbumRef alloc] refWithX:516 y:422 andScale:1]];
                 break;
                 
             case 2:
@@ -47,24 +48,23 @@
                 
             case 4:
                 points = [NSArray arrayWithObjects: 
-                          [[AlbumRef alloc] refWithX:300 y:324 andScale:1],
-                          [[AlbumRef alloc] refWithX:720 y:334 andScale:1],
-                          [[AlbumRef alloc] refWithX:720 y:618 andScale:1],
-                          [[AlbumRef alloc] refWithX:320 y:618 andScale:1]
+                          [[AlbumRef alloc] refWithX:300 y:324 andScale:0.8],
+                          [[AlbumRef alloc] refWithX:720 y:334 andScale:0.8],
+                          [[AlbumRef alloc] refWithX:720 y:618 andScale:0.8],
+                          [[AlbumRef alloc] refWithX:320 y:618 andScale:0.8]
                           , nil];
                 break;
                 
             case 5:
                 points = [NSArray arrayWithObjects: 
-                          [[AlbumRef alloc] refWithX:250 y:259 andScale:1],
-                          [[AlbumRef alloc] refWithX:765 y:259 andScale:1],
-                          [[AlbumRef alloc] refWithX:508 y:431 andScale:1],
-                          [[AlbumRef alloc] refWithX:250 y:618 andScale:1],
-                          [[AlbumRef alloc] refWithX:759 y:618 andScale:1]
+                          [[AlbumRef alloc] refWithX:250 y:259 andScale:0.7],
+                          [[AlbumRef alloc] refWithX:765 y:259 andScale:0.7],
+                          [[AlbumRef alloc] refWithX:508 y:431 andScale:0.7],
+                          [[AlbumRef alloc] refWithX:250 y:618 andScale:0.7],
+                          [[AlbumRef alloc] refWithX:759 y:618 andScale:0.7]
                           , nil];
                 break;    
         }
-        NSLog(@"%@ -< points", points);
         return points;
     }
     return nil;
