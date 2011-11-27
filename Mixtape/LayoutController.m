@@ -270,8 +270,12 @@ enum {
                 
         PlaylistTitleLayer * label = [self.titleLayers objectAtIndex:i];
         [label turnToLabel];
+        
         AlbumRef * ref = [self.centerPoints objectAtIndex:i];
-        label.position = [ref point];
+        CGPoint location = ref.point;
+        location.x -= ORCoverWidth / 2;
+        location.y -= ORCoverWidth / 2;
+        label.position = location;
 
         CALayer * wrapperLayer = [self.playlistWrapperLayers objectAtIndex:i];
         [wrapperLayer setPosition: [ref point]];
