@@ -278,11 +278,17 @@ enum {
         float halfCoverWidth = ORCoverWidth / 2;
         CGPoint location = ref.point;
 //        location.x += halfCoverWidth;
-//        location.y += halfCoverWidth;
+        location.y += halfCoverWidth + ( 50 * [ref scale]);
         label.position = location;
 
         CALayer * wrapperLayer = [self.playlistWrapperLayers objectAtIndex:i];
-        [wrapperLayer setPosition: [ref point]];
+        CGPoint wrapperLocation = [ref point];
+        if ([self isPortrait]) {
+            float tempX = wrapperLocation.x;
+            wrapperLocation.x = wrapperLocation.y;
+            wrapperLocation.y = tempX;
+        }
+        [wrapperLayer setPosition: wrapperLocation ];
         
         for (int j = [playlist count] - 1; j > -1 ; j--) {
             TrackLayer *layer = [playlist objectAtIndex:j];
