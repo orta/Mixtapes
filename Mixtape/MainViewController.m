@@ -24,25 +24,27 @@
 @synthesize layout = _layout, audio = _audio;
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playlistsReady:)  name:@"PlaylistsSet" object:[[UIApplication sharedApplication] delegate]];
+    [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playlistsReady:)  name:@"PlaylistsSet" object:[[UIApplication sharedApplication] delegate]];
 }
 
 - (void)playlistsReady:(id)notification {
-  [self removeLoadingNotice];
-  [self.layout setupAlbumArtwork];
-  [self.layout transitionIntoFloorView];
-  [self.layout setupGestureReconition];
+    [self removeLoadingNotice];
+    [self.layout setupAlbumArtwork];
+    [self.layout transitionIntoFloorView];
+    [self.layout setupGestureReconition];
+    
+    
 }
 
 - (NSMutableArray *)currentPlaylist {
-  return [self.layout currentPlaylist];
+    return [self.layout currentPlaylist];
 }
 
 - (void)viewDidUnload
 {
-  [self setLoadingImage:nil];
-  [super viewDidUnload];
+    [self setLoadingImage:nil];
+    [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -66,18 +68,18 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-      return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-  } else {
-    
-    if ( UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
-      _background.image = [UIImage imageNamed:@"bg2.jpg"];
-    }else{
-      _background.image = [UIImage imageNamed:@"bg.jpg"];      
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    } else {
+        
+        if ( UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
+            _background.image = [UIImage imageNamed:@"bg2.jpg"];
+        }else{
+            _background.image = [UIImage imageNamed:@"bg.jpg"];      
+        }
+        
+        return YES;
     }
-    
-  return YES;
-  }
 }
 
 #pragma mark - Flipside View Controller
@@ -114,12 +116,12 @@
 }
 
 -(void) removeLoadingNotice {
-  [UIView beginAnimations:@"hideLoading" context:NULL];
-  [UIView setAnimationDuration:1.0];
-  [self.loadingImage setAlpha: 0];
-  [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
-  [UIView commitAnimations];
-  
+    [UIView beginAnimations:@"hideLoading" context:NULL];
+    [UIView setAnimationDuration:1.0];
+    [self.loadingImage setAlpha: 0];
+    [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
+    [UIView commitAnimations];
+    
 	[self.loadingImage performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:1.0];
 }
 @end
