@@ -33,6 +33,8 @@
 		608086E01435AF1C0029BBC9 /* TrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 608086DF1435AF1C0029BBC9 /* TrackLayer.m */; };
 		60947ED01434CE36007024CD /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60947ECF1434CE36007024CD /* bg.jpg */; };
 		60947EDA1434EE2B007024CD /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 60947ED91434EE2B007024CD /* loading.png */; };
+		6096443C1484ABE100865A4A /* offline_indicator_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 6096443A1484ABE100865A4A /* offline_indicator_inactive.png */; };
+		6096443D1484ABE100865A4A /* offline_indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 6096443B1484ABE100865A4A /* offline_indicator.png */; };
 		60A19589143C750700EB89C9 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 60A19588143C750700EB89C9 /* pause.png */; };
 		60A1958E143C977700EB89C9 /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60A1958D143C977700EB89C9 /* bg2.jpg */; };
 		60A99FD6143F398E00ED5D11 /* libCocoaLibSpotify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A99FD5143F395D00ED5D11 /* libCocoaLibSpotify.a */; };
@@ -111,6 +113,8 @@
 		608086DF1435AF1C0029BBC9 /* TrackLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackLayer.m; sourceTree = "<group>"; };
 		60947ECF1434CE36007024CD /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg.jpg; path = ../bg.jpg; sourceTree = "<group>"; };
 		60947ED91434EE2B007024CD /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading.png; path = ../loading.png; sourceTree = "<group>"; };
+		6096443A1484ABE100865A4A /* offline_indicator_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = offline_indicator_inactive.png; sourceTree = "<group>"; };
+		6096443B1484ABE100865A4A /* offline_indicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = offline_indicator.png; sourceTree = "<group>"; };
 		60A19588143C750700EB89C9 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause.png; path = ../pause.png; sourceTree = "<group>"; };
 		60A1958D143C977700EB89C9 /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg2.jpg; path = ../bg2.jpg; sourceTree = "<group>"; };
 		60A99FCD143F395D00ED5D11 /* CocoaLibSpotify iOS Library.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CocoaLibSpotify iOS Library.xcodeproj"; path = "vendor/cocoalibspotify/iOS Library/CocoaLibSpotify iOS Library.xcodeproj"; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 		606E9A1114774E8C00DB1646 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6096443A1484ABE100865A4A /* offline_indicator_inactive.png */,
+				6096443B1484ABE100865A4A /* offline_indicator.png */,
 				602D4C161458836200CB8CF7 /* mixtapes57.png */,
 				602D4C141458834300CB8CF7 /* mixtapes114.png */,
 				60A1958D143C977700EB89C9 /* bg2.jpg */,
@@ -436,6 +442,8 @@
 				60F8C43F147864DE00DD8D8C /* Settings.bundle in Resources */,
 				606761BF147D655B00623485 /* IDEAS in Resources */,
 				6056C17214828F8D002D7358 /* SendSongViewController.xib in Resources */,
+				6096443C1484ABE100865A4A /* offline_indicator_inactive.png in Resources */,
+				6096443D1484ABE100865A4A /* offline_indicator.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

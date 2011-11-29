@@ -15,6 +15,12 @@
 
 #define DegreesToRadians(x) (M_PI * x / 180.0)
 
+static const float OROfflineTimerInterval = 2;
+
+@interface MainViewController (private)
+- (void)playlistsAreOffline;
+@end
+
 @implementation MainViewController
 @synthesize loadingImage = _loadingImage;
 @synthesize loadingBackground = _loadingBackground;
@@ -33,8 +39,22 @@
     [self.layout setupAlbumArtwork];
     [self.layout transitionIntoFloorView];
     [self.layout setupGestureReconition];
-    
-    
+    [NSTimer scheduledTimerWithTimeInterval:OROfflineTimerInterval target:self selector:@selector(checkPlaylistsAreOffline:) userInfo:nil repeats:YES];
+}
+
+- (void)checkPlaylistsAreOffline:(NSTimer *)timer {
+    MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate*)[[UIApplication sharedApplication] delegate];
+    for (SPPlaylist * playlist in appDelegate.playlists) {
+        if ([playlist offlineDownloadProgress] != 100.0f) {
+            return;
+        }
+    }
+    [timer invalidate];
+    [self playlistsAreOffline];
+}
+
+- (void)playlistsAreOffline {
+    _offlineIndicator.image = [UIImage imageNamed:@"offline_indicator.png"];
 }
 
 - (NSMutableArray *)currentPlaylist {
