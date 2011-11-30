@@ -23,12 +23,13 @@ enum {
 
 @interface LayoutController(private)
 - (void)hideAllPlaylistsButCurrent;
-- (NSNumber *) playlistIndexForPoint:(CGPoint) point;
+- (NSNumber *)playlistIndexForPoint:(CGPoint) point;
 - (void)transitionIntoPlaylistView;
 
 - (void)moveToCurrentTrack;
 - (int)currentPlaylistSelectionIndex;
 - (void)setCurrentPlaylistSeletionIndex:(int)index;
+- (void)playSelectedSong;
 
 - (NSArray*)currentCenterPoints;
 
@@ -177,12 +178,18 @@ enum {
             
         case LayoutsSinglePlaylist:
             self; // I get weird errors if I have C code right after case's
-            CGRect centerCover = CGRectMake(200, 200, 400, 400);
+            CGRect centerCover = CGRectMake(200, 200, ORCoverWidth, ORCoverWidth);
             if ( CGRectContainsPoint(centerCover, tapPoint)) {
-                MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
-                
-                [audio setCurrentPlaylist:[[appDelegate playlists] objectAtIndex:_currentplaylistIndex]];
-                [audio playTrackWithIndex:[self currentPlaylistSelectionIndex]];
+                [self playSelectedSong];
+                return;
+            }
+            
+            CGRect previousCover = CGRectMake(0, 200, 160, ORCoverWidth);
+            if ( CGRectContainsPoint(previousCover, tapPoint)) {
+                if (_currentplaylistIndex) {
+                    _currentplaylistIndex--;
+                    [self moveToCurrentTrack];
+                };
                 return;
             }
             
@@ -204,7 +211,14 @@ enum {
     }
 }
 
-- (NSNumber *) playlistIndexForPoint:(CGPoint) point{
+- (void)playSelectedSong { 
+    MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    [audio setCurrentPlaylist:[[appDelegate playlists] objectAtIndex:_currentplaylistIndex]];
+    [audio playTrackWithIndex:[self currentPlaylistSelectionIndex]];
+}
+
+- (NSNumber *)playlistIndexForPoint:(CGPoint) point{
     for (int i = 0; i < [self.centerPoints count]; i++) {
         AlbumRef * album = [self.centerPoints objectAtIndex:i];
         

@@ -434,12 +434,17 @@
 						</object>
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="activityIndicator">UIActivityIndicatorView</string>
 						<string key="failureLabel">UILabel</string>
 						<string key="loginButton">UIButton</string>
 						<string key="passwordTextField">UITextField</string>
 						<string key="usernameTextField">UITextField</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="activityIndicator">
+							<string key="name">activityIndicator</string>
+							<string key="candidateClassName">UIActivityIndicatorView</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="failureLabel">
 							<string key="name">failureLabel</string>
 							<string key="candidateClassName">UILabel</string>
