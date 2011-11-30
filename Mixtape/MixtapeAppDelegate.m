@@ -18,7 +18,6 @@
 - (void)showLoginController;
 - (void)showFolderController;
 - (void)waitForPlaylistsToLoad;
-- (void)storePlaylistsIDsInDefaults;
 - (BOOL)isOnline;
 - (void)checkForOfflinePlaylists;
 @end
@@ -112,7 +111,6 @@
             if (folder.folderId == folderID) {
                 self.playlists = folder.playlists;
                 [self waitForPlaylistsToLoad];
-                [self storePlaylistsIDsInDefaults];
                 found = YES;
             }
         } 
@@ -121,14 +119,6 @@
         [self performSelector:_cmd withObject:nil afterDelay:1.0];
         return;
     }
-}
-
-- (void)storePlaylistsIDsInDefaults {
-//    NSMutableArray * playlistIDs = [[NSMutableArray array] mutableCopy];
-//    for (SPPlaylist * playlist in self.playlists) {
-//        [playlistIDs addObject:playlist.]
-//    }
-//        [[NSUserDefaults standardUserDefaults] setObject: forKey:
 }
 
 - (void)waitForPlaylistsToLoad {
