@@ -24,7 +24,6 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
 
 @implementation MainViewController
 @synthesize loadingImage = _loadingImage;
-@synthesize loadingBackground = _loadingBackground;
 
 @synthesize canvas = _CACanvasView;
 @synthesize flipsidePopoverController = _flipsidePopoverController;

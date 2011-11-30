@@ -23,7 +23,6 @@
 @property (retain, nonatomic) IBOutlet UIView *canvas;
 @property (retain, nonatomic) UIPopoverController *flipsidePopoverController;
 @property (retain, nonatomic) IBOutlet UIImageView *loadingImage;
-@property (retain, nonatomic) IBOutlet UIImageView *loadingBackground;
 @property (retain, nonatomic) IBOutlet  LayoutController *layout;
 @property (retain, nonatomic) IBOutlet  AudioController *audio;
 
