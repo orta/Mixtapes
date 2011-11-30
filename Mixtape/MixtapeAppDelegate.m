@@ -11,11 +11,16 @@
 #import "Settings.h"
 #import "LoginViewController.h"
 #import "FolderChooserViewController.h"
+#import "Reachability.h"
+#import "SPPlaylistFolderInternal.h"
 
 @interface MixtapeAppDelegate (private)
 - (void)showLoginController;
 - (void)showFolderController;
 - (void)waitForPlaylistsToLoad;
+- (void)storePlaylistsIDsInDefaults;
+- (BOOL)isOnline;
+- (void)checkForOfflinePlaylists;
 @end
 
 @implementation MixtapeAppDelegate
@@ -79,7 +84,11 @@
     [self.window.rootViewController dismissModalViewControllerAnimated:NO];
     NSLog(@"logged in");
     if ([[NSUserDefaults standardUserDefaults] objectForKey:ORFolderID]) {
-        [self waitAndFillTrackPool];        
+        if ([self isOnline]) {
+            [self waitAndFillTrackPool];
+        }else{
+            [self checkForOfflinePlaylists];
+        }
     }else{
         [self showFolderController];
     }
@@ -103,6 +112,7 @@
             if (folder.folderId == folderID) {
                 self.playlists = folder.playlists;
                 [self waitForPlaylistsToLoad];
+                [self storePlaylistsIDsInDefaults];
                 found = YES;
             }
         } 
@@ -111,6 +121,14 @@
         [self performSelector:_cmd withObject:nil afterDelay:1.0];
         return;
     }
+}
+
+- (void)storePlaylistsIDsInDefaults {
+//    NSMutableArray * playlistIDs = [[NSMutableArray array] mutableCopy];
+//    for (SPPlaylist * playlist in self.playlists) {
+//        [playlistIDs addObject:playlist.]
+//    }
+//        [[NSUserDefaults standardUserDefaults] setObject: forKey:
 }
 
 - (void)waitForPlaylistsToLoad {
@@ -125,6 +143,28 @@
     }
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PlaylistsSet" object:self];
+}
+
+- (void)checkForOfflinePlaylists {
+    NSNumber * folderIDNumber = [[NSUserDefaults standardUserDefaults] objectForKey:ORFolderID];
+    uint64_t folderID = [folderIDNumber unsignedLongLongValue];
+
+    SPPlaylistFolder * folder = [[SPPlaylistFolder alloc] initWithPlaylistFolderId:folderID container:[[SPSession sharedSession] userPlaylists] inSession:[SPSession sharedSession]];
+    
+    bool synced = YES;
+    if (folder) {
+        for (SPPlaylist * playlist in folder.playlists) {
+            playlist.markedForOfflinePlayback = YES;
+            if ([playlist offlineStatus] != SP_PLAYLIST_OFFLINE_STATUS_YES) {
+                NSLog(@"ERROR - NOT SYNCED");
+                synced = NO;
+            }
+        }
+    }
+    if (synced) {
+        self.playlists = folder.playlists;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"PlaylistsSet" object:self];
+    }
 }
 
 - (void)showLoginController {
@@ -143,6 +183,10 @@
     FolderChooserViewController *controller = [[FolderChooserViewController alloc] initWithNibName:@"FolderChooserViewController" bundle:nil];
     controller.modalPresentationStyle = UIModalPresentationFormSheet;
     [self.window.rootViewController presentModalViewController:controller animated:NO];
+}
+
+- (BOOL)isOnline {
+    return ([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] != NotReachable);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application{}

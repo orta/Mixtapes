@@ -14,6 +14,8 @@ NSString * const ORFolderChosen = @"ORFolderChosen";
 NSString * const ORAppResetKey = @"ORAppReset";
 
 NSString * const ORFolderID = @"ORFolderID";
+NSString * const ORPlaylistIDArray = @"ORPlaylistIDs";
+
 NSString * const ORCellReuseID = @"ORCellReuseID";
 
 const float ORCoverWidth = 300;

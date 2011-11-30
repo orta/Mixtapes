@@ -53,6 +53,7 @@
 		60B1FC3A1434BE530039206C /* FlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B1FC381434BE530039206C /* FlipsideViewController.xib */; };
 		60B1FC7F1434C0340039206C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B1FC7E1434C0330039206C /* SystemConfiguration.framework */; };
 		60B1FC811434C0B50039206C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B1FC801434C0B50039206C /* CFNetwork.framework */; };
+		60BFCF261486A590000EEB24 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BFCF251486A590000EEB24 /* Reachability.m */; };
 		60E39AD3147890C900F848B7 /* SPTrack+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E39AD2147890C900F848B7 /* SPTrack+Debug.m */; };
 		60E600C3143790F00096BBB4 /* LayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E600C2143790F00096BBB4 /* LayoutController.m */; };
 		60F8C43F147864DE00DD8D8C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60F8C43E147864DD00DD8D8C /* Settings.bundle */; };
@@ -141,6 +142,8 @@
 		60B1FC391434BE530039206C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FlipsideViewController.xib; sourceTree = "<group>"; };
 		60B1FC7E1434C0330039206C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		60B1FC801434C0B50039206C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		60BFCF241486A590000EEB24 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		60BFCF251486A590000EEB24 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		60DD0ABD143892B7006C1934 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		60E39AD1147890C900F848B7 /* SPTrack+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPTrack+Debug.h"; sourceTree = "<group>"; };
 		60E39AD2147890C900F848B7 /* SPTrack+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPTrack+Debug.m"; sourceTree = "<group>"; };
@@ -195,6 +198,7 @@
 		606E99D81476937200DB1646 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				60BFCF231486A590000EEB24 /* Reachability */,
 				6028CF6B14810B1A0033B680 /* PlaylistPostionGenerator.h */,
 				6028CF6C14810B1A0033B680 /* PlaylistPostionGenerator.m */,
 			);
@@ -345,6 +349,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		60BFCF231486A590000EEB24 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				60BFCF241486A590000EEB24 /* Reachability.h */,
+				60BFCF251486A590000EEB24 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 		60E39AD0147890A700F848B7 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +484,7 @@
 				6028CF6A148107670033B680 /* AlbumRef.m in Sources */,
 				6028CF6D14810B1A0033B680 /* PlaylistPostionGenerator.m in Sources */,
 				6056C17114828F8D002D7358 /* SendSongViewController.m in Sources */,
+				60BFCF261486A590000EEB24 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

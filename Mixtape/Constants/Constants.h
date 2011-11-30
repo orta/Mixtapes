@@ -16,7 +16,10 @@ extern NSString * const ORFolderChosen;
 extern NSString * const ORUserAgent;
 extern NSString * const ORAppResetKey;
 
+// User Defaults
 extern NSString * const ORFolderID;
+extern NSString * const ORPlaylistIDArray;
+
 extern NSString * const ORCellReuseID;
 
 extern const float ORCoverWidth;
