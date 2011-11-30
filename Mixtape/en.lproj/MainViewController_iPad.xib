@@ -219,7 +219,6 @@
 								<string key="NSFrame">{{301, -10}, {121, 121}}</string>
 								<reference key="NSSuperview" ref="878246342"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:241</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -270,7 +269,6 @@
 						<string key="NSFrame">{{860, 77}, {65, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:345</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -389,6 +387,14 @@
 						<reference key="destination" ref="505820452"/>
 					</object>
 					<int key="connectionID">50</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">_offlineTextLabel</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="700849954"/>
+					</object>
+					<int key="connectionID">51</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -678,7 +684,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">50</int>
+			<int key="maxID">51</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -822,6 +828,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>_background</string>
 							<string>_offlineIndicator</string>
+							<string>_offlineTextLabel</string>
 							<string>audio</string>
 							<string>canvas</string>
 							<string>layout</string>
@@ -832,6 +839,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
+							<string>UILabel</string>
 							<string>AudioController</string>
 							<string>UIView</string>
 							<string>LayoutController</string>
@@ -845,6 +853,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>_background</string>
 							<string>_offlineIndicator</string>
+							<string>_offlineTextLabel</string>
 							<string>audio</string>
 							<string>canvas</string>
 							<string>layout</string>
@@ -860,6 +869,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">_offlineIndicator</string>
 								<string key="candidateClassName">UIImageView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_offlineTextLabel</string>
+								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">audio</string>

@@ -16,6 +16,7 @@
 #define DegreesToRadians(x) (M_PI * x / 180.0)
 
 static const float OROfflineTimerInterval = 2;
+static const float OROfflineInfoDelayBeforeFloat = 8;
 
 @interface MainViewController (private)
 - (void)playlistsAreOffline;
@@ -45,7 +46,8 @@ static const float OROfflineTimerInterval = 2;
 - (void)checkPlaylistsAreOffline:(NSTimer *)timer {
     MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate*)[[UIApplication sharedApplication] delegate];
     for (SPPlaylist * playlist in appDelegate.playlists) {
-        if ([playlist offlineDownloadProgress] != 100.0f) {
+        playlist.markedForOfflinePlayback = YES;
+        if ([playlist offlineStatus] != SP_PLAYLIST_OFFLINE_STATUS_YES) {
             return;
         }
     }
@@ -54,7 +56,18 @@ static const float OROfflineTimerInterval = 2;
 }
 
 - (void)playlistsAreOffline {
-    _offlineIndicator.image = [UIImage imageNamed:@"offline_indicator.png"];
+    _offlineIndicator.image = [UIImage imageNamed:@"offline_indicator"];
+    [self performSelector:@selector(fadeOutOfflineInfo) withObject:self afterDelay:OROfflineInfoDelayBeforeFloat];
+}
+
+- (void)fadeOutOfflineInfo {
+    [UIView beginAnimations:@"hideOfflineInfo" context:NULL];
+    [UIView setAnimationDuration:1.0];
+    [_offlineIndicator setAlpha: 0];
+    [_offlineTextLabel setAlpha:0];
+    [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
+    [UIView commitAnimations];
+
 }
 
 - (NSMutableArray *)currentPlaylist {

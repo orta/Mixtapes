@@ -124,10 +124,6 @@
         }
     }
     
-    for (SPPlaylist * playlist in self.playlists) {
-        playlist.markedForOfflinePlayback = YES;
-    }
-    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PlaylistsSet" object:self];
 }
 

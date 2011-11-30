@@ -11,11 +11,12 @@
 @class LayoutController, AudioController;
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
-  UIImageView *_loadingImage;
-  IBOutlet UIImageView *_background;
+    UIImageView *_loadingImage;
+    IBOutlet UIImageView *_background;
     IBOutlet UIImageView *_offlineIndicator;
-  UIView *_CACanvasView;
-  LayoutController *_layout;
+    IBOutlet UILabel *_offlineTextLabel;
+    UIView *_CACanvasView;
+    LayoutController *_layout;
 }
 
 
