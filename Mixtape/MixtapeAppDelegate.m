@@ -64,15 +64,19 @@
 #pragma mark Spotify Session delegate methods
 
 - (void)session:(SPSession *)aSession didFailToLoginWithError:(NSError *)error {
-    NSLog(@"bad spotify creds");
+    NSLog(@"login error %@", [error localizedDescription]);
+    NSDictionary * errorDictionary = [NSDictionary dictionaryWithObject:error forKey:ORNotificationErrorKey];
     [[NSNotificationCenter defaultCenter] postNotificationName: ORLoginFailed
-                                                        object: nil];
+                                                        object: nil 
+                                                      userInfo: errorDictionary];
 }
 
 - (void)session:(SPSession *)aSession didEncounterNetworkError:(NSError *)error {
     NSLog(@"spotify is down");
+    NSDictionary * errorDictionary = [NSDictionary dictionaryWithObject:error forKey:ORNotificationErrorKey];
     [[NSNotificationCenter defaultCenter] postNotificationName: ORLoginFailed
-                                                        object: nil];
+                                                        object: nil 
+                                                      userInfo: errorDictionary];
 }
 
 - (void)session:(SPSession *)aSession didLogMessage:(NSString *)aMessage {
@@ -145,6 +149,12 @@
     if (folder) {
         for (SPPlaylist * playlist in folder.playlists) {
             playlist.markedForOfflinePlayback = YES;
+            for (SPTrack *track in playlist.items) {
+                if (track.offlineStatus != SP_TRACK_OFFLINE_DONE) {
+                    NSLog(@"ERROR - NOT SYNCED %@", track.name);
+                    synced = NO;
+                }
+            }
             if ([playlist offlineStatus] != SP_PLAYLIST_OFFLINE_STATUS_YES) {
                 NSLog(@"ERROR - NOT SYNCED");
                 synced = NO;
@@ -188,6 +198,9 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application{    
     if ([[NSUserDefaults standardUserDefaults] boolForKey:ORAppResetKey]) {
         SPSession * session = [SPSession sharedSession];
+        for (SPPlaylist *playlist in self.playlists) {
+            [playlist setMarkedForOfflinePlayback:NO];
+        }
         [session logout];
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:ORFolderID];
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:ORAppResetKey];

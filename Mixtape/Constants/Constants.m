@@ -13,6 +13,9 @@ NSString * const ORLoginFailed = @"ORLoginFailed";
 NSString * const ORFolderChosen = @"ORFolderChosen";
 NSString * const ORAppResetKey = @"ORAppReset";
 
+NSString * const ORNotificationErrorKey = @"ORNotificationErrorKey";
+
+
 NSString * const ORFolderID = @"ORFolderID";
 NSString * const ORPlaylistIDArray = @"ORPlaylistIDs";
 

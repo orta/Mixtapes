@@ -11,6 +11,7 @@
 // Notifications
 extern NSString * const ORLoginFailed;
 extern NSString * const ORFolderChosen;
+extern NSString * const ORNotificationErrorKey;
 
 // Constants
 extern NSString * const ORUserAgent;

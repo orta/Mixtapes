@@ -19,6 +19,8 @@
     NSLog(@"cover %@", self.album.cover);
     if (!self.album.cover.loaded) NSLog(@"!!!!! not loaded");
     NSLog(@"image %@", self.album.cover.image);
+    if (!self.album.cover.loaded) NSLog(@"!!!!! not loaded");
+    
 }
 
 

@@ -27,7 +27,7 @@
     [passwordTextField addTarget:(id)self action:@selector(textFieldDidChange) forControlEvents:UIControlEventEditingChanged];
     
     [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(loginFailed) 
+                                             selector:@selector(loginFailed:) 
                                                  name:ORLoginFailed 
                                                object:nil];
 }
@@ -41,8 +41,8 @@
     [[SPSession sharedSession] attemptLoginWithUserName:usernameTextField.text password:passwordTextField.text rememberCredentials:YES];    
 }
 
-- (void)loginFailed {
-    failureLabel.text = @"Are you sure?";
+- (void)loginFailed:(NSNotification*)notification {
+    failureLabel.text = [[[notification userInfo] objectForKey:ORNotificationErrorKey] localizedDescription];
     [activityIndicator stopAnimating];
 }
 
