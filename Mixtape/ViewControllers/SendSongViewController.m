@@ -15,6 +15,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     playlistItems = [[NSMutableArray array] mutableCopy];
+    sentLabel.text = @"";
     
     [self getStarredSongs];
 }
@@ -47,10 +48,9 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ORCellReuseID];
     }
-    SPTrack * track = [playlistItems objectAtIndex:indexPath.row];
-    cell.textLabel.text = track.name;
+    SPPlaylistItem * item = [playlistItems objectAtIndex:indexPath.row];
+    cell.textLabel.text = [item.item name];
     cell.imageView.image = [UIImage imageNamed:@"loading.png"];
-//    cell.detailTextLabel.text = [NSString stringWithFormat:@"%i playlists", [[folder playlists] count]];
     return cell;
     
 }
@@ -59,8 +59,10 @@
 #pragma mark table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SPTrack * track = [playlistItems objectAtIndex:indexPath.row];
-    [[SPSession sharedSession] postTracks: [NSArray arrayWithObject:track] toInboxOfUser:@"ortatherox" withMessage:@"a new song form Mixtape!" delegate:self];
+    SPPlaylistItem * item = [playlistItems objectAtIndex:indexPath.row];
+    [[SPSession sharedSession] postTracks: [NSArray arrayWithObject: [item item] ] toInboxOfUser:@"ortatherox" withMessage:@"a new song from Mixtape!" delegate:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName: ORSongSent object: nil];
+    
 }
 
 -(void)postTracksToInboxOperationDidSucceed:(SPPostTracksToInboxOperation *)operation {
@@ -68,8 +70,7 @@
 }
 
 -(void)postTracksToInboxOperation:(SPPostTracksToInboxOperation *)operation didFailWithError:(NSError *)error {
-    #warning sending failed needs work
-    sentLabel.text = @"Sending failed?!";    
+    sentLabel.text = @"Sending failed?!";
 }
 
 

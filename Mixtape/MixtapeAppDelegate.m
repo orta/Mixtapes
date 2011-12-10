@@ -9,8 +9,7 @@
 #import "MixtapeAppDelegate.h"
 #import "MainViewController.h"
 #import "Settings.h"
-#import "LoginViewController.h"
-#import "FolderChooserViewController.h"
+#import "SetupViewController.h"
 #import "Reachability.h"
 #import "SPPlaylistFolderInternal.h"
 
@@ -85,7 +84,6 @@
 }
 
 - (void)sessionDidLoginSuccessfully:(SPSession *)aSession; {
-    [self.window.rootViewController dismissModalViewControllerAnimated:NO];
     [self monitorForErrors];
     NSLog(@"logged in");
     if ([[NSUserDefaults standardUserDefaults] objectForKey:ORFolderID]) {
@@ -95,7 +93,8 @@
             [self checkForOfflinePlaylists];
         }
     }else{
-        [self showFolderController];
+        [[NSNotificationCenter defaultCenter] postNotificationName: ORLoggedIn object: nil];
+
     }
 }
 
@@ -177,21 +176,16 @@
 }
 
 - (void)showLoginController {
-    LoginViewController *controller = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-    controller.modalPresentationStyle = UIModalPresentationFormSheet;
-    [self.window.rootViewController presentModalViewController:controller animated:YES];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:ORFolderID];
-}
-
-- (void)showFolderController {
-    [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(sessionDidLoginSuccessfully:) 
-                                                 name:ORFolderChosen 
-                                               object:nil];
+    SetupViewController *controller = [[SetupViewController alloc] initWithNibName:@"SetupViewController" bundle:nil];
     
-    FolderChooserViewController *controller = [[FolderChooserViewController alloc] initWithNibName:@"FolderChooserViewController" bundle:nil];
     controller.modalPresentationStyle = UIModalPresentationFormSheet;
     [self.window.rootViewController presentModalViewController:controller animated:NO];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(sessionDidLoginSuccessfully:) 
+                                                 name:ORSongSent 
+                                               object:nil];
+
 }
 
 - (BOOL)isOnline {

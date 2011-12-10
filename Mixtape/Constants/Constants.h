@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 // Notifications
+extern NSString * const ORLoggedIn;
 extern NSString * const ORLoginFailed;
 extern NSString * const ORFolderChosen;
 extern NSString * const ORNotificationErrorKey;
+extern NSString * const ORSongSent;
 
 // Constants
 extern NSString * const ORUserAgent;

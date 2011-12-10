@@ -9,9 +9,11 @@
 #import "Constants.h"
 
 NSString * const ORUserAgent = @"com.ortatherox.mixmcshane";
+NSString * const ORLoggedIn = @"ORLoggedIn";
 NSString * const ORLoginFailed = @"ORLoginFailed";
 NSString * const ORFolderChosen = @"ORFolderChosen";
 NSString * const ORAppResetKey = @"ORAppReset";
+NSString * const ORSongSent = @"ORSongSent";
 
 NSString * const ORNotificationErrorKey = @"ORNotificationErrorKey";
 
