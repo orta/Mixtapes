@@ -187,11 +187,19 @@ enum {
             CGRect previousCover = CGRectMake(0, 200, 160, ORCoverWidth);
             if ( CGRectContainsPoint(previousCover, tapPoint)) {
                 if (_currentplaylistIndex) {
-                    _currentplaylistIndex--;
-                    [self moveToCurrentTrack];
+                    [self handleSwipeRight:nil];
                 };
                 return;
             }
+            
+            CGRect nextCover = CGRectMake(80 + (ORCoverWidth * 2), 200, ORCoverWidth, ORCoverWidth);
+            if ( CGRectContainsPoint(nextCover, tapPoint)) {
+                if (_currentplaylistIndex) {
+                    [self handleSwipeLeft:nil];
+                };
+                return;
+            }
+            
             
             //fallback to hiding
             [self transitionIntoFloorView];

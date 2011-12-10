@@ -18,6 +18,7 @@
 - (void)showLoginController;
 - (void)showFolderController;
 - (void)waitForPlaylistsToLoad;
+- (void)monitorForErrors;
 - (BOOL)isOnline;
 - (void)checkForOfflinePlaylists;
 @end
@@ -85,6 +86,7 @@
 
 - (void)sessionDidLoginSuccessfully:(SPSession *)aSession; {
     [self.window.rootViewController dismissModalViewControllerAnimated:NO];
+    [self monitorForErrors];
     NSLog(@"logged in");
     if ([[NSUserDefaults standardUserDefaults] objectForKey:ORFolderID]) {
         if ([self isOnline]) {
@@ -165,6 +167,13 @@
         self.playlists = folder.playlists;
         [[NSNotificationCenter defaultCenter] postNotificationName:@"PlaylistsSet" object:self];
     }
+}
+
+- (void)monitorForErrors {
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(showLoginController) 
+                                                 name:ORLoginFailed 
+                                               object:nil];
 }
 
 - (void)showLoginController {
