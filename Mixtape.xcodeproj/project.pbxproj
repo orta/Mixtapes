@@ -13,6 +13,7 @@
 		601569EA14933BFF00342FAE /* roughbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 601569E914933BFF00342FAE /* roughbg.png */; };
 		601569EE14933C3A00342FAE /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601569EC14933C3A00342FAE /* SetupViewController.m */; };
 		601569EF14933C3A00342FAE /* SetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601569ED14933C3A00342FAE /* SetupViewController.xib */; };
+		601569F5149343C300342FAE /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 601569F4149343C300342FAE /* star.png */; };
 		60257AF514775F7800E3A53F /* FolderChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60257AF314775F7800E3A53F /* FolderChooserViewController.m */; };
 		60257AF614775F7800E3A53F /* FolderChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60257AF414775F7800E3A53F /* FolderChooserViewController.xib */; };
 		6028CF6A148107670033B680 /* AlbumRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 6028CF69148107670033B680 /* AlbumRef.m */; };
@@ -89,6 +90,7 @@
 		601569EB14933C3A00342FAE /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetupViewController.h; path = ViewControllers/SetupViewController.h; sourceTree = "<group>"; };
 		601569EC14933C3A00342FAE /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetupViewController.m; path = ViewControllers/SetupViewController.m; sourceTree = "<group>"; };
 		601569ED14933C3A00342FAE /* SetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SetupViewController.xib; path = ViewControllers/SetupViewController.xib; sourceTree = "<group>"; };
+		601569F4149343C300342FAE /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		60257AF214775F7800E3A53F /* FolderChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FolderChooserViewController.h; path = ViewControllers/FolderChooserViewController.h; sourceTree = "<group>"; };
 		60257AF314775F7800E3A53F /* FolderChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FolderChooserViewController.m; path = ViewControllers/FolderChooserViewController.m; sourceTree = "<group>"; };
 		60257AF414775F7800E3A53F /* FolderChooserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FolderChooserViewController.xib; path = ViewControllers/FolderChooserViewController.xib; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 		606E9A1114774E8C00DB1646 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				601569F4149343C300342FAE /* star.png */,
 				601569E914933BFF00342FAE /* roughbg.png */,
 				6096443A1484ABE100865A4A /* offline_indicator_inactive.png */,
 				6096443B1484ABE100865A4A /* offline_indicator.png */,
@@ -470,6 +473,7 @@
 				6096443D1484ABE100865A4A /* offline_indicator.png in Resources */,
 				601569EA14933BFF00342FAE /* roughbg.png in Resources */,
 				601569EF14933C3A00342FAE /* SetupViewController.xib in Resources */,
+				601569F5149343C300342FAE /* star.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

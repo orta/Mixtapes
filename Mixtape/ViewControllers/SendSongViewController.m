@@ -50,7 +50,7 @@
     }
     SPPlaylistItem * item = [playlistItems objectAtIndex:indexPath.row];
     cell.textLabel.text = [item.item name];
-    cell.imageView.image = [UIImage imageNamed:@"loading.png"];
+    cell.imageView.image = [UIImage imageNamed:@"star.png"];
     return cell;
     
 }

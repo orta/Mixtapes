@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class MainViewController;
+@class MainViewController, SetupViewController;
 
 @interface MixtapeAppDelegate : UIResponder <UIApplicationDelegate, SPSessionDelegate>
 
 @property (retain, nonatomic) UIWindow *window;
 @property (retain, nonatomic) MainViewController *mainViewController;
+@property (retain, nonatomic) SetupViewController *setupViewController;
 @property (retain, nonatomic) NSMutableArray * playlists;
 
 -(void) startSpotify;

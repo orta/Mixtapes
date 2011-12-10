@@ -15,7 +15,8 @@
 
 @interface MixtapeAppDelegate (private)
 - (void)showLoginController;
-- (void)showFolderController;
+- (void)removeSetup;
+
 - (void)waitForPlaylistsToLoad;
 - (void)monitorForErrors;
 - (BOOL)isOnline;
@@ -26,6 +27,7 @@
 
 @synthesize window = _window;
 @synthesize mainViewController = _mainViewController;
+@synthesize setupViewController = _setupViewController;
 @synthesize playlists = _playlists;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -87,6 +89,7 @@
     [self monitorForErrors];
     NSLog(@"logged in");
     if ([[NSUserDefaults standardUserDefaults] objectForKey:ORFolderID]) {
+        [self removeSetup];
         if ([self isOnline]) {
             [self waitAndFillTrackPool];
         }else{
@@ -98,7 +101,13 @@
     }
 }
 
--(void)waitAndFillTrackPool {
+- (void)removeSetup {
+    if (self.setupViewController) {
+        [self.setupViewController.view removeFromSuperview];
+    }
+}
+
+- (void)waitAndFillTrackPool {
 	if ([[[SPSession sharedSession] userPlaylists] isLoaded] == NO) {
         [self performSelector:_cmd withObject:nil afterDelay:0.5];
         return;
@@ -176,10 +185,10 @@
 }
 
 - (void)showLoginController {
-    SetupViewController *controller = [[SetupViewController alloc] initWithNibName:@"SetupViewController" bundle:nil];
+    self.setupViewController = [[SetupViewController alloc] initWithNibName:@"SetupViewController" bundle:nil];
     
-    controller.modalPresentationStyle = UIModalPresentationFormSheet;
-    [self.window.rootViewController presentModalViewController:controller animated:NO];
+
+    [self.window.rootViewController.view addSubview:self.setupViewController.view];
 
     [[NSNotificationCenter defaultCenter] addObserver:self 
                                              selector:@selector(sessionDidLoginSuccessfully:) 
