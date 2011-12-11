@@ -51,6 +51,11 @@
     SPPlaylistItem * item = [playlistItems objectAtIndex:indexPath.row];
     cell.textLabel.text = [item.item name];
     cell.imageView.image = [UIImage imageNamed:@"star.png"];
+    
+    if (item.itemClass == [SPTrack class]) {
+        SPTrack * track = item.item;
+        cell.detailTextLabel.text = [track consolidatedArtists];
+    }
     return cell;
     
 }

@@ -67,7 +67,7 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
-					<object class="IBUIImageView" id="199203837">
+					<object class="IBUIImageView" id="82777638">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">256</int>
 						<string key="NSFrame">{{200, 631}, {93, 94}}</string>
@@ -83,7 +83,7 @@
 							<string key="NSResourceName">mini_ribbon.png</string>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="588803689">
+					<object class="IBUIImageView" id="1064587332">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">256</int>
 						<string key="NSFrame">{{414, 259}, {171, 181}}</string>
@@ -105,11 +105,8 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="603502569"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MSAwAA</bytes>
-					<object class="NSColorSpace" key="NSCustomColorSpace">
-						<int key="NSID">2</int>
-					</object>
+					<int key="NSColorSpace">1</int>
+					<bytes key="NSRGB">MCAwIDAgMC4zAA</bytes>
 				</object>
 				<bool key="IBUIOpaque">NO</bool>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -163,8 +160,8 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="603502569"/>
 							<reference ref="632518564"/>
-							<reference ref="199203837"/>
-							<reference ref="588803689"/>
+							<reference ref="82777638"/>
+							<reference ref="1064587332"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -180,12 +177,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">7</int>
-						<reference key="object" ref="199203837"/>
+						<reference key="object" ref="82777638"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
-						<reference key="object" ref="588803689"/>
+						<reference key="object" ref="1064587332"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 				</array>

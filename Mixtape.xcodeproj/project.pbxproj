@@ -12,7 +12,6 @@
 		6010886A1438B6D8008D3D9F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601088691438B6D7008D3D9F /* AudioToolbox.framework */; };
 		601569EE14933C3A00342FAE /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601569EC14933C3A00342FAE /* SetupViewController.m */; };
 		601569EF14933C3A00342FAE /* SetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601569ED14933C3A00342FAE /* SetupViewController.xib */; };
-		601569F5149343C300342FAE /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 601569F4149343C300342FAE /* star.png */; };
 		60257AF514775F7800E3A53F /* FolderChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60257AF314775F7800E3A53F /* FolderChooserViewController.m */; };
 		60257AF614775F7800E3A53F /* FolderChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60257AF414775F7800E3A53F /* FolderChooserViewController.xib */; };
 		6028CF6A148107670033B680 /* AlbumRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 6028CF69148107670033B680 /* AlbumRef.m */; };
@@ -60,6 +59,7 @@
 		60F0F6971495504800473008 /* mini_ribbon.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F6941495504700473008 /* mini_ribbon.png */; };
 		60F0F6981495504800473008 /* ribbon.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F6951495504700473008 /* ribbon.png */; };
 		60F0F6991495504800473008 /* setup-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F6961495504800473008 /* setup-bg.png */; };
+		60F0F69B149553D700473008 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F69A149553D700473008 /* star.png */; };
 		60F8C43F147864DE00DD8D8C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60F8C43E147864DD00DD8D8C /* Settings.bundle */; };
 		60FEBEE714954639005A8BBE /* bottombargreen_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE114954639005A8BBE /* bottombargreen_pressed.png */; };
 		60FEBEE814954639005A8BBE /* bottombargreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE214954639005A8BBE /* bottombargreen.png */; };
@@ -96,7 +96,6 @@
 		601569EB14933C3A00342FAE /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetupViewController.h; path = ViewControllers/SetupViewController.h; sourceTree = "<group>"; };
 		601569EC14933C3A00342FAE /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetupViewController.m; path = ViewControllers/SetupViewController.m; sourceTree = "<group>"; };
 		601569ED14933C3A00342FAE /* SetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SetupViewController.xib; path = ViewControllers/SetupViewController.xib; sourceTree = "<group>"; };
-		601569F4149343C300342FAE /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		60257AF214775F7800E3A53F /* FolderChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FolderChooserViewController.h; path = ViewControllers/FolderChooserViewController.h; sourceTree = "<group>"; };
 		60257AF314775F7800E3A53F /* FolderChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FolderChooserViewController.m; path = ViewControllers/FolderChooserViewController.m; sourceTree = "<group>"; };
 		60257AF414775F7800E3A53F /* FolderChooserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FolderChooserViewController.xib; path = ViewControllers/FolderChooserViewController.xib; sourceTree = "<group>"; };
@@ -165,6 +164,7 @@
 		60F0F6941495504700473008 /* mini_ribbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mini_ribbon.png; sourceTree = "<group>"; };
 		60F0F6951495504700473008 /* ribbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ribbon.png; sourceTree = "<group>"; };
 		60F0F6961495504800473008 /* setup-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setup-bg.png"; sourceTree = "<group>"; };
+		60F0F69A149553D700473008 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		60F8C43E147864DD00DD8D8C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Resources/Settings.bundle; sourceTree = "<group>"; };
 		60FEBEE114954639005A8BBE /* bottombargreen_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombargreen_pressed.png; sourceTree = "<group>"; };
 		60FEBEE214954639005A8BBE /* bottombargreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombargreen.png; sourceTree = "<group>"; };
@@ -238,8 +238,8 @@
 				60FEBEE414954639005A8BBE /* bottombarredfire.png */,
 				60FEBEE514954639005A8BBE /* bottombarwhite_pressed.png */,
 				60FEBEE614954639005A8BBE /* bottombarwhite.png */,
-				601569F4149343C300342FAE /* star.png */,
 				6096443A1484ABE100865A4A /* offline_indicator_inactive.png */,
+				60F0F69A149553D700473008 /* star.png */,
 				6096443B1484ABE100865A4A /* offline_indicator.png */,
 				602D4C161458836200CB8CF7 /* mixtapes57.png */,
 				602D4C141458834300CB8CF7 /* mixtapes114.png */,
@@ -501,7 +501,6 @@
 				6096443C1484ABE100865A4A /* offline_indicator_inactive.png in Resources */,
 				6096443D1484ABE100865A4A /* offline_indicator.png in Resources */,
 				601569EF14933C3A00342FAE /* SetupViewController.xib in Resources */,
-				601569F5149343C300342FAE /* star.png in Resources */,
 				60FEBEE714954639005A8BBE /* bottombargreen_pressed.png in Resources */,
 				60FEBEE814954639005A8BBE /* bottombargreen.png in Resources */,
 				60FEBEE914954639005A8BBE /* bottombarredfire_pressed.png in Resources */,
@@ -511,6 +510,7 @@
 				60F0F6971495504800473008 /* mini_ribbon.png in Resources */,
 				60F0F6981495504800473008 /* ribbon.png in Resources */,
 				60F0F6991495504800473008 /* setup-bg.png in Resources */,
+				60F0F69B149553D700473008 /* star.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
