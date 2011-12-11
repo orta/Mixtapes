@@ -10,7 +10,6 @@
 		601088591438A33B008D3D9F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601088581438A33B008D3D9F /* AVFoundation.framework */; };
 		601088611438A722008D3D9F /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601088601438A722008D3D9F /* AudioController.m */; };
 		6010886A1438B6D8008D3D9F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601088691438B6D7008D3D9F /* AudioToolbox.framework */; };
-		601569EA14933BFF00342FAE /* roughbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 601569E914933BFF00342FAE /* roughbg.png */; };
 		601569EE14933C3A00342FAE /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601569EC14933C3A00342FAE /* SetupViewController.m */; };
 		601569EF14933C3A00342FAE /* SetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601569ED14933C3A00342FAE /* SetupViewController.xib */; };
 		601569F5149343C300342FAE /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 601569F4149343C300342FAE /* star.png */; };
@@ -27,8 +26,6 @@
 		606E99D71476936900DB1646 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E99D61476936900DB1646 /* Constants.m */; };
 		606E9A0F14774D7E00DB1646 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E9A0D14774D7E00DB1646 /* LoginViewController.m */; };
 		606E9A1014774D7E00DB1646 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 606E9A0E14774D7E00DB1646 /* LoginViewController.xib */; };
-		606E9A1314774EA500DB1646 /* loginview.png in Resources */ = {isa = PBXBuildFile; fileRef = 606E9A1214774EA500DB1646 /* loginview.png */; };
-		606E9A231477593D00DB1646 /* loginbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 606E9A221477593D00DB1646 /* loginbg.jpg */; };
 		6080869A1434FCDA0029BBC9 /* template.png in Resources */ = {isa = PBXBuildFile; fileRef = 608086991434FCDA0029BBC9 /* template.png */; };
 		6080869C143504B30029BBC9 /* loadingbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6080869B143504B30029BBC9 /* loadingbg.png */; };
 		608086CE14352A1C0029BBC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608086CD14352A1C0029BBC9 /* QuartzCore.framework */; };
@@ -60,7 +57,17 @@
 		60BFCF261486A590000EEB24 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BFCF251486A590000EEB24 /* Reachability.m */; };
 		60E39AD3147890C900F848B7 /* SPTrack+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E39AD2147890C900F848B7 /* SPTrack+Debug.m */; };
 		60E600C3143790F00096BBB4 /* LayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E600C2143790F00096BBB4 /* LayoutController.m */; };
+		60F0F6971495504800473008 /* mini_ribbon.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F6941495504700473008 /* mini_ribbon.png */; };
+		60F0F6981495504800473008 /* ribbon.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F6951495504700473008 /* ribbon.png */; };
+		60F0F6991495504800473008 /* setup-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F6961495504800473008 /* setup-bg.png */; };
 		60F8C43F147864DE00DD8D8C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60F8C43E147864DD00DD8D8C /* Settings.bundle */; };
+		60FEBEE714954639005A8BBE /* bottombargreen_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE114954639005A8BBE /* bottombargreen_pressed.png */; };
+		60FEBEE814954639005A8BBE /* bottombargreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE214954639005A8BBE /* bottombargreen.png */; };
+		60FEBEE914954639005A8BBE /* bottombarredfire_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE314954639005A8BBE /* bottombarredfire_pressed.png */; };
+		60FEBEEA14954639005A8BBE /* bottombarredfire.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE414954639005A8BBE /* bottombarredfire.png */; };
+		60FEBEEB14954639005A8BBE /* bottombarwhite_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE514954639005A8BBE /* bottombarwhite_pressed.png */; };
+		60FEBEEC14954639005A8BBE /* bottombarwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE614954639005A8BBE /* bottombarwhite.png */; };
+		60FEBEEF14954653005A8BBE /* ORButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEBEEE14954653005A8BBE /* ORButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +93,6 @@
 		601088601438A722008D3D9F /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
 		601088691438B6D7008D3D9F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6010886B1438E529008D3D9F /* SettingsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsExample.h; sourceTree = "<group>"; };
-		601569E914933BFF00342FAE /* roughbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roughbg.png; sourceTree = "<group>"; };
 		601569EB14933C3A00342FAE /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetupViewController.h; path = ViewControllers/SetupViewController.h; sourceTree = "<group>"; };
 		601569EC14933C3A00342FAE /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetupViewController.m; path = ViewControllers/SetupViewController.m; sourceTree = "<group>"; };
 		601569ED14933C3A00342FAE /* SetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SetupViewController.xib; path = ViewControllers/SetupViewController.xib; sourceTree = "<group>"; };
@@ -110,8 +116,6 @@
 		606E9A0C14774D7E00DB1646 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/LoginViewController.h; sourceTree = "<group>"; };
 		606E9A0D14774D7E00DB1646 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/LoginViewController.m; sourceTree = "<group>"; };
 		606E9A0E14774D7E00DB1646 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ViewControllers/LoginViewController.xib; sourceTree = "<group>"; };
-		606E9A1214774EA500DB1646 /* loginview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginview.png; sourceTree = "<group>"; };
-		606E9A221477593D00DB1646 /* loginbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginbg.jpg; sourceTree = "<group>"; };
 		608086991434FCDA0029BBC9 /* template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = template.png; path = ../template.png; sourceTree = "<group>"; };
 		6080869B143504B30029BBC9 /* loadingbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loadingbg.png; path = ../loadingbg.png; sourceTree = "<group>"; };
 		608086CD14352A1C0029BBC9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -158,7 +162,18 @@
 		60E39AD2147890C900F848B7 /* SPTrack+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPTrack+Debug.m"; sourceTree = "<group>"; };
 		60E600C1143790F00096BBB4 /* LayoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutController.h; sourceTree = "<group>"; };
 		60E600C2143790F00096BBB4 /* LayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutController.m; sourceTree = "<group>"; };
+		60F0F6941495504700473008 /* mini_ribbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mini_ribbon.png; sourceTree = "<group>"; };
+		60F0F6951495504700473008 /* ribbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ribbon.png; sourceTree = "<group>"; };
+		60F0F6961495504800473008 /* setup-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setup-bg.png"; sourceTree = "<group>"; };
 		60F8C43E147864DD00DD8D8C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Resources/Settings.bundle; sourceTree = "<group>"; };
+		60FEBEE114954639005A8BBE /* bottombargreen_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombargreen_pressed.png; sourceTree = "<group>"; };
+		60FEBEE214954639005A8BBE /* bottombargreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombargreen.png; sourceTree = "<group>"; };
+		60FEBEE314954639005A8BBE /* bottombarredfire_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombarredfire_pressed.png; sourceTree = "<group>"; };
+		60FEBEE414954639005A8BBE /* bottombarredfire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombarredfire.png; sourceTree = "<group>"; };
+		60FEBEE514954639005A8BBE /* bottombarwhite_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombarwhite_pressed.png; sourceTree = "<group>"; };
+		60FEBEE614954639005A8BBE /* bottombarwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombarwhite.png; sourceTree = "<group>"; };
+		60FEBEED14954653005A8BBE /* ORButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ORButton.h; path = views/ORButton.h; sourceTree = "<group>"; };
+		60FEBEEE14954653005A8BBE /* ORButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORButton.m; path = views/ORButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,8 +232,13 @@
 		606E9A1114774E8C00DB1646 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				60FEBEE114954639005A8BBE /* bottombargreen_pressed.png */,
+				60FEBEE214954639005A8BBE /* bottombargreen.png */,
+				60FEBEE314954639005A8BBE /* bottombarredfire_pressed.png */,
+				60FEBEE414954639005A8BBE /* bottombarredfire.png */,
+				60FEBEE514954639005A8BBE /* bottombarwhite_pressed.png */,
+				60FEBEE614954639005A8BBE /* bottombarwhite.png */,
 				601569F4149343C300342FAE /* star.png */,
-				601569E914933BFF00342FAE /* roughbg.png */,
 				6096443A1484ABE100865A4A /* offline_indicator_inactive.png */,
 				6096443B1484ABE100865A4A /* offline_indicator.png */,
 				602D4C161458836200CB8CF7 /* mixtapes57.png */,
@@ -230,8 +250,9 @@
 				608086991434FCDA0029BBC9 /* template.png */,
 				60947ED91434EE2B007024CD /* loading.png */,
 				60947ECF1434CE36007024CD /* bg.jpg */,
-				606E9A221477593D00DB1646 /* loginbg.jpg */,
-				606E9A1214774EA500DB1646 /* loginview.png */,
+				60F0F6941495504700473008 /* mini_ribbon.png */,
+				60F0F6951495504700473008 /* ribbon.png */,
+				60F0F6961495504800473008 /* setup-bg.png */,
 			);
 			name = Assets;
 			path = Resources;
@@ -244,6 +265,8 @@
 				608086D914359E350029BBC9 /* PlaylistTitleLayer.m */,
 				608086DE1435AF1C0029BBC9 /* TrackLayer.h */,
 				608086DF1435AF1C0029BBC9 /* TrackLayer.m */,
+				60FEBEED14954653005A8BBE /* ORButton.h */,
+				60FEBEEE14954653005A8BBE /* ORButton.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -251,6 +274,7 @@
 		608086DC14359E7B0029BBC9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				60FEBEE01495337C005A8BBE /* Setup */,
 				60B1FC291434BE530039206C /* MixtapeAppDelegate.h */,
 				60B1FC2A1434BE530039206C /* MixtapeAppDelegate.m */,
 				60B1FC2C1434BE530039206C /* MainViewController.h */,
@@ -261,18 +285,6 @@
 				60E600C2143790F00096BBB4 /* LayoutController.m */,
 				6010885F1438A722008D3D9F /* AudioController.h */,
 				601088601438A722008D3D9F /* AudioController.m */,
-				606E9A0C14774D7E00DB1646 /* LoginViewController.h */,
-				606E9A0D14774D7E00DB1646 /* LoginViewController.m */,
-				606E9A0E14774D7E00DB1646 /* LoginViewController.xib */,
-				60257AF214775F7800E3A53F /* FolderChooserViewController.h */,
-				60257AF314775F7800E3A53F /* FolderChooserViewController.m */,
-				60257AF414775F7800E3A53F /* FolderChooserViewController.xib */,
-				6056C16E14828F8C002D7358 /* SendSongViewController.h */,
-				6056C16F14828F8C002D7358 /* SendSongViewController.m */,
-				6056C17014828F8D002D7358 /* SendSongViewController.xib */,
-				601569EB14933C3A00342FAE /* SetupViewController.h */,
-				601569EC14933C3A00342FAE /* SetupViewController.m */,
-				601569ED14933C3A00342FAE /* SetupViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -381,6 +393,25 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		60FEBEE01495337C005A8BBE /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				606E9A0C14774D7E00DB1646 /* LoginViewController.h */,
+				606E9A0D14774D7E00DB1646 /* LoginViewController.m */,
+				606E9A0E14774D7E00DB1646 /* LoginViewController.xib */,
+				60257AF214775F7800E3A53F /* FolderChooserViewController.h */,
+				60257AF314775F7800E3A53F /* FolderChooserViewController.m */,
+				60257AF414775F7800E3A53F /* FolderChooserViewController.xib */,
+				6056C16E14828F8C002D7358 /* SendSongViewController.h */,
+				6056C16F14828F8C002D7358 /* SendSongViewController.m */,
+				6056C17014828F8D002D7358 /* SendSongViewController.xib */,
+				601569EB14933C3A00342FAE /* SetupViewController.h */,
+				601569EC14933C3A00342FAE /* SetupViewController.m */,
+				601569ED14933C3A00342FAE /* SetupViewController.xib */,
+			);
+			name = Setup;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -463,17 +494,23 @@
 				602D4C151458834300CB8CF7 /* mixtapes114.png in Resources */,
 				602D4C171458836200CB8CF7 /* mixtapes57.png in Resources */,
 				606E9A1014774D7E00DB1646 /* LoginViewController.xib in Resources */,
-				606E9A1314774EA500DB1646 /* loginview.png in Resources */,
-				606E9A231477593D00DB1646 /* loginbg.jpg in Resources */,
 				60257AF614775F7800E3A53F /* FolderChooserViewController.xib in Resources */,
 				60F8C43F147864DE00DD8D8C /* Settings.bundle in Resources */,
 				606761BF147D655B00623485 /* IDEAS in Resources */,
 				6056C17214828F8D002D7358 /* SendSongViewController.xib in Resources */,
 				6096443C1484ABE100865A4A /* offline_indicator_inactive.png in Resources */,
 				6096443D1484ABE100865A4A /* offline_indicator.png in Resources */,
-				601569EA14933BFF00342FAE /* roughbg.png in Resources */,
 				601569EF14933C3A00342FAE /* SetupViewController.xib in Resources */,
 				601569F5149343C300342FAE /* star.png in Resources */,
+				60FEBEE714954639005A8BBE /* bottombargreen_pressed.png in Resources */,
+				60FEBEE814954639005A8BBE /* bottombargreen.png in Resources */,
+				60FEBEE914954639005A8BBE /* bottombarredfire_pressed.png in Resources */,
+				60FEBEEA14954639005A8BBE /* bottombarredfire.png in Resources */,
+				60FEBEEB14954639005A8BBE /* bottombarwhite_pressed.png in Resources */,
+				60FEBEEC14954639005A8BBE /* bottombarwhite.png in Resources */,
+				60F0F6971495504800473008 /* mini_ribbon.png in Resources */,
+				60F0F6981495504800473008 /* ribbon.png in Resources */,
+				60F0F6991495504800473008 /* setup-bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +540,7 @@
 				6056C17114828F8D002D7358 /* SendSongViewController.m in Sources */,
 				60BFCF261486A590000EEB24 /* Reachability.m in Sources */,
 				601569EE14933C3A00342FAE /* SetupViewController.m in Sources */,
+				60FEBEEF14954653005A8BBE /* ORButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

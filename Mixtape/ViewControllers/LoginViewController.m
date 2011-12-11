@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "ORButton.h"
 
 @interface LoginViewController (private) 
 - (BOOL)validate;
@@ -20,6 +21,7 @@
     [usernameTextField becomeFirstResponder];
     failureLabel.text = @"";
     loginButton.enabled = NO;
+    [loginButton setCustomImage:@"bottombarwhite"];
     [activityIndicator stopAnimating];
     
     //register for text changes

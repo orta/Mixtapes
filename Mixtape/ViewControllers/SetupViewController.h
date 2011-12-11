@@ -10,6 +10,7 @@
 
 @interface SetupViewController : UIViewController {
     IBOutlet UIView * contentView;
+    UINavigationController * navController;
 }
 
 @end

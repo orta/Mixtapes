@@ -16,9 +16,13 @@
 
 
 - (void)viewDidLoad {
-    NSLog(@"ok");
-    LoginViewController *controller = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-    [contentView addSubview:controller.view];
+    LoginViewController *loginController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    navController = [[UINavigationController alloc] initWithRootViewController:loginController];
+    [contentView addSubview:navController.view];
+    navController.view.frame = contentView.bounds;
+    [navController setToolbarHidden:YES animated:NO];
+    [navController setNavigationBarHidden:YES animated:NO];
+
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:ORFolderID];
     [[NSNotificationCenter defaultCenter] addObserver:self 
                                              selector:@selector(showFolderController) 
@@ -30,20 +34,16 @@
 
 - (void)showFolderController {
     FolderChooserViewController *controller = [[FolderChooserViewController alloc] initWithNibName:@"FolderChooserViewController" bundle:nil];
-    UIView * oldView = [[contentView subviews] objectAtIndex:0];
-    [UIView transitionFromView: oldView toView:controller.view duration:0.5 options:UIViewAnimationTransitionFlipFromLeft completion:^(BOOL finished) { }];
-    
-        
+    [navController pushViewController:controller animated:YES];
     [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(showSendSongController) 
-                                                 name:ORFolderChosen 
-                                               object:nil];
+                                                 selector:@selector(showSendSongController) 
+                                                     name:ORFolderChosen 
+                                                   object:nil]; 
 }
 
 - (void)showSendSongController {
     SendSongViewController *controller = [[SendSongViewController alloc] initWithNibName:@"SendSongViewController" bundle:nil];    
-    UIView * oldView = [[contentView subviews] objectAtIndex:0];
-    [UIView transitionFromView: oldView toView:controller.view duration:0.5 options:UIViewAnimationTransitionFlipFromLeft completion:^(BOOL finished) { }];
+    [navController pushViewController:controller animated:YES];
 }
 
 @end
