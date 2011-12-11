@@ -7,6 +7,7 @@
 //
 
 #import "SendSongViewController.h"
+#import "ORButton.h"
 
 @implementation SendSongViewController
 
@@ -15,7 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     playlistItems = [[NSMutableArray array] mutableCopy];
-    sentLabel.text = @"";
+    [skipButton setCustomImage:@"bottombarwhite"];
     
     [self getStarredSongs];
 }
@@ -56,6 +57,11 @@
         SPTrack * track = item.item;
         cell.detailTextLabel.text = [track consolidatedArtists];
     }
+    
+    UIView *viewSelected = [[UIView alloc] init];
+    viewSelected.backgroundColor = [UIColor redColor];
+    cell.selectedBackgroundView = viewSelected;
+
     return cell;
     
 }
@@ -67,17 +73,11 @@
     SPPlaylistItem * item = [playlistItems objectAtIndex:indexPath.row];
     [[SPSession sharedSession] postTracks: [NSArray arrayWithObject: [item item] ] toInboxOfUser:@"ortatherox" withMessage:@"a new song from Mixtape!" delegate:self];
     [[NSNotificationCenter defaultCenter] postNotificationName: ORSongSent object: nil];
-    
 }
 
--(void)postTracksToInboxOperationDidSucceed:(SPPostTracksToInboxOperation *)operation {
-    sentLabel.text = @"Sent";
+- (IBAction)skipSongSending:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName: ORSongSent object: nil];
 }
-
--(void)postTracksToInboxOperation:(SPPostTracksToInboxOperation *)operation didFailWithError:(NSError *)error {
-    sentLabel.text = @"Sending failed?!";
-}
-
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

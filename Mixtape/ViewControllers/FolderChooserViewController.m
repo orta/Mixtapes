@@ -7,6 +7,7 @@
 //
 
 #import "FolderChooserViewController.h"
+#import "ORButton.h"
 
 @interface FolderChooserViewController (private)
 - (void)searchForFolders;
@@ -18,11 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     folders = [[NSMutableArray array] mutableCopy];
-    
-    // only show spotify button if they have spotify
-    NSURL *url = [[NSURL alloc] initWithString: @"spotify://" ];
-    spotifyButton.hidden = ![[UIApplication sharedApplication] canOpenURL:url];
-    
+    [spotifyButton setCustomImage:@"bottombargreen"];
     [self searchForFolders];
 }
 
@@ -45,8 +42,13 @@
 }
 
 - (IBAction)loadSpotify:(id)sender {
-    NSURL *url = [[NSURL alloc] initWithString: @"spotify:" ];
-    [[UIApplication sharedApplication] openURL: url];   
+    NSURL * url;
+    url = [[NSURL alloc] initWithString: @"spotify:" ];
+
+    if( ![[UIApplication sharedApplication] canOpenURL:url] ){
+        url = [[NSURL alloc] initWithString: @"itms-apps://itunes.com/apps/spotify"];
+    }
+    [[UIApplication sharedApplication] openURL: url];        
 }
 
 #pragma mark table view data source
@@ -63,6 +65,11 @@
     SPPlaylistFolder * folder = [folders objectAtIndex:indexPath.row];
     cell.textLabel.text = folder.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%i playlists", [[folder playlists] count]];
+
+    UIView *viewSelected = [[UIView alloc] init];
+    viewSelected.backgroundColor = [UIColor redColor];
+    cell.selectedBackgroundView = viewSelected;
+
     return cell;
 
 }
@@ -75,9 +82,7 @@
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithUnsignedLongLong:folder.folderId] forKey:ORFolderID];
     [[NSNotificationCenter defaultCenter] postNotificationName: ORFolderChosen
                                                         object: nil];
-
 }
-
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

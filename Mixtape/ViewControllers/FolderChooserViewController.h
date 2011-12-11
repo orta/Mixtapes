@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class ORButton;
+
 @interface FolderChooserViewController : UIViewController <UITableViewDataSource, UITableViewDelegate > {
     NSMutableArray * folders;
-    IBOutlet UIButton * spotifyButton;
+    IBOutlet ORButton * spotifyButton;
 }
 @property (retain, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)loadSpotify:(id)sender;

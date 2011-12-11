@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class ORButton;
+
 @interface SendSongViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPPostTracksToInboxOperationDelegate > {
     NSMutableArray * playlistItems;
-    IBOutlet UIButton * spotifyButton;
-    IBOutlet UILabel * sentLabel;
+    IBOutlet ORButton *skipButton;
 }
 
 @property (retain, nonatomic) IBOutlet UITableView *tableView;
 - (void) getStarredSongs; 
+- (IBAction)skipSongSending:(id)sender;
 @end
