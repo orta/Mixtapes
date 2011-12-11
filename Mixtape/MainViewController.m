@@ -43,6 +43,7 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
 }
 
 - (void)checkPlaylistsAreOffline:(NSTimer *)timer {
+    _offlineIndicator.hidden = NO;
     MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate*)[[UIApplication sharedApplication] delegate];
     for (SPPlaylist * playlist in appDelegate.playlists) {
         playlist.markedForOfflinePlayback = YES;

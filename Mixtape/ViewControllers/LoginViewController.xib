@@ -179,7 +179,7 @@
 							</object>
 							<object class="IBUIActivityIndicatorView" id="531576113">
 								<reference key="NSNextResponder" ref="597243762"/>
-								<int key="NSvFlags">301</int>
+								<int key="NSvFlags">-2147483347</int>
 								<string key="NSFrame">{{49, 327}, {20, 20}}</string>
 								<reference key="NSSuperview" ref="597243762"/>
 								<reference key="NSWindow"/>
@@ -187,7 +187,6 @@
 								<string key="NSReuseIdentifierKey">_NS:1030</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<bool key="IBUIHidesWhenStopped">NO</bool>
 								<int key="IBUIStyle">2</int>
 							</object>
 							<object class="IBUILabel" id="643349397">

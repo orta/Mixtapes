@@ -91,7 +91,7 @@
 					</object>
 					<object class="IBUIImageView" id="129092028">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">278</int>
+						<int key="NSvFlags">-2147483370</int>
 						<string key="NSFrameSize">{1024, 768}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
@@ -219,7 +219,6 @@
 								<string key="NSFrame">{{301, -10}, {121, 121}}</string>
 								<reference key="NSSuperview" ref="878246342"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:241</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -266,7 +265,7 @@
 					</object>
 					<object class="IBUILabel" id="700849954">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">289</int>
+						<int key="NSvFlags">-2147483359</int>
 						<string key="NSFrame">{{861, 78}, {65, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
@@ -835,7 +834,6 @@
 							<string>audio</string>
 							<string>canvas</string>
 							<string>layout</string>
-							<string>loadingBackground</string>
 							<string>loadingImage</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -846,7 +844,6 @@
 							<string>AudioController</string>
 							<string>UIView</string>
 							<string>LayoutController</string>
-							<string>UIImageView</string>
 							<string>UIImageView</string>
 						</object>
 					</object>
@@ -860,7 +857,6 @@
 							<string>audio</string>
 							<string>canvas</string>
 							<string>layout</string>
-							<string>loadingBackground</string>
 							<string>loadingImage</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -888,10 +884,6 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">layout</string>
 								<string key="candidateClassName">LayoutController</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">loadingBackground</string>
-								<string key="candidateClassName">UIImageView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">loadingImage</string>

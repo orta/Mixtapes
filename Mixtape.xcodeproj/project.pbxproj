@@ -279,8 +279,11 @@
 				60B1FC2A1434BE530039206C /* MixtapeAppDelegate.m */,
 				60B1FC2C1434BE530039206C /* MainViewController.h */,
 				60B1FC2D1434BE530039206C /* MainViewController.m */,
+				60B1FC321434BE530039206C /* MainViewController_iPhone.xib */,
+				60B1FC351434BE530039206C /* MainViewController_iPad.xib */,
 				60B1FC2F1434BE530039206C /* FlipsideViewController.h */,
 				60B1FC301434BE530039206C /* FlipsideViewController.m */,
+				60B1FC381434BE530039206C /* FlipsideViewController.xib */,
 				60E600C1143790F00096BBB4 /* LayoutController.h */,
 				60E600C2143790F00096BBB4 /* LayoutController.m */,
 				6010885F1438A722008D3D9F /* AudioController.h */,
@@ -292,9 +295,6 @@
 		608086DD14359E860029BBC9 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
-				60B1FC321434BE530039206C /* MainViewController_iPhone.xib */,
-				60B1FC351434BE530039206C /* MainViewController_iPad.xib */,
-				60B1FC381434BE530039206C /* FlipsideViewController.xib */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";

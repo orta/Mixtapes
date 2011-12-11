@@ -97,14 +97,14 @@
         }
     }else{
         [[NSNotificationCenter defaultCenter] postNotificationName: ORLoggedIn object: nil];
-
-    }
+     }
 }
 
 - (void)removeSetup {
     if (self.setupViewController) {
         [self.setupViewController.view removeFromSuperview];
     }
+    self.mainViewController.loadingImage.hidden = NO;
 }
 
 - (void)waitAndFillTrackPool {
