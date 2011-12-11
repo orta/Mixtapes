@@ -60,6 +60,7 @@
 		60F0F6981495504800473008 /* ribbon.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F6951495504700473008 /* ribbon.png */; };
 		60F0F6991495504800473008 /* setup-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F6961495504800473008 /* setup-bg.png */; };
 		60F0F69B149553D700473008 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F69A149553D700473008 /* star.png */; };
+		60F0F69D1495662000473008 /* from.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F69C1495662000473008 /* from.png */; };
 		60F8C43F147864DE00DD8D8C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60F8C43E147864DD00DD8D8C /* Settings.bundle */; };
 		60FEBEE714954639005A8BBE /* bottombargreen_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE114954639005A8BBE /* bottombargreen_pressed.png */; };
 		60FEBEE814954639005A8BBE /* bottombargreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE214954639005A8BBE /* bottombargreen.png */; };
@@ -165,6 +166,7 @@
 		60F0F6951495504700473008 /* ribbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ribbon.png; sourceTree = "<group>"; };
 		60F0F6961495504800473008 /* setup-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setup-bg.png"; sourceTree = "<group>"; };
 		60F0F69A149553D700473008 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		60F0F69C1495662000473008 /* from.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = from.png; sourceTree = "<group>"; };
 		60F8C43E147864DD00DD8D8C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Resources/Settings.bundle; sourceTree = "<group>"; };
 		60FEBEE114954639005A8BBE /* bottombargreen_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombargreen_pressed.png; sourceTree = "<group>"; };
 		60FEBEE214954639005A8BBE /* bottombargreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombargreen.png; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 		606E9A1114774E8C00DB1646 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				60F0F69C1495662000473008 /* from.png */,
 				60FEBEE114954639005A8BBE /* bottombargreen_pressed.png */,
 				60FEBEE214954639005A8BBE /* bottombargreen.png */,
 				60FEBEE314954639005A8BBE /* bottombarredfire_pressed.png */,
@@ -511,6 +514,7 @@
 				60F0F6981495504800473008 /* ribbon.png in Resources */,
 				60F0F6991495504800473008 /* setup-bg.png in Resources */,
 				60F0F69B149553D700473008 /* star.png in Resources */,
+				60F0F69D1495662000473008 /* from.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
