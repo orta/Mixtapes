@@ -22,6 +22,6 @@
 - (void)turnToThumbnailWithScale:(float)scale;
 - (void)turnToSelected;
 - (void)turnToUnSelected;
-- (void)reposition:(BOOL)shouldMove;
+- (void)repositionWithIndex:(int)index inRelationTo: (int)currentlyPlayingIndex;
 
 @end

@@ -284,7 +284,7 @@ enum {
         }
         
         // true if after selected track
-        [layer reposition:( i > index )];
+        [layer repositionWithIndex: i inRelationTo: index];
     } 
 }
 
