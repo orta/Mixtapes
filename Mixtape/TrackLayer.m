@@ -53,10 +53,10 @@
 - (void)turnToThumbnailWithScale:(float)scale {
     // this doesn't feel like the best way to do it!
     CATransform3D transform = CATransform3DMakeScale(scale, scale, scale);
-    transform = CATransform3DTranslate(transform, 0.0, ORCoverWidth / -2, 0.0);
+    transform = CATransform3DTranslate(transform, 0.0, ORCoverWidth / -3, 0.0);
     float angle = ( random() % 20 ) - 10;
     transform = CATransform3DRotate(transform, DegreesToRadians( angle ), 0, 0, 1);
-    transform = CATransform3DTranslate(transform, 0.0, ORCoverWidth / 2, 0.0);
+    transform = CATransform3DTranslate(transform, 0.0, ORCoverWidth / 3, 0.0);
     self.transform = transform;
     self.playButton.opacity = 0;
 }

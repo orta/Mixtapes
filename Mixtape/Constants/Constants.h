@@ -24,5 +24,6 @@ extern NSString * const ORFolderID;
 extern NSString * const ORPlaylistIDArray;
 
 extern NSString * const ORCellReuseID;
+extern NSString * const ORCellTitleReuseID;
 
 extern const float ORCoverWidth;

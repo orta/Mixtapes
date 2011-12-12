@@ -41,36 +41,56 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [playlistItems count];
+    return [playlistItems count] + 1;
 }
+
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:ORCellReuseID];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ORCellReuseID];
-    }
-    SPPlaylistItem * item = [playlistItems objectAtIndex:indexPath.row];
-    cell.textLabel.text = [item.item name];
-    cell.imageView.image = [UIImage imageNamed:@"star.png"];
     
-    if (item.itemClass == [SPTrack class]) {
-        SPTrack * track = item.item;
-        cell.detailTextLabel.text = [track consolidatedArtists];
+    if (indexPath.row == 0) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ORCellTitleReuseID];
+        cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"from_starred"] ];
+        [[cell.backgroundView  superview] bringSubviewToFront:cell.backgroundView];
+        cell.textLabel.text = @"";
     }
-    
-    UIView *viewSelected = [[UIView alloc] init];
-    viewSelected.backgroundColor = [UIColor redColor];
-    cell.selectedBackgroundView = viewSelected;
+    else{
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ORCellReuseID];
+        }
+        SPPlaylistItem * item = [playlistItems objectAtIndex:indexPath.row - 1];
+        cell.textLabel.text = [item.item name];
+        int index = random() % 4 ;
 
+        cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"star%i.png", index]];
+        
+        if (item.itemClass == [SPTrack class]) {
+            SPTrack * track = item.item;
+            cell.detailTextLabel.text = [track consolidatedArtists];
+        }
+        
+        UIView *viewSelected = [[UIView alloc] init];
+        viewSelected.backgroundColor = [UIColor redColor];
+        cell.selectedBackgroundView = viewSelected;
+    }
     return cell;
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0 && indexPath.section == 0) {
+        return 60;
+    }
+    return 44;
 }
 
 
 #pragma mark table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SPPlaylistItem * item = [playlistItems objectAtIndex:indexPath.row];
+    SPPlaylistItem * item = [playlistItems objectAtIndex:indexPath.row - 1];
     [[SPSession sharedSession] postTracks: [NSArray arrayWithObject: [item item] ] toInboxOfUser:@"ortatherox" withMessage:@"a new song from Mixtape!" delegate:self];
     [[NSNotificationCenter defaultCenter] postNotificationName: ORSongSent object: nil];
 }

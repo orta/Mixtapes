@@ -29,7 +29,7 @@
   [self setBounds: CGRectMake( 0, 0, 240, 40)];
   self.backgroundColor = [[UIColor colorWithRed:0 green:0 blue:0 alpha:0.7] CGColor];
   self.fontSize = FONT_SIZE;
-  float degrees = (random() % 40) - 20;
+  float degrees = (random() % 20) - 10;
   CATransform3D transform = CATransform3DMakeRotation ( DegreesToRadians( degrees ), 0, 0, 1);
   self.transform = transform;
   self.opacity = 1;
