@@ -144,7 +144,7 @@
 							<object class="IBUIImageView" id="746035539">
 								<reference key="NSNextResponder" ref="878246342"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{21, 21}, {64, 64}}</string>
+								<string key="NSFrameSize">{105, 105}</string>
 								<reference key="NSSuperview" ref="878246342"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="557574919"/>
@@ -156,7 +156,7 @@
 							<object class="IBUILabel" id="557574919">
 								<reference key="NSNextResponder" ref="878246342"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{111, 19}, {180, 21}}</string>
+								<string key="NSFrame">{{111, 14}, {180, 21}}</string>
 								<reference key="NSSuperview" ref="878246342"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="2241599"/>
@@ -440,14 +440,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">_playPauseButton</string>
-						<reference key="source" ref="722966223"/>
-						<reference key="destination" ref="341110436"/>
-					</object>
-					<int key="connectionID">41</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">_currentPlayingTrackArtist</string>
 						<reference key="source" ref="722966223"/>
 						<reference key="destination" ref="557574919"/>
@@ -469,6 +461,14 @@
 						<reference key="destination" ref="878246342"/>
 					</object>
 					<int key="connectionID">42</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">_playPauseButton</string>
+						<reference key="source" ref="722966223"/>
+						<reference key="destination" ref="341110436"/>
+					</object>
+					<int key="connectionID">52</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -576,9 +576,9 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="341110436"/>
-							<reference ref="2241599"/>
 							<reference ref="557574919"/>
 							<reference ref="746035539"/>
+							<reference ref="2241599"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -686,7 +686,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">51</int>
+			<int key="maxID">52</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

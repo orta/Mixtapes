@@ -86,9 +86,14 @@
     NSLog(@"play pause");
     [SPSession sharedSession].playing = ![SPSession sharedSession].playing;
     if ([SPSession sharedSession].playing) {
-        _playPauseButton.imageView.image = [UIImage imageNamed:@"pause"];
+        NSLog(@"playling!");
+//        [_playPauseButton setImage: [UIImage imageNamed:@"play.png"] forState: UIB;
+        [_playPauseButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+
     }else{
-        _playPauseButton.imageView.image = [UIImage imageNamed:@"play"];
+                NSLog(@"not! plalisny!");
+        [_playPauseButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
+
     }
 }
 

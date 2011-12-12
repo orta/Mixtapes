@@ -67,7 +67,6 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
     [_offlineTextLabel setAlpha:0];
     [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
     [UIView commitAnimations];
-
 }
 
 - (NSMutableArray *)currentPlaylist {
