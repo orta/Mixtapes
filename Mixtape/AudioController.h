@@ -28,9 +28,11 @@
 @property (retain) SPPlaybackManager *playbackManager;
 @property () int trackIndex;
 
-- (void)animateControllerIn;
+
 - (void)nextTrack;
 - (void)previousTrack;
 - (IBAction)playPause:(id)sender;
 - (void)playTrackWithIndex:(int)index;
+- (void)updateControllerTexts;
+
 @end

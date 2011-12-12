@@ -10,6 +10,12 @@
 #import <AVFoundation/AVFoundation.h>
 #import "SPTrack+Debug.h"
 
+@interface AudioController (private)
+
+- (void)animateControllerIn;
+
+@end
+
 @implementation AudioController
 
 @synthesize trackIndex = _trackIndex, currentPlaylist = _currentSPPlaylist;
@@ -64,13 +70,20 @@
         NSLog(@"playback error %@", [error localizedDescription]);
     }
     
-    _currentPlayingTrackImage.image = track.album.cover.image;
-    _currentPlayingTrackArtist.text = [track.album.artist name];
-    _currentPlayingTrackName.text = [track name];
+    [self updateControllerTexts];
     
     if (_trackIndex < [tracks count] - 1) {
         [[SPSession sharedSession] preloadTrackForPlayback:[[tracks objectAtIndex:_trackIndex + 1] item] error:nil];
     }
+}
+
+- (void)updateControllerTexts {
+    NSMutableArray *tracks = self.currentPlaylist.items;
+    SPTrack *track = [[tracks objectAtIndex:_trackIndex] item];
+
+    _currentPlayingTrackImage.image = track.album.cover.image;
+    _currentPlayingTrackArtist.text = [track.album.artist name];
+    _currentPlayingTrackName.text = [track name];
 }
 
 - (void) nextTrack {
@@ -88,7 +101,6 @@
 
     }else{
         [_playPauseButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
-
     }
 }
 

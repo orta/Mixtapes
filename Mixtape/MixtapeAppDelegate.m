@@ -239,7 +239,8 @@
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:ORAppResetKey];
         [self startSpotify];
     }
-    #warning refresh information in player
+    
+    [self.mainViewController.audio updateControllerTexts];
     
 }
 
