@@ -339,6 +339,4 @@ enum {
     return ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone );
 }
 
-
-
 @end

@@ -40,9 +40,9 @@
                 
             case 3:
                 points = [NSArray arrayWithObjects: 
-                          [[AlbumRef alloc] refWithX:542 y:506 andScale:0.9],
-                          [[AlbumRef alloc] refWithX:295 y:337 andScale:0.9],
-                          [[AlbumRef alloc] refWithX:830 y:337 andScale:0.9]
+                          [[AlbumRef alloc] refWithX:275 y:337 andScale:0.85],
+                          [[AlbumRef alloc] refWithX:550 y:333 andScale:0.85],
+                          [[AlbumRef alloc] refWithX:845 y:337 andScale:0.85]
                           , nil];
                 break;
                 
