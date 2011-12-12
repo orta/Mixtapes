@@ -297,11 +297,6 @@ enum {
         [label turnToLabel];
         
         AlbumRef * ref = [self.centerPoints objectAtIndex:i];
-        float halfCoverWidth = ORCoverWidth / 2;
-        CGPoint location = ref.point;
-//        location.x += halfCoverWidth;
-        location.y += halfCoverWidth + ( 50 * [ref scale]);
-        label.position = location;
 
         CALayer * wrapperLayer = [self.playlistWrapperLayers objectAtIndex:i];
         CGPoint wrapperLocation = [ref point];
@@ -310,6 +305,12 @@ enum {
             wrapperLocation.x = wrapperLocation.y;
             wrapperLocation.y = tempX;
         }
+        
+        float halfCoverWidth = ORCoverWidth / 2;
+        CGPoint location = wrapperLocation;
+        location.y += halfCoverWidth + ( 50 * [ref scale]);
+        label.position = location;
+
         [wrapperLayer setPosition: wrapperLocation ];
         
         for (int j = [playlist count] - 1; j > -1 ; j--) {
