@@ -83,12 +83,7 @@
     
     int toMove = 60;
     if(shouldMove && !_shifted) {
-        
-        // take into account larger profile image
-        if (index == currentlyPlayingIndex - 1) {
-            toMove += 40;
-        }
-        
+                
         // should move right
         self.position = CGPointMake(self.position.x + toMove, self.position.y);
         _shifted = YES;

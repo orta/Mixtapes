@@ -12,6 +12,7 @@
 #import "SetupViewController.h"
 #import "Reachability.h"
 #import "SPPlaylistFolderInternal.h"
+#import "AudioController.h"
 
 @interface MixtapeAppDelegate (private)
 - (void)showLoginController;
@@ -32,6 +33,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
@@ -197,6 +199,25 @@
 
 }
 
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    switch (event.subtype) {
+        case UIEventSubtypeRemoteControlTogglePlayPause:
+        case UIEventSubtypeRemoteControlPlay:
+        case UIEventSubtypeRemoteControlPause:
+            [self.mainViewController.audio playPause:self];
+            break;
+        case UIEventSubtypeRemoteControlNextTrack:
+            [self.mainViewController.audio nextTrack];
+            break;
+        case UIEventSubtypeRemoteControlPreviousTrack:
+            [self.mainViewController.audio previousTrack];
+            break;
+        default:
+            break;
+    }
+}
+
+
 - (BOOL)isOnline {
     return ([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] != NotReachable);
 }
@@ -218,6 +239,8 @@
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:ORAppResetKey];
         [self startSpotify];
     }
+    #warning refresh information in player
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application{}

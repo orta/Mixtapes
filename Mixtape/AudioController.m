@@ -42,7 +42,7 @@
 - (void)playTrackWithIndex:(int)index {
     if(self.playbackManager == nil){
         self.playbackManager = [[SPPlaybackManager alloc] initWithPlaybackSession:[SPSession sharedSession]];
-        self.playbackManager.delegate = self;       
+        self.playbackManager.delegate = self;
     }
     
     if(!_showingController){
