@@ -56,7 +56,6 @@
     
     NSMutableArray *tracks = self.currentPlaylist.items;
     SPTrack *track = [[tracks objectAtIndex:_trackIndex] item];
-    [track printDebugInfo];
     
     NSError *error = nil;
     [self.playbackManager playTrack:track error:&error];
@@ -83,15 +82,11 @@
 }
 
 - (void) playPause:(id)sender {
-    NSLog(@"play pause");
     [SPSession sharedSession].playing = ![SPSession sharedSession].playing;
     if ([SPSession sharedSession].playing) {
-        NSLog(@"playling!");
-//        [_playPauseButton setImage: [UIImage imageNamed:@"play.png"] forState: UIB;
         [_playPauseButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
 
     }else{
-                NSLog(@"not! plalisny!");
         [_playPauseButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
 
     }
