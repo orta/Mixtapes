@@ -25,6 +25,7 @@
 		606E99D71476936900DB1646 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E99D61476936900DB1646 /* Constants.m */; };
 		606E9A0F14774D7E00DB1646 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606E9A0D14774D7E00DB1646 /* LoginViewController.m */; };
 		606E9A1014774D7E00DB1646 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 606E9A0E14774D7E00DB1646 /* LoginViewController.xib */; };
+		607D44EF14957C3100CEAF4B /* recommend.png in Resources */ = {isa = PBXBuildFile; fileRef = 607D44EE14957C3100CEAF4B /* recommend.png */; };
 		6080869A1434FCDA0029BBC9 /* template.png in Resources */ = {isa = PBXBuildFile; fileRef = 608086991434FCDA0029BBC9 /* template.png */; };
 		6080869C143504B30029BBC9 /* loadingbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6080869B143504B30029BBC9 /* loadingbg.png */; };
 		608086CE14352A1C0029BBC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608086CD14352A1C0029BBC9 /* QuartzCore.framework */; };
@@ -117,6 +118,7 @@
 		606E9A0C14774D7E00DB1646 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/LoginViewController.h; sourceTree = "<group>"; };
 		606E9A0D14774D7E00DB1646 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/LoginViewController.m; sourceTree = "<group>"; };
 		606E9A0E14774D7E00DB1646 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ViewControllers/LoginViewController.xib; sourceTree = "<group>"; };
+		607D44EE14957C3100CEAF4B /* recommend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recommend.png; sourceTree = "<group>"; };
 		608086991434FCDA0029BBC9 /* template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = template.png; path = ../template.png; sourceTree = "<group>"; };
 		6080869B143504B30029BBC9 /* loadingbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loadingbg.png; path = ../loadingbg.png; sourceTree = "<group>"; };
 		608086CD14352A1C0029BBC9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -236,6 +238,7 @@
 		606E9A1114774E8C00DB1646 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				607D44EE14957C3100CEAF4B /* recommend.png */,
 				60F0F69E149567EC00473008 /* playlists.png */,
 				60F0F69C1495662000473008 /* from.png */,
 				60FEBEE114954639005A8BBE /* bottombargreen_pressed.png */,
@@ -519,6 +522,7 @@
 				60F0F69B149553D700473008 /* star.png in Resources */,
 				60F0F69D1495662000473008 /* from.png in Resources */,
 				60F0F69F149567EC00473008 /* playlists.png in Resources */,
+				607D44EF14957C3100CEAF4B /* recommend.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
