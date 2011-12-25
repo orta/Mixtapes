@@ -79,15 +79,14 @@
     self.transform = CATransform3DIdentity;
 }
 
-- (void)repositionWithIndex:(int)index inRelationTo: (int)currentlyPlayingIndex {
-    BOOL shouldMove = (index > currentlyPlayingIndex);
-    
+- (void)repositionWithIndex:(int)index inRelationTo: (int)currentlySelectedIndex {
+    BOOL shouldMove = (index > currentlySelectedIndex);
     if(shouldMove && _shifted) return;
     if(!shouldMove && !_shifted) return;
     
     int toMove = 60;
+    
     if(shouldMove && !_shifted) {
-                
         // should move right
         self.position = CGPointMake(self.position.x + toMove, self.position.y);
         _shifted = YES;

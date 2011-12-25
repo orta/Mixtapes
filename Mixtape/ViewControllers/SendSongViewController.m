@@ -60,7 +60,7 @@
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ORCellReuseID];
         }
-        SPPlaylistItem * item = [playlistItems objectAtIndex:indexPath.row - 1];
+        SPPlaylistItem * item = [playlistItems objectAtIndex:[playlistItems count] - indexPath.row];
         cell.textLabel.text = [item.item name];
         int index = random() % 4 ;
 
@@ -90,7 +90,7 @@
 #pragma mark table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SPPlaylistItem * item = [playlistItems objectAtIndex:indexPath.row - 1];
+    SPPlaylistItem * item = [playlistItems objectAtIndex:[playlistItems count] - indexPath.row];
     [[SPSession sharedSession] postTracks: [NSArray arrayWithObject: [item item] ] toInboxOfUser:@"ortatherox" withMessage:@"a new song from Mixtape!" delegate:self];
     [[NSNotificationCenter defaultCenter] postNotificationName: ORSongSent object: nil];
 }

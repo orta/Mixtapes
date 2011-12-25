@@ -10,7 +10,7 @@
 
 @interface TrackLayer : CATextLayer {
   int _monitorCount;
-  BOOL _shifted;
+  int _shifted;
   SPTrack * _track;
   CALayer * _playButton;
 }

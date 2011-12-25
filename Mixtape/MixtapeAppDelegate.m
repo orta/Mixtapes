@@ -60,7 +60,7 @@
     if (![session storedCredentialsUserName]) {
         [self showLoginController];
     }else{ 
-        NSLog(@"logged in as %@", [session storedCredentialsUserName]);
+        NSLog(@"previously logged in as %@", [session storedCredentialsUserName]);
         [session attemptLoginWithStoredCredentials:nil];
     }
 }
@@ -77,10 +77,14 @@
 
 - (void)session:(SPSession *)aSession didEncounterNetworkError:(NSError *)error {
     NSLog(@"spotify is down");
-    NSDictionary * errorDictionary = [NSDictionary dictionaryWithObject:error forKey:ORNotificationErrorKey];
-    [[NSNotificationCenter defaultCenter] postNotificationName: ORLoginFailed
-                                                        object: nil 
-                                                      userInfo: errorDictionary];
+    if ([[SPSession sharedSession] storedCredentialsUserName]) {
+        [self checkForOfflinePlaylists];
+    }
+
+//    NSDictionary * errorDictionary = [NSDictionary dictionaryWithObject:error forKey:ORNotificationErrorKey];
+//    [[NSNotificationCenter defaultCenter] postNotificationName: ORLoginFailed
+//                                                        object: nil 
+//                                                      userInfo: errorDictionary];
 }
 
 - (void)session:(SPSession *)aSession didLogMessage:(NSString *)aMessage {
@@ -89,7 +93,6 @@
 
 - (void)sessionDidLoginSuccessfully:(SPSession *)aSession; {
     [self monitorForErrors];
-    NSLog(@"logged in");
     if ([[NSUserDefaults standardUserDefaults] objectForKey:ORFolderID]) {
         [self removeSetup];
         if ([self isOnline]) {
@@ -155,6 +158,13 @@
     NSNumber * folderIDNumber = [[NSUserDefaults standardUserDefaults] objectForKey:ORFolderID];
     uint64_t folderID = [folderIDNumber unsignedLongLongValue];
 
+    SPSession *sess= [SPSession sharedSession];
+    for (SPPlaylist* playlist in [[sess playlistCache] allValues]) {
+        NSLog(@"playlist %@ id ", [playlist class]);
+        SPPlaylist* playlist2 = playlist;
+	}
+
+    
     SPPlaylistFolder * folder = [[SPPlaylistFolder alloc] initWithPlaylistFolderId:folderID container:[[SPSession sharedSession] userPlaylists] inSession:[SPSession sharedSession]];
     
     bool synced = YES;
