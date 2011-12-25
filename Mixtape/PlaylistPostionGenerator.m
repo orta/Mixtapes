@@ -58,10 +58,10 @@
             default:
                 points = [NSArray arrayWithObjects: 
                           [[AlbumRef alloc] refWithX:290 y:159 andScale:0.7],
-                          [[AlbumRef alloc] refWithX:845 y:159 andScale:0.7],
+                          [[AlbumRef alloc] refWithX:879 y:159 andScale:0.7],
                           [[AlbumRef alloc] refWithX:588 y:331 andScale:0.7],
                           [[AlbumRef alloc] refWithX:290 y:518 andScale:0.7],
-                          [[AlbumRef alloc] refWithX:849 y:518 andScale:0.7]
+                          [[AlbumRef alloc] refWithX:879 y:518 andScale:0.7]
                           , nil];
                 break;    
         }

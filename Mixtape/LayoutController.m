@@ -313,6 +313,7 @@ enum {
         float halfCoverWidth = ORCoverWidth / 2;
         CGPoint location = wrapperLocation;
         location.y += halfCoverWidth + ( 50 * [ref scale]);
+        location.x -= ( 50 * [ref scale]);
         label.position = location;
 
         [wrapperLayer setPosition: wrapperLocation ];
