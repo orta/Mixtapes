@@ -87,6 +87,10 @@ enum {
     MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate *)[[UIApplication sharedApplication] delegate];
 
     for (int i = 0; i < [appDelegate.playlists count]; i++) {
+        if (i > 4) {
+            break;
+        }
+        
         SPPlaylist * playlist = [appDelegate.playlists objectAtIndex:i];
         
         PlaylistTitleLayer *label = [[PlaylistTitleLayer alloc] initWithPlaylist:playlist];

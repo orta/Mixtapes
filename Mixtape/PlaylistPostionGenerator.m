@@ -55,7 +55,7 @@
                           , nil];
                 break;
                 
-            case 5:
+            default:
                 points = [NSArray arrayWithObjects: 
                           [[AlbumRef alloc] refWithX:290 y:159 andScale:0.7],
                           [[AlbumRef alloc] refWithX:845 y:159 andScale:0.7],
