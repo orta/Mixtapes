@@ -41,7 +41,7 @@
 @property (retain) NSMutableArray * titleLayers;
 @property (retain) NSMutableArray * currentPlaylist;
 @property (retain) NSMutableArray * playlistWrapperLayers;
-@property (retain) NSMutableArray * playlistSelectionIndex;
+@property (retain) NSMutableArray * playlistSelectionIndexes;
 @property (retain) NSArray * centerPoints;
 
 @end

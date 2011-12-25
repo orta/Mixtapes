@@ -43,14 +43,14 @@ enum {
 
 @synthesize state = _state, layers = _layers, titleLayers = _titleLayers;
 @synthesize currentPlaylist = _currentPlaylist, playlistWrapperLayers = _playlistWrapperLayers;
-@synthesize playlistSelectionIndex = _playlistSelectionIndex, centerPoints = _centerPoints;
+@synthesize playlistSelectionIndexes = _playlistSelectionIndex, centerPoints = _centerPoints;
 
 - (id)init {
     self = [super init];
     self.layers = [NSMutableArray array];
     self.titleLayers = [NSMutableArray array];
     self.playlistWrapperLayers = [NSMutableArray array];
-    self.playlistSelectionIndex = [NSMutableArray array];
+    self.playlistSelectionIndexes = [NSMutableArray array];
     _playlistLayer = [[CALayer layer] retain];
     [canvas.layer addSublayer:_playlistLayer];
     
@@ -96,7 +96,7 @@ enum {
         PlaylistTitleLayer *label = [[PlaylistTitleLayer alloc] initWithPlaylist:playlist];
         [self.titleLayers addObject:label];
         [canvas.layer addSublayer:label];
-        [self.playlistSelectionIndex addObject:[NSNumber numberWithInt:0]];
+        [self.playlistSelectionIndexes addObject:[NSNumber numberWithInt:0]];
         
         NSMutableArray * playlistLayerArray = [NSMutableArray array];
         [self.layers addObject:playlistLayerArray];
@@ -182,7 +182,13 @@ enum {
             
         case LayoutsSinglePlaylist:
             self; // I get weird errors if I have C code right after case's
+            
             CGRect centerCover = CGRectMake(200, 200, ORCoverWidth, ORCoverWidth);
+//            CALayer *currentSelectionLayer = [self.currentPlaylist [self currentPlaylistSelectionIndex]];
+            
+//            tapPoint = [canvas.layer convertPoint:tapPoint toLayer:canvas.layer.superlayer];
+//            CALayer *theLayer = [canvas.layer hitTest:tapPoint];
+            
             if ( CGRectContainsPoint(centerCover, tapPoint)) {
                 [self playSelectedSong];
                 return;
@@ -264,7 +270,12 @@ enum {
     
     for (int i = 0; i < [self.currentPlaylist count]; i++) {
         CALayer *layer = [self.currentPlaylist objectAtIndex:i];
-        layer.position = CGPointMake(i * 340, 0);
+        
+        int offset = 80;
+        if (i > [self currentPlaylistSelectionIndex]) {
+            offset = 120;
+        }
+        layer.position = CGPointMake(i * ORCoverWidth + offset, 0);
     }
     
     [self moveToCurrentTrack];
@@ -275,7 +286,13 @@ enum {
 - (void) moveToCurrentTrack {
     int index = [self currentPlaylistSelectionIndex];
     CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
-    wrapper.position = CGPointMake((index * -340) + 300, (canvas.frame.size.height / 2) + ( ORCoverWidth /2) ); 
+   
+    int offset = 00;
+    if (_currentplaylistIndex > [self currentPlaylistSelectionIndex]) {
+        offset = 40;
+    }
+
+    wrapper.position = CGPointMake((index * - ORCoverWidth + offset) + 300, (canvas.frame.size.height / 2) + ( ORCoverWidth /2) ); 
     
     for (int i = 0; i < [self.currentPlaylist count]; i++) {
         TrackLayer * layer = [self.currentPlaylist objectAtIndex:i];
@@ -286,8 +303,7 @@ enum {
         else {
             [layer turnToUnSelected]; 
         }
-        
-        // true if after selected track
+
         [layer repositionWithIndex: i inRelationTo: index];
     } 
 }
@@ -330,11 +346,11 @@ enum {
 }
 
 - (void)setCurrentPlaylistSeletionIndex:(int)index {
-    [self.playlistSelectionIndex  replaceObjectAtIndex:_currentplaylistIndex withObject:[NSNumber numberWithInt:index]];  
+    [self.playlistSelectionIndexes  replaceObjectAtIndex:_currentplaylistIndex withObject:[NSNumber numberWithInt:index]];  
 }
 
 - (int) currentPlaylistSelectionIndex {
-    return [[self.playlistSelectionIndex objectAtIndex:_currentplaylistIndex] intValue];
+    return [[self.playlistSelectionIndexes objectAtIndex:_currentplaylistIndex] intValue];
 }
 
 - (BOOL)isPortrait {
