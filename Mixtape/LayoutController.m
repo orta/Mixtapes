@@ -16,6 +16,8 @@
 #import "AlbumRef.h"
 #import "PlaylistPostionGenerator.h"
 
+static float ORSongMargin = 40;
+
 enum {
     LayoutsFloorView = 1,
     LayoutsSinglePlaylist = 2
@@ -54,11 +56,11 @@ enum {
     _playlistLayer = [[CALayer layer] retain];
     [canvas.layer addSublayer:_playlistLayer];
     
-    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(orientationChanged:)
-                                                 name:UIDeviceOrientationDidChangeNotification
-                                               object:nil];
+//    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(orientationChanged:)
+//                                                 name:UIDeviceOrientationDidChangeNotification
+//                                               object:nil];
     
     self.state = LayoutsFloorView;
     return self;
@@ -183,7 +185,8 @@ enum {
         case LayoutsSinglePlaylist:
             self; // I get weird errors if I have C code right after case's
             
-            CGRect centerCover = CGRectMake(200, 200, ORCoverWidth, ORCoverWidth);
+            CGRect centerCover = CGRectMake(370, 160, ORCoverWidth * 1.2, ORCoverWidth * 1.2);
+            
 //            CALayer *currentSelectionLayer = [self.currentPlaylist [self currentPlaylistSelectionIndex]];
             
 //            tapPoint = [canvas.layer convertPoint:tapPoint toLayer:canvas.layer.superlayer];
@@ -194,7 +197,11 @@ enum {
                 return;
             }
             
-            CGRect previousCover = CGRectMake(0, 200, 160, ORCoverWidth);
+            CGRect previousCover = CGRectMake(200, 200, 160, ORCoverWidth);
+//            UIView *center = [[UIView alloc] initWithFrame:previousCover];
+//            center.backgroundColor = [UIColor redColor];
+//            [canvas addSubview:center];
+
             if ( CGRectContainsPoint(previousCover, tapPoint)) {
                 if (_currentplaylistIndex) {
                     [self handleSwipeRight:nil];
@@ -268,14 +275,19 @@ enum {
         layer.opacity = 0;
     }
     
+    float xOffset = 0;
+    
     for (int i = 0; i < [self.currentPlaylist count]; i++) {
         CALayer *layer = [self.currentPlaylist objectAtIndex:i];
+                
+        layer.position = CGPointMake(xOffset, 0);
         
-        int offset = 80;
-        if (i > [self currentPlaylistSelectionIndex]) {
-            offset = 120;
+        if ((i != 0 ) && (i == [self currentPlaylistSelectionIndex]) ) {
+            xOffset += 60;
         }
-        layer.position = CGPointMake(i * ORCoverWidth + offset, 0);
+
+        xOffset += ORCoverWidth + ORSongMargin;
+
     }
     
     [self moveToCurrentTrack];
@@ -287,12 +299,12 @@ enum {
     int index = [self currentPlaylistSelectionIndex];
     CALayer * wrapper = [self.playlistWrapperLayers objectAtIndex:_currentplaylistIndex];
    
-    int offset = 00;
-    if (_currentplaylistIndex > [self currentPlaylistSelectionIndex]) {
-        offset = 40;
+    int offset = 0;
+    if ([self currentPlaylistSelectionIndex] > 0) {
+        offset = 100;
     }
 
-    wrapper.position = CGPointMake((index * - ORCoverWidth + offset) + 300, (canvas.frame.size.height / 2) + ( ORCoverWidth /2) ); 
+    wrapper.position = CGPointMake(((index * (ORCoverWidth + ORSongMargin)) + offset - 300) * -1, (canvas.frame.size.height / 2) + ( ORCoverWidth /2) ); 
     
     for (int i = 0; i < [self.currentPlaylist count]; i++) {
         TrackLayer * layer = [self.currentPlaylist objectAtIndex:i];

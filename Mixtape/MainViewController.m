@@ -75,19 +75,23 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        
-        if ( UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
-            _background.image = [UIImage imageNamed:@"bg2.jpg"];
-        }else{
-            _background.image = [UIImage imageNamed:@"bg.jpg"];      
-        }
-        
+    if (UIInterfaceOrientationIsLandscape(interfaceOrientation)) {
         return YES;
     }
+    
+//    // Return YES for supported orientations
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+//        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+//    } else {
+//        
+//        if ( UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
+//            _background.image = [UIImage imageNamed:@"bg2.jpg"];
+//        }else{
+//            _background.image = [UIImage imageNamed:@"bg.jpg"];      
+//        }
+//        
+//        return YES;
+//    }
 }
 
 #pragma mark - Flipside View Controller
