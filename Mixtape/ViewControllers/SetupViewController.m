@@ -33,6 +33,12 @@
 
 
 - (void)showFolderController {
+    [UIView animateWithDuration:0.3 animations:^{
+        CGRect newFrame = [contentView superview].frame;
+        newFrame.origin.y += 120;
+        [contentView superview].frame = newFrame;
+    }];
+
     FolderChooserViewController *controller = [[FolderChooserViewController alloc] initWithNibName:@"FolderChooserViewController" bundle:nil];
     [navController pushViewController:controller animated:YES];
     [[NSNotificationCenter defaultCenter] addObserver:self 

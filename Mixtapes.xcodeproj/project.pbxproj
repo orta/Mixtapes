@@ -143,14 +143,14 @@
 		60A99FD8143F3A2100ED5D11 /* SPCircularBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPCircularBuffer.m; path = "cocoalibspotify/Playback Helper Classes/SPCircularBuffer.m"; sourceTree = "<group>"; };
 		60A99FD9143F3A2100ED5D11 /* SPPlaybackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPPlaybackManager.h; path = "cocoalibspotify/Playback Helper Classes/SPPlaybackManager.h"; sourceTree = "<group>"; };
 		60A99FDA143F3A2100ED5D11 /* SPPlaybackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPPlaybackManager.m; path = "cocoalibspotify/Playback Helper Classes/SPPlaybackManager.m"; sourceTree = "<group>"; };
-		60B1FC161434BE530039206C /* Mixtape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixtape.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60B1FC161434BE530039206C /* Mixtapess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixtapess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B1FC1A1434BE530039206C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60B1FC1C1434BE530039206C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		60B1FC1E1434BE530039206C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		60B1FC221434BE530039206C /* Mixtape-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mixtape-Info.plist"; sourceTree = "<group>"; };
 		60B1FC241434BE530039206C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		60B1FC261434BE530039206C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		60B1FC281434BE530039206C /* Mixtape-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mixtape-Prefix.pch"; sourceTree = "<group>"; };
+		60B1FC281434BE530039206C /* Mixtapes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mixtapes-Prefix.pch"; sourceTree = "<group>"; };
 		60B1FC291434BE530039206C /* MixtapeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MixtapeAppDelegate.h; sourceTree = "<group>"; };
 		60B1FC2A1434BE530039206C /* MixtapeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MixtapeAppDelegate.m; sourceTree = "<group>"; };
 		60B1FC2C1434BE530039206C /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -327,7 +327,7 @@
 		60B1FC171434BE530039206C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				60B1FC161434BE530039206C /* Mixtape.app */,
+				60B1FC161434BE530039206C /* Mixtapess.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -378,7 +378,7 @@
 				60B1FC221434BE530039206C /* Mixtape-Info.plist */,
 				60B1FC231434BE530039206C /* InfoPlist.strings */,
 				60B1FC261434BE530039206C /* main.m */,
-				60B1FC281434BE530039206C /* Mixtape-Prefix.pch */,
+				60B1FC281434BE530039206C /* Mixtapes-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -444,9 +444,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		60B1FC151434BE530039206C /* Mixtape */ = {
+		60B1FC151434BE530039206C /* Mixtapess */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60B1FC3D1434BE530039206C /* Build configuration list for PBXNativeTarget "Mixtape" */;
+			buildConfigurationList = 60B1FC3D1434BE530039206C /* Build configuration list for PBXNativeTarget "Mixtapess" */;
 			buildPhases = (
 				60B1FC121434BE530039206C /* Sources */,
 				60B1FC131434BE530039206C /* Frameworks */,
@@ -457,9 +457,9 @@
 			dependencies = (
 				601FFEE81463F0EC00450B52 /* PBXTargetDependency */,
 			);
-			name = Mixtape;
+			name = Mixtapess;
 			productName = Mixtape;
-			productReference = 60B1FC161434BE530039206C /* Mixtape.app */;
+			productReference = 60B1FC161434BE530039206C /* Mixtapess.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -471,7 +471,7 @@
 				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "http://ortatherox.com";
 			};
-			buildConfigurationList = 60B1FC101434BE520039206C /* Build configuration list for PBXProject "Mixtape" */;
+			buildConfigurationList = 60B1FC101434BE520039206C /* Build configuration list for PBXProject "Mixtapes" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -489,7 +489,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				60B1FC151434BE530039206C /* Mixtape */,
+				60B1FC151434BE530039206C /* Mixtapess */,
 			);
 		};
 /* End PBXProject section */
@@ -681,7 +681,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mixtape/Mixtape-Prefix.pch";
+				GCC_PREFIX_HEADER = "Mixtape/Mixtapes-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
 				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
@@ -696,13 +696,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/vendor/spotify\"/**",
+					"\"$(SRCROOT)/vendor/**",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Mixtapess;
 				VALID_ARCHS = "i386 armv7 armv7f armv7k";
 				WRAPPER_EXTENSION = app;
 			};
@@ -714,7 +714,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mixtape/Mixtape-Prefix.pch";
+				GCC_PREFIX_HEADER = "Mixtape/Mixtapes-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
 				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
@@ -729,13 +729,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/vendor/spotify\"/**",
+					"\"$(SRCROOT)/vendor/**",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Mixtapess;
 				VALID_ARCHS = "i386 armv7 armv7f armv7k";
 				WRAPPER_EXTENSION = app;
 			};
@@ -744,7 +744,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		60B1FC101434BE520039206C /* Build configuration list for PBXProject "Mixtape" */ = {
+		60B1FC101434BE520039206C /* Build configuration list for PBXProject "Mixtapes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60B1FC3B1434BE530039206C /* Debug */,
@@ -753,7 +753,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60B1FC3D1434BE530039206C /* Build configuration list for PBXNativeTarget "Mixtape" */ = {
+		60B1FC3D1434BE530039206C /* Build configuration list for PBXNativeTarget "Mixtapess" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60B1FC3E1434BE530039206C /* Debug */,
