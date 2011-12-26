@@ -14,14 +14,19 @@
 @end
 
 @implementation LoginViewController
-@synthesize usernameTextField, passwordTextField, loginButton, failureLabel, activityIndicator;
+@synthesize usernameTextField, passwordTextField, loginButton, failureLabel, activityIndicator, helpButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [usernameTextField becomeFirstResponder];
     failureLabel.text = @"";
     loginButton.enabled = NO;
-    [loginButton setCustomImage:@"bottombarwhite"];
+    [helpButton setCustomImage:@"bottombarwhite"];
+    
+    [loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [loginButton setCustomImage:@"bottombarredfire"];
+
     [activityIndicator stopAnimating];
     
     //register for text changes
@@ -41,6 +46,10 @@
     [activityIndicator startAnimating];
     failureLabel.text = @"";
     [[SPSession sharedSession] attemptLoginWithUserName:usernameTextField.text password:passwordTextField.text rememberCredentials:YES];    
+}
+
+- (IBAction)help:(id)sender {
+    
 }
 
 - (void)loginFailed:(NSNotification*)notification {
