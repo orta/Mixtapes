@@ -185,12 +185,11 @@ enum {
         case LayoutsSinglePlaylist:
             self; // I get weird errors if I have C code right after case's
             
-            CGRect centerCover = CGRectMake(370, 160, ORCoverWidth * 1.2, ORCoverWidth * 1.2);
-            
-//            CALayer *currentSelectionLayer = [self.currentPlaylist [self currentPlaylistSelectionIndex]];
-            
-//            tapPoint = [canvas.layer convertPoint:tapPoint toLayer:canvas.layer.superlayer];
-//            CALayer *theLayer = [canvas.layer hitTest:tapPoint];
+            CGRect centerCover = CGRectMake(205, 160, ORCoverWidth * 1.2, ORCoverWidth * 1.2);
+            UIView *center = [[UIView alloc] initWithFrame:centerCover];
+            center.backgroundColor = [UIColor redColor];
+            center.alpha = 0.5;
+            [canvas addSubview:center];
             
             if ( CGRectContainsPoint(centerCover, tapPoint)) {
                 [self playSelectedSong];
@@ -198,9 +197,7 @@ enum {
             }
             
             CGRect previousCover = CGRectMake(200, 200, 160, ORCoverWidth);
-//            UIView *center = [[UIView alloc] initWithFrame:previousCover];
-//            center.backgroundColor = [UIColor redColor];
-//            [canvas addSubview:center];
+
 
             if ( CGRectContainsPoint(previousCover, tapPoint)) {
                 if (_currentplaylistIndex) {
@@ -282,12 +279,11 @@ enum {
                 
         layer.position = CGPointMake(xOffset, 0);
         
-        if ((i != 0 ) && (i == [self currentPlaylistSelectionIndex]) ) {
+        if (i == [self currentPlaylistSelectionIndex]) {
             xOffset += 60;
         }
 
         xOffset += ORCoverWidth + ORSongMargin;
-
     }
     
     [self moveToCurrentTrack];
@@ -302,9 +298,12 @@ enum {
     int offset = 0;
     if ([self currentPlaylistSelectionIndex] > 0) {
         offset = 100;
+    }else {
+        offset = 80;
     }
-
-    wrapper.position = CGPointMake(((index * (ORCoverWidth + ORSongMargin)) + offset - 300) * -1, (canvas.frame.size.height / 2) + ( ORCoverWidth /2) ); 
+    
+    float x = (index * (ORCoverWidth + ORSongMargin)) + offset - 300;   
+    wrapper.position = CGPointMake(x * -1, (canvas.frame.size.height / 2) + ( ORCoverWidth /2) ); 
     
     for (int i = 0; i < [self.currentPlaylist count]; i++) {
         TrackLayer * layer = [self.currentPlaylist objectAtIndex:i];
