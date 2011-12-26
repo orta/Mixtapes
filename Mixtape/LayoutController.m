@@ -185,20 +185,13 @@ enum {
         case LayoutsSinglePlaylist:
             self; // I get weird errors if I have C code right after case's
             
-            CGRect centerCover = CGRectMake(205, 160, ORCoverWidth * 1.2, ORCoverWidth * 1.2);
-            UIView *center = [[UIView alloc] initWithFrame:centerCover];
-            center.backgroundColor = [UIColor redColor];
-            center.alpha = 0.5;
-            [canvas addSubview:center];
-            
+            CGRect centerCover = CGRectMake(205, 160, ORCoverWidth * 1.2, ORCoverWidth * 1.2);            
             if ( CGRectContainsPoint(centerCover, tapPoint)) {
                 [self playSelectedSong];
                 return;
             }
             
-            CGRect previousCover = CGRectMake(200, 200, 160, ORCoverWidth);
-
-
+            CGRect previousCover = CGRectMake(0, 220, 160, ORCoverWidth);
             if ( CGRectContainsPoint(previousCover, tapPoint)) {
                 if (_currentplaylistIndex) {
                     [self handleSwipeRight:nil];
@@ -206,14 +199,14 @@ enum {
                 return;
             }
             
-            CGRect nextCover = CGRectMake(80 + (ORCoverWidth * 2), 200, ORCoverWidth, ORCoverWidth);
+            CGRect nextCover = CGRectMake((ORCoverWidth * 2) + 20, 220, ORCoverWidth, ORCoverWidth);
+
             if ( CGRectContainsPoint(nextCover, tapPoint)) {
                 if (_currentplaylistIndex) {
                     [self handleSwipeLeft:nil];
                 };
                 return;
             }
-            
             
             //fallback to hiding
             [self transitionIntoFloorView];
