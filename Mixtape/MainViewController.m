@@ -50,7 +50,9 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
     
     MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate*)[[UIApplication sharedApplication] delegate];
     for (SPPlaylist * playlist in appDelegate.playlists) {
-        playlist.markedForOfflinePlayback = YES;
+        if (playlist.markedForOfflinePlayback != YES) {
+            playlist.markedForOfflinePlayback = YES;            
+        }
         if ([playlist offlineStatus] != SP_PLAYLIST_OFFLINE_STATUS_YES) {
             return;
         }
