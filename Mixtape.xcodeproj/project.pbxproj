@@ -671,7 +671,7 @@
 				OTHER_LDFLAGS = "-lstdc++";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Release;
 		};
@@ -688,7 +688,10 @@
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
 				GCC_WARN_PEDANTIC = NO;
 				GCC_WARN_SHADOW = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/**";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/vendor/**",
+					"$(SRCROOT)/vendor/cocoalibspotify/iOS\\ Library/libspotify-10.1.16-iOS-universal/libspotify.framework/Versions/10.1.16/Headers/",
+				);
 				INFOPLIST_FILE = "Mixtape/Mixtape-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
@@ -718,7 +721,10 @@
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
 				GCC_WARN_PEDANTIC = NO;
 				GCC_WARN_SHADOW = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/**";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/vendor/**",
+					"$(SRCROOT)/vendor/cocoalibspotify/iOS\\ Library/libspotify-10.1.16-iOS-universal/libspotify.framework/Versions/10.1.16/Headers/",
+				);
 				INFOPLIST_FILE = "Mixtape/Mixtape-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (

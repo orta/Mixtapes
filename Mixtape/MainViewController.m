@@ -32,6 +32,8 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playlistsReady:)  name:@"PlaylistsSet" object:[[UIApplication sharedApplication] delegate]];
+    _offlineIndicator.hidden = YES;
+    _offlineTextLabel.hidden = YES;
 }
 
 - (void)playlistsReady:(id)notification {
@@ -44,6 +46,8 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
 
 - (void)checkPlaylistsAreOffline:(NSTimer *)timer {
     _offlineIndicator.hidden = NO;
+    _offlineTextLabel.hidden = NO;
+    
     MixtapeAppDelegate * appDelegate = (MixtapeAppDelegate*)[[UIApplication sharedApplication] delegate];
     for (SPPlaylist * playlist in appDelegate.playlists) {
         playlist.markedForOfflinePlayback = YES;
@@ -78,6 +82,7 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
     if (UIInterfaceOrientationIsLandscape(interfaceOrientation)) {
         return YES;
     }
+    return NO;
     
 //    // Return YES for supported orientations
 //    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
