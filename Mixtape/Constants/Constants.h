@@ -14,6 +14,7 @@ extern NSString * const ORLoginFailed;
 extern NSString * const ORFolderChosen;
 extern NSString * const ORNotificationErrorKey;
 extern NSString * const ORSongSent;
+extern NSString * const ORHelpNotification;
 
 // Constants
 extern NSString * const ORUserAgent;

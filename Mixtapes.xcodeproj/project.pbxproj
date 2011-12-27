@@ -75,6 +75,9 @@
 		60FEBEEB14954639005A8BBE /* bottombarwhite_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE514954639005A8BBE /* bottombarwhite_pressed.png */; };
 		60FEBEEC14954639005A8BBE /* bottombarwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE614954639005A8BBE /* bottombarwhite.png */; };
 		60FEBEEF14954653005A8BBE /* ORButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FEBEEE14954653005A8BBE /* ORButton.m */; };
+		60FF822A14A9436E0018553D /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FF822814A9436E0018553D /* HelpViewController.m */; };
+		60FF822B14A9436E0018553D /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60FF822914A9436E0018553D /* HelpViewController.xib */; };
+		60FF822F14A945540018553D /* help-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FF822E14A945540018553D /* help-bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +191,10 @@
 		60FEBEE614954639005A8BBE /* bottombarwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombarwhite.png; sourceTree = "<group>"; };
 		60FEBEED14954653005A8BBE /* ORButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ORButton.h; path = views/ORButton.h; sourceTree = "<group>"; };
 		60FEBEEE14954653005A8BBE /* ORButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ORButton.m; path = views/ORButton.m; sourceTree = "<group>"; };
+		60FF822714A9436D0018553D /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelpViewController.h; path = ViewControllers/HelpViewController.h; sourceTree = "<group>"; };
+		60FF822814A9436E0018553D /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelpViewController.m; path = ViewControllers/HelpViewController.m; sourceTree = "<group>"; };
+		60FF822914A9436E0018553D /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HelpViewController.xib; path = ViewControllers/HelpViewController.xib; sourceTree = "<group>"; };
+		60FF822E14A945540018553D /* help-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-bg.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,9 +202,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				601088591438A33B008D3D9F /* AVFoundation.framework in Frameworks */,
 				60A99FD6143F398E00ED5D11 /* libCocoaLibSpotify.a in Frameworks */,
 				6010886A1438B6D8008D3D9F /* AudioToolbox.framework in Frameworks */,
-				601088591438A33B008D3D9F /* AVFoundation.framework in Frameworks */,
 				608086D714352C5A0029BBC9 /* ImageIO.framework in Frameworks */,
 				608086CE14352A1C0029BBC9 /* QuartzCore.framework in Frameworks */,
 				60B1FC811434C0B50039206C /* CFNetwork.framework in Frameworks */,
@@ -261,6 +268,7 @@
 				60F0F6941495504700473008 /* mini_ribbon.png */,
 				60F0F6951495504700473008 /* ribbon.png */,
 				60F0F6961495504800473008 /* setup-bg.png */,
+				60FF822E14A945540018553D /* help-bg.png */,
 			);
 			name = Assets;
 			path = Resources;
@@ -296,6 +304,9 @@
 				60E600C2143790F00096BBB4 /* LayoutController.m */,
 				6010885F1438A722008D3D9F /* AudioController.h */,
 				601088601438A722008D3D9F /* AudioController.m */,
+				60FF822714A9436D0018553D /* HelpViewController.h */,
+				60FF822814A9436E0018553D /* HelpViewController.m */,
+				60FF822914A9436E0018553D /* HelpViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -444,9 +455,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		60B1FC151434BE530039206C /* Mixtapess */ = {
+		60B1FC151434BE530039206C /* Mixtapes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60B1FC3D1434BE530039206C /* Build configuration list for PBXNativeTarget "Mixtapess" */;
+			buildConfigurationList = 60B1FC3D1434BE530039206C /* Build configuration list for PBXNativeTarget "Mixtapes" */;
 			buildPhases = (
 				60B1FC121434BE530039206C /* Sources */,
 				60B1FC131434BE530039206C /* Frameworks */,
@@ -457,7 +468,7 @@
 			dependencies = (
 				601FFEE81463F0EC00450B52 /* PBXTargetDependency */,
 			);
-			name = Mixtapess;
+			name = Mixtapes;
 			productName = Mixtape;
 			productReference = 60B1FC161434BE530039206C /* Mixtapess.app */;
 			productType = "com.apple.product-type.application";
@@ -489,7 +500,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				60B1FC151434BE530039206C /* Mixtapess */,
+				60B1FC151434BE530039206C /* Mixtapes */,
 			);
 		};
 /* End PBXProject section */
@@ -547,6 +558,8 @@
 				60EAE09C1495AC15006B55E8 /* star2.png in Resources */,
 				60EAE09D1495AC15006B55E8 /* star1.png in Resources */,
 				60EAE09F1495AFD4006B55E8 /* from_starred.png in Resources */,
+				60FF822B14A9436E0018553D /* HelpViewController.xib in Resources */,
+				60FF822F14A945540018553D /* help-bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +590,7 @@
 				60BFCF261486A590000EEB24 /* Reachability.m in Sources */,
 				601569EE14933C3A00342FAE /* SetupViewController.m in Sources */,
 				60FEBEEF14954653005A8BBE /* ORButton.m in Sources */,
+				60FF822A14A9436E0018553D /* HelpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,7 +767,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60B1FC3D1434BE530039206C /* Build configuration list for PBXNativeTarget "Mixtapess" */ = {
+		60B1FC3D1434BE530039206C /* Build configuration list for PBXNativeTarget "Mixtapes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60B1FC3E1434BE530039206C /* Debug */,

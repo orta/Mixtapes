@@ -12,6 +12,7 @@
 #import <ImageIO/ImageIO.h>
 #import "LayoutController.h"
 #import "AudioController.h"
+#import "HelpViewController.h"
 
 #define DegreesToRadians(x) (M_PI * x / 180.0)
 
@@ -28,12 +29,26 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
 @synthesize canvas = _CACanvasView;
 @synthesize flipsidePopoverController = _flipsidePopoverController;
 @synthesize layout = _layout, audio = _audio;
+@synthesize helpViewController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playlistsReady:)  name:@"PlaylistsSet" object:[[UIApplication sharedApplication] delegate]];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showHelp:)  name:ORHelpNotification object: nil];
+
     _offlineIndicator.hidden = YES;
     _offlineTextLabel.hidden = YES;
+}
+
+- (void)showHelp:(NSNotification*)notification {
+    helpViewController = [[HelpViewController alloc] initWithNibName:@"HelpViewController" bundle:nil];
+    helpViewController.view.alpha = 0;
+    [self.view addSubview:helpViewController.view];
+    [UIView animateWithDuration:0.3 animations:^{
+        helpViewController.view.alpha = 1;        
+    }];
+
 }
 
 - (void)playlistsReady:(id)notification {

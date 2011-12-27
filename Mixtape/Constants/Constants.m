@@ -16,12 +16,14 @@ NSString * const ORAppResetKey = @"ORAppReset";
 NSString * const ORSongSent = @"ORSongSent";
 
 NSString * const ORNotificationErrorKey = @"ORNotificationErrorKey";
-
+NSString * const ORHelpNotification = @"ORHelpNotification";
 
 NSString * const ORFolderID = @"ORFolderID";
 NSString * const ORPlaylistIDArray = @"ORPlaylistIDs";
 
 NSString * const ORCellReuseID = @"ORCellReuseID";
 NSString * const ORCellTitleReuseID = @"ORCellTitleReuseID";
+
+
 
 const float ORCoverWidth = 300;

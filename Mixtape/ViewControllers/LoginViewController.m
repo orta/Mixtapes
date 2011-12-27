@@ -49,7 +49,8 @@
 }
 
 - (IBAction)help:(id)sender {
-    
+    [self.view endEditing:YES];
+    [[NSNotificationCenter defaultCenter] postNotificationName:ORHelpNotification object:nil userInfo: [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:0] forKey:ORHelpNotification]];
 }
 
 - (void)loginFailed:(NSNotification*)notification {
@@ -79,16 +80,5 @@
     }
     return NO;
 }
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
-}
-
 
 @end
