@@ -16,10 +16,8 @@
 @implementation HelpViewController
 
 @synthesize webView;
-@synthesize loginHelpButton;
-@synthesize foldersHelpButton;
-@synthesize reccomendHelpButton;
 @synthesize backHelpButton;
+@synthesize messageImage;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,24 +30,27 @@
 - (void)viewDidUnload {
     [self setWebView:nil];
     [self setBackHelpButton:nil];
+    [self setMessageImage:nil];
     [super viewDidUnload];
 }
 
 
 - (IBAction)recommendHelp:(id)sender {
+    self.messageImage.image = [UIImage imageNamed:@"help_song"];
     [self openURL:@"http://ortastuff.s3.amazonaws.com/mixtape_help/sendsong.mov"];
 }
 
 - (IBAction)folderHelp:(id)sender {
+    self.messageImage.image = [UIImage imageNamed:@"help_folders"];
     [self openURL:@"http://ortastuff.s3.amazonaws.com/mixtape_help/folder.mov"];
 }
 
 - (IBAction)loginHelp:(id)sender {
+    self.messageImage.image = [UIImage imageNamed:@"help_login"];
     [self openURL:@"http://ortastuff.s3.amazonaws.com/mixtape_help/login.mov"];
 }
 
 - (IBAction)close:(id)sender {
-    
     [UIView animateWithDuration:0.3 animations:^{
         self.view.alpha = 0;
     } completion:^(BOOL finished) {

@@ -12,10 +12,8 @@
 
 @interface HelpViewController : UIViewController
 @property (retain, nonatomic) IBOutlet UIWebView *webView;
-@property (retain, nonatomic) IBOutlet ORButton *loginHelpButton;
-@property (retain, nonatomic) IBOutlet ORButton *foldersHelpButton;
-@property (retain, nonatomic) IBOutlet ORButton *reccomendHelpButton;
 @property (retain, nonatomic) IBOutlet ORButton *backHelpButton;
+@property (retain, nonatomic) IBOutlet UIImageView *messageImage;
 
 - (IBAction)recommendHelp:(id)sender;
 - (IBAction)folderHelp:(id)sender;

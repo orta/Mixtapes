@@ -78,6 +78,9 @@
 		60FF822A14A9436E0018553D /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FF822814A9436E0018553D /* HelpViewController.m */; };
 		60FF822B14A9436E0018553D /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60FF822914A9436E0018553D /* HelpViewController.xib */; };
 		60FF822F14A945540018553D /* help-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FF822E14A945540018553D /* help-bg.png */; };
+		60FF823314A95F000018553D /* help_song.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FF823014A95EFE0018553D /* help_song.png */; };
+		60FF823414A95F000018553D /* help_folders.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FF823114A95EFF0018553D /* help_folders.png */; };
+		60FF823514A95F000018553D /* help_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FF823214A95EFF0018553D /* help_login.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +198,9 @@
 		60FF822814A9436E0018553D /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelpViewController.m; path = ViewControllers/HelpViewController.m; sourceTree = "<group>"; };
 		60FF822914A9436E0018553D /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HelpViewController.xib; path = ViewControllers/HelpViewController.xib; sourceTree = "<group>"; };
 		60FF822E14A945540018553D /* help-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help-bg.png"; sourceTree = "<group>"; };
+		60FF823014A95EFE0018553D /* help_song.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_song.png; sourceTree = "<group>"; };
+		60FF823114A95EFF0018553D /* help_folders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_folders.png; sourceTree = "<group>"; };
+		60FF823214A95EFF0018553D /* help_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_login.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +421,9 @@
 		60EAE0951495AC02006B55E8 /* setup */ = {
 			isa = PBXGroup;
 			children = (
+				60FF823014A95EFE0018553D /* help_song.png */,
+				60FF823114A95EFF0018553D /* help_folders.png */,
+				60FF823214A95EFF0018553D /* help_login.png */,
 				60EAE09E1495AFD4006B55E8 /* from_starred.png */,
 				60EAE0971495AC15006B55E8 /* star3.png */,
 				60EAE0981495AC15006B55E8 /* star2.png */,
@@ -560,6 +569,9 @@
 				60EAE09F1495AFD4006B55E8 /* from_starred.png in Resources */,
 				60FF822B14A9436E0018553D /* HelpViewController.xib in Resources */,
 				60FF822F14A945540018553D /* help-bg.png in Resources */,
+				60FF823314A95F000018553D /* help_song.png in Resources */,
+				60FF823414A95F000018553D /* help_folders.png in Resources */,
+				60FF823514A95F000018553D /* help_login.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
