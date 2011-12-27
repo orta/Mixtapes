@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "60B1FC151434BE530039206C"
-               BuildableName = "Mixtapess.app"
+               BuildableName = "Mixtapes.app"
                BlueprintName = "Mixtapes"
                ReferencedContainer = "container:Mixtapes.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "60B1FC151434BE530039206C"
-            BuildableName = "Mixtapess.app"
+            BuildableName = "Mixtapes.app"
             BlueprintName = "Mixtapes"
             ReferencedContainer = "container:Mixtapes.xcodeproj">
          </BuildableReference>
@@ -50,7 +50,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "60B1FC151434BE530039206C"
-            BuildableName = "Mixtapess.app"
+            BuildableName = "Mixtapes.app"
             BlueprintName = "Mixtapes"
             ReferencedContainer = "container:Mixtapes.xcodeproj">
          </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "60B1FC151434BE530039206C"
-            BuildableName = "Mixtapess.app"
+            BuildableName = "Mixtapes.app"
             BlueprintName = "Mixtapes"
             ReferencedContainer = "container:Mixtapes.xcodeproj">
          </BuildableReference>

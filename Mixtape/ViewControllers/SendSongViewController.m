@@ -27,6 +27,7 @@
 
 
 - (void) getStarredSongs {
+    [tableView reloadData];
     if ([[[SPSession sharedSession] starredPlaylist] isLoaded] == NO) {
         [self performSelector:_cmd withObject:nil afterDelay:0.5];
         return;

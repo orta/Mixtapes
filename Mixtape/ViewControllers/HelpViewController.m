@@ -9,7 +9,7 @@
 #import "HelpViewController.h"
 #import "ORButton.h"
 
-@interface HelpViewController(privatE)
+@interface HelpViewController(private)
 - (void)openURL:(NSString *)address;
 @end
 

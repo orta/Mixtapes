@@ -101,8 +101,9 @@
             [self checkForOfflinePlaylists];
         }
     }else{
-        [[NSNotificationCenter defaultCenter] postNotificationName: ORLoggedIn object: nil];
-     }
+        [[SPSession sharedSession] logout];
+        [self showLoginController];
+    }
 }
 
 - (void)removeSetup {
@@ -236,7 +237,9 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application{}
 
-- (void)applicationWillEnterForeground:(UIApplication *)application{}
+- (void)applicationWillEnterForeground:(UIApplication *)application{
+    [self applicationDidBecomeActive:application];
+}
 
 - (void)applicationDidBecomeActive:(UIApplication *)application{    
     if ([[NSUserDefaults standardUserDefaults] boolForKey:ORAppResetKey]) {
