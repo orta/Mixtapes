@@ -15,6 +15,7 @@ extern NSString * const ORFolderChosen;
 extern NSString * const ORNotificationErrorKey;
 extern NSString * const ORSongSent;
 extern NSString * const ORHelpNotification;
+extern NSString * const ORHelpClosedNotification;
 
 // Constants
 extern NSString * const ORUserAgent;

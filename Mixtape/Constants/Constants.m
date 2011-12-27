@@ -17,6 +17,7 @@ NSString * const ORSongSent = @"ORSongSent";
 
 NSString * const ORNotificationErrorKey = @"ORNotificationErrorKey";
 NSString * const ORHelpNotification = @"ORHelpNotification";
+NSString * const ORHelpClosedNotification = @"ORHelpClosedNotification";
 
 NSString * const ORFolderID = @"ORFolderID";
 NSString * const ORPlaylistIDArray = @"ORPlaylistIDs";

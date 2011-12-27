@@ -37,6 +37,19 @@
                                              selector:@selector(loginFailed:) 
                                                  name:ORLoginFailed 
                                                object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(helpClosed:) 
+                                                 name:ORHelpClosedNotification 
+                                               object:nil];
+    
+}
+
+- (void)helpClosed:(NSNotification *)notification {
+    if (usernameTextField.text) {
+        [passwordTextField becomeFirstResponder];
+    }else{
+        [usernameTextField becomeFirstResponder];
+    }
 }
 
 - (IBAction)login:(id)sender {

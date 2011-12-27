@@ -56,6 +56,7 @@
     } completion:^(BOOL finished) {
         [self.view removeFromSuperview];
         [self openURL:@"http://google.com"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:ORHelpClosedNotification object:nil];
     }];
 }
 
