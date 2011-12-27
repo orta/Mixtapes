@@ -43,7 +43,7 @@
 						<string key="NSFrame">{{0, 85}, {320, 321}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="889797488"/>
+						<reference key="NSNextKeyView" ref="508398044"/>
 						<string key="NSReuseIdentifierKey">_NS:418</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -73,7 +73,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">No Thanks</string>
-						<object class="NSColor" key="IBUIHighlightedTitleColor" id="280174134">
+						<object class="NSColor" key="IBUIHighlightedTitleColor" id="516246411">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
@@ -81,15 +81,15 @@
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
-						<object class="NSColor" key="IBUINormalTitleShadowColor" id="1026714365">
+						<object class="NSColor" key="IBUINormalTitleShadowColor" id="812931149">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="765856453">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="176652148">
 							<int key="type">2</int>
 							<double key="pointSize">15</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="44114333">
+						<object class="NSFont" key="IBUIFont" id="770567215">
 							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
@@ -112,10 +112,10 @@
 							<string key="NSResourceName">recommend.png</string>
 						</object>
 					</object>
-					<object class="IBUIButton" id="889797488">
+					<object class="IBUIButton" id="508398044">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">265</int>
-						<string key="NSFrame">{{139, 423}, {72, 37}}</string>
+						<string key="NSFrame">{{137, 423}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="186076559"/>
@@ -126,14 +126,14 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">Help</string>
-						<reference key="IBUIHighlightedTitleColor" ref="280174134"/>
+						<reference key="IBUIHighlightedTitleColor" ref="516246411"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="1026714365"/>
-						<reference key="IBUIFontDescription" ref="765856453"/>
-						<reference key="IBUIFont" ref="44114333"/>
+						<reference key="IBUINormalTitleShadowColor" ref="812931149"/>
+						<reference key="IBUIFontDescription" ref="176652148"/>
+						<reference key="IBUIFont" ref="770567215"/>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
@@ -179,6 +179,14 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">helpButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="508398044"/>
+					</object>
+					<int key="connectionID">19</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">dataSource</string>
 						<reference key="source" ref="590070959"/>
 						<reference key="destination" ref="372490531"/>
@@ -205,7 +213,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">helpPressed:</string>
-						<reference key="source" ref="889797488"/>
+						<reference key="source" ref="508398044"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -227,7 +235,7 @@
 							<reference ref="590070959"/>
 							<reference ref="659228980"/>
 							<reference ref="186076559"/>
-							<reference ref="889797488"/>
+							<reference ref="508398044"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -259,7 +267,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">17</int>
-						<reference key="object" ref="889797488"/>
+						<reference key="object" ref="508398044"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -281,7 +289,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">18</int>
+			<int key="maxID">19</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -308,10 +316,15 @@
 						</object>
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="helpButton">ORButton</string>
 						<string key="skipButton">ORButton</string>
 						<string key="tableView">UITableView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="helpButton">
+							<string key="name">helpButton</string>
+							<string key="candidateClassName">ORButton</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="skipButton">
 							<string key="name">skipButton</string>
 							<string key="candidateClassName">ORButton</string>

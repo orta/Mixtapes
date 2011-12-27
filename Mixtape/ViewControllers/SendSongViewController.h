@@ -13,6 +13,7 @@
 @interface SendSongViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPPostTracksToInboxOperationDelegate > {
     NSMutableArray * playlistItems;
     IBOutlet ORButton *skipButton;
+    IBOutlet ORButton *helpButton;
 }
 
 @property (retain, nonatomic) IBOutlet UITableView *tableView;

@@ -16,8 +16,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     playlistItems = [[NSMutableArray array] mutableCopy];
-    [skipButton setCustomImage:@"bottombarwhite"];
+    [helpButton setCustomImage:@"bottombarwhite"];
     
+    [skipButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [skipButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [skipButton setCustomImage:@"bottombarredfire"];
+
     [self getStarredSongs];
 }
 
@@ -108,4 +112,13 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)dealloc {
+    [helpButton release];
+    [super dealloc];
+}
+- (void)viewDidUnload {
+    [helpButton release];
+    helpButton = nil;
+    [super viewDidUnload];
+}
 @end

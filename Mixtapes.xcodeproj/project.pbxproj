@@ -146,7 +146,7 @@
 		60A99FD8143F3A2100ED5D11 /* SPCircularBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPCircularBuffer.m; path = "cocoalibspotify/Playback Helper Classes/SPCircularBuffer.m"; sourceTree = "<group>"; };
 		60A99FD9143F3A2100ED5D11 /* SPPlaybackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPPlaybackManager.h; path = "cocoalibspotify/Playback Helper Classes/SPPlaybackManager.h"; sourceTree = "<group>"; };
 		60A99FDA143F3A2100ED5D11 /* SPPlaybackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPPlaybackManager.m; path = "cocoalibspotify/Playback Helper Classes/SPPlaybackManager.m"; sourceTree = "<group>"; };
-		60B1FC161434BE530039206C /* Mixtapess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixtapess.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60B1FC161434BE530039206C /* Mixtapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixtapes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B1FC1A1434BE530039206C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60B1FC1C1434BE530039206C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		60B1FC1E1434BE530039206C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -338,7 +338,7 @@
 		60B1FC171434BE530039206C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				60B1FC161434BE530039206C /* Mixtapess.app */,
+				60B1FC161434BE530039206C /* Mixtapes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -470,7 +470,7 @@
 			);
 			name = Mixtapes;
 			productName = Mixtape;
-			productReference = 60B1FC161434BE530039206C /* Mixtapess.app */;
+			productReference = 60B1FC161434BE530039206C /* Mixtapes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -716,7 +716,7 @@
 					"-ObjC",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = Mixtapess;
+				PRODUCT_NAME = Mixtapes;
 				VALID_ARCHS = "i386 armv7 armv7f armv7k";
 				WRAPPER_EXTENSION = app;
 			};
@@ -749,7 +749,7 @@
 					"-ObjC",
 					"-lstdc++",
 				);
-				PRODUCT_NAME = Mixtapess;
+				PRODUCT_NAME = Mixtapes;
 				VALID_ARCHS = "i386 armv7 armv7f armv7k";
 				WRAPPER_EXTENSION = app;
 			};

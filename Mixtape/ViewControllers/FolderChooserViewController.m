@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     folders = [[NSMutableArray array] mutableCopy];
+    [helpButton setCustomImage:@"bottombarwhite"];
     [spotifyButton setCustomImage:@"bottombargreen"];
     [self searchForFolders];
 }
@@ -84,8 +85,16 @@
                                                         object: nil];
 }
 
-
 - (IBAction)helpTapped:(id)sender {
     [[NSNotificationCenter defaultCenter] postNotificationName:ORHelpNotification object:nil userInfo: [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:1] forKey:ORHelpNotification]];
+}
+- (void)dealloc {
+    [helpButton release];
+    [super dealloc];
+}
+- (void)viewDidUnload {
+    [helpButton release];
+    helpButton = nil;
+    [super viewDidUnload];
 }
 @end
