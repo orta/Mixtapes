@@ -86,6 +86,9 @@
     return 44;
 }
 
+- (IBAction)helpPressed:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:ORHelpNotification object:nil userInfo: [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:2] forKey:ORHelpNotification]];
+}
 
 #pragma mark table view delegate
 

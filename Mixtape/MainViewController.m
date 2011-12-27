@@ -42,13 +42,25 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
 }
 
 - (void)showHelp:(NSNotification*)notification {
+    helpViewController = nil;
     helpViewController = [[HelpViewController alloc] initWithNibName:@"HelpViewController" bundle:nil];
     helpViewController.view.alpha = 0;
     [self.view addSubview:helpViewController.view];
+    switch ([[[notification userInfo] objectForKey:ORHelpNotification] intValue]) {
+        case 0:
+            [helpViewController loginHelp:self];
+            break;
+        case 1:
+            [helpViewController folderHelp:self];
+            break;
+        default:
+            [helpViewController recommendHelp:self];
+            break;
+    }
+    
     [UIView animateWithDuration:0.3 animations:^{
         helpViewController.view.alpha = 1;        
     }];
-
 }
 
 - (void)playlistsReady:(id)notification {

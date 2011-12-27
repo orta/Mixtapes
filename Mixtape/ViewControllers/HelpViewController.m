@@ -23,19 +23,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.loginHelpButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.loginHelpButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
-    [self.loginHelpButton setCustomImage:@"bottombarredfire"];
-
-
+        
+    [self.backHelpButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.backHelpButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [self.backHelpButton setCustomImage:@"bottombarredfire"];
 }
 
 - (void)viewDidUnload {
     [self setWebView:nil];
-    [self setLoginHelpButton:nil];
-    [self setFoldersHelpButton:nil];
-    [self setReccomendHelpButton:nil];
     [self setBackHelpButton:nil];
     [super viewDidUnload];
 }
@@ -51,6 +46,16 @@
 
 - (IBAction)loginHelp:(id)sender {
     [self openURL:@"http://ortastuff.s3.amazonaws.com/mixtape_help/login.mov"];
+}
+
+- (IBAction)close:(id)sender {
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        self.view.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self.view removeFromSuperview];
+        [self openURL:@"http://google.com"];
+    }];
 }
 
 - (void)openURL:(NSString *)address {
