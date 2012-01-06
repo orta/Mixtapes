@@ -23,26 +23,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Mixtape/MixtapeAppDelegate.m"
-         timestampString = "346702492.14398"
+         timestampString = "347516227.643961"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "121"
-         endingLineNumber = "121"
+         startingLineNumber = "124"
+         endingLineNumber = "124"
          landmarkName = "-waitAndFillTrackPool"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Mixtape/MixtapeAppDelegate.m"
-         timestampString = "346702234.109228"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "96"
-         endingLineNumber = "96"
-         landmarkName = "-sessionDidLoginSuccessfully:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

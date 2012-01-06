@@ -101,8 +101,11 @@
             [self checkForOfflinePlaylists];
         }
     }else{
-        [[SPSession sharedSession] logout];
-        [self showLoginController];
+        if (!self.setupViewController) {
+            [self showLoginController];
+        }else{
+            [[NSNotificationCenter defaultCenter] postNotificationName:ORLoggedIn object:nil];
+        }
     }
 }
 
