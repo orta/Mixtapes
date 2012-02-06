@@ -23,7 +23,7 @@ extern NSString * const ORAppResetKey;
 
 // User Defaults
 extern NSString * const ORFolderID;
-extern NSString * const ORPlaylistIDArray;
+extern NSString * const ORPlaylistURLArray;
 
 extern NSString * const ORCellReuseID;
 extern NSString * const ORCellTitleReuseID;

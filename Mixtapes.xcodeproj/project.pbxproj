@@ -67,6 +67,7 @@
 		60F0F69B149553D700473008 /* star0.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F69A149553D700473008 /* star0.png */; };
 		60F0F69D1495662000473008 /* from.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F69C1495662000473008 /* from.png */; };
 		60F0F69F149567EC00473008 /* playlists.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F69E149567EC00473008 /* playlists.png */; };
+		60F126FC14DF4886007ECFCE /* NSObject+KVOBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F126FB14DF4886007ECFCE /* NSObject+KVOBlocks.m */; };
 		60F8C43F147864DE00DD8D8C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60F8C43E147864DD00DD8D8C /* Settings.bundle */; };
 		60FEBEE714954639005A8BBE /* bottombargreen_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE114954639005A8BBE /* bottombargreen_pressed.png */; };
 		60FEBEE814954639005A8BBE /* bottombargreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE214954639005A8BBE /* bottombargreen.png */; };
@@ -185,6 +186,8 @@
 		60F0F69A149553D700473008 /* star0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star0.png; sourceTree = "<group>"; };
 		60F0F69C1495662000473008 /* from.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = from.png; sourceTree = "<group>"; };
 		60F0F69E149567EC00473008 /* playlists.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playlists.png; sourceTree = "<group>"; };
+		60F126FA14DF4886007ECFCE /* NSObject+KVOBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+KVOBlocks.h"; path = "utils/NSObject+KVOBlocks.h"; sourceTree = "<group>"; };
+		60F126FB14DF4886007ECFCE /* NSObject+KVOBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KVOBlocks.m"; path = "utils/NSObject+KVOBlocks.m"; sourceTree = "<group>"; };
 		60F8C43E147864DD00DD8D8C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Resources/Settings.bundle; sourceTree = "<group>"; };
 		60FEBEE114954639005A8BBE /* bottombargreen_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombargreen_pressed.png; sourceTree = "<group>"; };
 		60FEBEE214954639005A8BBE /* bottombargreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombargreen.png; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 				60BFCF231486A590000EEB24 /* Reachability */,
 				6028CF6B14810B1A0033B680 /* PlaylistPostionGenerator.h */,
 				6028CF6C14810B1A0033B680 /* PlaylistPostionGenerator.m */,
+				60F126FA14DF4886007ECFCE /* NSObject+KVOBlocks.h */,
+				60F126FB14DF4886007ECFCE /* NSObject+KVOBlocks.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -603,6 +608,7 @@
 				601569EE14933C3A00342FAE /* SetupViewController.m in Sources */,
 				60FEBEEF14954653005A8BBE /* ORButton.m in Sources */,
 				60FF822A14A9436E0018553D /* HelpViewController.m in Sources */,
+				60F126FC14DF4886007ECFCE /* NSObject+KVOBlocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

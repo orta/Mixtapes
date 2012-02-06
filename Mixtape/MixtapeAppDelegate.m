@@ -76,15 +76,9 @@
 }
 
 - (void)session:(SPSession *)aSession didEncounterNetworkError:(NSError *)error {
-    NSLog(@"spotify is down");
-    if ([[SPSession sharedSession] storedCredentialsUserName]) {
+    if ([[SPSession sharedSession] storedCredentialsUserName] && !self.playlists) {
         [self checkForOfflinePlaylists];
     }
-
-//    NSDictionary * errorDictionary = [NSDictionary dictionaryWithObject:error forKey:ORNotificationErrorKey];
-//    [[NSNotificationCenter defaultCenter] postNotificationName: ORLoginFailed
-//                                                        object: nil 
-//                                                      userInfo: errorDictionary];
 }
 
 - (void)session:(SPSession *)aSession didLogMessage:(NSString *)aMessage {
@@ -155,42 +149,46 @@
         }
     }
     
+    // All are loaded, so set them to be offlined.
+    for (id item in self.playlists) {
+        if ([item isKindOfClass:[SPPlaylist class]]) {
+            SPPlaylist *playlist = item;
+            playlist.markedForOfflinePlayback = YES;
+            NSLog(@"marking %@ for offline", playlist.name);
+        }
+    }
+    
+    [[SPSession sharedSession] addObserverForKeyPath:@"offlineTracksRemaining" task:^(id obj, NSDictionary *change) {
+        NSLog(@"%u tracks remaining", [SPSession sharedSession].offlineTracksRemaining);
+    }];
+    
+    [[SPSession sharedSession] addObserverForKeyPath:@"offlinePlaylistsRemaining" task:^(id obj, NSDictionary *change) {
+        NSLog(@"%u playlists remaining", [SPSession sharedSession].offlinePlaylistsRemaining);
+    }];
+    
+    [[SPSession sharedSession] addObserverForKeyPath:@"offlineStatistics" task:^(id obj, NSDictionary *change) {
+        NSLog(@"stats: %@", [SPSession sharedSession].offlineStatistics);
+    }];
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PlaylistsSet" object:self];
 }
 
 - (void)checkForOfflinePlaylists {
-    NSNumber * folderIDNumber = [[NSUserDefaults standardUserDefaults] objectForKey:ORFolderID];
-    uint64_t folderID = [folderIDNumber unsignedLongLongValue];
-
-//    SPSession *sess= [SPSession sharedSession];
-//    for (SPPlaylist* playlist in [[sess playlistCache] allValues]) {
-//        NSLog(@"playlist %@ id ", [playlist class]);
-//        SPPlaylist* playlist2 = playlist;
-//	}
-//
+    NSLog(@"checking for offline playlists");
     
-    SPPlaylistFolder * folder = [[SPPlaylistFolder alloc] initWithPlaylistFolderId:folderID container:[[SPSession sharedSession] userPlaylists] inSession:[SPSession sharedSession]];
+    NSArray *playlistURLS = [[NSUserDefaults standardUserDefaults] objectForKey:ORPlaylistURLArray];
     
-    bool synced = YES;
-    if (folder) {
-        for (SPPlaylist * playlist in folder.playlists) {
-            playlist.markedForOfflinePlayback = YES;
-            for (SPTrack *track in playlist.items) {
-                if (track.offlineStatus != SP_TRACK_OFFLINE_DONE) {
-                    NSLog(@"ERROR - NOT SYNCED %@", track.name);
-                    synced = NO;
-                }
-            }
-            if ([playlist offlineStatus] != SP_PLAYLIST_OFFLINE_STATUS_YES) {
-                NSLog(@"ERROR - NOT SYNCED");
-                synced = NO;
-            }
+    NSMutableArray *offlinePlaylists = [NSMutableArray array];
+    for (NSString * url in playlistURLS) {        
+        SPPlaylist *playlist = [[SPSession sharedSession] playlistForURL:[NSURL URLWithString:url]];
+        if (playlist) {
+            NSLog(@"playlist found! %@", playlist.name);
+            [offlinePlaylists addObject:playlist];            
         }
     }
-    if (synced) {
-        self.playlists = folder.playlists;
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"PlaylistsSet" object:self];
-    }
+        
+    self.playlists = offlinePlaylists;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"PlaylistsSet" object:self];
 }
 
 - (void)monitorForErrors {

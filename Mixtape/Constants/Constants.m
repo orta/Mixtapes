@@ -20,7 +20,7 @@ NSString * const ORHelpNotification = @"ORHelpNotification";
 NSString * const ORHelpClosedNotification = @"ORHelpClosedNotification";
 
 NSString * const ORFolderID = @"ORFolderID";
-NSString * const ORPlaylistIDArray = @"ORPlaylistIDs";
+NSString * const ORPlaylistURLArray = @"ORPlaylistIDs";
 
 NSString * const ORCellReuseID = @"ORCellReuseID";
 NSString * const ORCellTitleReuseID = @"ORCellTitleReuseID";

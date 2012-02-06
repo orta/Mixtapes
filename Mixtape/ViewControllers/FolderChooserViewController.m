@@ -11,6 +11,7 @@
 
 @interface FolderChooserViewController (private)
 - (void)searchForFolders;
+- (void)getAllFolderMetadata;
 @end
 
 @implementation FolderChooserViewController
@@ -41,6 +42,40 @@
     }
     [tableView reloadData];
 }
+
+- (void)getAllFolderMetadata {
+    
+    if ([[[SPSession sharedSession] userPlaylists] isLoaded] == NO) {
+        [self performSelector:_cmd withObject:nil afterDelay:0.1];
+        return;
+    }
+    
+    SPPlaylistFolder * folder = [folders objectAtIndex:selectedIndex];
+    
+    // Store the URLs as unique IDs
+    NSMutableArray *playlistURLs = [NSMutableArray array];
+    for (SPPlaylist *playlist in folder.playlists) {
+        if (!playlist.loaded) {
+            NSLog(@"reloading and waiting");
+            [self performSelector:_cmd withObject:nil afterDelay:0.3];
+            return;
+        }
+        
+        NSLog(@"adding %@ - %@", playlist.name, playlist.spotifyURL);
+        [playlistURLs addObject:[playlist.spotifyURL absoluteString]];
+        
+    }
+    
+    NSNumber *folderID = [NSNumber numberWithUnsignedLongLong:folder.folderId];
+    [[NSUserDefaults standardUserDefaults] setObject:folderID forKey:ORFolderID];
+    [[NSUserDefaults standardUserDefaults] setObject:playlistURLs forKey:ORPlaylistURLArray];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName: ORFolderChosen
+                                                        object: nil];
+}
+
+
 
 - (IBAction)loadSpotify:(id)sender {
     NSURL * url;
@@ -79,10 +114,8 @@
 #pragma mark table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SPPlaylistFolder * folder = [folders objectAtIndex:indexPath.row];
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithUnsignedLongLong:folder.folderId] forKey:ORFolderID];
-    [[NSNotificationCenter defaultCenter] postNotificationName: ORFolderChosen
-                                                        object: nil];
+    selectedIndex = indexPath.row;
+    [self getAllFolderMetadata];
 }
 
 - (IBAction)helpTapped:(id)sender {

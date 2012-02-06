@@ -14,6 +14,8 @@
     NSMutableArray * folders;
     IBOutlet ORButton * spotifyButton;
     IBOutlet ORButton *helpButton;
+    
+    int selectedIndex;
 }
 @property (retain, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)loadSpotify:(id)sender;
