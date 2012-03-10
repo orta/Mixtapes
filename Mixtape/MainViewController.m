@@ -21,6 +21,7 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
 
 @interface MainViewController (private)
 - (void)playlistsAreOffline;
+- (void)getTrackCount;
 @end
 
 @implementation MainViewController
@@ -36,9 +37,10 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playlistsReady:)  name:@"PlaylistsSet" object:[[UIApplication sharedApplication] delegate]];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showHelp:)  name:ORHelpNotification object: nil];
-
+    
     _offlineIndicator.hidden = YES;
     _offlineTextLabel.hidden = YES;
+    _offlineProgressView.hidden = YES;
 }
 
 - (void)showHelp:(NSNotification*)notification {
@@ -68,7 +70,17 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
     [self.layout setupAlbumArtwork];
     [self.layout transitionIntoFloorView];
     [self.layout setupGestureReconition];
+    
+    [[SPSession sharedSession] addObserverForKeyPath:@"offlinePlaylistsRemaining" task:^(id obj, NSDictionary *change) {
+        NSLog(@"progress %f", _offlineProgressView.progress);
+        _offlineProgressView.progress = _totalTracks / (_totalTracks - [SPSession sharedSession].offlineTracksRemaining);
+    }];
+
     [NSTimer scheduledTimerWithTimeInterval:OROfflineTimerInterval target:self selector:@selector(checkPlaylistsAreOffline:) userInfo:nil repeats:YES];
+}
+
+- (void)getTrackCount {
+    _totalTracks = [SPSession sharedSession].offlineTracksRemaining;
 }
 
 - (void)checkPlaylistsAreOffline:(NSTimer *)timer {
@@ -81,6 +93,7 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
             playlist.markedForOfflinePlayback = YES;            
         }
         if ([playlist offlineStatus] != SP_PLAYLIST_OFFLINE_STATUS_YES) {
+            _offlineProgressView.hidden = NO;
             return;
         }
     }
@@ -98,6 +111,7 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
     [UIView setAnimationDuration:1.0];
     [_offlineIndicator setAlpha: 0];
     [_offlineTextLabel setAlpha:0];
+    [_offlineProgressView setAlpha:0];
     [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
     [UIView commitAnimations];
 }

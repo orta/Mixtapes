@@ -112,7 +112,7 @@
 						<int key="NSvFlags">274</int>
 						<object class="NSMutableArray" key="NSSubviews">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIProgressView" id="803475118">
+							<object class="IBUIProgressView" id="850539169">
 								<reference key="NSNextResponder" ref="975558063"/>
 								<int key="NSvFlags">289</int>
 								<string key="NSFrame">{{908, 102}, {64, 9}}</string>
@@ -234,7 +234,6 @@
 								<string key="NSFrame">{{301, -10}, {121, 121}}</string>
 								<reference key="NSSuperview" ref="878246342"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:241</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -415,6 +414,14 @@
 					<int key="connectionID">51</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">_offlineProgressView</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="850539169"/>
+					</object>
+					<int key="connectionID">54</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">showInfo:</string>
 						<reference key="source" ref="827738330"/>
@@ -572,7 +579,7 @@
 						<reference key="object" ref="975558063"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="803475118"/>
+							<reference ref="850539169"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 						<string key="objectName">Canvas View</string>
@@ -636,7 +643,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">53</int>
-						<reference key="object" ref="803475118"/>
+						<reference key="object" ref="850539169"/>
 						<reference key="parent" ref="975558063"/>
 					</object>
 				</object>
@@ -710,7 +717,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">53</int>
+			<int key="maxID">54</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -854,6 +861,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>_background</string>
 							<string>_offlineIndicator</string>
+							<string>_offlineProgressView</string>
 							<string>_offlineTextLabel</string>
 							<string>audio</string>
 							<string>canvas</string>
@@ -864,6 +872,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
+							<string>UIProgressView</string>
 							<string>UILabel</string>
 							<string>AudioController</string>
 							<string>UIView</string>
@@ -877,6 +886,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>_background</string>
 							<string>_offlineIndicator</string>
+							<string>_offlineProgressView</string>
 							<string>_offlineTextLabel</string>
 							<string>audio</string>
 							<string>canvas</string>
@@ -892,6 +902,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">_offlineIndicator</string>
 								<string key="candidateClassName">UIImageView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_offlineProgressView</string>
+								<string key="candidateClassName">UIProgressView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">_offlineTextLabel</string>

@@ -15,10 +15,13 @@
     IBOutlet UIImageView *_background;
     IBOutlet UIImageView *_offlineIndicator;
     IBOutlet UILabel *_offlineTextLabel;
+    IBOutlet UIProgressView *_offlineProgressView;
+
     UIView *_CACanvasView;
     LayoutController *_layout;
-}
 
+    int _totalTracks;
+}
 
 @property (retain, nonatomic) IBOutlet UIView *canvas;
 @property (retain, nonatomic) UIPopoverController *flipsidePopoverController;

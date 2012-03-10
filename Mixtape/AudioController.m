@@ -35,7 +35,7 @@
 #pragma mark playing / pausing delegate callbacks
 
 -(void)playbackManagerWillStartPlayingAudio:(SPPlaybackManager *)aPlaybackManager{ 
-    NSLog(@"started playing");
+    [_playPauseButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
 }
 
 // someone else is using the app

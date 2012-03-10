@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
-		<int key="IBDocument.SystemTarget">1280</int>
-		<string key="IBDocument.SystemVersion">11C74</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1938</string>
-		<string key="IBDocument.AppKitVersion">1138.23</string>
-		<string key="IBDocument.HIToolboxVersion">567.00</string>
+		<int key="IBDocument.SystemTarget">1296</int>
+		<string key="IBDocument.SystemVersion">11D50b</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2182</string>
+		<string key="IBDocument.AppKitVersion">1138.32</string>
+		<string key="IBDocument.HIToolboxVersion">568.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">933</string>
+			<string key="NS.object.0">1179</string>
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<string>IBUICustomObject</string>
-			<string>IBUIButton</string>
-			<string>IBUIImageView</string>
 			<string>IBUIView</string>
+			<string>IBUIImageView</string>
 			<string>IBUILabel</string>
+			<string>IBUICustomObject</string>
 			<string>IBProxyObject</string>
+			<string>IBUIProgressView</string>
+			<string>IBUIButton</string>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -65,7 +66,6 @@
 						<string key="NSFrame">{{442, 261}, {18, 19}}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -296,6 +296,17 @@
 						<reference key="IBUIFontDescription" ref="309845309"/>
 						<reference key="IBUIFont" ref="1044347254"/>
 					</object>
+					<object class="IBUIProgressView" id="685231729">
+						<reference key="NSNextResponder" ref="883825266"/>
+						<int key="NSvFlags">289</int>
+						<string key="NSFrame">{{399, 36}, {64, 9}}</string>
+						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<float key="IBUIProgress">0.5</float>
+					</object>
 				</object>
 				<string key="NSFrame">{{0, 20}, {480, 300}}</string>
 				<reference key="NSSuperview"/>
@@ -379,6 +390,14 @@
 						<reference key="destination" ref="509724882"/>
 					</object>
 					<int key="connectionID">70</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">_offlineProgressView</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="685231729"/>
+					</object>
+					<int key="connectionID">73</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -489,6 +508,7 @@
 							<reference ref="156192825"/>
 							<reference ref="509724882"/>
 							<reference ref="980263209"/>
+							<reference ref="685231729"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -568,6 +588,11 @@
 						<reference key="object" ref="980263209"/>
 						<reference key="parent" ref="883825266"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">72</int>
+						<reference key="object" ref="685231729"/>
+						<reference key="parent" ref="883825266"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -594,8 +619,9 @@
 					<string>48.IBPluginDependency</string>
 					<string>67.IBPluginDependency</string>
 					<string>68.IBPluginDependency</string>
+					<string>72.IBPluginDependency</string>
 				</object>
-				<object class="NSMutableArray" key="dict.values">
+				<object class="NSArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>MainViewController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -606,6 +632,7 @@
 					<string>LayoutController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>AudioController</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -631,7 +658,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">70</int>
+			<int key="maxID">73</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -660,7 +687,7 @@
 							<string>_currentPlayingTrackName</string>
 							<string>_playPauseButton</string>
 						</object>
-						<object class="NSMutableArray" key="dict.values">
+						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIView</string>
 							<string>UILabel</string>
@@ -679,7 +706,7 @@
 							<string>_currentPlayingTrackName</string>
 							<string>_playPauseButton</string>
 						</object>
-						<object class="NSMutableArray" key="dict.values">
+						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
 								<string key="name">_controllerView</string>
@@ -719,7 +746,7 @@
 							<string>canvas</string>
 							<string>loadingActivityView</string>
 						</object>
-						<object class="NSMutableArray" key="dict.values">
+						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>AudioController</string>
 							<string>UIView</string>
@@ -734,7 +761,7 @@
 							<string>canvas</string>
 							<string>loadingActivityView</string>
 						</object>
-						<object class="NSMutableArray" key="dict.values">
+						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
 								<string key="name">audio</string>
@@ -775,22 +802,22 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>_background</string>
 							<string>_offlineIndicator</string>
+							<string>_offlineProgressView</string>
 							<string>_offlineTextLabel</string>
 							<string>audio</string>
 							<string>canvas</string>
 							<string>layout</string>
-							<string>loadingBackground</string>
 							<string>loadingImage</string>
 						</object>
-						<object class="NSMutableArray" key="dict.values">
+						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIImageView</string>
 							<string>UIImageView</string>
+							<string>UIProgressView</string>
 							<string>UILabel</string>
 							<string>AudioController</string>
 							<string>UIView</string>
 							<string>LayoutController</string>
-							<string>UIImageView</string>
 							<string>UIImageView</string>
 						</object>
 					</object>
@@ -800,14 +827,14 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>_background</string>
 							<string>_offlineIndicator</string>
+							<string>_offlineProgressView</string>
 							<string>_offlineTextLabel</string>
 							<string>audio</string>
 							<string>canvas</string>
 							<string>layout</string>
-							<string>loadingBackground</string>
 							<string>loadingImage</string>
 						</object>
-						<object class="NSMutableArray" key="dict.values">
+						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
 								<string key="name">_background</string>
@@ -816,6 +843,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">_offlineIndicator</string>
 								<string key="candidateClassName">UIImageView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_offlineProgressView</string>
+								<string key="candidateClassName">UIProgressView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">_offlineTextLabel</string>
@@ -834,10 +865,6 @@
 								<string key="candidateClassName">LayoutController</string>
 							</object>
 							<object class="IBToOneOutletInfo">
-								<string key="name">loadingBackground</string>
-								<string key="candidateClassName">UIImageView</string>
-							</object>
-							<object class="IBToOneOutletInfo">
 								<string key="name">loadingImage</string>
 								<string key="candidateClassName">UIImageView</string>
 							</object>
@@ -854,7 +881,7 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
-			<real value="1280" key="NS.object.0"/>
+			<real value="1296" key="NS.object.0"/>
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.InterfaceBuilder3</string>
@@ -871,7 +898,7 @@
 				<string>offline_indicator_inactive.png</string>
 				<string>play.png</string>
 			</object>
-			<object class="NSMutableArray" key="dict.values">
+			<object class="NSArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{1024, 768}</string>
 				<string>{460, 149}</string>
@@ -879,6 +906,6 @@
 				<string>{121, 121}</string>
 			</object>
 		</object>
-		<string key="IBCocoaTouchPluginVersion">933</string>
+		<string key="IBCocoaTouchPluginVersion">1179</string>
 	</data>
 </archive>
