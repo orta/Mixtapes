@@ -63,16 +63,11 @@
     NSMutableArray *tracks = self.currentPlaylist.items;
     SPTrack *track = [[tracks objectAtIndex:_trackIndex] item];
     
-    NSLog(@"track %@", track);
-    
-    NSLog(@"track status %i", track.offlineStatus);
-
-    
     NSError *error = nil;
     [self.playbackManager playTrack:track error:&error];
     
     if( error && [error isKindOfClass:[NSError class]]) {
-        NSLog(@"playback error %@", [error localizedDescription]);
+        NSLog(@"track playback error %@", [error localizedDescription]);
     }
     
     [self updateControllerTexts];
@@ -109,7 +104,6 @@
     }
 }
 
-
 - (void)animateControllerIn {
     _showingController = YES;
     [UIView beginAnimations:@"animationID" context:NULL];
@@ -117,11 +111,11 @@
     
     CGRect newLocation = _controllerView.frame;
     newLocation.origin.y -= 200;
-    _controllerView.frame = newLocation;
+    _controllerView.frame = newLocation;    
+    [_playPauseButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
     
     [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
     [UIView commitAnimations];
 }
-
 
 @end

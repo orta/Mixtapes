@@ -61,14 +61,22 @@
         [self showLoginController];
     }else{ 
         NSLog(@"previously logged in as %@", [session storedCredentialsUserName]);
-        [session attemptLoginWithStoredCredentials:nil];
+        NSError *loginError = nil;
+        [session attemptLoginWithStoredCredentials:&loginError];
+        if (loginError) {
+            NSLog(@"login error");
+            NSLog(@"login error -- %@", [loginError localizedDescription]);
+        }
     }
 }
 
 #pragma mark Spotify Session delegate methods
 
 - (void)session:(SPSession *)aSession didFailToLoginWithError:(NSError *)error {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
     NSLog(@"login error %@", [error localizedDescription]);
+    NSLog(@" %@", error);
+    
     NSDictionary * errorDictionary = [NSDictionary dictionaryWithObject:error forKey:ORNotificationErrorKey];
     [[NSNotificationCenter defaultCenter] postNotificationName: ORLoginFailed
                                                         object: nil 
@@ -153,36 +161,30 @@
     for (id item in self.playlists) {
         if ([item isKindOfClass:[SPPlaylist class]]) {
             SPPlaylist *playlist = item;
-            playlist.markedForOfflinePlayback = YES;
-            NSLog(@"marking %@ for offline", playlist.name);
+            if (playlist.offlineStatus != SP_PLAYLIST_OFFLINE_STATUS_YES) {
+                playlist.markedForOfflinePlayback = YES;
+            }
         }
     }
     
     [[SPSession sharedSession] addObserverForKeyPath:@"offlineTracksRemaining" task:^(id obj, NSDictionary *change) {
         NSLog(@"%u tracks remaining", [SPSession sharedSession].offlineTracksRemaining);
+        
     }];
-    
-    [[SPSession sharedSession] addObserverForKeyPath:@"offlinePlaylistsRemaining" task:^(id obj, NSDictionary *change) {
-        NSLog(@"%u playlists remaining", [SPSession sharedSession].offlinePlaylistsRemaining);
-    }];
-    
-    [[SPSession sharedSession] addObserverForKeyPath:@"offlineStatistics" task:^(id obj, NSDictionary *change) {
-        NSLog(@"stats: %@", [SPSession sharedSession].offlineStatistics);
-    }];
+    //    [[SPSession sharedSession] addObserverForKeyPath:@"offlineStatistics" task:^(id obj, NSDictionary *change) {
+//        //  NSLog(@"stats: %@", [SPSession sharedSession].offlineStatistics);
+//    }];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PlaylistsSet" object:self];
 }
 
-- (void)checkForOfflinePlaylists {
-    NSLog(@"checking for offline playlists");
-    
+- (void)checkForOfflinePlaylists {    
     NSArray *playlistURLS = [[NSUserDefaults standardUserDefaults] objectForKey:ORPlaylistURLArray];
-    
     NSMutableArray *offlinePlaylists = [NSMutableArray array];
+    
     for (NSString * url in playlistURLS) {        
         SPPlaylist *playlist = [[SPSession sharedSession] playlistForURL:[NSURL URLWithString:url]];
         if (playlist) {
-            NSLog(@"playlist found! %@", playlist.name);
             [offlinePlaylists addObject:playlist];            
         }
     }
@@ -229,12 +231,11 @@
     }
 }
 
-
 - (BOOL)isOnline {
     return ([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] != NotReachable);
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application{}
+- (void)applicationWillResignActive:(UIApplication *)application {}
 
 - (void)applicationDidEnterBackground:(UIApplication *)application{}
 
@@ -244,11 +245,9 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application{    
     if ([[NSUserDefaults standardUserDefaults] boolForKey:ORAppResetKey]) {
-        SPSession * session = [SPSession sharedSession];
         for (SPPlaylist *playlist in self.playlists) {
             [playlist setMarkedForOfflinePlayback:NO];
         }
-        [session logout];
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:ORFolderID];
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:ORAppResetKey];
         [self startSpotify];
@@ -258,6 +257,10 @@
     
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application{}
+- (void)applicationWillTerminate:(UIApplication *)application {
+    NSLog(@"%@ logging out", NSStringFromSelector(_cmd));
+    SPSession * session = [SPSession sharedSession];
+    [session logout];
+}
 
 @end

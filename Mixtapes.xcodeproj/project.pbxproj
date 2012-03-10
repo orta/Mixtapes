@@ -725,7 +725,7 @@
 					"$(SRCROOT)/vendor/cocoalibspotify/iOS\\ Library/libspotify-10.1.16-iOS-universal/libspotify.framework/Versions/10.1.16/Headers/",
 				);
 				INFOPLIST_FILE = "Mixtape/Mixtape-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/vendor/**",
@@ -735,6 +735,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = Mixtapes;
+				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "i386 armv7 armv7f armv7k";
 				WRAPPER_EXTENSION = app;
 			};
@@ -758,7 +759,7 @@
 					"$(SRCROOT)/vendor/cocoalibspotify/iOS\\ Library/libspotify-10.1.16-iOS-universal/libspotify.framework/Versions/10.1.16/Headers/",
 				);
 				INFOPLIST_FILE = "Mixtape/Mixtape-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/vendor/**",
@@ -768,6 +769,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = Mixtapes;
+				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "i386 armv7 armv7f armv7k";
 				WRAPPER_EXTENSION = app;
 			};

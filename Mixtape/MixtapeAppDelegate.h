@@ -17,7 +17,7 @@
 @property (retain, nonatomic) SetupViewController *setupViewController;
 @property (retain, nonatomic) NSMutableArray * playlists;
 
--(void) startSpotify;
--(void)waitAndFillTrackPool;
+- (void)startSpotify;
+- (void)waitAndFillTrackPool;
 
 @end
