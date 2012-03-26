@@ -33,6 +33,7 @@
     
     for (id playlistOrFolder in [[SPSession sharedSession] userPlaylists].playlists) {
         if ([playlistOrFolder isKindOfClass:[SPPlaylistFolder class]]) {
+            NSLog(@"%@", NSStringFromSelector(_cmd));
             [folders addObject:playlistOrFolder];
         } 
     }
@@ -66,10 +67,8 @@
     [[NSUserDefaults standardUserDefaults] setObject:playlistURLs forKey:ORPlaylistURLArray];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName: ORFolderChosen
-                                                        object: nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:ORFolderChosen object: nil];
 }
-
 
 
 - (IBAction)loadSpotify:(id)sender {
@@ -108,10 +107,8 @@
         UIView *viewSelected = [[UIView alloc] init];
         viewSelected.backgroundColor = [UIColor redColor];
         cell.selectedBackgroundView = viewSelected;
-        
     }
     return cell;
-
 }
 
 
@@ -125,10 +122,12 @@
 - (IBAction)helpTapped:(id)sender {
     [[NSNotificationCenter defaultCenter] postNotificationName:ORHelpNotification object:nil userInfo: [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:1] forKey:ORHelpNotification]];
 }
+
 - (void)dealloc {
     [helpButton release];
     [super dealloc];
 }
+
 - (void)viewDidUnload {
     [helpButton release];
     helpButton = nil;

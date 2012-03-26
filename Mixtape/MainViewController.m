@@ -41,18 +41,7 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
     _offlineIndicator.hidden = YES;
     _offlineTextLabel.hidden = YES;
     _offlineProgressView.hidden = YES;
-    
-    [[SPSession sharedSession] addObserverForKeyPath:@"offlineTracksRemaining" task:^(id obj, NSDictionary *change) {
-        NSInteger tracksRemaining=  [SPSession sharedSession].offlineTracksRemaining;
-        if (tracksRemaining > _totalTracksToDownload) {
-            _totalTracksToDownload = tracksRemaining;
-        }
-        
-        CGFloat percentageDone = (_totalTracksToDownload - tracksRemaining) / _totalTracksToDownload;
-        _offlineProgressView.progress = percentageDone;
-        
-        NSLog(@"%f perc remaining", percentageDone); 
-    }];
+    _offlineTextLabel.text = @"Syncing";
 }
 
 - (void)showHelp:(NSNotification*)notification {
@@ -83,11 +72,18 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
     [self.layout transitionIntoFloorView];
     [self.layout setupGestureReconition];
     
-    [[SPSession sharedSession] addObserverForKeyPath:@"offlinePlaylistsRemaining" task:^(id obj, NSDictionary *change) {
-        NSLog(@"progress %f", _offlineProgressView.progress);
-        _offlineProgressView.progress = _totalTracks / (_totalTracks - [SPSession sharedSession].offlineTracksRemaining);
+    [[SPSession sharedSession] addObserverForKeyPath:@"offlineTracksRemaining" task:^(id obj, NSDictionary *change) {
+        NSInteger tracksRemaining =  [obj offlineTracksRemaining];
+        if (tracksRemaining > _totalTracksToDownload) {
+            _totalTracksToDownload = tracksRemaining;
+        }
+        
+        _offlineProgressView.progress = (_totalTracksToDownload - tracksRemaining) / _totalTracksToDownload;
+        NSLog(@" %d / %i perc remaining", _totalTracksToDownload - tracksRemaining, _totalTracksToDownload); 
     }];
 
+
+    
     [NSTimer scheduledTimerWithTimeInterval:OROfflineTimerInterval target:self selector:@selector(checkPlaylistsAreOffline:) userInfo:nil repeats:YES];
 }
 
@@ -115,6 +111,7 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
 
 - (void)playlistsAreOffline {
     _offlineIndicator.image = [UIImage imageNamed:@"offline_indicator"];
+    _offlineTextLabel.text = @"Offline";
     [self performSelector:@selector(fadeOutOfflineInfo) withObject:self afterDelay:OROfflineInfoDelayBeforeFloat];
 }
 
