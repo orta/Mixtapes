@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6005A6F715210AC600754DFF /* icon144.png in Resources */ = {isa = PBXBuildFile; fileRef = 6005A6F615210AC500754DFF /* icon144.png */; };
+		6005A6F915210AC800754DFF /* icon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 6005A6F815210AC700754DFF /* icon72.png */; };
+		6005A6FD15210B4A00754DFF /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6005A6FC15210B4A00754DFF /* Default-Landscape~ipad.png */; };
 		601088591438A33B008D3D9F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601088581438A33B008D3D9F /* AVFoundation.framework */; };
 		601088611438A722008D3D9F /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601088601438A722008D3D9F /* AudioController.m */; };
 		6010886A1438B6D8008D3D9F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601088691438B6D7008D3D9F /* AudioToolbox.framework */; };
@@ -102,6 +105,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6005A6F615210AC500754DFF /* icon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon144.png; path = ../../icon144.png; sourceTree = "<group>"; };
+		6005A6F815210AC700754DFF /* icon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon72.png; path = ../../icon72.png; sourceTree = "<group>"; };
+		6005A6FC15210B4A00754DFF /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		601088581438A33B008D3D9F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6010885F1438A722008D3D9F /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
 		601088601438A722008D3D9F /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
@@ -264,6 +270,8 @@
 		606E9A1114774E8C00DB1646 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6005A6F815210AC700754DFF /* icon72.png */,
+				6005A6F615210AC500754DFF /* icon144.png */,
 				60EAE0951495AC02006B55E8 /* setup */,
 				6096443A1484ABE100865A4A /* offline_indicator_inactive.png */,
 				6096443B1484ABE100865A4A /* offline_indicator.png */,
@@ -340,6 +348,7 @@
 		60B1FC0B1434BE520039206C = {
 			isa = PBXGroup;
 			children = (
+				6005A6FC15210B4A00754DFF /* Default-Landscape~ipad.png */,
 				60B1FC201434BE530039206C /* Mixtape */,
 				60B1FC191434BE530039206C /* Frameworks */,
 				60B1FC171434BE530039206C /* Products */,
@@ -577,6 +586,9 @@
 				60FF823314A95F000018553D /* help_song.png in Resources */,
 				60FF823414A95F000018553D /* help_folders.png in Resources */,
 				60FF823514A95F000018553D /* help_login.png in Resources */,
+				6005A6F715210AC600754DFF /* icon144.png in Resources */,
+				6005A6F915210AC800754DFF /* icon72.png in Resources */,
+				6005A6FD15210B4A00754DFF /* Default-Landscape~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +725,8 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ben Maslen";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mixtape/Mixtapes-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -736,6 +750,8 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = Mixtapes;
+				PROVISIONING_PROFILE = "F155168C-351D-42DC-971B-6B62F63DF2E9";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "i386 armv7 armv7f armv7k";
 				WRAPPER_EXTENSION = app;
@@ -748,6 +764,8 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ben Maslen";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mixtape/Mixtapes-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -771,6 +789,8 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = Mixtapes;
+				PROVISIONING_PROFILE = "F155168C-351D-42DC-971B-6B62F63DF2E9";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "i386 armv7 armv7f armv7k";
 				WRAPPER_EXTENSION = app;

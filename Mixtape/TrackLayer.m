@@ -34,8 +34,8 @@
         self.playButton = [CALayer layer];
         self.playButton.contents =  (id)[[UIImage imageNamed:@"play"] CGImage];
         [self addSublayer:self.playButton];
-        self.playButton.position = CGPointMake(200, -100);
-        self.playButton.bounds = CGRectMake(0, 0, 120, 120);
+        self.playButton.position = CGPointMake(260, -40);
+        self.playButton.bounds = CGRectMake(0, 0, 80, 80);
         self.playButton.opacity = 0;
         
         [self addObserver:self
