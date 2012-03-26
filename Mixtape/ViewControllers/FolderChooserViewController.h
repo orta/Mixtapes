@@ -16,6 +16,7 @@
     IBOutlet ORButton *helpButton;
     
     int selectedIndex;
+    BOOL hasNoFolders;
 }
 @property (retain, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)loadSpotify:(id)sender;

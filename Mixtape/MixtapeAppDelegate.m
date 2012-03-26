@@ -167,10 +167,6 @@
         }
     }
     
-    [[SPSession sharedSession] addObserverForKeyPath:@"offlineTracksRemaining" task:^(id obj, NSDictionary *change) {
-        NSLog(@"%u tracks remaining", [SPSession sharedSession].offlineTracksRemaining);
-        
-    }];
     //    [[SPSession sharedSession] addObserverForKeyPath:@"offlineStatistics" task:^(id obj, NSDictionary *change) {
 //        //  NSLog(@"stats: %@", [SPSession sharedSession].offlineStatistics);
 //    }];

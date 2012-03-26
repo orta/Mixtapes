@@ -21,6 +21,7 @@
     LayoutController *_layout;
 
     int _totalTracks;
+    int _totalTracksToDownload;
 }
 
 @property (retain, nonatomic) IBOutlet UIView *canvas;

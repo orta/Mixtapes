@@ -41,6 +41,18 @@ static const float OROfflineInfoDelayBeforeFloat = 8;
     _offlineIndicator.hidden = YES;
     _offlineTextLabel.hidden = YES;
     _offlineProgressView.hidden = YES;
+    
+    [[SPSession sharedSession] addObserverForKeyPath:@"offlineTracksRemaining" task:^(id obj, NSDictionary *change) {
+        NSInteger tracksRemaining=  [SPSession sharedSession].offlineTracksRemaining;
+        if (tracksRemaining > _totalTracksToDownload) {
+            _totalTracksToDownload = tracksRemaining;
+        }
+        
+        CGFloat percentageDone = (_totalTracksToDownload - tracksRemaining) / _totalTracksToDownload;
+        _offlineProgressView.progress = percentageDone;
+        
+        NSLog(@"%f perc remaining", percentageDone); 
+    }];
 }
 
 - (void)showHelp:(NSNotification*)notification {

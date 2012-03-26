@@ -37,8 +37,7 @@
         } 
     }
     if ([folders count] == 0) {
-        #warning  deal with them having no folders to choose from
-        NSLog(@"UH OH");
+        hasNoFolders = YES;
     }
     [tableView reloadData];
 }
@@ -56,14 +55,10 @@
     NSMutableArray *playlistURLs = [NSMutableArray array];
     for (SPPlaylist *playlist in folder.playlists) {
         if (!playlist.loaded) {
-            NSLog(@"reloading and waiting");
             [self performSelector:_cmd withObject:nil afterDelay:0.3];
             return;
         }
-        
-        NSLog(@"adding %@ - %@", playlist.name, playlist.spotifyURL);
         [playlistURLs addObject:[playlist.spotifyURL absoluteString]];
-        
     }
     
     NSNumber *folderID = [NSNumber numberWithUnsignedLongLong:folder.folderId];
@@ -90,6 +85,9 @@
 #pragma mark table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (hasNoFolders) {
+        return 1;
+    }
     return [folders count];
 }
 
@@ -98,14 +96,20 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ORCellReuseID];
     }
-    SPPlaylistFolder * folder = [folders objectAtIndex:indexPath.row];
-    cell.textLabel.text = folder.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%i playlists", [[folder playlists] count]];
-
-    UIView *viewSelected = [[UIView alloc] init];
-    viewSelected.backgroundColor = [UIColor redColor];
-    cell.selectedBackgroundView = viewSelected;
-
+    if (hasNoFolders) {
+        cell.textLabel.text = @"You don't have any folders yet!";        
+        cell.detailTextLabel.text = @"Go to the spotify app and set some up";
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    } else {
+        SPPlaylistFolder * folder = [folders objectAtIndex:indexPath.row];
+        cell.textLabel.text = folder.name;
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%i playlists", [[folder playlists] count]];
+        
+        UIView *viewSelected = [[UIView alloc] init];
+        viewSelected.backgroundColor = [UIColor redColor];
+        cell.selectedBackgroundView = viewSelected;
+        
+    }
     return cell;
 
 }

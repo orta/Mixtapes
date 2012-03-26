@@ -25,6 +25,4 @@ NSString * const ORPlaylistURLArray = @"ORPlaylistIDs";
 NSString * const ORCellReuseID = @"ORCellReuseID";
 NSString * const ORCellTitleReuseID = @"ORCellTitleReuseID";
 
-
-
 const float ORCoverWidth = 300;
