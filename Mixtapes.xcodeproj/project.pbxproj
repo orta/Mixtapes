@@ -71,6 +71,7 @@
 		60F0F69D1495662000473008 /* from.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F69C1495662000473008 /* from.png */; };
 		60F0F69F149567EC00473008 /* playlists.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F0F69E149567EC00473008 /* playlists.png */; };
 		60F126FC14DF4886007ECFCE /* NSObject+KVOBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F126FB14DF4886007ECFCE /* NSObject+KVOBlocks.m */; };
+		60F5AD051521CF1700DD7A6F /* libFlurryAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F5AD041521CF1700DD7A6F /* libFlurryAnalytics.a */; };
 		60F8C43F147864DE00DD8D8C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60F8C43E147864DD00DD8D8C /* Settings.bundle */; };
 		60FEBEE714954639005A8BBE /* bottombargreen_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE114954639005A8BBE /* bottombargreen_pressed.png */; };
 		60FEBEE814954639005A8BBE /* bottombargreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FEBEE214954639005A8BBE /* bottombargreen.png */; };
@@ -194,6 +195,8 @@
 		60F0F69E149567EC00473008 /* playlists.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playlists.png; sourceTree = "<group>"; };
 		60F126FA14DF4886007ECFCE /* NSObject+KVOBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+KVOBlocks.h"; path = "utils/NSObject+KVOBlocks.h"; sourceTree = "<group>"; };
 		60F126FB14DF4886007ECFCE /* NSObject+KVOBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KVOBlocks.m"; path = "utils/NSObject+KVOBlocks.m"; sourceTree = "<group>"; };
+		60F5AD031521CF1700DD7A6F /* FlurryAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlurryAnalytics.h; path = ../vendor/FlurryAnalytics/FlurryAnalytics.h; sourceTree = "<group>"; };
+		60F5AD041521CF1700DD7A6F /* libFlurryAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFlurryAnalytics.a; path = ../vendor/FlurryAnalytics/libFlurryAnalytics.a; sourceTree = "<group>"; };
 		60F8C43E147864DD00DD8D8C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Resources/Settings.bundle; sourceTree = "<group>"; };
 		60FEBEE114954639005A8BBE /* bottombargreen_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombargreen_pressed.png; sourceTree = "<group>"; };
 		60FEBEE214954639005A8BBE /* bottombargreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombargreen.png; sourceTree = "<group>"; };
@@ -227,6 +230,7 @@
 				60B1FC1B1434BE530039206C /* UIKit.framework in Frameworks */,
 				60B1FC1D1434BE530039206C /* Foundation.framework in Frameworks */,
 				60B1FC1F1434BE530039206C /* CoreGraphics.framework in Frameworks */,
+				60F5AD051521CF1700DD7A6F /* libFlurryAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +370,7 @@
 		60B1FC191434BE530039206C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60F5AD021521CF1700DD7A6F /* FlurryAnalytics */,
 				60A99FCD143F395D00ED5D11 /* CocoaLibSpotify iOS Library.xcodeproj */,
 				60B1FC801434C0B50039206C /* CFNetwork.framework */,
 				601088691438B6D7008D3D9F /* AudioToolbox.framework */,
@@ -454,6 +459,15 @@
 				60FEBEE614954639005A8BBE /* bottombarwhite.png */,
 			);
 			name = setup;
+			sourceTree = "<group>";
+		};
+		60F5AD021521CF1700DD7A6F /* FlurryAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				60F5AD031521CF1700DD7A6F /* FlurryAnalytics.h */,
+				60F5AD041521CF1700DD7A6F /* libFlurryAnalytics.a */,
+			);
+			path = FlurryAnalytics;
 			sourceTree = "<group>";
 		};
 		60FEBEE01495337C005A8BBE /* Setup */ = {

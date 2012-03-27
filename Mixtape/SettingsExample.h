@@ -9,3 +9,5 @@
 // https://developer.spotify.com/en/libspotify/application-key/
 const uint8_t g_appkey[] = {};
 const size_t g_appkey_size = sizeof(g_appkey);
+
+NSString *FlurryAPIKey = @"APIKEY";

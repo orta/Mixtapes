@@ -13,6 +13,7 @@
 #import "Reachability.h"
 #import "SPPlaylistFolderInternal.h"
 #import "AudioController.h"
+#import "FlurryAnalytics.h"
 
 @interface MixtapeAppDelegate (private)
 - (void)showLoginController;
@@ -33,6 +34,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [FlurryAnalytics startSession:FlurryAPIKey];
+
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -49,7 +52,7 @@
 
 -(void) startSpotify {
     srandom((unsigned int)time(NULL));
-    
+
     [SPSession initializeSharedSessionWithApplicationKey:[NSData dataWithBytes:&g_appkey length:g_appkey_size]
                                                userAgent:ORUserAgent
                                                    error:nil];
