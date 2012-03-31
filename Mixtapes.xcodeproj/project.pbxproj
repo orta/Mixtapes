@@ -42,8 +42,6 @@
 		60A19589143C750700EB89C9 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 60A19588143C750700EB89C9 /* pause.png */; };
 		60A1958E143C977700EB89C9 /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60A1958D143C977700EB89C9 /* bg2.jpg */; };
 		60A99FD6143F398E00ED5D11 /* libCocoaLibSpotify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A99FD5143F395D00ED5D11 /* libCocoaLibSpotify.a */; };
-		60A99FDB143F3A2100ED5D11 /* SPCircularBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A99FD8143F3A2100ED5D11 /* SPCircularBuffer.m */; };
-		60A99FDC143F3A2100ED5D11 /* SPPlaybackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A99FDA143F3A2100ED5D11 /* SPPlaybackManager.m */; };
 		60B1FC1B1434BE530039206C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B1FC1A1434BE530039206C /* UIKit.framework */; };
 		60B1FC1D1434BE530039206C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B1FC1C1434BE530039206C /* Foundation.framework */; };
 		60B1FC1F1434BE530039206C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B1FC1E1434BE530039206C /* CoreGraphics.framework */; };
@@ -153,8 +151,6 @@
 		60A19588143C750700EB89C9 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause.png; path = ../pause.png; sourceTree = "<group>"; };
 		60A1958D143C977700EB89C9 /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg2.jpg; path = ../bg2.jpg; sourceTree = "<group>"; };
 		60A99FCD143F395D00ED5D11 /* CocoaLibSpotify iOS Library.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CocoaLibSpotify iOS Library.xcodeproj"; path = "vendor/cocoalibspotify/iOS Library/CocoaLibSpotify iOS Library.xcodeproj"; sourceTree = "<group>"; };
-		60A99FD7143F3A2100ED5D11 /* SPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPCircularBuffer.h; path = "cocoalibspotify/Playback Helper Classes/SPCircularBuffer.h"; sourceTree = "<group>"; };
-		60A99FD8143F3A2100ED5D11 /* SPCircularBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPCircularBuffer.m; path = "cocoalibspotify/Playback Helper Classes/SPCircularBuffer.m"; sourceTree = "<group>"; };
 		60A99FD9143F3A2100ED5D11 /* SPPlaybackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPPlaybackManager.h; path = "cocoalibspotify/Playback Helper Classes/SPPlaybackManager.h"; sourceTree = "<group>"; };
 		60A99FDA143F3A2100ED5D11 /* SPPlaybackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPPlaybackManager.m; path = "cocoalibspotify/Playback Helper Classes/SPPlaybackManager.m"; sourceTree = "<group>"; };
 		60B1FC161434BE530039206C /* Mixtapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixtapes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,8 +236,6 @@
 		601088621438A84F008D3D9F /* Spotify Audio */ = {
 			isa = PBXGroup;
 			children = (
-				60A99FD7143F3A2100ED5D11 /* SPCircularBuffer.h */,
-				60A99FD8143F3A2100ED5D11 /* SPCircularBuffer.m */,
 				60A99FD9143F3A2100ED5D11 /* SPPlaybackManager.h */,
 				60A99FDA143F3A2100ED5D11 /* SPPlaybackManager.m */,
 			);
@@ -621,8 +615,6 @@
 				608086E01435AF1C0029BBC9 /* TrackLayer.m in Sources */,
 				60E600C3143790F00096BBB4 /* LayoutController.m in Sources */,
 				601088611438A722008D3D9F /* AudioController.m in Sources */,
-				60A99FDB143F3A2100ED5D11 /* SPCircularBuffer.m in Sources */,
-				60A99FDC143F3A2100ED5D11 /* SPPlaybackManager.m in Sources */,
 				606E99D71476936900DB1646 /* Constants.m in Sources */,
 				606E9A0F14774D7E00DB1646 /* LoginViewController.m in Sources */,
 				60257AF514775F7800E3A53F /* FolderChooserViewController.m in Sources */,
@@ -740,7 +732,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ben Maslen";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ben Maslen (P62E9AFBV2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mixtape/Mixtapes-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -764,8 +756,8 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = Mixtapes;
-				PROVISIONING_PROFILE = "F155168C-351D-42DC-971B-6B62F63DF2E9";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DC6C198C-9444-4FFE-8DF5-1EDFF3565815";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "i386 armv7 armv7f armv7k";
 				WRAPPER_EXTENSION = app;
@@ -803,7 +795,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = Mixtapes;
-				PROVISIONING_PROFILE = "F155168C-351D-42DC-971B-6B62F63DF2E9";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "i386 armv7 armv7f armv7k";

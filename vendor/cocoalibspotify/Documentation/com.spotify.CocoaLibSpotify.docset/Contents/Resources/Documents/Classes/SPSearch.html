@@ -1,0 +1,1979 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SPSearch Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">CocoaLibSpotify </a></h1>
+				<a id="developerHome" href="../index.html">Spotify AB</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SPSearch Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/albums">&nbsp;&nbsp;&nbsp;&nbsp;albums</option>
+	
+	<option value="//api/name/artists">&nbsp;&nbsp;&nbsp;&nbsp;artists</option>
+	
+	<option value="//api/name/hasExhaustedAlbumResults">&nbsp;&nbsp;&nbsp;&nbsp;hasExhaustedAlbumResults</option>
+	
+	<option value="//api/name/hasExhaustedArtistResults">&nbsp;&nbsp;&nbsp;&nbsp;hasExhaustedArtistResults</option>
+	
+	<option value="//api/name/hasExhaustedPlaylistResults">&nbsp;&nbsp;&nbsp;&nbsp;hasExhaustedPlaylistResults</option>
+	
+	<option value="//api/name/hasExhaustedTrackResults">&nbsp;&nbsp;&nbsp;&nbsp;hasExhaustedTrackResults</option>
+	
+	<option value="//api/name/playlists">&nbsp;&nbsp;&nbsp;&nbsp;playlists</option>
+	
+	<option value="//api/name/searchError">&nbsp;&nbsp;&nbsp;&nbsp;searchError</option>
+	
+	<option value="//api/name/searchInProgress">&nbsp;&nbsp;&nbsp;&nbsp;searchInProgress</option>
+	
+	<option value="//api/name/searchQuery">&nbsp;&nbsp;&nbsp;&nbsp;searchQuery</option>
+	
+	<option value="//api/name/searchType">&nbsp;&nbsp;&nbsp;&nbsp;searchType</option>
+	
+	<option value="//api/name/session">&nbsp;&nbsp;&nbsp;&nbsp;session</option>
+	
+	<option value="//api/name/spotifyURL">&nbsp;&nbsp;&nbsp;&nbsp;spotifyURL</option>
+	
+	<option value="//api/name/suggestedSearchQuery">&nbsp;&nbsp;&nbsp;&nbsp;suggestedSearchQuery</option>
+	
+	<option value="//api/name/tracks">&nbsp;&nbsp;&nbsp;&nbsp;tracks</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/liveSearchWithSearchQuery:inSession:">&nbsp;&nbsp;&nbsp;&nbsp;+ liveSearchWithSearchQuery:inSession:</option>
+	
+	<option value="//api/name/searchWithSearchQuery:inSession:">&nbsp;&nbsp;&nbsp;&nbsp;+ searchWithSearchQuery:inSession:</option>
+	
+	<option value="//api/name/searchWithURL:inSession:">&nbsp;&nbsp;&nbsp;&nbsp;+ searchWithURL:inSession:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addAlbumPage">&nbsp;&nbsp;&nbsp;&nbsp;- addAlbumPage</option>
+	
+	<option value="//api/name/addArtistPage">&nbsp;&nbsp;&nbsp;&nbsp;- addArtistPage</option>
+	
+	<option value="//api/name/addPageForArtists:albums:tracks:playlists:">&nbsp;&nbsp;&nbsp;&nbsp;- addPageForArtists:albums:tracks:playlists:</option>
+	
+	<option value="//api/name/addPlaylistPage">&nbsp;&nbsp;&nbsp;&nbsp;- addPlaylistPage</option>
+	
+	<option value="//api/name/addTrackPage">&nbsp;&nbsp;&nbsp;&nbsp;- addTrackPage</option>
+	
+	<option value="//api/name/initWithSearchQuery:inSession:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithSearchQuery:inSession:</option>
+	
+	<option value="//api/name/initWithSearchQuery:inSession:type:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithSearchQuery:inSession:type:</option>
+	
+	<option value="//api/name/initWithSearchQuery:pageSize:inSession:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithSearchQuery:pageSize:inSession:</option>
+	
+	<option value="//api/name/initWithSearchQuery:pageSize:inSession:type:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithSearchQuery:pageSize:inSession:type:</option>
+	
+	<option value="//api/name/initWithURL:inSession:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithURL:inSession:</option>
+	
+	<option value="//api/name/initWithURL:pageSize:inSession:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithURL:pageSize:inSession:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating and Initializing Searches">Creating and Initializing Searches</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Requesting More Results">Requesting More Results</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Results">Results</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/albums">albums</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/artists">artists</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasExhaustedAlbumResults">hasExhaustedAlbumResults</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasExhaustedArtistResults">hasExhaustedArtistResults</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasExhaustedPlaylistResults">hasExhaustedPlaylistResults</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasExhaustedTrackResults">hasExhaustedTrackResults</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlists">playlists</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchError">searchError</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchInProgress">searchInProgress</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchQuery">searchQuery</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchType">searchType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session">session</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/spotifyURL">spotifyURL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/suggestedSearchQuery">suggestedSearchQuery</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tracks">tracks</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/liveSearchWithSearchQuery:inSession:">liveSearchWithSearchQuery:inSession:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchWithSearchQuery:inSession:">searchWithSearchQuery:inSession:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchWithURL:inSession:">searchWithURL:inSession:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addAlbumPage">addAlbumPage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addArtistPage">addArtistPage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addPageForArtists:albums:tracks:playlists:">addPageForArtists:albums:tracks:playlists:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addPlaylistPage">addPlaylistPage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addTrackPage">addTrackPage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithSearchQuery:inSession:">initWithSearchQuery:inSession:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithSearchQuery:inSession:type:">initWithSearchQuery:inSession:type:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithSearchQuery:pageSize:inSession:">initWithSearchQuery:pageSize:inSession:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithSearchQuery:pageSize:inSession:type:">initWithSearchQuery:pageSize:inSession:type:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithURL:inSession:">initWithURL:inSession:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithURL:pageSize:inSession:">initWithURL:pageSize:inSession:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SPSearch Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SPSearch Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SPSearch.h<br />SPSearch.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The &ldquo;do not search&rdquo; page size. Used if you don&rsquo;t want to search for a particular kind of result.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Creating and Initializing Searches" name="task_Creating and Initializing Searches"></a>
+						<h3 class="subsubtitle task-title">Creating and Initializing Searches</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/searchWithURL:inSession:">+&nbsp;searchWithURL:inSession:</a></code>
+		<span class="tooltip"><p>Creates a new SPSearch with the default page size from the given Spotify search URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/searchWithSearchQuery:inSession:">+&nbsp;searchWithSearchQuery:inSession:</a></code>
+		<span class="tooltip"><p>Creates a new SPSearch with the default page size for the given query.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/liveSearchWithSearchQuery:inSession:">+&nbsp;liveSearchWithSearchQuery:inSession:</a></code>
+		<span class="tooltip"><p>Creates a new &ldquo;live search&rdquo; SPSearch with the default page size for the given query.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithURL:inSession:">&ndash;&nbsp;initWithURL:inSession:</a></code>
+		<span class="tooltip"><p>Initializes a new SPSearch with the default page size from the given Spotify search URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithURL:pageSize:inSession:">&ndash;&nbsp;initWithURL:pageSize:inSession:</a></code>
+		<span class="tooltip"><p>Initializes a new SPSearch from the given Spotify search URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithSearchQuery:inSession:">&ndash;&nbsp;initWithSearchQuery:inSession:</a></code>
+		<span class="tooltip"><p>Initializes a new SPSearch with the default page size for the given query.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithSearchQuery:inSession:type:">&ndash;&nbsp;initWithSearchQuery:inSession:type:</a></code>
+		<span class="tooltip"><p>Initializes a new SPSearch with the default page size for the given query and type.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithSearchQuery:pageSize:inSession:">&ndash;&nbsp;initWithSearchQuery:pageSize:inSession:</a></code>
+		<span class="tooltip"><p>Initializes a new SPSearch for the given query.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithSearchQuery:pageSize:inSession:type:">&ndash;&nbsp;initWithSearchQuery:pageSize:inSession:type:</a></code>
+		<span class="tooltip"><p>Initializes a new SPSearch for the given query.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Requesting More Results" name="task_Requesting More Results"></a>
+						<h3 class="subsubtitle task-title">Requesting More Results</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addAlbumPage">&ndash;&nbsp;addAlbumPage</a></code>
+		<span class="tooltip"><p>Request an extra page of <a href="#//api/name/albums">albums</a> from the Spotify search service.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addArtistPage">&ndash;&nbsp;addArtistPage</a></code>
+		<span class="tooltip"><p>Request an extra page of <a href="#//api/name/artists">artists</a> from the Spotify search service.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addTrackPage">&ndash;&nbsp;addTrackPage</a></code>
+		<span class="tooltip"><p>Request an extra page of <a href="#//api/name/tracks">tracks</a> from the Spotify search service.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addPlaylistPage">&ndash;&nbsp;addPlaylistPage</a></code>
+		<span class="tooltip"><p>Request an extra page of <a href="#//api/name/playlists">playlists</a> from the Spotify search service.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addPageForArtists:albums:tracks:playlists:">&ndash;&nbsp;addPageForArtists:albums:tracks:playlists:</a></code>
+		<span class="tooltip"><p>Request an extra page of <a href="#//api/name/tracks">tracks</a>, <a href="#//api/name/albums">albums</a>, <a href="#//api/name/tracks">tracks</a> and <a href="#//api/name/playlists">playlists</a> from the Spotify search service.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Results" name="task_Results"></a>
+						<h3 class="subsubtitle task-title">Results</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/suggestedSearchQuery">&nbsp;&nbsp;suggestedSearchQuery</a></code>
+		<span class="tooltip"><p>Returns a &ldquo;suggested&rdquo; search query provided by the search service, or <code>nil</code> if the search has not loaded or there is no suggested query.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasExhaustedAlbumResults">&nbsp;&nbsp;hasExhaustedAlbumResults</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if the search service has indicated there are no more album results to find.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasExhaustedArtistResults">&nbsp;&nbsp;hasExhaustedArtistResults</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if the search service has indicated there are no more artist results to find.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasExhaustedTrackResults">&nbsp;&nbsp;hasExhaustedTrackResults</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if the search service has indicated there are no more track results to find.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasExhaustedPlaylistResults">&nbsp;&nbsp;hasExhaustedPlaylistResults</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if the search service has indicated there are no more playlist results to find.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/albums">&nbsp;&nbsp;albums</a></code>
+		<span class="tooltip"><p>Returns the album results of the search, or <code>nil</code> if the search has not loaded or there are no album results.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/artists">&nbsp;&nbsp;artists</a></code>
+		<span class="tooltip"><p>Returns the artist results of the search, or <code>nil</code> if the search has not loaded or there are no artist results.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tracks">&nbsp;&nbsp;tracks</a></code>
+		<span class="tooltip"><p>Returns the track results of the search, or <code>nil</code> if the search has not loaded or there are no track results.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlists">&nbsp;&nbsp;playlists</a></code>
+		<span class="tooltip"><p>Returns the playlist results of the search, or <code>nil</code> if the search has not loaded or there are no playlist results.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Properties" name="task_Properties"></a>
+						<h3 class="subsubtitle task-title">Properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/searchError">&nbsp;&nbsp;searchError</a></code>
+		<span class="tooltip"><p>Returns an NSError indicating the search failure reason, or <code>nil</code> if there was no error.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/searchInProgress">&nbsp;&nbsp;searchInProgress</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if a search is currently in progress, or <code>NO</code> if the search is complete (or has failed).</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/searchQuery">&nbsp;&nbsp;searchQuery</a></code>
+		<span class="tooltip"><p>Returns the search query for this search.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session">&nbsp;&nbsp;session</a></code>
+		<span class="tooltip"><p>Returns the session the search is being performed in.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/spotifyURL">&nbsp;&nbsp;spotifyURL</a></code>
+		<span class="tooltip"><p>Returns the Spotify URI of the search, for example: <code>spotify:search:rick+astley</code></p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/searchType">&nbsp;&nbsp;searchType</a></code>
+		<span class="tooltip"><p>Returns the type of search, either <code>SP_SEARCH_STANDARD</code> or <code>SP_SEARCH_SUGGEST</code>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/albums" title="albums"></a>
+	<h3 class="subsubtitle method-title">albums</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the album results of the search, or <code>nil</code> if the search has not loaded or there are no album results.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) NSArray *albums</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/artists" title="artists"></a>
+	<h3 class="subsubtitle method-title">artists</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the artist results of the search, or <code>nil</code> if the search has not loaded or there are no artist results.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) NSArray *artists</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasExhaustedAlbumResults" title="hasExhaustedAlbumResults"></a>
+	<h3 class="subsubtitle method-title">hasExhaustedAlbumResults</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the search service has indicated there are no more album results to find.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL hasExhaustedAlbumResults</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasExhaustedArtistResults" title="hasExhaustedArtistResults"></a>
+	<h3 class="subsubtitle method-title">hasExhaustedArtistResults</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the search service has indicated there are no more artist results to find.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL hasExhaustedArtistResults</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasExhaustedPlaylistResults" title="hasExhaustedPlaylistResults"></a>
+	<h3 class="subsubtitle method-title">hasExhaustedPlaylistResults</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the search service has indicated there are no more playlist results to find.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL hasExhaustedPlaylistResults</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasExhaustedTrackResults" title="hasExhaustedTrackResults"></a>
+	<h3 class="subsubtitle method-title">hasExhaustedTrackResults</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the search service has indicated there are no more track results to find.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL hasExhaustedTrackResults</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playlists" title="playlists"></a>
+	<h3 class="subsubtitle method-title">playlists</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the playlist results of the search, or <code>nil</code> if the search has not loaded or there are no playlist results.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) NSArray *playlists</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/searchError" title="searchError"></a>
+	<h3 class="subsubtitle method-title">searchError</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an NSError indicating the search failure reason, or <code>nil</code> if there was no error.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSError *searchError</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/searchInProgress" title="searchInProgress"></a>
+	<h3 class="subsubtitle method-title">searchInProgress</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if a search is currently in progress, or <code>NO</code> if the search is complete (or has failed).</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL searchInProgress</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/searchQuery" title="searchQuery"></a>
+	<h3 class="subsubtitle method-title">searchQuery</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the search query for this search.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSString *searchQuery</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/searchType" title="searchType"></a>
+	<h3 class="subsubtitle method-title">searchType</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the type of search, either <code>SP_SEARCH_STANDARD</code> or <code>SP_SEARCH_SUGGEST</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) sp_search_type searchType</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/session" title="session"></a>
+	<h3 class="subsubtitle method-title">session</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the session the search is being performed in.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) SPSession *session</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/spotifyURL" title="spotifyURL"></a>
+	<h3 class="subsubtitle method-title">spotifyURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the Spotify URI of the search, for example: <code>spotify:search:rick+astley</code></p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSURL *spotifyURL</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/suggestedSearchQuery" title="suggestedSearchQuery"></a>
+	<h3 class="subsubtitle method-title">suggestedSearchQuery</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a &ldquo;suggested&rdquo; search query provided by the search service, or <code>nil</code> if the search has not loaded or there is no suggested query.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSString *suggestedSearchQuery</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This can be presented to the user as a &ldquo;did you mean?&rdquo; suggestion.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tracks" title="tracks"></a>
+	<h3 class="subsubtitle method-title">tracks</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the track results of the search, or <code>nil</code> if the search has not loaded or there are no track results.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) NSArray *tracks</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/liveSearchWithSearchQuery:inSession:" title="liveSearchWithSearchQuery:inSession:"></a>
+	<h3 class="subsubtitle method-title">liveSearchWithSearchQuery:inSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a new &ldquo;live search&rdquo; SPSearch with the default page size for the given query.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (SPSearch *)liveSearchWithSearchQuery:(NSString *)<em>searchQuery</em> inSession:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>searchQuery</em></dt>
+			<dd><p>The search query to create an SPSearch for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the track should exist in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPSearch object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Live searches should be used when displaying &ldquo;live search&rdquo; UI — for example, a search suggestion
+UI as the user is typing into a search field. This convenience method is simply returns a new,
+autoreleased SPSearch object. No caching is performed.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> The search query will be sent to the Spotify search service
+immediately. Be sure you want to perform the search before creating the object!</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/searchWithSearchQuery:inSession:" title="searchWithSearchQuery:inSession:"></a>
+	<h3 class="subsubtitle method-title">searchWithSearchQuery:inSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a new SPSearch with the default page size for the given query.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (SPSearch *)searchWithSearchQuery:(NSString *)<em>searchQuery</em> inSession:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>searchQuery</em></dt>
+			<dd><p>The search query to create an SPSearch for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the track should exist in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPSearch object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This convenience method is simply returns a new, autoreleased SPSearch
+object. No caching is performed.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> The search query will be sent to the Spotify search service
+immediately. Be sure you want to perform the search before creating the object!</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/searchWithURL:inSession:" title="searchWithURL:inSession:"></a>
+	<h3 class="subsubtitle method-title">searchWithURL:inSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a new SPSearch with the default page size from the given Spotify search URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (SPSearch *)searchWithURL:(NSURL *)<em>searchURL</em> inSession:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>searchURL</em></dt>
+			<dd><p>The search URL to create an SPSearch for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the track should exist in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPSearch object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This convenience method is simply returns a new, autoreleased SPSearch
+object. No caching is performed.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> If you pass in an invalid search URL (i.e., any URL not
+starting <code>spotify:search:</code>, this method will return <code>nil</code>.</p></div><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> The search query will be sent to the Spotify search service
+immediately. Be sure you want to perform the search before creating the object!</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addAlbumPage" title="addAlbumPage"></a>
+	<h3 class="subsubtitle method-title">addAlbumPage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Request an extra page of <a href="#//api/name/albums">albums</a> from the Spotify search service.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)addAlbumPage</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns <code>YES</code> if a search request was created, <code>NO</code> if there are no more results to fetch
+or if a search is already in progress.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The <a href="#//api/name/albums">albums</a> property will be updated when new results are returned.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> If you want to request more than just <a href="#//api/name/albums">albums</a>, use
+<a href="#//api/name/addPageForArtists:albums:tracks:playlists:"><code>addPageForArtists:albums:tracks:playlists:</code></a> for better performance.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addArtistPage" title="addArtistPage"></a>
+	<h3 class="subsubtitle method-title">addArtistPage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Request an extra page of <a href="#//api/name/artists">artists</a> from the Spotify search service.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)addArtistPage</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns <code>YES</code> if a search request was created, <code>NO</code> if there are no more results to fetch
+or if a search is already in progress.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>  The <a href="#//api/name/artists">artists</a> property will be updated when new results are returned.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> If you want to request more than just <a href="#//api/name/artists">artists</a>, use
+<a href="#//api/name/addPageForArtists:albums:tracks:playlists:"><code>addPageForArtists:albums:tracks:playlists:</code></a> for better performance.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addPageForArtists:albums:tracks:playlists:" title="addPageForArtists:albums:tracks:playlists:"></a>
+	<h3 class="subsubtitle method-title">addPageForArtists:albums:tracks:playlists:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Request an extra page of <a href="#//api/name/tracks">tracks</a>, <a href="#//api/name/albums">albums</a>, <a href="#//api/name/tracks">tracks</a> and <a href="#//api/name/playlists">playlists</a> from the Spotify search service.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)addPageForArtists:(BOOL)<em>searchArtist</em> albums:(BOOL)<em>searchAlbum</em> tracks:(BOOL)<em>searchTrack</em> playlists:(BOOL)<em>searchPlaylist</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>searchArtist</em></dt>
+			<dd><p>Set to <code>YES</code> to request more artist results.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>searchAlbum</em></dt>
+			<dd><p>Set to <code>YES</code> to request more album results.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>searchTrack</em></dt>
+			<dd><p>Set to <code>YES</code> to request more track results.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>searchPlaylist</em></dt>
+			<dd><p>Set to <code>YES</code> to request more playlist results.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns <code>YES</code> if a search request was created, <code>NO</code> if there are no more results to fetch
+  or if a search is already in progress.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>  The <a href="#//api/name/albums">albums</a>, <a href="#//api/name/artists">artists</a>, <a href="#//api/name/tracks">tracks</a> and <a href="#//api/name/playlists">playlists</a> properties will be updated as appropriate when new results are returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addPlaylistPage" title="addPlaylistPage"></a>
+	<h3 class="subsubtitle method-title">addPlaylistPage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Request an extra page of <a href="#//api/name/playlists">playlists</a> from the Spotify search service.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)addPlaylistPage</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns <code>YES</code> if a search request was created, <code>NO</code> if there are no more results to fetch
+or if a search is already in progress.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The <a href="#//api/name/playlists">playlists</a> property will be updated when new results are returned.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> If you want to request more than just <a href="#//api/name/playlists">playlists</a>, use
+<a href="#//api/name/addPageForArtists:albums:tracks:playlists:"><code>addPageForArtists:albums:tracks:playlists:</code></a> for better performance.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addTrackPage" title="addTrackPage"></a>
+	<h3 class="subsubtitle method-title">addTrackPage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Request an extra page of <a href="#//api/name/tracks">tracks</a> from the Spotify search service.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)addTrackPage</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns <code>YES</code> if a search request was created, <code>NO</code> if there are no more results to fetch
+or if a search is already in progress.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>  The <a href="#//api/name/tracks">tracks</a> property will be updated when new results are returned.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> If you want to request more than just <a href="#//api/name/tracks">tracks</a>, use
+<a href="#//api/name/addPageForArtists:albums:tracks:playlists:"><code>addPageForArtists:albums:tracks:playlists:</code></a> for better performance.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithSearchQuery:inSession:" title="initWithSearchQuery:inSession:"></a>
+	<h3 class="subsubtitle method-title">initWithSearchQuery:inSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes a new SPSearch with the default page size for the given query.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithSearchQuery:(NSString *)<em>searchString</em> inSession:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>searchString</em></dt>
+			<dd><p>The search query to create an SPSearch for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the track should exist in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPSearch object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> The search query will be sent to the Spotify search service
+immediately. Be sure you want to perform the search before creating the object!</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithSearchQuery:inSession:type:" title="initWithSearchQuery:inSession:type:"></a>
+	<h3 class="subsubtitle method-title">initWithSearchQuery:inSession:type:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes a new SPSearch with the default page size for the given query and type.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithSearchQuery:(NSString *)<em>searchString</em> inSession:(SPSession *)<em>aSession</em> type:(sp_search_type)<em>type</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>searchString</em></dt>
+			<dd><p>The search query to create an SPSearch for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the track should exist in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The type of search to perform, either <code>SP_SEARCH_STANDARD</code> or <code>SP_SEARCH_SUGGEST</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPSearch object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If you are displaying &ldquo;live search&rdquo; UI — for example, a search suggestion
+UI as the user is typing into a search field — pass <code>SP_SEARCH_SUGGEST</code> to <code>type</code>
+for more appropriate results.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> The search query will be sent to the Spotify search service
+immediately. Be sure you want to perform the search before creating the object!</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithSearchQuery:pageSize:inSession:" title="initWithSearchQuery:pageSize:inSession:"></a>
+	<h3 class="subsubtitle method-title">initWithSearchQuery:pageSize:inSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes a new SPSearch for the given query.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithSearchQuery:(NSString *)<em>searchString</em> pageSize:(NSInteger)<em>size</em> inSession:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>searchString</em></dt>
+			<dd><p>The search query to create an SPSearch for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>size</em></dt>
+			<dd><p>The number of results to request per page of results.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the track should exist in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPSearch object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> The search query will be sent to the Spotify search service
+immediately. Be sure you want to perform the search before creating the object!</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithSearchQuery:pageSize:inSession:type:" title="initWithSearchQuery:pageSize:inSession:type:"></a>
+	<h3 class="subsubtitle method-title">initWithSearchQuery:pageSize:inSession:type:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes a new SPSearch for the given query.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithSearchQuery:(NSString *)<em>searchString</em> pageSize:(NSInteger)<em>size</em> inSession:(SPSession *)<em>aSession</em> type:(sp_search_type)<em>type</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>searchString</em></dt>
+			<dd><p>The search query to create an SPSearch for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>size</em></dt>
+			<dd><p>The number of results to request per page of results.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the track should exist in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The type of search to perform, either <code>SP_SEARCH_STANDARD</code> or <code>SP_SEARCH_SUGGEST</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPSearch object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If you are displaying &ldquo;live search&rdquo; UI — for example, a search suggestion
+UI as the user is typing into a search field — pass <code>SP_SEARCH_SUGGEST</code> to <code>type</code>
+for more appropriate results.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> The search query will be sent to the Spotify search service
+immediately. Be sure you want to perform the search before creating the object!</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithURL:inSession:" title="initWithURL:inSession:"></a>
+	<h3 class="subsubtitle method-title">initWithURL:inSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes a new SPSearch with the default page size from the given Spotify search URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithURL:(NSURL *)<em>searchURL</em> inSession:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>searchURL</em></dt>
+			<dd><p>The search URL to create an SPSearch for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the track should exist in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPSearch object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> If you pass in an invalid search URL (i.e., any URL not
+starting <code>spotify:search:</code>, this method will return <code>nil</code>.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithURL:pageSize:inSession:" title="initWithURL:pageSize:inSession:"></a>
+	<h3 class="subsubtitle method-title">initWithURL:pageSize:inSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes a new SPSearch from the given Spotify search URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithURL:(NSURL *)<em>searchURL</em> pageSize:(NSInteger)<em>size</em> inSession:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>searchURL</em></dt>
+			<dd><p>The search URL to create an SPSearch for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>size</em></dt>
+			<dd><p>The number of results to request per page of results.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the track should exist in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPSearch object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> If you pass in an invalid search URL (i.e., any URL not
+starting <code>spotify:search:</code>, this method will return <code>nil</code>.</p></div><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> The search query will be sent to the Spotify search service
+immediately. Be sure you want to perform the search before creating the object!</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSearch.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Spotify AB. All rights reserved. (Last updated: 2012-03-28)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

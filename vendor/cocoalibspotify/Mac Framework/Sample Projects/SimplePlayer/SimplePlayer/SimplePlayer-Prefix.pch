@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'SimplePlayer' target in the 'SimplePlayer' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif

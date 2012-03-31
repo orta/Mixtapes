@@ -1,0 +1,1419 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SPPlaylist Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">CocoaLibSpotify </a></h1>
+				<a id="developerHome" href="../index.html">Spotify AB</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SPPlaylist Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/collaborative">&nbsp;&nbsp;&nbsp;&nbsp;collaborative</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/hasPendingChanges">&nbsp;&nbsp;&nbsp;&nbsp;hasPendingChanges</option>
+	
+	<option value="//api/name/image">&nbsp;&nbsp;&nbsp;&nbsp;image</option>
+	
+	<option value="//api/name/items">&nbsp;&nbsp;&nbsp;&nbsp;items</option>
+	
+	<option value="//api/name/loaded">&nbsp;&nbsp;&nbsp;&nbsp;loaded</option>
+	
+	<option value="//api/name/markedForOfflinePlayback">&nbsp;&nbsp;&nbsp;&nbsp;markedForOfflinePlayback</option>
+	
+	<option value="//api/name/name">&nbsp;&nbsp;&nbsp;&nbsp;name</option>
+	
+	<option value="//api/name/offlineDownloadProgress">&nbsp;&nbsp;&nbsp;&nbsp;offlineDownloadProgress</option>
+	
+	<option value="//api/name/offlineStatus">&nbsp;&nbsp;&nbsp;&nbsp;offlineStatus</option>
+	
+	<option value="//api/name/owner">&nbsp;&nbsp;&nbsp;&nbsp;owner</option>
+	
+	<option value="//api/name/playlist">&nbsp;&nbsp;&nbsp;&nbsp;playlist</option>
+	
+	<option value="//api/name/playlistDescription">&nbsp;&nbsp;&nbsp;&nbsp;playlistDescription</option>
+	
+	<option value="//api/name/session">&nbsp;&nbsp;&nbsp;&nbsp;session</option>
+	
+	<option value="//api/name/spotifyURL">&nbsp;&nbsp;&nbsp;&nbsp;spotifyURL</option>
+	
+	<option value="//api/name/subscribers">&nbsp;&nbsp;&nbsp;&nbsp;subscribers</option>
+	
+	<option value="//api/name/updating">&nbsp;&nbsp;&nbsp;&nbsp;updating</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/playlistWithPlaylistStruct:inSession:">&nbsp;&nbsp;&nbsp;&nbsp;+ playlistWithPlaylistStruct:inSession:</option>
+	
+	<option value="//api/name/playlistWithPlaylistURL:inSession:">&nbsp;&nbsp;&nbsp;&nbsp;+ playlistWithPlaylistURL:inSession:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithPlaylistStruct:inSession:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithPlaylistStruct:inSession:</option>
+	
+	<option value="//api/name/moveItemsAtIndexes:toIndex:error:">&nbsp;&nbsp;&nbsp;&nbsp;- moveItemsAtIndexes:toIndex:error:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating and Initializing Playlists">Creating and Initializing Playlists</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Metadata">Metadata</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Working with Items">Working with Items</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collaborative">collaborative</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasPendingChanges">hasPendingChanges</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/image">image</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/items">items</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loaded">loaded</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/markedForOfflinePlayback">markedForOfflinePlayback</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/name">name</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/offlineDownloadProgress">offlineDownloadProgress</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/offlineStatus">offlineStatus</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/owner">owner</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlist">playlist</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlistDescription">playlistDescription</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session">session</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/spotifyURL">spotifyURL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/subscribers">subscribers</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updating">updating</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlistWithPlaylistStruct:inSession:">playlistWithPlaylistStruct:inSession:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlistWithPlaylistURL:inSession:">playlistWithPlaylistURL:inSession:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithPlaylistStruct:inSession:">initWithPlaylistStruct:inSession:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/moveItemsAtIndexes:toIndex:error:">moveItemsAtIndexes:toIndex:error:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SPPlaylist Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SPPlaylist Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">SPPlaylistableItem</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SPPlaylist.h<br />SPPlaylist.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This class represents a list of <a href="#//api/name/items">items</a>, be it a user&rsquo;s starred list, inbox, or a traditional &ldquo;playlist&rdquo;.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Creating and Initializing Playlists" name="task_Creating and Initializing Playlists"></a>
+						<h3 class="subsubtitle task-title">Creating and Initializing Playlists</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlistWithPlaylistStruct:inSession:">+&nbsp;playlistWithPlaylistStruct:inSession:</a></code>
+		<span class="tooltip"><p>Creates an SPPlaylist from the given opaque sp_<a href="#//api/name/playlist">playlist</a> struct.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlistWithPlaylistURL:inSession:">+&nbsp;playlistWithPlaylistURL:inSession:</a></code>
+		<span class="tooltip"><p>Creates an SPPlaylist from the given Spotify <a href="#//api/name/playlist">playlist</a> URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithPlaylistStruct:inSession:">&ndash;&nbsp;initWithPlaylistStruct:inSession:</a></code>
+		<span class="tooltip"><p>Initializes an SPPlaylist from the given opaque sp_<a href="#//api/name/playlist">playlist</a> struct.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Properties" name="task_Properties"></a>
+						<h3 class="subsubtitle task-title">Properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+		<span class="tooltip"><p>Returns the playlist&rsquo;s delegate object.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasPendingChanges">&nbsp;&nbsp;hasPendingChanges</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if the <a href="#//api/name/playlist">playlist</a> has changes not yet recognised by the Spotify servers, otherwise <code>NO</code>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collaborative">&nbsp;&nbsp;collaborative</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if the <a href="#//api/name/playlist">playlist</a> is collaborative (can be edited by users other than the <a href="#//api/name/owner">owner</a>), otherwise <code>NO</code>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loaded">&nbsp;&nbsp;loaded</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if the <a href="#//api/name/playlist">playlist</a> has finished loading and all data is available.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/markedForOfflinePlayback">&nbsp;&nbsp;markedForOfflinePlayback</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if the <a href="#//api/name/playlist">playlist</a> is marked for offline playback.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updating">&nbsp;&nbsp;updating</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if the <a href="#//api/name/playlist">playlist</a> is being updated, otherwise <code>NO</code>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/offlineDownloadProgress">&nbsp;&nbsp;offlineDownloadProgress</a></code>
+		<span class="tooltip"><p>Returns the download progress of the <a href="#//api/name/playlist">playlist</a> (between 0 and 1) is it is marked for offline sync.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/offlineStatus">&nbsp;&nbsp;offlineStatus</a></code>
+		<span class="tooltip"><p>Returns the offline status of the <a href="#//api/name/playlist">playlist</a>. Possible values:</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/owner">&nbsp;&nbsp;owner</a></code>
+		<span class="tooltip"><p>Returns the owner of the <a href="#//api/name/playlist">playlist</a>, or <code>nil</code> if the <a href="#//api/name/playlist">playlist</a> hasn&rsquo;t <a href="#//api/name/loaded">loaded</a> yet.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlist">&nbsp;&nbsp;playlist</a></code>
+		<span class="tooltip"><p>Returns the opaque structure used by the C LibSpotify API.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session">&nbsp;&nbsp;session</a></code>
+		<span class="tooltip"><p>Returns the session object the <a href="#//api/name/playlist">playlist</a> is <a href="#//api/name/loaded">loaded</a> in.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/spotifyURL">&nbsp;&nbsp;spotifyURL</a></code>
+		<span class="tooltip"><p>Returns the Spotify URI of the <a href="#//api/name/playlist">playlist</a> profile, for example: <code>spotify:user:sarnesjo:playlist:3p2c7mmML3fIUh5fcZ8Hcq</code></p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/subscribers">&nbsp;&nbsp;subscribers</a></code>
+		<span class="tooltip"><p>Returns the subscribers to the <a href="#//api/name/playlist">playlist</a> as an array of Spotify usernames.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Metadata" name="task_Metadata"></a>
+						<h3 class="subsubtitle task-title">Metadata</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/image">&nbsp;&nbsp;image</a></code>
+		<span class="tooltip"><p>Returns the custom image for the <a href="#//api/name/playlist">playlist</a>, or <code>nil</code> if the <a href="#//api/name/playlist">playlist</a> hasn&rsquo;t <a href="#//api/name/loaded">loaded</a> yet or it doesn&rsquo;t have a custom image.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+		<span class="tooltip"><p>Returns the name of the <a href="#//api/name/playlist">playlist</a>, or <code>nil</code> if the <a href="#//api/name/playlist">playlist</a> hasn&rsquo;t <a href="#//api/name/loaded">loaded</a> yet.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlistDescription">&nbsp;&nbsp;playlistDescription</a></code>
+		<span class="tooltip"><p>Returns the custom <a href="#//api/name/description">description</a> for the <a href="#//api/name/playlist">playlist</a>, or <code>nil</code> if the <a href="#//api/name/playlist">playlist</a> hasn&rsquo;t <a href="#//api/name/loaded">loaded</a> yet or it doesn&rsquo;t have a custom <a href="#//api/name/description">description</a>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Working with Items" name="task_Working with Items"></a>
+						<h3 class="subsubtitle task-title">Working with Items</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/items">&nbsp;&nbsp;items</a></code>
+		<span class="tooltip"><p>Returns an array of <a href="../Classes/SPPlaylistItem.html">SPPlaylistItem</a> objects representing playlist&rsquo;s item order.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/moveItemsAtIndexes:toIndex:error:">&ndash;&nbsp;moveItemsAtIndexes:toIndex:error:</a></code>
+		<span class="tooltip"><p>Move item(s) to another location in the list.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/collaborative" title="collaborative"></a>
+	<h3 class="subsubtitle method-title">collaborative</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the <a href="#//api/name/playlist">playlist</a> is collaborative (can be edited by users other than the <a href="#//api/name/owner">owner</a>), otherwise <code>NO</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, getter=isCollaborative) BOOL collaborative</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the playlist&rsquo;s delegate object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, assign) __unsafe_unretained id&lt;&gt; delegate</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasPendingChanges" title="hasPendingChanges"></a>
+	<h3 class="subsubtitle method-title">hasPendingChanges</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the <a href="#//api/name/playlist">playlist</a> has changes not yet recognised by the Spotify servers, otherwise <code>NO</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL hasPendingChanges</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/image" title="image"></a>
+	<h3 class="subsubtitle method-title">image</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the custom image for the <a href="#//api/name/playlist">playlist</a>, or <code>nil</code> if the <a href="#//api/name/playlist">playlist</a> hasn&rsquo;t <a href="#//api/name/loaded">loaded</a> yet or it doesn&rsquo;t have a custom image.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) SPImage *image</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/items" title="items"></a>
+	<h3 class="subsubtitle method-title">items</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an array of <a href="../Classes/SPPlaylistItem.html">SPPlaylistItem</a> objects representing playlist&rsquo;s item order.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSMutableArray *items</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This array is KVO compliant, and any changes made will be reflected in the user&rsquo;s account.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> You can add both <a href="../Classes/SPTrack.html"><code>SPTrack</code></a> and <a href="../Classes/SPPlaylistItem.html"><code>SPPlaylistItem</code></a> objects to this array.
+<a href="../Classes/SPTrack.html"><code>SPTrack</code></a> objects will automatically be wrapped inside an <a href="../Classes/SPPlaylistItem.html"><code>SPPlaylistItem</code></a>.</p></div><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> If you need to move an item from one location in this list to another, please
+use <a href="#//api/name/moveItemsAtIndexes:toIndex:error:"><code>moveItemsAtIndexes:toIndex:error:</code></a> for performance reasons.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/moveItemsAtIndexes:toIndex:error:">&ndash; moveItemsAtIndexes:toIndex:error:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loaded" title="loaded"></a>
+	<h3 class="subsubtitle method-title">loaded</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the <a href="#//api/name/playlist">playlist</a> has finished loading and all data is available.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isLoaded) BOOL loaded</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/markedForOfflinePlayback" title="markedForOfflinePlayback"></a>
+	<h3 class="subsubtitle method-title">markedForOfflinePlayback</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the <a href="#//api/name/playlist">playlist</a> is marked for offline playback.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, getter=isMarkedForOfflinePlayback) BOOL markedForOfflinePlayback</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="subsubtitle method-title">name</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the name of the <a href="#//api/name/playlist">playlist</a>, or <code>nil</code> if the <a href="#//api/name/playlist">playlist</a> hasn&rsquo;t <a href="#//api/name/loaded">loaded</a> yet.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, copy) NSString *name</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/offlineDownloadProgress" title="offlineDownloadProgress"></a>
+	<h3 class="subsubtitle method-title">offlineDownloadProgress</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the download progress of the <a href="#//api/name/playlist">playlist</a> (between 0 and 1) is it is marked for offline sync.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) float offlineDownloadProgress</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/offlineStatus" title="offlineStatus"></a>
+	<h3 class="subsubtitle method-title">offlineStatus</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the offline status of the <a href="#//api/name/playlist">playlist</a>. Possible values:</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) sp_playlist_offline_status offlineStatus</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>SP_PLAYLIST_OFFLINE_STATUS_NO <br/>
+Playlist is not offline enabled.</p>
+
+<p>SP_PLAYLIST_OFFLINE_STATUS_YES<br/>
+Playlist is synchronized to local storage.</p>
+
+<p>SP_PLAYLIST_OFFLINE_STATUS_DOWNLOADING<br/>
+This <a href="#//api/name/playlist">playlist</a> is currently downloading. Only one <a href="#//api/name/playlist">playlist</a> can be in this state any given time.</p>
+
+<p>SP_PLAYLIST_OFFLINE_STATUS_WAITING<br/>
+Playlist is queued for download.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/owner" title="owner"></a>
+	<h3 class="subsubtitle method-title">owner</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the owner of the <a href="#//api/name/playlist">playlist</a>, or <code>nil</code> if the <a href="#//api/name/playlist">playlist</a> hasn&rsquo;t <a href="#//api/name/loaded">loaded</a> yet.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) SPUser *owner</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playlist" title="playlist"></a>
+	<h3 class="subsubtitle method-title">playlist</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the opaque structure used by the C LibSpotify API.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) sp_playlist *playlist</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> This should only be used if you plan to directly use the
+C LibSpotify API. The behaviour of CocoaLibSpotify is undefined if you use the C
+API directly on <a href="#//api/name/items">items</a> that have CocoaLibSpotify objects associated with them.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playlistDescription" title="playlistDescription"></a>
+	<h3 class="subsubtitle method-title">playlistDescription</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the custom <a href="#//api/name/description">description</a> for the <a href="#//api/name/playlist">playlist</a>, or <code>nil</code> if the <a href="#//api/name/playlist">playlist</a> hasn&rsquo;t <a href="#//api/name/loaded">loaded</a> yet or it doesn&rsquo;t have a custom <a href="#//api/name/description">description</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSString *playlistDescription</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/session" title="session"></a>
+	<h3 class="subsubtitle method-title">session</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the session object the <a href="#//api/name/playlist">playlist</a> is <a href="#//api/name/loaded">loaded</a> in.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, assign) __unsafe_unretained SPSession *session</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/spotifyURL" title="spotifyURL"></a>
+	<h3 class="subsubtitle method-title">spotifyURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the Spotify URI of the <a href="#//api/name/playlist">playlist</a> profile, for example: <code>spotify:user:sarnesjo:playlist:3p2c7mmML3fIUh5fcZ8Hcq</code></p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSURL *spotifyURL</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/subscribers" title="subscribers"></a>
+	<h3 class="subsubtitle method-title">subscribers</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the subscribers to the <a href="#//api/name/playlist">playlist</a> as an array of Spotify usernames.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) NSArray *subscribers</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updating" title="updating"></a>
+	<h3 class="subsubtitle method-title">updating</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the <a href="#//api/name/playlist">playlist</a> is being updated, otherwise <code>NO</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isUpdating) BOOL updating</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Typically, you should delay UI updates while this property is set to <code>YES</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/playlistWithPlaylistStruct:inSession:" title="playlistWithPlaylistStruct:inSession:"></a>
+	<h3 class="subsubtitle method-title">playlistWithPlaylistStruct:inSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates an SPPlaylist from the given opaque sp_<a href="#//api/name/playlist">playlist</a> struct.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (SPPlaylist *)playlistWithPlaylistStruct:(sp_playlist *)<em>pl</em> inSession:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pl</em></dt>
+			<dd><p>The sp_<a href="#//api/name/playlist">playlist</a> struct to create an SPPlaylist for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the <a href="#//api/name/playlist">playlist</a> should exist in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPPlaylist object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This convenience method creates an SPPlaylist object if one doesn&rsquo;t exist, or
+returns a cached SPPlaylist if one already exists for the given struct.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playlistWithPlaylistURL:inSession:" title="playlistWithPlaylistURL:inSession:"></a>
+	<h3 class="subsubtitle method-title">playlistWithPlaylistURL:inSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates an SPPlaylist from the given Spotify <a href="#//api/name/playlist">playlist</a> URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (SPPlaylist *)playlistWithPlaylistURL:(NSURL *)<em>playlistURL</em> inSession:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>playlistURL</em></dt>
+			<dd><p>The <a href="#//api/name/playlist">playlist</a> URL to create an SPPlaylist for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the <a href="#//api/name/playlist">playlist</a> should exist in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPPlaylist object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This convenience method creates an SPPlaylist object if one doesn&rsquo;t exist, or
+returns a cached SPPlaylist if one already exists for the given URL.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> If you pass in an invalid <a href="#//api/name/playlist">playlist</a> URL (i.e., any URL not
+starting <code>spotify:user:XXXX:playlist:</code>, this method will return <code>nil</code>.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithPlaylistStruct:inSession:" title="initWithPlaylistStruct:inSession:"></a>
+	<h3 class="subsubtitle method-title">initWithPlaylistStruct:inSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes an SPPlaylist from the given opaque sp_<a href="#//api/name/playlist">playlist</a> struct.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithPlaylistStruct:(sp_playlist *)<em>pl</em> inSession:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pl</em></dt>
+			<dd><p>The sp_<a href="#//api/name/playlist">playlist</a> struct to create an SPPlaylist for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the <a href="#//api/name/playlist">playlist</a> should exist in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPPlaylist object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> For better performance and built-in caching, it is recommended
+you create SPPlaylist objects using <a href="#//api/name/playlistWithPlaylistStruct:inSession:">[SPPlaylist playlistWithPlaylistStruct:inSession:]</a>,
+<a href="#//api/name/playlistWithPlaylistURL:inSession:">[SPPlaylist playlistWithPlaylistURL:inSession:]</a> or the instance methods on <a href="../Classes/SPSession.html">SPSession</a>.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/moveItemsAtIndexes:toIndex:error:" title="moveItemsAtIndexes:toIndex:error:"></a>
+	<h3 class="subsubtitle method-title">moveItemsAtIndexes:toIndex:error:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Move item(s) to another location in the list.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)moveItemsAtIndexes:(NSIndexSet *)<em>indexes</em> toIndex:(NSUInteger)<em>newLocation</em> error:(NSError **)<em>error</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexes</em></dt>
+			<dd><p>The indexes of the <a href="#//api/name/items">items</a> to move.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>newLocation</em></dt>
+			<dd><p>The index the <a href="#//api/name/items">items</a> should be moved to.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>An NSError pointer to be filled if the operation fails.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns <code>YES</code> if the operation succeeded, otherwise <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>All indexes are given relative to the state of the item order before the move is executed. Therefore, you
+<em>don&rsquo;t</em> need to adjust the destination index to take into account <a href="#//api/name/items">items</a> that will be moved from above it.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> This operation can fail, for example if you give invalid indexes. Please make sure
+you check the result of this method.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylist.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Spotify AB. All rights reserved. (Last updated: 2012-03-28)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

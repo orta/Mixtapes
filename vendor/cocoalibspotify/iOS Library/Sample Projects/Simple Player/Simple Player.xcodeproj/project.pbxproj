@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5002BD6C1439DE2400FEAB3C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5002BD6B1439DE2400FEAB3C /* AudioToolbox.framework */; };
+		5002BD7D1439E8E800FEAB3C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5002BD7C1439E8E800FEAB3C /* SystemConfiguration.framework */; };
+		5002BD7F1439E8FC00FEAB3C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5002BD7E1439E8FC00FEAB3C /* CFNetwork.framework */; };
+		5002BD811439E90400FEAB3C /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5002BD801439E90400FEAB3C /* libstdc++.dylib */; };
+		50A26BEA1439D79D00A0C876 /* libCocoaLibSpotify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 500EC8CA1439D54E00E8A60C /* libCocoaLibSpotify.a */; };
+		50A26BEC1439D7AA00A0C876 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A26BEB1439D7AA00A0C876 /* CoreAudio.framework */; };
+		50AF49AD1439CB6D00E4A5EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AF49AC1439CB6D00E4A5EF /* UIKit.framework */; };
+		50AF49AF1439CB6D00E4A5EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AF49AE1439CB6D00E4A5EF /* Foundation.framework */; };
+		50AF49B11439CB6D00E4A5EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AF49B01439CB6D00E4A5EF /* CoreGraphics.framework */; };
+		50AF49B71439CB6D00E4A5EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50AF49B51439CB6D00E4A5EF /* InfoPlist.strings */; };
+		50AF49B91439CB6D00E4A5EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AF49B81439CB6D00E4A5EF /* main.m */; };
+		50AF49BD1439CB6D00E4A5EF /* Simple_PlayerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AF49BC1439CB6D00E4A5EF /* Simple_PlayerAppDelegate.m */; };
+		50AF49C41439CB6D00E4A5EF /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50AF49C21439CB6D00E4A5EF /* MainWindow_iPhone.xib */; };
+		50AF49CB1439CB6D00E4A5EF /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50AF49C91439CB6D00E4A5EF /* MainWindow_iPad.xib */; };
+		50DBB5E11520BF6100BF516F /* SPLoginResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50DBB5E01520BF6100BF516F /* SPLoginResources.bundle */; };
+		50DBB5E41520C2B800BF516F /* RotatableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DBB5E31520C2B800BF516F /* RotatableViewController.m */; };
+		50FAA141143A0B1400FF06D7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FAA140143A0B1400FF06D7 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		500EC8C91439D54E00E8A60C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 500EC8C21439D54E00E8A60C /* CocoaLibSpotify iOS Library.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 50AF49DC1439CBFE00E4A5EF;
+			remoteInfo = CocoaLibSpotify;
+		};
+		500EC8CB1439D57500E8A60C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 500EC8C21439D54E00E8A60C /* CocoaLibSpotify iOS Library.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 50AF49DB1439CBFE00E4A5EF;
+			remoteInfo = CocoaLibSpotify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5002BD6B1439DE2400FEAB3C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5002BD7C1439E8E800FEAB3C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5002BD7E1439E8FC00FEAB3C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5002BD801439E90400FEAB3C /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		500EC8C21439D54E00E8A60C /* CocoaLibSpotify iOS Library.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CocoaLibSpotify iOS Library.xcodeproj"; path = "../../CocoaLibSpotify iOS Library.xcodeproj"; sourceTree = "<group>"; };
+		50A26BEB1439D7AA00A0C876 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		50AF49A81439CB6D00E4A5EF /* Simple Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50AF49AC1439CB6D00E4A5EF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		50AF49AE1439CB6D00E4A5EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		50AF49B01439CB6D00E4A5EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		50AF49B41439CB6D00E4A5EF /* Simple Player-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Simple Player-Info.plist"; sourceTree = "<group>"; };
+		50AF49B61439CB6D00E4A5EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50AF49B81439CB6D00E4A5EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50AF49BA1439CB6D00E4A5EF /* Simple Player-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Simple Player-Prefix.pch"; sourceTree = "<group>"; };
+		50AF49BB1439CB6D00E4A5EF /* Simple_PlayerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Simple_PlayerAppDelegate.h; sourceTree = "<group>"; };
+		50AF49BC1439CB6D00E4A5EF /* Simple_PlayerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Simple_PlayerAppDelegate.m; sourceTree = "<group>"; };
+		50AF49C31439CB6D00E4A5EF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		50AF49CA1439CB6D00E4A5EF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		50DBB5E01520BF6100BF516F /* SPLoginResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SPLoginResources.bundle; path = ../../../SPLoginResources.bundle; sourceTree = "<group>"; };
+		50DBB5E21520C2B800BF516F /* RotatableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatableViewController.h; sourceTree = "<group>"; };
+		50DBB5E31520C2B800BF516F /* RotatableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatableViewController.m; sourceTree = "<group>"; };
+		50FAA140143A0B1400FF06D7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50AF49A51439CB6D00E4A5EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50FAA141143A0B1400FF06D7 /* AVFoundation.framework in Frameworks */,
+				5002BD811439E90400FEAB3C /* libstdc++.dylib in Frameworks */,
+				5002BD7F1439E8FC00FEAB3C /* CFNetwork.framework in Frameworks */,
+				5002BD7D1439E8E800FEAB3C /* SystemConfiguration.framework in Frameworks */,
+				5002BD6C1439DE2400FEAB3C /* AudioToolbox.framework in Frameworks */,
+				50A26BEC1439D7AA00A0C876 /* CoreAudio.framework in Frameworks */,
+				50A26BEA1439D79D00A0C876 /* libCocoaLibSpotify.a in Frameworks */,
+				50AF49AD1439CB6D00E4A5EF /* UIKit.framework in Frameworks */,
+				50AF49AF1439CB6D00E4A5EF /* Foundation.framework in Frameworks */,
+				50AF49B11439CB6D00E4A5EF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		500EC8C31439D54E00E8A60C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				500EC8CA1439D54E00E8A60C /* libCocoaLibSpotify.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50AF499D1439CB6D00E4A5EF = {
+			isa = PBXGroup;
+			children = (
+				500EC8C21439D54E00E8A60C /* CocoaLibSpotify iOS Library.xcodeproj */,
+				50AF49B21439CB6D00E4A5EF /* Simple Player */,
+				50AF49AB1439CB6D00E4A5EF /* Frameworks */,
+				50AF49A91439CB6D00E4A5EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50AF49A91439CB6D00E4A5EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50AF49A81439CB6D00E4A5EF /* Simple Player.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50AF49AB1439CB6D00E4A5EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50FAA140143A0B1400FF06D7 /* AVFoundation.framework */,
+				5002BD801439E90400FEAB3C /* libstdc++.dylib */,
+				5002BD7E1439E8FC00FEAB3C /* CFNetwork.framework */,
+				5002BD7C1439E8E800FEAB3C /* SystemConfiguration.framework */,
+				5002BD6B1439DE2400FEAB3C /* AudioToolbox.framework */,
+				50A26BEB1439D7AA00A0C876 /* CoreAudio.framework */,
+				50AF49AC1439CB6D00E4A5EF /* UIKit.framework */,
+				50AF49AE1439CB6D00E4A5EF /* Foundation.framework */,
+				50AF49B01439CB6D00E4A5EF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50AF49B21439CB6D00E4A5EF /* Simple Player */ = {
+			isa = PBXGroup;
+			children = (
+				50AF49BB1439CB6D00E4A5EF /* Simple_PlayerAppDelegate.h */,
+				50AF49BC1439CB6D00E4A5EF /* Simple_PlayerAppDelegate.m */,
+				50DBB5E21520C2B800BF516F /* RotatableViewController.h */,
+				50DBB5E31520C2B800BF516F /* RotatableViewController.m */,
+				50AF49C21439CB6D00E4A5EF /* MainWindow_iPhone.xib */,
+				50AF49C91439CB6D00E4A5EF /* MainWindow_iPad.xib */,
+				50DBB5E01520BF6100BF516F /* SPLoginResources.bundle */,
+				50AF49B31439CB6D00E4A5EF /* Supporting Files */,
+			);
+			path = "Simple Player";
+			sourceTree = "<group>";
+		};
+		50AF49B31439CB6D00E4A5EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50AF49B41439CB6D00E4A5EF /* Simple Player-Info.plist */,
+				50AF49B51439CB6D00E4A5EF /* InfoPlist.strings */,
+				50AF49B81439CB6D00E4A5EF /* main.m */,
+				50AF49BA1439CB6D00E4A5EF /* Simple Player-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50AF49A71439CB6D00E4A5EF /* Simple Player */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50AF49CE1439CB6E00E4A5EF /* Build configuration list for PBXNativeTarget "Simple Player" */;
+			buildPhases = (
+				50AF49A41439CB6D00E4A5EF /* Sources */,
+				50AF49A51439CB6D00E4A5EF /* Frameworks */,
+				50AF49A61439CB6D00E4A5EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				500EC8CC1439D57500E8A60C /* PBXTargetDependency */,
+			);
+			name = "Simple Player";
+			productName = "Simple Player";
+			productReference = 50AF49A81439CB6D00E4A5EF /* Simple Player.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50AF499F1439CB6D00E4A5EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Spotify;
+			};
+			buildConfigurationList = 50AF49A21439CB6D00E4A5EF /* Build configuration list for PBXProject "Simple Player" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 50AF499D1439CB6D00E4A5EF;
+			productRefGroup = 50AF49A91439CB6D00E4A5EF /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 500EC8C31439D54E00E8A60C /* Products */;
+					ProjectRef = 500EC8C21439D54E00E8A60C /* CocoaLibSpotify iOS Library.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				50AF49A71439CB6D00E4A5EF /* Simple Player */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		500EC8CA1439D54E00E8A60C /* libCocoaLibSpotify.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCocoaLibSpotify.a;
+			remoteRef = 500EC8C91439D54E00E8A60C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50AF49A61439CB6D00E4A5EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50AF49B71439CB6D00E4A5EF /* InfoPlist.strings in Resources */,
+				50AF49C41439CB6D00E4A5EF /* MainWindow_iPhone.xib in Resources */,
+				50AF49CB1439CB6D00E4A5EF /* MainWindow_iPad.xib in Resources */,
+				50DBB5E11520BF6100BF516F /* SPLoginResources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50AF49A41439CB6D00E4A5EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50AF49B91439CB6D00E4A5EF /* main.m in Sources */,
+				50AF49BD1439CB6D00E4A5EF /* Simple_PlayerAppDelegate.m in Sources */,
+				50DBB5E41520C2B800BF516F /* RotatableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		500EC8CC1439D57500E8A60C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaLibSpotify;
+			targetProxy = 500EC8CB1439D57500E8A60C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		50AF49B51439CB6D00E4A5EF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50AF49B61439CB6D00E4A5EF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		50AF49C21439CB6D00E4A5EF /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50AF49C31439CB6D00E4A5EF /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		50AF49C91439CB6D00E4A5EF /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50AF49CA1439CB6D00E4A5EF /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50AF49CC1439CB6E00E4A5EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = $CONFIGURATION_BUILD_DIR/include;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		50AF49CD1439CB6E00E4A5EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = $CONFIGURATION_BUILD_DIR/include;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50AF49CF1439CB6E00E4A5EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Simple Player/Simple Player-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Simple Player/Simple Player-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		50AF49D01439CB6E00E4A5EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Simple Player/Simple Player-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Simple Player/Simple Player-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50AF49A21439CB6D00E4A5EF /* Build configuration list for PBXProject "Simple Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50AF49CC1439CB6E00E4A5EF /* Debug */,
+				50AF49CD1439CB6E00E4A5EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50AF49CE1439CB6E00E4A5EF /* Build configuration list for PBXNativeTarget "Simple Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50AF49CF1439CB6E00E4A5EF /* Debug */,
+				50AF49D01439CB6E00E4A5EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50AF499F1439CB6D00E4A5EF /* Project object */;
+}

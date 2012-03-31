@@ -1,0 +1,70 @@
+/* mini reset */
+html, body, form, fieldset, h1, h2 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+body {
+	font: 14px 'helvetica neue', arial, DroidSans;
+}
+
+.appicon {
+	width: 85px;
+	height: 85px;
+	float: left;
+	margin: 5px;
+}
+
+h1 {
+	font-size: 18px;
+	padding-top: 8px;
+	padding-bottom: 0;
+}
+p.tagline {
+	font-weight: bold;
+	margin: 0;
+	font-size: 14px;
+	color: #858585;
+}
+
+h2 {
+	clear: left;
+	font-size: 16px;
+	padding-left: 5px;
+	background-color: rgb(232, 234, 240);
+	border: 1px solid rgb(197, 198, 205);
+	border-width: 1px 0px 1px 0px;
+	color: rgb(76, 78, 84);
+	text-shadow: #fff 0 1px 1px;
+}
+
+img.feedicon {
+	width: 36px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+p.feedinfo {
+	margin-left: 50px;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+p {
+	margin: 10px;
+}
+
+div.footer {
+	border-top: 1px solid rgb(198, 198, 198);
+}
+
+.footer p {
+	font-size: 10px;
+	color: rgb(108, 108, 108);
+}
+
+a {
+	text-decoration: none;
+	color: rgb(116, 130, 166);
+}

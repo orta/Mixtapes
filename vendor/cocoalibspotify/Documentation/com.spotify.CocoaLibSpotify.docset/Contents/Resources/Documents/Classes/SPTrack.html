@@ -1,0 +1,1379 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SPTrack Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">CocoaLibSpotify </a></h1>
+				<a id="developerHome" href="../index.html">Spotify AB</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SPTrack Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/album">&nbsp;&nbsp;&nbsp;&nbsp;album</option>
+	
+	<option value="//api/name/artists">&nbsp;&nbsp;&nbsp;&nbsp;artists</option>
+	
+	<option value="//api/name/availability">&nbsp;&nbsp;&nbsp;&nbsp;availability</option>
+	
+	<option value="//api/name/consolidatedArtists">&nbsp;&nbsp;&nbsp;&nbsp;consolidatedArtists</option>
+	
+	<option value="//api/name/discNumber">&nbsp;&nbsp;&nbsp;&nbsp;discNumber</option>
+	
+	<option value="//api/name/duration">&nbsp;&nbsp;&nbsp;&nbsp;duration</option>
+	
+	<option value="//api/name/loaded">&nbsp;&nbsp;&nbsp;&nbsp;loaded</option>
+	
+	<option value="//api/name/local">&nbsp;&nbsp;&nbsp;&nbsp;local</option>
+	
+	<option value="//api/name/name">&nbsp;&nbsp;&nbsp;&nbsp;name</option>
+	
+	<option value="//api/name/offlineStatus">&nbsp;&nbsp;&nbsp;&nbsp;offlineStatus</option>
+	
+	<option value="//api/name/popularity">&nbsp;&nbsp;&nbsp;&nbsp;popularity</option>
+	
+	<option value="//api/name/session">&nbsp;&nbsp;&nbsp;&nbsp;session</option>
+	
+	<option value="//api/name/spotifyURL">&nbsp;&nbsp;&nbsp;&nbsp;spotifyURL</option>
+	
+	<option value="//api/name/starred">&nbsp;&nbsp;&nbsp;&nbsp;starred</option>
+	
+	<option value="//api/name/track">&nbsp;&nbsp;&nbsp;&nbsp;track</option>
+	
+	<option value="//api/name/trackNumber">&nbsp;&nbsp;&nbsp;&nbsp;trackNumber</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/trackForTrackStruct:inSession:">&nbsp;&nbsp;&nbsp;&nbsp;+ trackForTrackStruct:inSession:</option>
+	
+	<option value="//api/name/trackForTrackURL:inSession:">&nbsp;&nbsp;&nbsp;&nbsp;+ trackForTrackURL:inSession:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithTrackStruct:inSession:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithTrackStruct:inSession:</option>
+	
+	<option value="//api/name/playableTrack">&nbsp;&nbsp;&nbsp;&nbsp;- playableTrack</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating and Initializing Tracks">Creating and Initializing Tracks</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Metadata">Metadata</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/album">album</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/artists">artists</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/availability">availability</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/consolidatedArtists">consolidatedArtists</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/discNumber">discNumber</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/duration">duration</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loaded">loaded</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/local">local</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/name">name</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/offlineStatus">offlineStatus</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/popularity">popularity</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session">session</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/spotifyURL">spotifyURL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/starred">starred</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/track">track</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/trackNumber">trackNumber</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/trackForTrackStruct:inSession:">trackForTrackStruct:inSession:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/trackForTrackURL:inSession:">trackForTrackURL:inSession:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithTrackStruct:inSession:">initWithTrackStruct:inSession:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playableTrack">playableTrack</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SPTrack Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SPTrack Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">SPPlaylistableItem</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SPTrack.h<br />SPTrack.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Represents a <a href="#//api/name/track">track</a> on Spotify.</p>
+
+<p>SPTrack  is roughly analogous to the sp_<a href="#//api/name/track">track</a> struct in the C LibSpotify API.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Creating and Initializing Tracks" name="task_Creating and Initializing Tracks"></a>
+						<h3 class="subsubtitle task-title">Creating and Initializing Tracks</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/trackForTrackStruct:inSession:">+&nbsp;trackForTrackStruct:inSession:</a></code>
+		<span class="tooltip"><p>Creates an SPTrack from the given opaque sp_<a href="#//api/name/track">track</a> struct.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/trackForTrackURL:inSession:">+&nbsp;trackForTrackURL:inSession:</a></code>
+		<span class="tooltip"><p>Creates an SPTrack from the given Spotify <a href="#//api/name/track">track</a> URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithTrackStruct:inSession:">&ndash;&nbsp;initWithTrackStruct:inSession:</a></code>
+		<span class="tooltip"><p>Initializes a new SPTrack from the given opaque sp_<a href="#//api/name/track">track</a> struct.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playableTrack">&ndash;&nbsp;playableTrack</a></code>
+		<span class="tooltip"><p>Gets the <a href="#//api/name/track">track</a> that would be played if the receiver is a &ldquo;linked&rdquo; <a href="#//api/name/track">track</a>.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Properties" name="task_Properties"></a>
+						<h3 class="subsubtitle task-title">Properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/availability">&nbsp;&nbsp;availability</a></code>
+		<span class="tooltip"><p>Returns availability for this  <a href="#//api/name/track">track</a>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loaded">&nbsp;&nbsp;loaded</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if the <a href="#//api/name/track">track</a> has finished loading and all data is available.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/local">&nbsp;&nbsp;local</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if the <a href="#//api/name/track">track</a> is a local file and requires separate playback.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/spotifyURL">&nbsp;&nbsp;spotifyURL</a></code>
+		<span class="tooltip"><p>Returns the Spotify URI of the <a href="#//api/name/track">track</a>, for example: <code>spotify:track:6JEK0CvvjDjjMUBFoXShNZ</code></p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/track">&nbsp;&nbsp;track</a></code>
+		<span class="tooltip"><p>Returns the opaque structure used by the C LibSpotify API.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/starred">&nbsp;&nbsp;starred</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if the <a href="#//api/name/track">track</a> is in the logged-in user&rsquo;s starred list.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/offlineStatus">&nbsp;&nbsp;offlineStatus</a></code>
+		<span class="tooltip"><p>Returns an <code>sp_track_offline_status</code> containing the offline status of the <a href="#//api/name/track">track</a>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session">&nbsp;&nbsp;session</a></code>
+		<span class="tooltip"><p>Returns the Spotify session the <a href="#//api/name/track">track</a> is associated with.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Metadata" name="task_Metadata"></a>
+						<h3 class="subsubtitle task-title">Metadata</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/album">&nbsp;&nbsp;album</a></code>
+		<span class="tooltip"><p>Returns the album of the <a href="#//api/name/track">track</a>. If no metadata is available for the <a href="#//api/name/track">track</a> yet, returns <code>nil</code>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/artists">&nbsp;&nbsp;artists</a></code>
+		<span class="tooltip"><p>Returns the artist(s) of the <a href="#//api/name/track">track</a>. If no metadata is available for the <a href="#//api/name/track">track</a> yet, returns <code>nil</code>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/consolidatedArtists">&nbsp;&nbsp;consolidatedArtists</a></code>
+		<span class="tooltip"><p>Returns a string represention of the artist(s) of the <a href="#//api/name/track">track</a>. If no metadata is available for the <a href="#//api/name/track">track</a> yet, returns <code>nil</code>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/discNumber">&nbsp;&nbsp;discNumber</a></code>
+		<span class="tooltip"><p>Returns the disc index of the <a href="#//api/name/track">track</a>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/duration">&nbsp;&nbsp;duration</a></code>
+		<span class="tooltip"><p>Returns the duration of the <a href="#//api/name/track">track</a>. If no metadata is available for the <a href="#//api/name/track">track</a> yet, returns 0.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+		<span class="tooltip"><p>Returns the name of the <a href="#//api/name/track">track</a>.  If no metadata is available for the <a href="#//api/name/track">track</a> yet, returns an empty string.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/popularity">&nbsp;&nbsp;popularity</a></code>
+		<span class="tooltip"><p>Returns the popularity of the <a href="#//api/name/track">track</a> in range 0 to 100. If no metadata is available for the <a href="#//api/name/track">track</a> yet, returns 0.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/trackNumber">&nbsp;&nbsp;trackNumber</a></code>
+		<span class="tooltip"><p>Returns the <a href="#//api/name/track">track</a> position on a disc.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/album" title="album"></a>
+	<h3 class="subsubtitle method-title">album</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the album of the <a href="#//api/name/track">track</a>. If no metadata is available for the <a href="#//api/name/track">track</a> yet, returns <code>nil</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) SPAlbum *album</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/artists" title="artists"></a>
+	<h3 class="subsubtitle method-title">artists</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the artist(s) of the <a href="#//api/name/track">track</a>. If no metadata is available for the <a href="#//api/name/track">track</a> yet, returns <code>nil</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) NSArray *artists</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/availability" title="availability"></a>
+	<h3 class="subsubtitle method-title">availability</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns availability for this  <a href="#//api/name/track">track</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) sp_track_availability availability</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Possible return values:</p>
+
+<p>SP_TRACK_AVAILABILITY_UNAVAILABLE
+Track is not available</p>
+
+<p>SP_TRACK_AVAILABILITY_AVAILABLE
+Track is available and can be played</p>
+
+<p>SP_TRACK_AVAILABILITY_NOT_STREAMABLE
+Track can not be streamed using this account</p>
+
+<p>SP_TRACK_AVAILABILITY_BANNED_BY_ARTIST
+Track not available on artist&rsquo;s reqeust</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/consolidatedArtists" title="consolidatedArtists"></a>
+	<h3 class="subsubtitle method-title">consolidatedArtists</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string represention of the artist(s) of the <a href="#//api/name/track">track</a>. If no metadata is available for the <a href="#//api/name/track">track</a> yet, returns <code>nil</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSString *consolidatedArtists</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the <a href="#//api/name/track">track</a> has one artist, returns that artist&rsquo;s <a href="#//api/name/name">name</a>. Otherwise, returns all artist names in alphabetical order, each
+separated with a comma (,).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/discNumber" title="discNumber"></a>
+	<h3 class="subsubtitle method-title">discNumber</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the disc index of the <a href="#//api/name/track">track</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger discNumber</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Possible values are [1, total number of discs on album]. Returns
+valid data only for tracks appearing in a browse artist or browse <a href="#//api/name/album">album</a>
+result (otherwise returns 0).</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/SPAlbumBrowse.html">SPAlbumBrowse</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/SPArtistBrowse.html">SPArtistBrowse</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/duration" title="duration"></a>
+	<h3 class="subsubtitle method-title">duration</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the duration of the <a href="#//api/name/track">track</a>. If no metadata is available for the <a href="#//api/name/track">track</a> yet, returns 0.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSTimeInterval duration</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loaded" title="loaded"></a>
+	<h3 class="subsubtitle method-title">loaded</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the <a href="#//api/name/track">track</a> has finished loading and all data is available.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isLoaded) BOOL loaded</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/local" title="local"></a>
+	<h3 class="subsubtitle method-title">local</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the <a href="#//api/name/track">track</a> is a local file and requires separate playback.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isLocal) BOOL local</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="subsubtitle method-title">name</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the name of the <a href="#//api/name/track">track</a>.  If no metadata is available for the <a href="#//api/name/track">track</a> yet, returns an empty string.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSString *name</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/offlineStatus" title="offlineStatus"></a>
+	<h3 class="subsubtitle method-title">offlineStatus</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an <code>sp_track_offline_status</code> containing the offline status of the <a href="#//api/name/track">track</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) sp_track_offline_status offlineStatus</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Possible values:</p>
+
+<p><code>SP_TRACK_OFFLINE_NO</code>: Not marked for offline
+<code>SP_TRACK_OFFLINE_WAITING</code>: Waiting for download
+<code>SP_TRACK_OFFLINE_DOWNLOADING</code>: Currently downloading
+<code>SP_TRACK_OFFLINE_DONE</code>: Down<a href="#//api/name/loaded">loaded</a> OK and can be played
+<code>SP_TRACK_OFFLINE_ERROR</code>: Error during download
+<code>SP_TRACK_OFFLINE_DONE_EXPIRED</code>: Down<a href="#//api/name/loaded">loaded</a> OK but not playable due to expiery
+<code>SP_TRACK_OFFLINE_RATE_EXCEEDED</code>: Waiting because download rate limit is exceeded
+<code>SP_TRACK_OFFLINE_DONE_RESYNC</code>: Down<a href="#//api/name/loaded">loaded</a> OK and available but scheduled for re-download</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/popularity" title="popularity"></a>
+	<h3 class="subsubtitle method-title">popularity</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the popularity of the <a href="#//api/name/track">track</a> in range 0 to 100. If no metadata is available for the <a href="#//api/name/track">track</a> yet, returns 0.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger popularity</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/session" title="session"></a>
+	<h3 class="subsubtitle method-title">session</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the Spotify session the <a href="#//api/name/track">track</a> is associated with.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, assign) __unsafe_unretained SPSession *session</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/spotifyURL" title="spotifyURL"></a>
+	<h3 class="subsubtitle method-title">spotifyURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the Spotify URI of the <a href="#//api/name/track">track</a>, for example: <code>spotify:track:6JEK0CvvjDjjMUBFoXShNZ</code></p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSURL *spotifyURL</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/starred" title="starred"></a>
+	<h3 class="subsubtitle method-title">starred</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the <a href="#//api/name/track">track</a> is in the logged-in user&rsquo;s starred list.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) BOOL starred</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/track" title="track"></a>
+	<h3 class="subsubtitle method-title">track</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the opaque structure used by the C LibSpotify API.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) sp_track *track</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> This should only be used if you plan to directly use the
+C LibSpotify API. The behaviour of CocoaLibSpotify is undefined if you use the C
+API directly on items that have CocoaLibSpotify objects associated with them.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/trackNumber" title="trackNumber"></a>
+	<h3 class="subsubtitle method-title">trackNumber</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the <a href="#//api/name/track">track</a> position on a disc.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger trackNumber</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Starts at 1 (relative the corresponding disc). Returns valid data
+only for tracks appearing in a browse artist or browse <a href="#//api/name/album">album</a> result
+(otherwise returns 0).</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/SPAlbumBrowse.html">SPAlbumBrowse</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/SPArtistBrowse.html">SPArtistBrowse</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/trackForTrackStruct:inSession:" title="trackForTrackStruct:inSession:"></a>
+	<h3 class="subsubtitle method-title">trackForTrackStruct:inSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates an SPTrack from the given opaque sp_<a href="#//api/name/track">track</a> struct.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (SPTrack *)trackForTrackStruct:(sp_track *)<em>spTrack</em> inSession:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>spTrack</em></dt>
+			<dd><p>The sp_<a href="#//api/name/track">track</a> struct to create an SPTrack for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the <a href="#//api/name/track">track</a> should exist in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPTrack object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This convenience method creates an SPTrack object if one doesn&rsquo;t exist, or
+returns a cached SPTrack if one already exists for the given struct.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/trackForTrackURL:inSession:" title="trackForTrackURL:inSession:"></a>
+	<h3 class="subsubtitle method-title">trackForTrackURL:inSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates an SPTrack from the given Spotify <a href="#//api/name/track">track</a> URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (SPTrack *)trackForTrackURL:(NSURL *)<em>trackURL</em> inSession:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>trackURL</em></dt>
+			<dd><p>The <a href="#//api/name/track">track</a> URL to create an SPTrack for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the <a href="#//api/name/track">track</a> should exist in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPTrack object, or <code>nil</code> if given an invalid <a href="#//api/name/track">track</a> URL.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This convenience method creates an SPTrack object if one doesn&rsquo;t exist, or
+returns a cached SPTrack if one already exists for the given URL.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> If you pass in an invalid <a href="#//api/name/track">track</a> URL (i.e., any URL not
+starting <code>spotify:track:</code>, this method will return <code>nil</code>.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithTrackStruct:inSession:" title="initWithTrackStruct:inSession:"></a>
+	<h3 class="subsubtitle method-title">initWithTrackStruct:inSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes a new SPTrack from the given opaque sp_<a href="#//api/name/track">track</a> struct.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithTrackStruct:(sp_track *)<em>tr</em> inSession:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tr</em></dt>
+			<dd><p>The sp_<a href="#//api/name/track">track</a> struct to create an SPTrack for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The <a href="../Classes/SPSession.html">SPSession</a> the <a href="#//api/name/track">track</a> should exist in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created SPTrack object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> For better performance and built-in caching, it is recommended
+you create SPTrack objects using <a href="#//api/name/trackForTrackStruct:inSession:">[SPTrack trackForTrackStruct:inSession:]</a>,
+<a href="#//api/name/trackForTrackURL:inSession:">[SPTrack trackForTrackURL:inSession:]</a> or the instance methods on <a href="../Classes/SPSession.html">SPSession</a>.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playableTrack" title="playableTrack"></a>
+	<h3 class="subsubtitle method-title">playableTrack</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the <a href="#//api/name/track">track</a> that would be played if the receiver is a &ldquo;linked&rdquo; <a href="#//api/name/track">track</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPTrack *)playableTrack</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Linked tracks are redirect from an unplayable <a href="#//api/name/track">track</a> to a <a href="#//api/name/track">track</a> on a
+different <a href="#//api/name/album">album</a> (which is available in the currently logged in user&rsquo;s region)
+Normally, your application does not need to worry about this but the function
+is here for completeness.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPTrack.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Spotify AB. All rights reserved. (Last updated: 2012-03-28)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

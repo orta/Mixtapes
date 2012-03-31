@@ -1,0 +1,697 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SPPlaylistContainer Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">CocoaLibSpotify </a></h1>
+				<a id="developerHome" href="../index.html">Spotify AB</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SPPlaylistContainer Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/container">&nbsp;&nbsp;&nbsp;&nbsp;container</option>
+	
+	<option value="//api/name/owner">&nbsp;&nbsp;&nbsp;&nbsp;owner</option>
+	
+	<option value="//api/name/playlists">&nbsp;&nbsp;&nbsp;&nbsp;playlists</option>
+	
+	<option value="//api/name/session">&nbsp;&nbsp;&nbsp;&nbsp;session</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/createFolderWithName:error:">&nbsp;&nbsp;&nbsp;&nbsp;- createFolderWithName:error:</option>
+	
+	<option value="//api/name/createPlaylistWithName:">&nbsp;&nbsp;&nbsp;&nbsp;- createPlaylistWithName:</option>
+	
+	<option value="//api/name/movePlaylistOrFolderAtIndex:ofParent:toIndex:ofNewParent:error:">&nbsp;&nbsp;&nbsp;&nbsp;- movePlaylistOrFolderAtIndex:ofParent:toIndex:ofNewParent:error:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Working with Playlists and Folders">Working with Playlists and Folders</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/container">container</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/owner">owner</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlists">playlists</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session">session</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createFolderWithName:error:">createFolderWithName:error:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createPlaylistWithName:">createPlaylistWithName:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/movePlaylistOrFolderAtIndex:ofParent:toIndex:ofNewParent:error:">movePlaylistOrFolderAtIndex:ofParent:toIndex:ofNewParent:error:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SPPlaylistContainer Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SPPlaylistContainer Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SPPlaylistContainer.h<br />SPPlaylistContainer.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This class represents a list of <a href="#//api/name/playlists">playlists</a>. In practice, it is only found when dealing with a user&rsquo;s playlist
+list and can&rsquo;t be created manually.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Properties" name="task_Properties"></a>
+						<h3 class="subsubtitle task-title">Properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/container">&nbsp;&nbsp;container</a></code>
+		<span class="tooltip"><p>Returns the opaque structure used by the C LibSpotify API.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/owner">&nbsp;&nbsp;owner</a></code>
+		<span class="tooltip"><p>Returns the owner of the playlist list.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlists">&nbsp;&nbsp;playlists</a></code>
+		<span class="tooltip"><p>Returns an array of <a href="../Classes/SPPlaylist.html">SPPlaylist</a> and/or SPPlaylistFolders representing the owner&rsquo;s playlists.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session">&nbsp;&nbsp;session</a></code>
+		<span class="tooltip"><p>Returns the session the list is loaded in.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Working with Playlists and Folders" name="task_Working with Playlists and Folders"></a>
+						<h3 class="subsubtitle task-title">Working with Playlists and Folders</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createFolderWithName:error:">&ndash;&nbsp;createFolderWithName:error:</a></code>
+		<span class="tooltip"><p>Create a new, empty folder.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createPlaylistWithName:">&ndash;&nbsp;createPlaylistWithName:</a></code>
+		<span class="tooltip"><p>Create a new, empty playlist.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/movePlaylistOrFolderAtIndex:ofParent:toIndex:ofNewParent:error:">&ndash;&nbsp;movePlaylistOrFolderAtIndex:ofParent:toIndex:ofNewParent:error:</a></code>
+		<span class="tooltip"><p>Move a playlist or folder to another location in the list.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/container" title="container"></a>
+	<h3 class="subsubtitle method-title">container</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the opaque structure used by the C LibSpotify API.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, assign) sp_playlistcontainer *container</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> This should only be used if you plan to directly use the
+C LibSpotify API. The behaviour of CocoaLibSpotify is undefined if you use the C
+API directly on items that have CocoaLibSpotify objects associated with them.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylistContainer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/owner" title="owner"></a>
+	<h3 class="subsubtitle method-title">owner</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the owner of the playlist list.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) SPUser *owner</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylistContainer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playlists" title="playlists"></a>
+	<h3 class="subsubtitle method-title">playlists</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an array of <a href="../Classes/SPPlaylist.html">SPPlaylist</a> and/or SPPlaylistFolders representing the owner&rsquo;s playlists.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSMutableArray *playlists</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This array is KVO compliant, and any changes made will be reflected in the user&rsquo;s account.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> If you need to move a playlist from one location in this list to another, please
+use <a href="#//api/name/movePlaylistOrFolderAtIndex:ofParent:toIndex:ofNewParent:error:"><code>movePlaylistOrFolderAtIndex:ofParent:toIndex:ofNewParent:error:</code></a> for performance reasons.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/movePlaylistOrFolderAtIndex:ofParent:toIndex:ofNewParent:error:">&ndash; movePlaylistOrFolderAtIndex:ofParent:toIndex:ofNewParent:error:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylistContainer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/session" title="session"></a>
+	<h3 class="subsubtitle method-title">session</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the session the list is loaded in.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, assign) __unsafe_unretained SPSession *session</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylistContainer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/createFolderWithName:error:" title="createFolderWithName:error:"></a>
+	<h3 class="subsubtitle method-title">createFolderWithName:error:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a new, empty folder.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPPlaylistFolder *)createFolderWithName:(NSString *)<em>name</em> error:(NSError **)<em>error</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>The name of the new folder.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>An error pointer that will be filled with an NSError if the operation fails.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created folder (which will also be added to the start of the <a href="#//api/name/playlists">playlists</a> property), or <code>nil</code> if the operation failed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylistContainer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createPlaylistWithName:" title="createPlaylistWithName:"></a>
+	<h3 class="subsubtitle method-title">createPlaylistWithName:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a new, empty playlist.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPPlaylist *)createPlaylistWithName:(NSString *)<em>name</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>The name of the new playlist. Must be shorter than 256 characters and not consist of only whitespace.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created playlist (which will also be added to the end of the <a href="#//api/name/playlists">playlists</a> property), or <code>nil</code> if the operation failed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylistContainer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/movePlaylistOrFolderAtIndex:ofParent:toIndex:ofNewParent:error:" title="movePlaylistOrFolderAtIndex:ofParent:toIndex:ofNewParent:error:"></a>
+	<h3 class="subsubtitle method-title">movePlaylistOrFolderAtIndex:ofParent:toIndex:ofNewParent:error:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Move a playlist or folder to another location in the list.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)movePlaylistOrFolderAtIndex:(NSUInteger)<em>aPlaylistOrFolder</em> ofParent:(SPPlaylistFolder *)<em>existingParentFolderOrNil</em> toIndex:(NSUInteger)<em>newIndex</em> ofNewParent:(SPPlaylistFolder *)<em>aParentFolderOrNil</em> error:(NSError **)<em>err</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aPlaylistOrFolder</em></dt>
+			<dd><p>The index of the playlist or folder in its parent (or the root list if it has no parent).</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>existingParentFolderOrNil</em></dt>
+			<dd><p>The parent folder the previous index refers to, or <code>nil</code> if there is no parent.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>newIndex</em></dt>
+			<dd><p>The desired destination index in the destination parent folder (or root list if there&rsquo;s no parent).</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aParentFolderOrNil</em></dt>
+			<dd><p>The new parent folder, or nil if there is no parent.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>err</em></dt>
+			<dd><p>An NSError pointer to be filled if the operation fails.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns <code>YES</code> if the operation succeeded, otherwise <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> This operation can fail, for example if you give invalid indexes or try to move
+a folder into itself. Please make sure you check the result of this method.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPPlaylistContainer.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Spotify AB. All rights reserved. (Last updated: 2012-03-28)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

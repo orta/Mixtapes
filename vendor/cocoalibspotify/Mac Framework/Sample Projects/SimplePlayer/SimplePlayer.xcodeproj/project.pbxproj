@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5006F154137161D800AF4418 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5006F153137161D800AF4418 /* Cocoa.framework */; };
+		5006F15E137161D800AF4418 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5006F15C137161D800AF4418 /* InfoPlist.strings */; };
+		5006F161137161D800AF4418 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5006F160137161D800AF4418 /* main.m */; };
+		5006F164137161D800AF4418 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5006F162137161D800AF4418 /* Credits.rtf */; };
+		5006F167137161D800AF4418 /* SimplePlayerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5006F166137161D800AF4418 /* SimplePlayerAppDelegate.m */; };
+		5006F16A137161D800AF4418 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5006F168137161D800AF4418 /* MainMenu.xib */; };
+		504E0907140CCE3A008A20D9 /* CocoaLibSpotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E0904140CCE23008A20D9 /* CocoaLibSpotify.framework */; };
+		504E0908140CCE41008A20D9 /* CocoaLibSpotify.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 504E0904140CCE23008A20D9 /* CocoaLibSpotify.framework */; };
+		506DA59613718B47009A8D1F /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506DA59513718B47009A8D1F /* AudioUnit.framework */; };
+		506DA59A13718B72009A8D1F /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506DA59913718B72009A8D1F /* CoreAudio.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		504E0903140CCE23008A20D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 504E08FC140CCE23008A20D9 /* CocoaLibSpotify Mac Framework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 503D630F13258041007772CA;
+			remoteInfo = CocoaLibSpotify;
+		};
+		504E0905140CCE34008A20D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 504E08FC140CCE23008A20D9 /* CocoaLibSpotify Mac Framework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 503D630E13258041007772CA;
+			remoteInfo = CocoaLibSpotify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5006F1791371649300AF4418 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				504E0908140CCE41008A20D9 /* CocoaLibSpotify.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5006F14F137161D800AF4418 /* SimplePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5006F153137161D800AF4418 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5006F156137161D800AF4418 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		5006F157137161D800AF4418 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5006F158137161D800AF4418 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5006F15B137161D800AF4418 /* SimplePlayer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimplePlayer-Info.plist"; sourceTree = "<group>"; };
+		5006F15D137161D800AF4418 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5006F15F137161D800AF4418 /* SimplePlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimplePlayer-Prefix.pch"; sourceTree = "<group>"; };
+		5006F160137161D800AF4418 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5006F163137161D800AF4418 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		5006F165137161D800AF4418 /* SimplePlayerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplePlayerAppDelegate.h; sourceTree = "<group>"; };
+		5006F166137161D800AF4418 /* SimplePlayerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePlayerAppDelegate.m; sourceTree = "<group>"; };
+		5006F169137161D800AF4418 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		504E08FC140CCE23008A20D9 /* CocoaLibSpotify Mac Framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CocoaLibSpotify Mac Framework.xcodeproj"; path = "../../CocoaLibSpotify Mac Framework.xcodeproj"; sourceTree = "<group>"; };
+		506DA59513718B47009A8D1F /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
+		506DA59913718B72009A8D1F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5006F14C137161D800AF4418 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				504E0907140CCE3A008A20D9 /* CocoaLibSpotify.framework in Frameworks */,
+				506DA59A13718B72009A8D1F /* CoreAudio.framework in Frameworks */,
+				506DA59613718B47009A8D1F /* AudioUnit.framework in Frameworks */,
+				5006F154137161D800AF4418 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5006F144137161D800AF4418 = {
+			isa = PBXGroup;
+			children = (
+				504E08FC140CCE23008A20D9 /* CocoaLibSpotify Mac Framework.xcodeproj */,
+				5006F159137161D800AF4418 /* SimplePlayer */,
+				5006F15A137161D800AF4418 /* Supporting Files */,
+				5006F152137161D800AF4418 /* Frameworks */,
+				5006F150137161D800AF4418 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5006F150137161D800AF4418 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5006F14F137161D800AF4418 /* SimplePlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5006F152137161D800AF4418 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				506DA59913718B72009A8D1F /* CoreAudio.framework */,
+				506DA59513718B47009A8D1F /* AudioUnit.framework */,
+				5006F153137161D800AF4418 /* Cocoa.framework */,
+				5006F155137161D800AF4418 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5006F155137161D800AF4418 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5006F156137161D800AF4418 /* AppKit.framework */,
+				5006F157137161D800AF4418 /* CoreData.framework */,
+				5006F158137161D800AF4418 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		5006F159137161D800AF4418 /* SimplePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				5006F165137161D800AF4418 /* SimplePlayerAppDelegate.h */,
+				5006F166137161D800AF4418 /* SimplePlayerAppDelegate.m */,
+				5006F168137161D800AF4418 /* MainMenu.xib */,
+			);
+			path = SimplePlayer;
+			sourceTree = "<group>";
+		};
+		5006F15A137161D800AF4418 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5006F15B137161D800AF4418 /* SimplePlayer-Info.plist */,
+				5006F15C137161D800AF4418 /* InfoPlist.strings */,
+				5006F15F137161D800AF4418 /* SimplePlayer-Prefix.pch */,
+				5006F160137161D800AF4418 /* main.m */,
+				5006F162137161D800AF4418 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			path = SimplePlayer;
+			sourceTree = "<group>";
+		};
+		504E08FD140CCE23008A20D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				504E0904140CCE23008A20D9 /* CocoaLibSpotify.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5006F14E137161D800AF4418 /* SimplePlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5006F16D137161D800AF4418 /* Build configuration list for PBXNativeTarget "SimplePlayer" */;
+			buildPhases = (
+				5006F14B137161D800AF4418 /* Sources */,
+				5006F14C137161D800AF4418 /* Frameworks */,
+				5006F14D137161D800AF4418 /* Resources */,
+				5006F1791371649300AF4418 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				504E0906140CCE34008A20D9 /* PBXTargetDependency */,
+			);
+			name = SimplePlayer;
+			productName = SimplePlayer;
+			productReference = 5006F14F137161D800AF4418 /* SimplePlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5006F146137161D800AF4418 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Spotify;
+			};
+			buildConfigurationList = 5006F149137161D800AF4418 /* Build configuration list for PBXProject "SimplePlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5006F144137161D800AF4418;
+			productRefGroup = 5006F150137161D800AF4418 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 504E08FD140CCE23008A20D9 /* Products */;
+					ProjectRef = 504E08FC140CCE23008A20D9 /* CocoaLibSpotify Mac Framework.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				5006F14E137161D800AF4418 /* SimplePlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		504E0904140CCE23008A20D9 /* CocoaLibSpotify.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaLibSpotify.framework;
+			remoteRef = 504E0903140CCE23008A20D9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5006F14D137161D800AF4418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5006F15E137161D800AF4418 /* InfoPlist.strings in Resources */,
+				5006F164137161D800AF4418 /* Credits.rtf in Resources */,
+				5006F16A137161D800AF4418 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5006F14B137161D800AF4418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5006F161137161D800AF4418 /* main.m in Sources */,
+				5006F167137161D800AF4418 /* SimplePlayerAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		504E0906140CCE34008A20D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaLibSpotify;
+			targetProxy = 504E0905140CCE34008A20D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5006F15C137161D800AF4418 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5006F15D137161D800AF4418 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5006F162137161D800AF4418 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5006F163137161D800AF4418 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		5006F168137161D800AF4418 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5006F169137161D800AF4418 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5006F16B137161D800AF4418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "\"$SRCROOT\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBC_PLUGIN_SEARCH_PATHS = "$(SRCROOT)";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5006F16C137161D800AF4418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "\"$SRCROOT\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBC_PLUGIN_SEARCH_PATHS = "$(SRCROOT)";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5006F16E137161D800AF4418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					$CONFIGURATION_BUILD_DIR/CocoaLibSpotify.framework/Versions/Frameworks,
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimplePlayer/SimplePlayer-Prefix.pch";
+				INFOPLIST_FILE = "SimplePlayer/SimplePlayer-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5006F16F137161D800AF4418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					$CONFIGURATION_BUILD_DIR/CocoaLibSpotify.framework/Versions/Frameworks,
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimplePlayer/SimplePlayer-Prefix.pch";
+				INFOPLIST_FILE = "SimplePlayer/SimplePlayer-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5006F149137161D800AF4418 /* Build configuration list for PBXProject "SimplePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5006F16B137161D800AF4418 /* Debug */,
+				5006F16C137161D800AF4418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5006F16D137161D800AF4418 /* Build configuration list for PBXNativeTarget "SimplePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5006F16E137161D800AF4418 /* Debug */,
+				5006F16F137161D800AF4418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5006F146137161D800AF4418 /* Project object */;
+}

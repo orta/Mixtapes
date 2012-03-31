@@ -1,0 +1,13 @@
+.browser-image {
+	background: url(browser@2x.png);
+	background-size: 100%;
+}
+.throbber div, .throbber span {
+	background: url(throbber@2x.gif);
+	background-size: cover;
+}
+h1 {
+	background-color: red;
+	background: url('logo@2x.png') no-repeat top center;
+	background-size: 183px 70px;
+}

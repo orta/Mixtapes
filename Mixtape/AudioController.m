@@ -57,6 +57,11 @@
     
     if ( [[SPSession sharedSession] isPlaying] &&  (_trackIndex == index) ) return;
     _trackIndex = index;
+
+    if (self.currentPlaylist.items.count == _trackIndex) {
+        [self animateControllerOut];
+    }
+    
     _trackIndex = MIN(_trackIndex, [self.currentPlaylist.items count] - 1);
     _trackIndex = MAX(_trackIndex, 0);
     
@@ -117,5 +122,21 @@
     [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
     [UIView commitAnimations];
 }
+
+
+- (void)animateControllerOut {
+    _showingController = NO;
+    [UIView beginAnimations:@"animationID" context:NULL];
+    [UIView setAnimationDuration:0.6];
+    
+    CGRect newLocation = _controllerView.frame;
+    newLocation.origin.y += 200;
+    _controllerView.frame = newLocation;
+    [_playPauseButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+    
+    [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
+    [UIView commitAnimations];
+}
+
 
 @end

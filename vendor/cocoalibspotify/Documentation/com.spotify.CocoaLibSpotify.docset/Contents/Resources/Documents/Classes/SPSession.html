@@ -1,0 +1,3213 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SPSession Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">CocoaLibSpotify </a></h1>
+				<a id="developerHome" href="../index.html">Spotify AB</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SPSession Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/audioDeliveryDelegate">&nbsp;&nbsp;&nbsp;&nbsp;audioDeliveryDelegate</option>
+	
+	<option value="//api/name/connectionState">&nbsp;&nbsp;&nbsp;&nbsp;connectionState</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/inboxPlaylist">&nbsp;&nbsp;&nbsp;&nbsp;inboxPlaylist</option>
+	
+	<option value="//api/name/locale">&nbsp;&nbsp;&nbsp;&nbsp;locale</option>
+	
+	<option value="//api/name/offlineKeyTimeRemaining">&nbsp;&nbsp;&nbsp;&nbsp;offlineKeyTimeRemaining</option>
+	
+	<option value="//api/name/offlinePlaylistsRemaining">&nbsp;&nbsp;&nbsp;&nbsp;offlinePlaylistsRemaining</option>
+	
+	<option value="//api/name/offlineStatistics">&nbsp;&nbsp;&nbsp;&nbsp;offlineStatistics</option>
+	
+	<option value="//api/name/offlineSyncError">&nbsp;&nbsp;&nbsp;&nbsp;offlineSyncError</option>
+	
+	<option value="//api/name/offlineSyncing">&nbsp;&nbsp;&nbsp;&nbsp;offlineSyncing</option>
+	
+	<option value="//api/name/offlineTracksRemaining">&nbsp;&nbsp;&nbsp;&nbsp;offlineTracksRemaining</option>
+	
+	<option value="//api/name/playbackDelegate">&nbsp;&nbsp;&nbsp;&nbsp;playbackDelegate</option>
+	
+	<option value="//api/name/playing">&nbsp;&nbsp;&nbsp;&nbsp;playing</option>
+	
+	<option value="//api/name/session">&nbsp;&nbsp;&nbsp;&nbsp;session</option>
+	
+	<option value="//api/name/starredPlaylist">&nbsp;&nbsp;&nbsp;&nbsp;starredPlaylist</option>
+	
+	<option value="//api/name/user">&nbsp;&nbsp;&nbsp;&nbsp;user</option>
+	
+	<option value="//api/name/userAgent">&nbsp;&nbsp;&nbsp;&nbsp;userAgent</option>
+	
+	<option value="//api/name/userPlaylists">&nbsp;&nbsp;&nbsp;&nbsp;userPlaylists</option>
+	
+	<option value="//api/name/usingVolumeNormalization">&nbsp;&nbsp;&nbsp;&nbsp;usingVolumeNormalization</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/initializeSharedSessionWithApplicationKey:userAgent:error:">&nbsp;&nbsp;&nbsp;&nbsp;+ initializeSharedSessionWithApplicationKey:userAgent:error:</option>
+	
+	<option value="//api/name/libSpotifyBuildId">&nbsp;&nbsp;&nbsp;&nbsp;+ libSpotifyBuildId</option>
+	
+	<option value="//api/name/sharedSession">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedSession</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/albumForURL:">&nbsp;&nbsp;&nbsp;&nbsp;- albumForURL:</option>
+	
+	<option value="//api/name/artistForURL:">&nbsp;&nbsp;&nbsp;&nbsp;- artistForURL:</option>
+	
+	<option value="//api/name/attemptLoginWithStoredCredentials:">&nbsp;&nbsp;&nbsp;&nbsp;- attemptLoginWithStoredCredentials:</option>
+	
+	<option value="//api/name/attemptLoginWithUserName:existingCredential:rememberCredentials:">&nbsp;&nbsp;&nbsp;&nbsp;- attemptLoginWithUserName:existingCredential:rememberCredentials:</option>
+	
+	<option value="//api/name/attemptLoginWithUserName:password:rememberCredentials:">&nbsp;&nbsp;&nbsp;&nbsp;- attemptLoginWithUserName:password:rememberCredentials:</option>
+	
+	<option value="//api/name/flushCaches">&nbsp;&nbsp;&nbsp;&nbsp;- flushCaches</option>
+	
+	<option value="//api/name/forgetStoredCredentials">&nbsp;&nbsp;&nbsp;&nbsp;- forgetStoredCredentials</option>
+	
+	<option value="//api/name/imageForURL:">&nbsp;&nbsp;&nbsp;&nbsp;- imageForURL:</option>
+	
+	<option value="//api/name/initWithApplicationKey:userAgent:error:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithApplicationKey:userAgent:error:</option>
+	
+	<option value="//api/name/logout">&nbsp;&nbsp;&nbsp;&nbsp;- logout</option>
+	
+	<option value="//api/name/objectRepresentationForSpotifyURL:linkType:">&nbsp;&nbsp;&nbsp;&nbsp;- objectRepresentationForSpotifyURL:linkType:</option>
+	
+	<option value="//api/name/playTrack:error:">&nbsp;&nbsp;&nbsp;&nbsp;- playTrack:error:</option>
+	
+	<option value="//api/name/playlistFolderForFolderId:inContainer:">&nbsp;&nbsp;&nbsp;&nbsp;- playlistFolderForFolderId:inContainer:</option>
+	
+	<option value="//api/name/playlistForPlaylistStruct:">&nbsp;&nbsp;&nbsp;&nbsp;- playlistForPlaylistStruct:</option>
+	
+	<option value="//api/name/playlistForURL:">&nbsp;&nbsp;&nbsp;&nbsp;- playlistForURL:</option>
+	
+	<option value="//api/name/postTracks:toInboxOfUser:withMessage:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- postTracks:toInboxOfUser:withMessage:delegate:</option>
+	
+	<option value="//api/name/preloadTrackForPlayback:error:">&nbsp;&nbsp;&nbsp;&nbsp;- preloadTrackForPlayback:error:</option>
+	
+	<option value="//api/name/searchForURL:">&nbsp;&nbsp;&nbsp;&nbsp;- searchForURL:</option>
+	
+	<option value="//api/name/seekPlaybackToOffset:">&nbsp;&nbsp;&nbsp;&nbsp;- seekPlaybackToOffset:</option>
+	
+	<option value="//api/name/setMaximumCacheSizeMB:">&nbsp;&nbsp;&nbsp;&nbsp;- setMaximumCacheSizeMB:</option>
+	
+	<option value="//api/name/setPreferredBitrate:">&nbsp;&nbsp;&nbsp;&nbsp;- setPreferredBitrate:</option>
+	
+	<option value="//api/name/storedCredentialsUserName">&nbsp;&nbsp;&nbsp;&nbsp;- storedCredentialsUserName</option>
+	
+	<option value="//api/name/trackForTrackStruct:">&nbsp;&nbsp;&nbsp;&nbsp;- trackForTrackStruct:</option>
+	
+	<option value="//api/name/trackForURL:">&nbsp;&nbsp;&nbsp;&nbsp;- trackForURL:</option>
+	
+	<option value="//api/name/unknownPlaylistForPlaylistStruct:">&nbsp;&nbsp;&nbsp;&nbsp;- unknownPlaylistForPlaylistStruct:</option>
+	
+	<option value="//api/name/unloadPlayback">&nbsp;&nbsp;&nbsp;&nbsp;- unloadPlayback</option>
+	
+	<option value="//api/name/userForURL:">&nbsp;&nbsp;&nbsp;&nbsp;- userForURL:</option>
+	
+	<option value="//api/name/userForUserStruct:">&nbsp;&nbsp;&nbsp;&nbsp;- userForUserStruct:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Logging In and Setup">Logging In and Setup</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Offline Syncing">Offline Syncing</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_User Content">User Content</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing Content by URL">Accessing Content by URL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing Arbitrary Content">Accessing Arbitrary Content</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Audio Playback">Audio Playback</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/audioDeliveryDelegate">audioDeliveryDelegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionState">connectionState</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/inboxPlaylist">inboxPlaylist</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/locale">locale</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/offlineKeyTimeRemaining">offlineKeyTimeRemaining</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/offlinePlaylistsRemaining">offlinePlaylistsRemaining</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/offlineStatistics">offlineStatistics</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/offlineSyncError">offlineSyncError</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/offlineSyncing">offlineSyncing</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/offlineTracksRemaining">offlineTracksRemaining</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playbackDelegate">playbackDelegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playing">playing</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session">session</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/starredPlaylist">starredPlaylist</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/user">user</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/userAgent">userAgent</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/userPlaylists">userPlaylists</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/usingVolumeNormalization">usingVolumeNormalization</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initializeSharedSessionWithApplicationKey:userAgent:error:">initializeSharedSessionWithApplicationKey:userAgent:error:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/libSpotifyBuildId">libSpotifyBuildId</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedSession">sharedSession</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/albumForURL:">albumForURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/artistForURL:">artistForURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attemptLoginWithStoredCredentials:">attemptLoginWithStoredCredentials:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attemptLoginWithUserName:existingCredential:rememberCredentials:">attemptLoginWithUserName:existingCredential:rememberCredentials:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attemptLoginWithUserName:password:rememberCredentials:">attemptLoginWithUserName:password:rememberCredentials:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/flushCaches">flushCaches</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/forgetStoredCredentials">forgetStoredCredentials</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageForURL:">imageForURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithApplicationKey:userAgent:error:">initWithApplicationKey:userAgent:error:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/logout">logout</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectRepresentationForSpotifyURL:linkType:">objectRepresentationForSpotifyURL:linkType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playTrack:error:">playTrack:error:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlistFolderForFolderId:inContainer:">playlistFolderForFolderId:inContainer:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlistForPlaylistStruct:">playlistForPlaylistStruct:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/playlistForURL:">playlistForURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/postTracks:toInboxOfUser:withMessage:delegate:">postTracks:toInboxOfUser:withMessage:delegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/preloadTrackForPlayback:error:">preloadTrackForPlayback:error:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/searchForURL:">searchForURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/seekPlaybackToOffset:">seekPlaybackToOffset:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setMaximumCacheSizeMB:">setMaximumCacheSizeMB:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setPreferredBitrate:">setPreferredBitrate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/storedCredentialsUserName">storedCredentialsUserName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/trackForTrackStruct:">trackForTrackStruct:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/trackForURL:">trackForURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unknownPlaylistForPlaylistStruct:">unknownPlaylistForPlaylistStruct:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unloadPlayback">unloadPlayback</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/userForURL:">userForURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/userForUserStruct:">userForUserStruct:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SPSession Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SPSession Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">SPSessionPlaybackProvider</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SPSession.h<br />SPSession.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This class provides core functionality for interacting with Spotify. You must have a valid, logged-in
+SPSession object before using any other part of the API.</p>
+
+<p>To log in and use CocoaLibSpotify, you need two things:</p>
+
+<ul>
+<li>An application key, available at the <a href="http://developer.spotify.com/">Spotify Developers Site</a>.</li>
+<li>A <a href="#//api/name/user">user</a> account with the Premium subscription level.</li>
+</ul>
+
+
+<p>Playback</p>
+
+<p>Please note that CocoaLibSpotify does <em>not</em> push audio data to the system&rsquo;s audio
+output. To hear tracks, you need to push the raw audio data provided to your application
+as you see fit. See the SimplePlayback sample project for an example of how to do this.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sharedSession">+&nbsp;sharedSession</a></code>
+		<span class="tooltip"><p>Returns a shared SPSession object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initializeSharedSessionWithApplicationKey:userAgent:error:">+&nbsp;initializeSharedSessionWithApplicationKey:userAgent:error:</a></code>
+		<span class="tooltip"><p>Initializes the shared SPSession object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/libSpotifyBuildId">+&nbsp;libSpotifyBuildId</a></code>
+		<span class="tooltip"><p>The &ldquo;debug&rdquo; build ID of libspotify.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Logging In and Setup" name="task_Logging In and Setup"></a>
+						<h3 class="subsubtitle task-title">Logging In and Setup</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithApplicationKey:userAgent:error:">&ndash;&nbsp;initWithApplicationKey:userAgent:error:</a></code>
+		<span class="tooltip"><p>Initialize a new SPSession object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/attemptLoginWithUserName:password:rememberCredentials:">&ndash;&nbsp;attemptLoginWithUserName:password:rememberCredentials:</a></code>
+		<span class="tooltip"><p>Attempt to login to the Spotify service.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/attemptLoginWithUserName:existingCredential:rememberCredentials:">&ndash;&nbsp;attemptLoginWithUserName:existingCredential:rememberCredentials:</a></code>
+		<span class="tooltip"><p>Attempt to login to the Spotify service using an existing login credentials blob.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/attemptLoginWithStoredCredentials:">&ndash;&nbsp;attemptLoginWithStoredCredentials:</a></code>
+		<span class="tooltip"><p>Attempt to login to the Spotify service using previously stored credentials.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/storedCredentialsUserName">&ndash;&nbsp;storedCredentialsUserName</a></code>
+		<span class="tooltip"><p>The username saved in the stored credentials.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/forgetStoredCredentials">&ndash;&nbsp;forgetStoredCredentials</a></code>
+		<span class="tooltip"><p>Remove stored credentials from the encrypted store.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/flushCaches">&ndash;&nbsp;flushCaches</a></code>
+		<span class="tooltip"><p>Manually flush libSpotify&rsquo;s caches.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/logout">&ndash;&nbsp;logout</a></code>
+		<span class="tooltip"><p>Log out from the Spotify service.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/connectionState">&nbsp;&nbsp;connectionState</a></code>
+		<span class="tooltip"><p>Returns the current connection state.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setMaximumCacheSizeMB:">&ndash;&nbsp;setMaximumCacheSizeMB:</a></code>
+		<span class="tooltip"><p>Set the maximum cache size, in megabytes.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setPreferredBitrate:">&ndash;&nbsp;setPreferredBitrate:</a></code>
+		<span class="tooltip"><p>Set the preferred audio bitrate for playback.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Properties" name="task_Properties"></a>
+						<h3 class="subsubtitle task-title">Properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+		<span class="tooltip"><p>Returns the current delegate object.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session">&nbsp;&nbsp;session</a></code>
+		<span class="tooltip"><p>Returns the opaque structure used by the C LibSpotify API.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/userAgent">&nbsp;&nbsp;userAgent</a></code>
+		<span class="tooltip"><p>Returns the <a href="#//api/name/user">user</a> agent value the <a href="#//api/name/session">session</a> was initialized with.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Offline Syncing" name="task_Offline Syncing"></a>
+						<h3 class="subsubtitle task-title">Offline Syncing</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/offlineSyncing">&nbsp;&nbsp;offlineSyncing</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if tracks are currently being downloaded for offline playback, otherwise <code>NO</code>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/offlineTracksRemaining">&nbsp;&nbsp;offlineTracksRemaining</a></code>
+		<span class="tooltip"><p>Returns the number of tracks still waiting to be downloaded for offline playback.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/offlinePlaylistsRemaining">&nbsp;&nbsp;offlinePlaylistsRemaining</a></code>
+		<span class="tooltip"><p>Returns the number of playlists still waiting to be downloaded for offline playback.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/offlineStatistics">&nbsp;&nbsp;offlineStatistics</a></code>
+		<span class="tooltip"><p>Returns a dictionary containing information about any offline sync activity. See Contants for keys.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/offlineKeyTimeRemaining">&nbsp;&nbsp;offlineKeyTimeRemaining</a></code>
+		<span class="tooltip"><p>Returns the time until the <a href="#//api/name/user">user</a> needs to reconnect to Spotify to renew offline syncing keys.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/offlineSyncError">&nbsp;&nbsp;offlineSyncError</a></code>
+		<span class="tooltip"><p>Returns the last error encountered during offline syncing, or <code>nil</code> if there is no problem.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="User Content" name="task_User Content"></a>
+						<h3 class="subsubtitle task-title">User Content</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/inboxPlaylist">&nbsp;&nbsp;inboxPlaylist</a></code>
+		<span class="tooltip"><p>Returns the logged in user&rsquo;s inbox playlist.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/locale">&nbsp;&nbsp;locale</a></code>
+		<span class="tooltip"><p>Returns the locale of the logged-in <a href="#//api/name/user">user</a>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/starredPlaylist">&nbsp;&nbsp;starredPlaylist</a></code>
+		<span class="tooltip"><p>Returns the logged in user&rsquo;s starred playlist.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/user">&nbsp;&nbsp;user</a></code>
+		<span class="tooltip"><p>Returns the current logged in user.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/userPlaylists">&nbsp;&nbsp;userPlaylists</a></code>
+		<span class="tooltip"><p>Returns an <a href="../Classes/SPPlaylistContainer.html">SPPlaylistContainer</a> object that contains the user&rsquo;s playlists.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/postTracks:toInboxOfUser:withMessage:delegate:">&ndash;&nbsp;postTracks:toInboxOfUser:withMessage:delegate:</a></code>
+		<span class="tooltip"><p>Send tracks to another Spotify <a href="#//api/name/user">user</a>.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Accessing Content by URL" name="task_Accessing Content by URL"></a>
+						<h3 class="subsubtitle task-title">Accessing Content by URL</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/albumForURL:">&ndash;&nbsp;albumForURL:</a></code>
+		<span class="tooltip"><p>Returns an <a href="../Classes/SPAlbum.html">SPAlbum</a> object representing the given URL, or <code>nil</code> if the URL is not a valid album URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/artistForURL:">&ndash;&nbsp;artistForURL:</a></code>
+		<span class="tooltip"><p>Returns an <a href="../Classes/SPArtist.html">SPArtist</a> object representing the given URL, or <code>nil</code> if the URL is not a valid artist URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/imageForURL:">&ndash;&nbsp;imageForURL:</a></code>
+		<span class="tooltip"><p>Returns an <a href="../Classes/SPImage.html">SPImage</a> object representing the given URL, or <code>nil</code> if the URL is not a valid image URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlistForURL:">&ndash;&nbsp;playlistForURL:</a></code>
+		<span class="tooltip"><p>Returns an <a href="../Classes/SPPlaylist.html">SPPlaylist</a> object representing the given URL, or <code>nil</code> if the URL is not a valid playlist URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/searchForURL:">&ndash;&nbsp;searchForURL:</a></code>
+		<span class="tooltip"><p>Returns an <a href="../Classes/SPSearch.html">SPSearch</a> object representing the given URL, or <code>nil</code> if the URL is not a valid search URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/trackForURL:">&ndash;&nbsp;trackForURL:</a></code>
+		<span class="tooltip"><p>Returns an <a href="../Classes/SPTrack.html">SPTrack</a> object representing the given URL, or <code>nil</code> if the URL is not a valid track URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/userForURL:">&ndash;&nbsp;userForURL:</a></code>
+		<span class="tooltip"><p>Returns an <a href="../Classes/SPUser.html">SPUser</a> object representing the given URL, or <code>nil</code> if the URL is not a valid <a href="#//api/name/user">user</a> URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectRepresentationForSpotifyURL:linkType:">&ndash;&nbsp;objectRepresentationForSpotifyURL:linkType:</a></code>
+		<span class="tooltip"><p>Returns an object representation of the given Spotify URL.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Accessing Arbitrary Content" name="task_Accessing Arbitrary Content"></a>
+						<h3 class="subsubtitle task-title">Accessing Arbitrary Content</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlistForPlaylistStruct:">&ndash;&nbsp;playlistForPlaylistStruct:</a></code>
+		<span class="tooltip"><p>Create and cache an <a href="../Classes/SPPlaylist.html">SPPlaylist</a> for the given sp_playlist struct from the C LibSpotify API.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playlistFolderForFolderId:inContainer:">&ndash;&nbsp;playlistFolderForFolderId:inContainer:</a></code>
+		<span class="tooltip"><p>Create and cache an <a href="../Classes/SPPlaylistFolder.html">SPPlaylistFolder</a> for the given folder ID from the C LibSpotify API.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unknownPlaylistForPlaylistStruct:">&ndash;&nbsp;unknownPlaylistForPlaylistStruct:</a></code>
+		<span class="tooltip"><p>Create and cache an <a href="../Classes/SPUnknownPlaylist.html">SPUnknownPlaylist</a> (subclass of <a href="../Classes/SPPlaylist.html">SPPlaylist</a>) for the given sp_playlist struct from the C LibSpotify API.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/trackForTrackStruct:">&ndash;&nbsp;trackForTrackStruct:</a></code>
+		<span class="tooltip"><p>Create and cache an <a href="../Classes/SPTrack.html">SPTrack</a> for the given sp_track struct from the C LibSpotify API.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/userForUserStruct:">&ndash;&nbsp;userForUserStruct:</a></code>
+		<span class="tooltip"><p>Create and cache an <a href="../Classes/SPUser.html">SPUser</a> for the given sp_<a href="#//api/name/user">user</a> struct from the C LibSpotify API.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Audio Playback" name="task_Audio Playback"></a>
+						<h3 class="subsubtitle task-title">Audio Playback</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/usingVolumeNormalization">&nbsp;&nbsp;usingVolumeNormalization</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if the <a href="#//api/name/session">session</a> is employing volume normalization (that is, attempts to keep the
+sound level of each track the same), otherwise <code>NO</code>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playing">&nbsp;&nbsp;playing</a></code>
+		<span class="tooltip"><p>Returns <code>YES</code> if the <a href="#//api/name/session">session</a> is currently playing a track, otherwise <code>NO</code>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playbackDelegate">&nbsp;&nbsp;playbackDelegate</a></code>
+		<span class="tooltip"><p>Returns the session&rsquo;s playback <a href="#//api/name/delegate">delegate</a> object.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/audioDeliveryDelegate">&nbsp;&nbsp;audioDeliveryDelegate</a></code>
+		<span class="tooltip"><p>Returns the session&rsquo;s audio delivery <a href="#//api/name/delegate">delegate</a> object.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/preloadTrackForPlayback:error:">&ndash;&nbsp;preloadTrackForPlayback:error:</a></code>
+		<span class="tooltip"><p>Preloads playback assets for the given track.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/playTrack:error:">&ndash;&nbsp;playTrack:error:</a></code>
+		<span class="tooltip"><p>Start <a href="#//api/name/playing">playing</a> the given track.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/seekPlaybackToOffset:">&ndash;&nbsp;seekPlaybackToOffset:</a></code>
+		<span class="tooltip"><p>Seek the current playback position to the given time.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unloadPlayback">&ndash;&nbsp;unloadPlayback</a></code>
+		<span class="tooltip"><p>Unload playback resources from memory.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/audioDeliveryDelegate" title="audioDeliveryDelegate"></a>
+	<h3 class="subsubtitle method-title">audioDeliveryDelegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the session&rsquo;s audio delivery <a href="#//api/name/delegate">delegate</a> object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, assign) __unsafe_unretained id&lt;&gt; audioDeliveryDelegate</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The audio delivery <a href="#//api/name/delegate">delegate</a> is responsible for pushing raw audio data provided by the <a href="#//api/name/session">session</a>
+to the system&rsquo;s audio output. See the SimplePlayback sample project for an example of how to do this.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/connectionState" title="connectionState"></a>
+	<h3 class="subsubtitle method-title">connectionState</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the current connection state.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) sp_connectionstate connectionState</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Possible values:</p>
+
+<p>SP_CONNECTION_STATE_LOGGED_OUT<br/>
+User not yet logged in.</p>
+
+<p>SP_CONNECTION_STATE_OFFLINE
+User is logged in but in offline mode.</p>
+
+<p>SP_CONNECTION_STATE_LOGGED_IN <br/>
+Logged in against a Spotify access point.</p>
+
+<p>SP_CONNECTION_STATE_DISCONNECTED  <br/>
+Was logged in, but has now been disconnected.</p>
+
+<p>SP_CONNECTION_STATE_UNDEFINED <br/>
+The connection state is undefined.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the current delegate object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, assign) __unsafe_unretained id&lt;&gt; delegate</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/inboxPlaylist" title="inboxPlaylist"></a>
+	<h3 class="subsubtitle method-title">inboxPlaylist</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the logged in user&rsquo;s inbox playlist.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) SPPlaylist *inboxPlaylist</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The inbox playlist contains tracks sent to the <a href="#//api/name/user">user</a> by other Spotify users, and is
+updated as new tracks are sent to the <a href="#//api/name/user">user</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/locale" title="locale"></a>
+	<h3 class="subsubtitle method-title">locale</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the locale of the logged-in <a href="#//api/name/user">user</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) NSLocale *locale</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/offlineKeyTimeRemaining" title="offlineKeyTimeRemaining"></a>
+	<h3 class="subsubtitle method-title">offlineKeyTimeRemaining</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the time until the <a href="#//api/name/user">user</a> needs to reconnect to Spotify to renew offline syncing keys.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSTimeInterval offlineKeyTimeRemaining</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/offlinePlaylistsRemaining" title="offlinePlaylistsRemaining"></a>
+	<h3 class="subsubtitle method-title">offlinePlaylistsRemaining</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the number of playlists still waiting to be downloaded for offline playback.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger offlinePlaylistsRemaining</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/offlineStatistics" title="offlineStatistics"></a>
+	<h3 class="subsubtitle method-title">offlineStatistics</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a dictionary containing information about any offline sync activity. See Contants for keys.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSDictionary *offlineStatistics</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/offlineSyncError" title="offlineSyncError"></a>
+	<h3 class="subsubtitle method-title">offlineSyncError</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the last error encountered during offline syncing, or <code>nil</code> if there is no problem.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) NSError *offlineSyncError</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/offlineSyncing" title="offlineSyncing"></a>
+	<h3 class="subsubtitle method-title">offlineSyncing</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if tracks are currently being downloaded for offline playback, otherwise <code>NO</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isOfflineSyncing) BOOL offlineSyncing</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/offlineTracksRemaining" title="offlineTracksRemaining"></a>
+	<h3 class="subsubtitle method-title">offlineTracksRemaining</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the number of tracks still waiting to be downloaded for offline playback.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger offlineTracksRemaining</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playbackDelegate" title="playbackDelegate"></a>
+	<h3 class="subsubtitle method-title">playbackDelegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the session&rsquo;s playback <a href="#//api/name/delegate">delegate</a> object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, assign) __unsafe_unretained id&lt;&gt; playbackDelegate</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The playback <a href="#//api/name/delegate">delegate</a> is responsible for dealing with playback events from CocoaLibSpotify, such as
+playback ending or being paused because the account is being used for playback elsewhere.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playing" title="playing"></a>
+	<h3 class="subsubtitle method-title">playing</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the <a href="#//api/name/session">session</a> is currently playing a track, otherwise <code>NO</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, getter=isPlaying) BOOL playing</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/session" title="session"></a>
+	<h3 class="subsubtitle method-title">session</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the opaque structure used by the C LibSpotify API.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) sp_session *session</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> This should only be used if you plan to directly use the
+C LibSpotify API. The behaviour of CocoaLibSpotify is undefined if you use the C
+API directly on items that have CocoaLibSpotify objects associated with them.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/starredPlaylist" title="starredPlaylist"></a>
+	<h3 class="subsubtitle method-title">starredPlaylist</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the logged in user&rsquo;s starred playlist.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) SPPlaylist *starredPlaylist</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The starred playlist contains tracks starred by the <a href="#//api/name/user">user</a>, and is updated as new tracks are
+starred or unstarred.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/user" title="user"></a>
+	<h3 class="subsubtitle method-title">user</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the current logged in user.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) SPUser *user</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/userAgent" title="userAgent"></a>
+	<h3 class="subsubtitle method-title">userAgent</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the <a href="#//api/name/user">user</a> agent value the <a href="#//api/name/session">session</a> was initialized with.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSString *userAgent</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/userPlaylists" title="userPlaylists"></a>
+	<h3 class="subsubtitle method-title">userPlaylists</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an <a href="../Classes/SPPlaylistContainer.html">SPPlaylistContainer</a> object that contains the user&rsquo;s playlists.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, strong) SPPlaylistContainer *userPlaylists</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/SPPlaylistContainer.html">SPPlaylistContainer</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/usingVolumeNormalization" title="usingVolumeNormalization"></a>
+	<h3 class="subsubtitle method-title">usingVolumeNormalization</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>YES</code> if the <a href="#//api/name/session">session</a> is employing volume normalization (that is, attempts to keep the
+sound level of each track the same), otherwise <code>NO</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, getter=isUsingVolumeNormalization) BOOL usingVolumeNormalization</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> This property currently has no effect on iOS platforms.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initializeSharedSessionWithApplicationKey:userAgent:error:" title="initializeSharedSessionWithApplicationKey:userAgent:error:"></a>
+	<h3 class="subsubtitle method-title">initializeSharedSessionWithApplicationKey:userAgent:error:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes the shared SPSession object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (BOOL)initializeSharedSessionWithApplicationKey:(NSData *)<em>appKey</em> userAgent:(NSString *)<em>userAgent</em> error:(NSError **)<em>error</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>appKey</em></dt>
+			<dd><p>Your application key as an NSData.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>userAgent</em></dt>
+			<dd><p>Your application&rsquo;s <a href="#//api/name/user">user</a> agent (for example, com.yourcompany.MyGreatApp).</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>An error pointer to be filled with an NSError should a login problem occur.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> the the shared <a href="#//api/name/session">session</a> was initialized correctly, otherwise <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Your application key and <a href="#//api/name/user">user</a> agent must be valid to create an SPSession object.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> The C API that CocoaLibSpotify uses (LibSpotify) doesn&rsquo;t
+support using multiple sessions in the same process. While you can either create and
+store your SPSession object using this convenience method or yourself using <a href="#//api/name/initWithApplicationKey:userAgent:error:">[SPSession initWithApplicationKey:userAgent:error:]</a>,
+make sure you only have <em>one</em> instance of SPSession active in your process at a time.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/libSpotifyBuildId" title="libSpotifyBuildId"></a>
+	<h3 class="subsubtitle method-title">libSpotifyBuildId</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The &ldquo;debug&rdquo; build ID of libspotify.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSString *)libSpotifyBuildId</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns an NSString representing the build ID of the currently running version of libspotify.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This could be useful to display somewhere deep down in the <a href="#//api/name/user">user</a> interface in
+case you (or Spotify) would like to know the exact version running.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sharedSession" title="sharedSession"></a>
+	<h3 class="subsubtitle method-title">sharedSession</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a shared SPSession object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (SPSession *)sharedSession</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is a convenience method for creating and storing a single SPSession instance.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> The C API that CocoaLibSpotify uses (LibSpotify) doesn&rsquo;t
+support using multiple sessions in the same process. While you can either create and
+store your SPSession object using this convenience method or yourself using <a href="#//api/name/init">[SPSession init]</a>,
+make sure you only have <em>one</em> instance of SPSession active in your process at a time.</p></div><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> This will return <code>nil</code> until <a href="#//api/name/initializeSharedSessionWithApplicationKey:userAgent:error:">[SPSession initializeSharedSessionWithApplicationKey:userAgent:error:]</a> is
+successfully called.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/albumForURL:" title="albumForURL:"></a>
+	<h3 class="subsubtitle method-title">albumForURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an <a href="../Classes/SPAlbum.html">SPAlbum</a> object representing the given URL, or <code>nil</code> if the URL is not a valid album URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPAlbum *)albumForURL:(NSURL *)<em>url</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>url</em></dt>
+			<dd><p>The URL of the album.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/artistForURL:" title="artistForURL:"></a>
+	<h3 class="subsubtitle method-title">artistForURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an <a href="../Classes/SPArtist.html">SPArtist</a> object representing the given URL, or <code>nil</code> if the URL is not a valid artist URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPArtist *)artistForURL:(NSURL *)<em>url</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>url</em></dt>
+			<dd><p>The URL of the artist.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/attemptLoginWithStoredCredentials:" title="attemptLoginWithStoredCredentials:"></a>
+	<h3 class="subsubtitle method-title">attemptLoginWithStoredCredentials:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Attempt to login to the Spotify service using previously stored credentials.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)attemptLoginWithStoredCredentials:(NSError **)<em>error</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>An error pointer to be filled with an NSError should a login problem occur.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns <code>YES</code> if <a href="#//api/name/user">user</a> credentials had been stored and the login attempt began successfully.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Login success or fail methods will be called on the session&rsquo;s <a href="#//api/name/delegate">delegate</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/attemptLoginWithUserName:existingCredential:rememberCredentials:" title="attemptLoginWithUserName:existingCredential:rememberCredentials:"></a>
+	<h3 class="subsubtitle method-title">attemptLoginWithUserName:existingCredential:rememberCredentials:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Attempt to login to the Spotify service using an existing login credentials blob.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)attemptLoginWithUserName:(NSString *)<em>userName</em> existingCredential:(NSString *)<em>credential</em> rememberCredentials:(BOOL)<em>rememberMe</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>userName</em></dt>
+			<dd><p>The username of the <a href="#//api/name/user">user</a> who wishes to log in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>credential</em></dt>
+			<dd><p>A login credential string previously provided by the <code>-session:didGenerateLoginCredentials:forUserName:</code> <a href="#//api/name/delegate">delegate</a> method.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rememberMe</em></dt>
+			<dd><p><code>YES</code> if the user&rsquo;s credentials should be saved in libspotify&rsquo;s encrypted store, replacing any previous credentials, otherwise <code>NO</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Login success or fail methods will be called on the session&rsquo;s <a href="#//api/name/delegate">delegate</a>.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> You must have successfully logged in to the Spotify service before using
+most other API methods.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/attemptLoginWithUserName:password:rememberCredentials:" title="attemptLoginWithUserName:password:rememberCredentials:"></a>
+	<h3 class="subsubtitle method-title">attemptLoginWithUserName:password:rememberCredentials:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Attempt to login to the Spotify service.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)attemptLoginWithUserName:(NSString *)<em>userName</em> password:(NSString *)<em>password</em> rememberCredentials:(BOOL)<em>rememberMe</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>userName</em></dt>
+			<dd><p>The username of the <a href="#//api/name/user">user</a> who wishes to log in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>password</em></dt>
+			<dd><p>The password for the <a href="#//api/name/user">user</a> who wishes to log in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rememberMe</em></dt>
+			<dd><p><code>YES</code> if the user&rsquo;s credentials should be saved in libspotify&rsquo;s encrypted store, replacing any previous credentials, otherwise <code>NO</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Login success or fail methods will be called on the session&rsquo;s <a href="#//api/name/delegate">delegate</a>.</p><div class="warning"><p><strong>Warning:</strong> <em>Important:</em> You must have successfully logged in to the Spotify service before using
+most other API methods.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/flushCaches" title="flushCaches"></a>
+	<h3 class="subsubtitle method-title">flushCaches</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Manually flush libSpotify&rsquo;s caches.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)flushCaches</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method will force libSpotify to flush its caches. If you&rsquo;re writing an iOS application, call
+this when your application is put into the background to ensure correct operation.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/forgetStoredCredentials" title="forgetStoredCredentials"></a>
+	<h3 class="subsubtitle method-title">forgetStoredCredentials</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove stored credentials from the encrypted store.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)forgetStoredCredentials</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method will cleanly log out from the Spotify service and clear any in-memory caches.
+Called automatically when the instance is deallocated.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/imageForURL:" title="imageForURL:"></a>
+	<h3 class="subsubtitle method-title">imageForURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an <a href="../Classes/SPImage.html">SPImage</a> object representing the given URL, or <code>nil</code> if the URL is not a valid image URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPImage *)imageForURL:(NSURL *)<em>url</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>url</em></dt>
+			<dd><p>The URL of the image.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithApplicationKey:userAgent:error:" title="initWithApplicationKey:userAgent:error:"></a>
+	<h3 class="subsubtitle method-title">initWithApplicationKey:userAgent:error:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize a new SPSession object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithApplicationKey:(NSData *)<em>appKey</em> userAgent:(NSString *)<em>userAgent</em> error:(NSError **)<em>error</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>appKey</em></dt>
+			<dd><p>Your application key as an NSData.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>userAgent</em></dt>
+			<dd><p>Your application&rsquo;s <a href="#//api/name/user">user</a> agent (for example, com.yourcompany.MyGreatApp).</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>An error pointer to be filled with an NSError should a login problem occur.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns a newly initialised SPSession object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Your application key and <a href="#//api/name/user">user</a> agent must be valid to create an SPSession object. This is SPSession&rsquo;s designated initializer.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/logout" title="logout"></a>
+	<h3 class="subsubtitle method-title">logout</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Log out from the Spotify service.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)logout</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method will cleanly log out from the Spotify service and clear any in-memory caches.
+Called automatically when the instance is deallocated.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectRepresentationForSpotifyURL:linkType:" title="objectRepresentationForSpotifyURL:linkType:"></a>
+	<h3 class="subsubtitle method-title">objectRepresentationForSpotifyURL:linkType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an object representation of the given Spotify URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)objectRepresentationForSpotifyURL:(NSURL *)<em>aSpotifyUrlOfSomeKind</em> linkType:(sp_linktype *)<em>linkType</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSpotifyUrlOfSomeKind</em></dt>
+			<dd><p>A Spotify URL (starting <code>spotify:</code>).</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>linkType</em></dt>
+			<dd><p>A pointer to an sp_linktype variable, which will be filled with the link type if not NULL.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns an <a href="../Classes/SPAlbum.html">SPAlbum</a>, <a href="../Classes/SPArtist.html">SPArtist</a>, <a href="../Classes/SPPlaylist.html">SPPlaylist</a>, <a href="../Classes/SPSearch.html">SPSearch</a>, <a href="../Classes/SPTrack.html">SPTrack</a> or <a href="../Classes/SPUser.html">SPUser</a> object for the given URL, or <code>nil</code> if the URL is invalid.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method works just like <a href="#//api/name/albumForURL:">albumForURL:</a>, <a href="#//api/name/artistForURL:">artistForURL:</a> and so on, except that it works out
+what the given URL represents and returns that for you.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playTrack:error:" title="playTrack:error:"></a>
+	<h3 class="subsubtitle method-title">playTrack:error:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Start <a href="#//api/name/playing">playing</a> the given track.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)playTrack:(SPTrack *)<em>aTrack</em> error:(NSError **)<em>error</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aTrack</em></dt>
+			<dd><p>The track to play.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>An NSError pointer that will be filled with any error that occurs.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns <code>YES</code> if playback started successfully, or <code>NO</code> if the track cannot be played.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playlistFolderForFolderId:inContainer:" title="playlistFolderForFolderId:inContainer:"></a>
+	<h3 class="subsubtitle method-title">playlistFolderForFolderId:inContainer:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create and cache an <a href="../Classes/SPPlaylistFolder.html">SPPlaylistFolder</a> for the given folder ID from the C LibSpotify API.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPPlaylistFolder *)playlistFolderForFolderId:(sp_uint64)<em>playlistId</em> inContainer:(SPPlaylistContainer *)<em>aContainer</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>playlistId</em></dt>
+			<dd><p>The folder ID.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aContainer</em></dt>
+			<dd><p>The <a href="../Classes/SPPlaylistContainer.html">SPPlaylistContainer</a> that contains the given folder.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created or cached <a href="../Classes/SPPlaylistFolder.html">SPPlaylistFolder</a> object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method caches <a href="../Classes/SPPlaylistFolder.html">SPPlaylistFolder</a> objects by ID.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playlistForPlaylistStruct:" title="playlistForPlaylistStruct:"></a>
+	<h3 class="subsubtitle method-title">playlistForPlaylistStruct:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create and cache an <a href="../Classes/SPPlaylist.html">SPPlaylist</a> for the given sp_playlist struct from the C LibSpotify API.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPPlaylist *)playlistForPlaylistStruct:(sp_playlist *)<em>playlist</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>playlist</em></dt>
+			<dd><p>The sp_playlist struct.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created or cached <a href="../Classes/SPPlaylist.html">SPPlaylist</a> object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method caches SPPlaylist objects using the same cache the [SPPlaylist playlist&hellip;]
+convenience methods use.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/playlistForURL:" title="playlistForURL:"></a>
+	<h3 class="subsubtitle method-title">playlistForURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an <a href="../Classes/SPPlaylist.html">SPPlaylist</a> object representing the given URL, or <code>nil</code> if the URL is not a valid playlist URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPPlaylist *)playlistForURL:(NSURL *)<em>url</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>url</em></dt>
+			<dd><p>The URL of the playlist.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/postTracks:toInboxOfUser:withMessage:delegate:" title="postTracks:toInboxOfUser:withMessage:delegate:"></a>
+	<h3 class="subsubtitle method-title">postTracks:toInboxOfUser:withMessage:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Send tracks to another Spotify <a href="#//api/name/user">user</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPPostTracksToInboxOperation *)postTracks:(NSArray *)<em>tracks</em> toInboxOfUser:(NSString *)<em>targetUserName</em> withMessage:(NSString *)<em>aFriendlyMessage</em> delegate:(id&lt;SPPostTracksToInboxOperationDelegate&gt;)<em>operationDelegate</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tracks</em></dt>
+			<dd><p>An array of <a href="../Classes/SPTrack.html">SPTrack</a> objects to send.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>targetUserName</em></dt>
+			<dd><p>The username of the <a href="#//api/name/user">user</a> to send the tracks to.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aFriendlyMessage</em></dt>
+			<dd><p>The message to send with the tracks, if any.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>operationDelegate</em></dt>
+			<dd><p>The <a href="#//api/name/delegate">delegate</a> to send success/failure messages to.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns an <a href="../Classes/SPPostTracksToInboxOperation.html">SPPostTracksToInboxOperation</a> object representing the operation.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> Tracks will be posted to the given <a href="#//api/name/user">user</a> as soon as this
+method is called. Be sure you want to post the tracks before doing so!</p></div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/SPPostTracksToInboxOperation.html">SPPostTracksToInboxOperation</a></p></code></li>
+			
+			<li><code><p><a href="../Protocols/SPPostTracksToInboxOperationDelegate.html">SPPostTracksToInboxOperationDelegate</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/preloadTrackForPlayback:error:" title="preloadTrackForPlayback:error:"></a>
+	<h3 class="subsubtitle method-title">preloadTrackForPlayback:error:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Preloads playback assets for the given track.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)preloadTrackForPlayback:(SPTrack *)<em>aTrack</em> error:(NSError **)<em>error</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aTrack</em></dt>
+			<dd><p>The track to preload.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>An NSError pointer that will be filled with any error that occurs.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns <code>YES</code> if loading started successfully, or <code>NO</code> if the track cannot be played.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>For smooth changes between tracks, you can use this method to start loading track playback
+data before the track needs to be played. The Spotify client does this a few seconds before moving
+to the next track during normal playback.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/searchForURL:" title="searchForURL:"></a>
+	<h3 class="subsubtitle method-title">searchForURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an <a href="../Classes/SPSearch.html">SPSearch</a> object representing the given URL, or <code>nil</code> if the URL is not a valid search URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPSearch *)searchForURL:(NSURL *)<em>url</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>url</em></dt>
+			<dd><p>The URL of the search query.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/seekPlaybackToOffset:" title="seekPlaybackToOffset:"></a>
+	<h3 class="subsubtitle method-title">seekPlaybackToOffset:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Seek the current playback position to the given time.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)seekPlaybackToOffset:(NSTimeInterval)<em>offset</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>offset</em></dt>
+			<dd><p>The time at which to seek to. Must be between 0.0 and the duration of the <a href="#//api/name/playing">playing</a> track.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setMaximumCacheSizeMB:" title="setMaximumCacheSizeMB:"></a>
+	<h3 class="subsubtitle method-title">setMaximumCacheSizeMB:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the maximum cache size, in megabytes.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setMaximumCacheSizeMB:(size_t)<em>maximumCacheSizeMB</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maximumCacheSizeMB</em></dt>
+			<dd><p>The maxiumum cache size, in MB, or 0 to automatically manage disk space.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Set to 0 (the default) to automatically manage the cache, using at most 10% of the free disk space.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setPreferredBitrate:" title="setPreferredBitrate:"></a>
+	<h3 class="subsubtitle method-title">setPreferredBitrate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the preferred audio bitrate for playback.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setPreferredBitrate:(sp_bitrate)<em>bitrate</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>bitrate</em></dt>
+			<dd><p>The preferred bitrate for streaming.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The default is to play the highest quality stream available.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/storedCredentialsUserName" title="storedCredentialsUserName"></a>
+	<h3 class="subsubtitle method-title">storedCredentialsUserName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The username saved in the stored credentials.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)storedCredentialsUserName</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the username that will be logged in with <a href="#//api/name/attemptLoginWithStoredCredentials:">[SPSession attemptLoginWithStoredCredentials:]</a>, or
+<code>nil</code> if there are no stored credentials.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/trackForTrackStruct:" title="trackForTrackStruct:"></a>
+	<h3 class="subsubtitle method-title">trackForTrackStruct:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create and cache an <a href="../Classes/SPTrack.html">SPTrack</a> for the given sp_track struct from the C LibSpotify API.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPTrack *)trackForTrackStruct:(sp_track *)<em>track</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>track</em></dt>
+			<dd><p>The sp_track struct.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created or cached <a href="../Classes/SPTrack.html">SPTrack</a> object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method caches SPTrack objects using the same cache the [SPTrack track&hellip;]
+convenience methods use.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/trackForURL:" title="trackForURL:"></a>
+	<h3 class="subsubtitle method-title">trackForURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an <a href="../Classes/SPTrack.html">SPTrack</a> object representing the given URL, or <code>nil</code> if the URL is not a valid track URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPTrack *)trackForURL:(NSURL *)<em>url</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>url</em></dt>
+			<dd><p>The URL of the track.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/unknownPlaylistForPlaylistStruct:" title="unknownPlaylistForPlaylistStruct:"></a>
+	<h3 class="subsubtitle method-title">unknownPlaylistForPlaylistStruct:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create and cache an <a href="../Classes/SPUnknownPlaylist.html">SPUnknownPlaylist</a> (subclass of <a href="../Classes/SPPlaylist.html">SPPlaylist</a>) for the given sp_playlist struct from the C LibSpotify API.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPUnknownPlaylist *)unknownPlaylistForPlaylistStruct:(sp_playlist *)<em>playlist</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>playlist</em></dt>
+			<dd><p>The sp_playlist struct.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created or cached <a href="../Classes/SPUnknownPlaylist.html">SPUnknownPlaylist</a> object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method caches SPUnknownPlaylist objects using the same cache the [SPPlaylist playlist&hellip;]
+convenience methods use.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/unloadPlayback" title="unloadPlayback"></a>
+	<h3 class="subsubtitle method-title">unloadPlayback</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Unload playback resources from memory.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)unloadPlayback</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Call this when you&rsquo;re done <a href="#//api/name/playing">playing</a> to free up some memory. Called automatically on
+instance deallocation.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/userForURL:" title="userForURL:"></a>
+	<h3 class="subsubtitle method-title">userForURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an <a href="../Classes/SPUser.html">SPUser</a> object representing the given URL, or <code>nil</code> if the URL is not a valid <a href="#//api/name/user">user</a> URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPUser *)userForURL:(NSURL *)<em>url</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>url</em></dt>
+			<dd><p>The URL of the <a href="#//api/name/user">user</a>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/userForUserStruct:" title="userForUserStruct:"></a>
+	<h3 class="subsubtitle method-title">userForUserStruct:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create and cache an <a href="../Classes/SPUser.html">SPUser</a> for the given sp_<a href="#//api/name/user">user</a> struct from the C LibSpotify API.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SPUser *)userForUserStruct:(sp_user *)<em>user</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>user</em></dt>
+			<dd><p>The sp_<a href="#//api/name/user">user</a> struct.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns the created or cached <a href="../Classes/SPUser.html">SPUser</a> object.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method caches SPUser objects using the same cache the [SPUser user&hellip;]
+convenience methods use.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Spotify AB. All rights reserved. (Last updated: 2012-03-28)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

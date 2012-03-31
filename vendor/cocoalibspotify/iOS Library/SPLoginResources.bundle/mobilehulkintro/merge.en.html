@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="hulk-merge">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=320, initial-scale=1, user-scalable=no">
+	<title>Connect to Facebook</title>
+	<link rel="stylesheet" href="base.css">
+	<link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)" href="retina.css">
+	<script src="shared.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	function get_username() {
+		return document.getElementById('username').value;
+	}
+	function get_password() {
+		return document.getElementById('password').value;
+	}
+	function set_first_name(name) {
+		document.getElementById("firstname").innerText = name
+	}
+	function set_login_in_progress(is_in_progress)
+	{
+		if(is_in_progress) {
+			sp_addClass(document.getElementById('loadingbezel'), 'active');
+			sp_removeClass(document.getElementById('loginbtn'), 'active');
+			sp_removeClass(document.getElementById('loadingbezel'), 'inactive');
+			sp_addClass(document.getElementById('loginbtn'), 'inactive');
+			document.getElementById('password').disabled = document.getElementById('username').disabled = 'disabled';
+
+		} else {
+			sp_removeClass(document.getElementById('loadingbezel'), 'active');
+			sp_addClass(document.getElementById('loginbtn'), 'active');
+			sp_addClass(document.getElementById('loadingbezel'), 'inactive');
+			sp_removeClass(document.getElementById('loginbtn'), 'inactive');
+			document.getElementById('password').disabled = document.getElementById('username').disabled = '';
+		}
+	}
+	</script>
+</head>
+
+<body>
+<div id="wrapper">
+	<h1>Spotify</h1>
+	<p>Hi <span id="firstname">there</span>, connect your Facebook<br />account using your Spotify credentials.</p>
+
+	<div class="throbber inactive" id="loadingbezel"><div></div></div>
+	<form method="post" action="spotify:internal:loginandmerge" id="login">
+		<fieldset>
+			<ul>
+				<li><input type="text" placeholder="Username" id="username"></li>
+				<li><input type="password" placeholder="Password" id="password"></li>
+				<li><input type="submit" id="loginbtn" value="Login" class="primary" /></li>
+			</ul>
+		</fieldset>
+	</form>
+	<script>
+	document.getElementById('login').addEventListener('submit', function(e) {
+		var username = document.getElementById('username'),
+			password = document.getElementById('password');
+		if (username.value === '' || password.value === '') {
+			e.preventDefault();
+		}
+		if (window.hulk) {
+			e.preventDefault();
+			// change this to whatever
+			window.hulk.zomfgImALIVE();
+		}
+	});
+	</script>
+</div>
+</body>
+</html>

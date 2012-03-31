@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="hulk-intro">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=320, initial-scale=1">
+	<title>Connect to Facebook</title>
+	<link rel="stylesheet" href="base.css">
+	<link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)" href="retina.css">
+	<script src="shared.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	// API for the from the native client
+	function set_existing_user(user) {
+		document.getElementById("existing_user_button").innerText = "Are you " + user + "? Please log in."
+	}
+	var current_page = undefined
+	function show_page(page_name) {
+		sp_removeClass(document.getElementById('loading'), 'active');
+		if(current_page) sp_removeClass(document.getElementById(current_page), 'active');
+		sp_addClass(document.getElementById(page_name), 'active');
+		current_page = page_name;
+		return true;
+	}
+	function get_scrobbling_setting() {
+		return document.getElementById('scrobbling_setting').checked;
+	}
+	</script>
+</head>
+
+<body>
+<div id="wrapper">
+	<h2>Discover great music <span>with your friends</span></h2>
+	<div class="browser-image"></div>
+
+	<ul class="pages">
+		<li id="loading" class="active"><div class="throbber"><div></div></div></li>
+		<li id="existing_unsocial">
+			<a class="button primary" href="spotify:internal:connect-with-facebook">Connect with Facebook</a>
+			<a class="button" href="spotify:internal:dont-connect">No Thanks</a>
+		</li>
+		<li id="existing_social">
+			<a class="button primary" href="spotify:internal:done">Okay, thanks!</a>
+		</li>
+		<li id="new_hulk">
+			<a class="button primary" href="spotify:internal:login-spotify" id="existing_user_button">Already a Spotify user? Please log in.</a>
+			<a class="button" href="spotify:internal:done">I'm new to Spotify, let's go!</a>
+		</li>
+	</ul>
+	<p class="scrobbling"><input type="checkbox" id="scrobbling_setting" checked><label for="scrobbling_setting">Get personal recommendations by sending music you play to Facebook's Open Graph.</label></p>
+	
+	<div class="footer">
+		<p class="disclaimer">By proceeding, you also agree to Spotify's <a href="spotify:internal:read-TOS">Terms of Service</a> and <a href="spotify:internal:read-TOS">Privacy Policy</a>.</p>
+	</div>
+</div>
+</body>
+</html>

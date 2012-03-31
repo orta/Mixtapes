@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Guess The Intro' target in the 'Guess The Intro' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif

@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5029717F143B0A8600B8C31D /* SPArrayExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5029717E143B0A8600B8C31D /* SPArrayExtensions.m */; };
+		5073D8C81520C5DC0058AA4F /* SPLoginResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5073D8C71520C5DC0058AA4F /* SPLoginResources.bundle */; };
+		50A0D829143AF62100458686 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A0D828143AF62100458686 /* UIKit.framework */; };
+		50A0D82B143AF62100458686 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A0D82A143AF62100458686 /* Foundation.framework */; };
+		50A0D82D143AF62100458686 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A0D82C143AF62100458686 /* CoreGraphics.framework */; };
+		50A0D833143AF62100458686 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50A0D831143AF62100458686 /* InfoPlist.strings */; };
+		50A0D835143AF62100458686 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0D834143AF62100458686 /* main.m */; };
+		50A0D839143AF62100458686 /* Guess_The_IntroAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0D838143AF62100458686 /* Guess_The_IntroAppDelegate.m */; };
+		50A0D83C143AF62100458686 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A0D83A143AF62100458686 /* MainWindow.xib */; };
+		50A0D83F143AF62100458686 /* Guess_The_IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A0D83E143AF62100458686 /* Guess_The_IntroViewController.m */; };
+		50A0D842143AF62100458686 /* Guess_The_IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A0D840143AF62100458686 /* Guess_The_IntroViewController.xib */; };
+		50A0D863143AFF3400458686 /* libCocoaLibSpotify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A0D860143AFF2100458686 /* libCocoaLibSpotify.a */; };
+		50A0D865143B001D00458686 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A0D864143B001D00458686 /* SystemConfiguration.framework */; };
+		50A0D867143B002300458686 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A0D866143B002300458686 /* libstdc++.dylib */; };
+		50A0D869143B002B00458686 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A0D868143B002B00458686 /* CFNetwork.framework */; };
+		50A0D86B143B016700458686 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A0D86A143B016700458686 /* AVFoundation.framework */; };
+		50A0D86D143B016B00458686 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A0D86C143B016B00458686 /* CoreAudio.framework */; };
+		50A0D86F143B017400458686 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A0D86E143B017400458686 /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50A0D85F143AFF2100458686 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50A0D858143AFF2100458686 /* CocoaLibSpotify iOS Library.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 50AF49DC1439CBFE00E4A5EF;
+			remoteInfo = CocoaLibSpotify;
+		};
+		50A0D861143AFF2B00458686 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50A0D858143AFF2100458686 /* CocoaLibSpotify iOS Library.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 50AF49DB1439CBFE00E4A5EF;
+			remoteInfo = CocoaLibSpotify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5029717D143B0A8600B8C31D /* SPArrayExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPArrayExtensions.h; sourceTree = "<group>"; };
+		5029717E143B0A8600B8C31D /* SPArrayExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPArrayExtensions.m; sourceTree = "<group>"; };
+		5073D8C71520C5DC0058AA4F /* SPLoginResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SPLoginResources.bundle; path = ../../../SPLoginResources.bundle; sourceTree = "<group>"; };
+		50A0D824143AF62100458686 /* Guess The Intro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guess The Intro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50A0D828143AF62100458686 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		50A0D82A143AF62100458686 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		50A0D82C143AF62100458686 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		50A0D830143AF62100458686 /* Guess The Intro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Guess The Intro-Info.plist"; sourceTree = "<group>"; };
+		50A0D832143AF62100458686 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50A0D834143AF62100458686 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50A0D836143AF62100458686 /* Guess The Intro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Guess The Intro-Prefix.pch"; sourceTree = "<group>"; };
+		50A0D837143AF62100458686 /* Guess_The_IntroAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Guess_The_IntroAppDelegate.h; sourceTree = "<group>"; };
+		50A0D838143AF62100458686 /* Guess_The_IntroAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Guess_The_IntroAppDelegate.m; sourceTree = "<group>"; };
+		50A0D83B143AF62100458686 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		50A0D83D143AF62100458686 /* Guess_The_IntroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Guess_The_IntroViewController.h; sourceTree = "<group>"; };
+		50A0D83E143AF62100458686 /* Guess_The_IntroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Guess_The_IntroViewController.m; sourceTree = "<group>"; };
+		50A0D841143AF62100458686 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Guess_The_IntroViewController.xib; sourceTree = "<group>"; };
+		50A0D858143AFF2100458686 /* CocoaLibSpotify iOS Library.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CocoaLibSpotify iOS Library.xcodeproj"; path = "../../CocoaLibSpotify iOS Library.xcodeproj"; sourceTree = "<group>"; };
+		50A0D864143B001D00458686 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		50A0D866143B002300458686 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		50A0D868143B002B00458686 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		50A0D86A143B016700458686 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		50A0D86C143B016B00458686 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		50A0D86E143B017400458686 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50A0D821143AF62100458686 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50A0D86F143B017400458686 /* AudioToolbox.framework in Frameworks */,
+				50A0D86D143B016B00458686 /* CoreAudio.framework in Frameworks */,
+				50A0D86B143B016700458686 /* AVFoundation.framework in Frameworks */,
+				50A0D869143B002B00458686 /* CFNetwork.framework in Frameworks */,
+				50A0D867143B002300458686 /* libstdc++.dylib in Frameworks */,
+				50A0D865143B001D00458686 /* SystemConfiguration.framework in Frameworks */,
+				50A0D863143AFF3400458686 /* libCocoaLibSpotify.a in Frameworks */,
+				50A0D829143AF62100458686 /* UIKit.framework in Frameworks */,
+				50A0D82B143AF62100458686 /* Foundation.framework in Frameworks */,
+				50A0D82D143AF62100458686 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50297180143B0A9000B8C31D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5029717D143B0A8600B8C31D /* SPArrayExtensions.h */,
+				5029717E143B0A8600B8C31D /* SPArrayExtensions.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		50A0D819143AF62100458686 = {
+			isa = PBXGroup;
+			children = (
+				50A0D858143AFF2100458686 /* CocoaLibSpotify iOS Library.xcodeproj */,
+				50A0D82E143AF62100458686 /* Guess The Intro */,
+				50A0D827143AF62100458686 /* Frameworks */,
+				50A0D825143AF62100458686 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50A0D825143AF62100458686 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50A0D824143AF62100458686 /* Guess The Intro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50A0D827143AF62100458686 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50A0D86E143B017400458686 /* AudioToolbox.framework */,
+				50A0D86C143B016B00458686 /* CoreAudio.framework */,
+				50A0D86A143B016700458686 /* AVFoundation.framework */,
+				50A0D868143B002B00458686 /* CFNetwork.framework */,
+				50A0D866143B002300458686 /* libstdc++.dylib */,
+				50A0D864143B001D00458686 /* SystemConfiguration.framework */,
+				50A0D828143AF62100458686 /* UIKit.framework */,
+				50A0D82A143AF62100458686 /* Foundation.framework */,
+				50A0D82C143AF62100458686 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50A0D82E143AF62100458686 /* Guess The Intro */ = {
+			isa = PBXGroup;
+			children = (
+				50A0D837143AF62100458686 /* Guess_The_IntroAppDelegate.h */,
+				50A0D838143AF62100458686 /* Guess_The_IntroAppDelegate.m */,
+				50A0D83A143AF62100458686 /* MainWindow.xib */,
+				50A0D83D143AF62100458686 /* Guess_The_IntroViewController.h */,
+				50A0D83E143AF62100458686 /* Guess_The_IntroViewController.m */,
+				50A0D840143AF62100458686 /* Guess_The_IntroViewController.xib */,
+				5073D8C71520C5DC0058AA4F /* SPLoginResources.bundle */,
+				50297180143B0A9000B8C31D /* Extensions */,
+				50A0D82F143AF62100458686 /* Supporting Files */,
+			);
+			path = "Guess The Intro";
+			sourceTree = "<group>";
+		};
+		50A0D82F143AF62100458686 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50A0D830143AF62100458686 /* Guess The Intro-Info.plist */,
+				50A0D831143AF62100458686 /* InfoPlist.strings */,
+				50A0D834143AF62100458686 /* main.m */,
+				50A0D836143AF62100458686 /* Guess The Intro-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50A0D859143AFF2100458686 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50A0D860143AFF2100458686 /* libCocoaLibSpotify.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50A0D823143AF62100458686 /* Guess The Intro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50A0D845143AF62200458686 /* Build configuration list for PBXNativeTarget "Guess The Intro" */;
+			buildPhases = (
+				50A0D820143AF62100458686 /* Sources */,
+				50A0D821143AF62100458686 /* Frameworks */,
+				50A0D822143AF62100458686 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50A0D862143AFF2B00458686 /* PBXTargetDependency */,
+			);
+			name = "Guess The Intro";
+			productName = "Guess The Intro";
+			productReference = 50A0D824143AF62100458686 /* Guess The Intro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50A0D81B143AF62100458686 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 50A0D81E143AF62100458686 /* Build configuration list for PBXProject "Guess The Intro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 50A0D819143AF62100458686;
+			productRefGroup = 50A0D825143AF62100458686 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 50A0D859143AFF2100458686 /* Products */;
+					ProjectRef = 50A0D858143AFF2100458686 /* CocoaLibSpotify iOS Library.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				50A0D823143AF62100458686 /* Guess The Intro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		50A0D860143AFF2100458686 /* libCocoaLibSpotify.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCocoaLibSpotify.a;
+			remoteRef = 50A0D85F143AFF2100458686 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50A0D822143AF62100458686 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50A0D833143AF62100458686 /* InfoPlist.strings in Resources */,
+				50A0D83C143AF62100458686 /* MainWindow.xib in Resources */,
+				50A0D842143AF62100458686 /* Guess_The_IntroViewController.xib in Resources */,
+				5073D8C81520C5DC0058AA4F /* SPLoginResources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50A0D820143AF62100458686 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50A0D835143AF62100458686 /* main.m in Sources */,
+				50A0D839143AF62100458686 /* Guess_The_IntroAppDelegate.m in Sources */,
+				50A0D83F143AF62100458686 /* Guess_The_IntroViewController.m in Sources */,
+				5029717F143B0A8600B8C31D /* SPArrayExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50A0D862143AFF2B00458686 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaLibSpotify;
+			targetProxy = 50A0D861143AFF2B00458686 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		50A0D831143AF62100458686 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50A0D832143AF62100458686 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		50A0D83A143AF62100458686 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50A0D83B143AF62100458686 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		50A0D840143AF62100458686 /* Guess_The_IntroViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50A0D841143AF62100458686 /* en */,
+			);
+			name = Guess_The_IntroViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50A0D843143AF62100458686 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		50A0D844143AF62100458686 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50A0D846143AF62200458686 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Guess The Intro/Guess The Intro-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = $CONFIGURATION_BUILD_DIR/include;
+				INFOPLIST_FILE = "Guess The Intro/Guess The Intro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		50A0D847143AF62200458686 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Guess The Intro/Guess The Intro-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = $CONFIGURATION_BUILD_DIR/include;
+				INFOPLIST_FILE = "Guess The Intro/Guess The Intro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50A0D81E143AF62100458686 /* Build configuration list for PBXProject "Guess The Intro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50A0D843143AF62100458686 /* Debug */,
+				50A0D844143AF62100458686 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50A0D845143AF62200458686 /* Build configuration list for PBXNativeTarget "Guess The Intro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50A0D846143AF62200458686 /* Debug */,
+				50A0D847143AF62200458686 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50A0D81B143AF62100458686 /* Project object */;
+}

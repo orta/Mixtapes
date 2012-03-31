@@ -1,0 +1,856 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SPSessionDelegate Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">CocoaLibSpotify </a></h1>
+				<a id="developerHome" href="../index.html">Spotify AB</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SPSessionDelegate Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/session:didEncounterNetworkError:">&nbsp;&nbsp;&nbsp;&nbsp;- session:didEncounterNetworkError:</option>
+	
+	<option value="//api/name/session:didFailToLoginWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- session:didFailToLoginWithError:</option>
+	
+	<option value="//api/name/session:didGenerateLoginCredentials:forUserName:">&nbsp;&nbsp;&nbsp;&nbsp;- session:didGenerateLoginCredentials:forUserName:</option>
+	
+	<option value="//api/name/session:didLogMessage:">&nbsp;&nbsp;&nbsp;&nbsp;- session:didLogMessage:</option>
+	
+	<option value="//api/name/session:recievedMessageForUser:">&nbsp;&nbsp;&nbsp;&nbsp;- session:recievedMessageForUser:</option>
+	
+	<option value="//api/name/sessionDidChangeMetadata:">&nbsp;&nbsp;&nbsp;&nbsp;- sessionDidChangeMetadata:</option>
+	
+	<option value="//api/name/sessionDidLogOut:">&nbsp;&nbsp;&nbsp;&nbsp;- sessionDidLogOut:</option>
+	
+	<option value="//api/name/sessionDidLoginSuccessfully:">&nbsp;&nbsp;&nbsp;&nbsp;- sessionDidLoginSuccessfully:</option>
+	
+	<option value="//api/name/viewControllerToPresentLoginViewForSession:">&nbsp;&nbsp;&nbsp;&nbsp;- viewControllerToPresentLoginViewForSession:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Logging In and Out">Logging In and Out</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Communicating With The User">Communicating With The User</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Metadata">Metadata</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Networking and Debug">Networking and Debug</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session:didEncounterNetworkError:">session:didEncounterNetworkError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session:didFailToLoginWithError:">session:didFailToLoginWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session:didGenerateLoginCredentials:forUserName:">session:didGenerateLoginCredentials:forUserName:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session:didLogMessage:">session:didLogMessage:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/session:recievedMessageForUser:">session:recievedMessageForUser:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sessionDidChangeMetadata:">sessionDidChangeMetadata:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sessionDidLogOut:">sessionDidLogOut:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sessionDidLoginSuccessfully:">sessionDidLoginSuccessfully:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/viewControllerToPresentLoginViewForSession:">viewControllerToPresentLoginViewForSession:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SPSessionDelegate Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SPSessionDelegate Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SPSession.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>General delegate callbacks from <a href="../Classes/SPSession.html">SPSession</a>. For playback-related callbacks, see <a href="../Protocols/SPSessionPlaybackDelegate.html">SPSessionPlaybackDelegate</a>.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Logging In and Out" name="task_Logging In and Out"></a>
+						<h3 class="subsubtitle task-title">Logging In and Out</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sessionDidLoginSuccessfully:">&ndash;&nbsp;sessionDidLoginSuccessfully:</a></code>
+		<span class="tooltip"><p>Called when the given session has logged in successfully.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session:didGenerateLoginCredentials:forUserName:">&ndash;&nbsp;session:didGenerateLoginCredentials:forUserName:</a></code>
+		<span class="tooltip"><p>Called when a set of login credentials has been generated for the user, typically just after login.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session:didFailToLoginWithError:">&ndash;&nbsp;session:didFailToLoginWithError:</a></code>
+		<span class="tooltip"><p>Called when the given session could not log in successfully.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sessionDidLogOut:">&ndash;&nbsp;sessionDidLogOut:</a></code>
+		<span class="tooltip"><p>Called when the given session has logged out.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Communicating With The User" name="task_Communicating With The User"></a>
+						<h3 class="subsubtitle task-title">Communicating With The User</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session:recievedMessageForUser:">&ndash;&nbsp;session:recievedMessageForUser:</a></code>
+		<span class="tooltip"><p>Called when the Spotify service would like to display a message to the user.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Metadata" name="task_Metadata"></a>
+						<h3 class="subsubtitle task-title">Metadata</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sessionDidChangeMetadata:">&ndash;&nbsp;sessionDidChangeMetadata:</a></code>
+		<span class="tooltip"><p>Called when metadata has been updated.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Networking and Debug" name="task_Networking and Debug"></a>
+						<h3 class="subsubtitle task-title">Networking and Debug</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session:didEncounterNetworkError:">&ndash;&nbsp;session:didEncounterNetworkError:</a></code>
+		<span class="tooltip"><p>Called when there is a connection error, and CocoaLibSpotify has problems reconnecting
+to the Spotify service. Can be called multiple times (as long as the problem is present).</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/session:didLogMessage:">&ndash;&nbsp;session:didLogMessage:</a></code>
+		<span class="tooltip"><p>Called when a log-worthy message is generated by the Spotify service.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/viewControllerToPresentLoginViewForSession:">&ndash;&nbsp;viewControllerToPresentLoginViewForSession:</a></code>
+		<span class="tooltip"><p>Called when the session needs to present a view controller to allow the user to login, sign up
+or confirm Facebook access permissions.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/session:didEncounterNetworkError:" title="session:didEncounterNetworkError:"></a>
+	<h3 class="subsubtitle method-title">session:didEncounterNetworkError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when there is a connection error, and CocoaLibSpotify has problems reconnecting
+to the Spotify service. Can be called multiple times (as long as the problem is present).</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)session:(SPSession *)<em>aSession</em> didEncounterNetworkError:(NSError *)<em>error</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The session that encountered a problem.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>An NSError object describing the failure.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/session:didFailToLoginWithError:" title="session:didFailToLoginWithError:"></a>
+	<h3 class="subsubtitle method-title">session:didFailToLoginWithError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when the given session could not log in successfully.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)session:(SPSession *)<em>aSession</em> didFailToLoginWithError:(NSError *)<em>error</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The session that failed to log in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>An NSError object describing the failure.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/session:didGenerateLoginCredentials:forUserName:" title="session:didGenerateLoginCredentials:forUserName:"></a>
+	<h3 class="subsubtitle method-title">session:didGenerateLoginCredentials:forUserName:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when a set of login credentials has been generated for the user, typically just after login.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)session:(SPSession *)<em>aSession</em> didGenerateLoginCredentials:(NSString *)<em>credential</em> forUserName:(NSString *)<em>userName</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The session that logged in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>credential</em></dt>
+			<dd><p>The login credential.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>userName</em></dt>
+			<dd><p>The username for the given credential.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If you wish to store login credentials for multiple users, store the credentials given by this
+delegate method rather than their passwords (it&rsquo;s against the libSpotify Terms and Conditions to store
+Spotify passwords yourself). These credentials are safe to store without encryption, such as in <code>NSUserDefaults</code>.</p>
+
+<p>To use these credentials to log in, use <code>-attemptLoginWithUserName:existingCredential:rememberCredentials:</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/session:didLogMessage:" title="session:didLogMessage:"></a>
+	<h3 class="subsubtitle method-title">session:didLogMessage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when a log-worthy message is generated by the Spotify service.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)session:(SPSession *)<em>aSession</em> didLogMessage:(NSString *)<em>aMessage</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The session that is sending the log message.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aMessage</em></dt>
+			<dd><p>The message to be logged.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> This method will be called very frequently if implemented. Please
+refrain from mindlessly logging these to the console in a release application to aid the user&rsquo;s
+sainity.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/session:recievedMessageForUser:" title="session:recievedMessageForUser:"></a>
+	<h3 class="subsubtitle method-title">session:recievedMessageForUser:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when the Spotify service would like to display a message to the user.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)session:(SPSession *)<em>aSession</em> recievedMessageForUser:(NSString *)<em>aMessage</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The session that received the message.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aMessage</em></dt>
+			<dd><p>The message to be displayed..</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>In the desktop client, these are shown in a blueish toolbar just below the search box.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sessionDidChangeMetadata:" title="sessionDidChangeMetadata:"></a>
+	<h3 class="subsubtitle method-title">sessionDidChangeMetadata:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when metadata has been updated.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)sessionDidChangeMetadata:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The session updated its metadata.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If you have cached metadata yourself, you should purge your caches and fetch new versions.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sessionDidLogOut:" title="sessionDidLogOut:"></a>
+	<h3 class="subsubtitle method-title">sessionDidLogOut:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when the given session has logged out.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)sessionDidLogOut:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The session that logged out.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sessionDidLoginSuccessfully:" title="sessionDidLoginSuccessfully:"></a>
+	<h3 class="subsubtitle method-title">sessionDidLoginSuccessfully:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when the given session has logged in successfully.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)sessionDidLoginSuccessfully:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The session that logged in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/viewControllerToPresentLoginViewForSession:" title="viewControllerToPresentLoginViewForSession:"></a>
+	<h3 class="subsubtitle method-title">viewControllerToPresentLoginViewForSession:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when the session needs to present a view controller to allow the user to login, sign up
+or confirm Facebook access permissions.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (UIViewController *)viewControllerToPresentLoginViewForSession:(SPSession *)<em>aSession</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aSession</em></dt>
+			<dd><p>The session needing to display UI.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A view controller appropriate for the given session to present a modal view controller over.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> <em>Important:</em> While this typically happens around login, it can happen at any point. When this method
+is called, your application should make sure it&rsquo;s in a state appropriate for displaying a login view.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SPSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Spotify AB. All rights reserved. (Last updated: 2012-03-28)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="hulk-permissions">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=320, initial-scale=1">
+	<title>Facebook</title>
+	<link rel="stylesheet" href="fb.css">
+	<link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)" href="fb-retina.css">
+	<script src="../mobilehulkintro/shared.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	// API for the from the native client
+	
+	// Use this regex to localize using docs.splang before presenting:
+	// \$l\((.*?)\)
+	
+	function setPermissionsNeeded(listOfPermissions) {
+		var insertInto = document.getElementById("permissions");
+		
+		var permissionToReadableMap = {
+			"email": "Your e-mail address",
+			"user_birthday": "Your birthday",
+			"publish_actions": "Publish my app activity to Facebook",
+			"publish_stream": "Post to Facebook as you",
+			"read_stream": "Access posts in your News Feed",
+			"user_likes": "Your likes",
+			"friends_likes": "Friends' likes"
+		};
+		for(var i in listOfPermissions) {
+			var permissionIdentifier = listOfPermissions[i];
+			var humanReadable = permissionToReadableMap[permissionIdentifier];
+			if (!humanReadable)
+			 	humanReadable = permissionIdentifier;
+			
+			var permissionElement = document.createElement("li");
+			permissionElement.innerText = humanReadable;
+			insertInto.appendChild(permissionElement);
+		}
+	}
+	
+	
+	</script>
+</head>
+
+<body>
+
+<img src="spotify-round.png" class="appicon" />
+
+<h1>Spotify</h1>
+<p class="tagline">Play and discover music for FREE!</p>
+
+<h2>Add Spotify to Facebook</h2>
+<img src="feedicon.png" class="feedicon" />
+<p class="feedinfo">This app will share songs you listened to, radio stations you listened to, albums you listened to and other activity on Facebook.</p>
+
+<!--<p class="feedinfo">This activity will be visible to:</p>-->
+
+<h2>Spotify needs:</h2>
+<ul id="permissions">
+</ul>
+
+<h2>About this app</h2>
+<p>Spotify gives you a great way to discover and share music with your friends. Create an account by continuing. Enjoy!</p>
+
+<div class="footer">
+	<p class="disclaimer">By proceeding, you also agree to Spotify's <a href="spotify:internal:read-TOS">Terms of Service</a> and <a href="spotify:internal:read-TOS">Privacy Policy</a>.</p>
+</div>
+</body>
+</html>

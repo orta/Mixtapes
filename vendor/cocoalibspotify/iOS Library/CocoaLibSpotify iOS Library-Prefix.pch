@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'CocoaLibSpotify iOS Library' target in the 'CocoaLibSpotify iOS Library' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif
