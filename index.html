@@ -1,1 +1,55 @@
-My GitHub Page
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Stevontoast - Portfolio</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/style.css">
+ 
+  <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.superbgimage.min.js"></script>
+  
+<script type="text/javascript">
+$(function() {
+
+  $.fn.superbgimage.options = {
+    slideshow: 0,
+  };
+
+  $('#thumbs').superbgimage().hide();
+
+});
+</script>
+<style type="text/css">
+
+#content {
+  z-index: 99;
+  width: 960px;
+  margin: 0 auto;
+  background-color: #3dd;
+  position: fixed;
+  bottom: 32px;
+  left:0;
+  right:0;
+}
+
+</style>
+</head>
+
+
+
+<body>
+  <fieldset id="thumbs">
+    <a href="img/mixtapes_bg.jpg" title="">1</a>
+  </fieldset>
+
+  <div id= "content">
+    sdsfddf
+  </div>
+</body>
+</html>
