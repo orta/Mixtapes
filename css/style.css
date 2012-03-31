@@ -1,3 +1,11 @@
-body {
-  background-color: #333;
+@font-face {
+    font-family: 'CalligraffitiRegular';
+    src: url('Calligraffiti-webfont.eot');
+    src: url('Calligraffiti-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Calligraffiti-webfont.woff') format('woff'),
+         url('Calligraffiti-webfont.ttf') format('truetype'),
+         url('Calligraffiti-webfont.svg#CalligraffitiRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
