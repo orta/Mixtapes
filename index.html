@@ -8,8 +8,9 @@
   <meta name="description" content="An iPad app for beautiful Spotify playlists.">
   <meta name="author" content="orta therox">
 
-  <!-- <meta name="viewport" content="user-scalable=no,width=device-width" /> -->
-  <link rel="stylesheet" href="css/style.css">
+<!--   <meta name="viewport" content="user-scalable=no,width=device-width" />
+ -->  
+ <link rel="stylesheet" href="css/style.css">
  
   <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
   <script type="text/javascript" src="js/jquery.superbgimage.min.js"></script>
@@ -98,6 +99,11 @@ p{
 
 /*iPhone CSS rules here */
 @media screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
+
+  #content {
+    width: 480px;
+  }
+
   p {
     font-size: 24px;
   }
